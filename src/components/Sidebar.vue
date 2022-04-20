@@ -2,13 +2,32 @@
   <div class="sidenav">
     <router-link :to="'/admin'">ภาพรวมระบบ</router-link>
     <router-link :to="'/admin'">รายชื่อผู้ป่วย</router-link>
-    <router-link :to="'/admin'">ตั้งค่าระบบ</router-link>
+    <label @click="toggleSetting" for="">ตั้งค่าระบบ</label>
+    <div class="setting" v-show="isSetting">
+      <router-link :to="'/admin'">โรงพยาบาล</router-link>
+      <router-link :to="'/admin'">กลุ่มผู้ใช้งาน</router-link>
+      <router-link :to="'/admin'">ผู้ใช้งาน</router-link>
+      <router-link :to="'/admin'">แผนก</router-link>
+    </div>
   </div>
 </template>
 
 <script>
+import { computed } from "@vue/runtime-core";
 export default {
   name: "Sidebar",
+  data() {
+    return {
+      isSetting: false,
+    };
+  },
+  methods: {
+    toggleSetting() {
+      console.log("Click");
+      this.isSetting = !this.isSetting;
+      console.log(this.isSetting);
+    },
+  },
 };
 </script>
 
@@ -36,4 +55,17 @@ div.sidenav * {
   text-align: center;
   background-color: rgb(37, 149, 122);
 }
+
+.sidenav label:hover {
+  cursor: pointer;
+}
+
+div.setting{
+  padding: 0;
+  font-weight: bold;
+}
+/* button.setting{
+  margin: 0;
+  border: none;
+} */
 </style>
