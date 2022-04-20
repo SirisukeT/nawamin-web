@@ -76,7 +76,7 @@
         </li>
       </ul>
     </nav>
-    
+
     <!-- Page Content  -->
     <div id="content">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -121,13 +121,8 @@
 
 <script>
 export default {
-  name: "Sidebar",
+  name: "Sidebar"
 };
-$(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
 </script>
 
 <style scoped>

@@ -1,8 +1,10 @@
 <template>
   <header>
     <Navbar />
-    <Sidebar />
   </header>
+  <div class="main">
+    <Sidebar />
+  </div>
 </template>
 
 <script>

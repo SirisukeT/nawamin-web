@@ -9,7 +9,7 @@
           height="64"
           class="d-inline-block align-text-top"
         />
-        <strong>โรงพยาบาลค่ายนวมินทราชินี</strong>
+        <p>โรงพยาบาลค่ายนวมินทราชินี</p>
       </a>
     </div>
   </nav>
@@ -33,6 +33,14 @@ h1 {
 
 a.navbar-brand {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.navbar-brand p{
+  margin: 0;
 }
 
 </style>
