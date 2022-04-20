@@ -47,6 +47,7 @@ export default {
     sendlogin() {
       if (this.username === this.user1 && this.password === this.pass1) {
         alert(`ยินดีต้อนรับ ${this.username} ค่ะ`);
+        
         this.$router.push("/admin");
       }
       //   alert(`${this.$refs.username.value}\n${this.$refs.password.value}`);
