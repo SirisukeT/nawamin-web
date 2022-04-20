@@ -4,10 +4,11 @@
       <div class="navbar-brand">
         <router-link :to="'/admin'">
           <img
+            id="logo"
             src="@/assets/logo_re.png"
             alt=""
-            width="64"
-            height="64"
+            width="90"
+            height="90"
             class="d-inline-block align-text-top"
         /></router-link>
         <p>โรงพยาบาลค่ายนวมินทราชินี</p>
@@ -19,7 +20,7 @@
           <h4>ตำแหน่ง</h4>
           <h4>โรงพยาบาลค่ายนวมินทราชินี</h4>
         </div>
-        <a href="/">ออกจากระบบ</a>
+        <router-link :to="'/'"><img id="exit" src="../assets/arrow-right-from-bracket-solid.svg" alt="" /></router-link>
       </div>
     </div>
   </nav>
@@ -35,7 +36,7 @@ export default {
 .navbar {
   background-image: linear-gradient(
     to right,
-    rgba(37, 149, 122, 1),
+    rgb(37, 149, 122),
     rgb(129, 187, 173)
   );
   width: 100%;
@@ -50,7 +51,7 @@ export default {
 }
 
 div.navbar-brand {
-  color: white;
+  color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,6 +81,14 @@ div.navbar-brand p {
   height: 70px;
   width: 70px;
 }
+
+.navbar-r img#exit {
+  background: none;
+  border-radius: 0;
+  height: 30px;
+  width:  30px;
+}
+
 .navbar-brand p {
   margin: 0;
 }
