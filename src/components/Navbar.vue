@@ -16,9 +16,9 @@
       <div class="navbar-r">
         <img src="../assets/user-regular.svg" alt="" />
         <div class="navbar-account">
-          <h4>นายสมหมาย มิตรรัก</h4>
-          <h4>ตำแหน่ง</h4>
-          <h4>โรงพยาบาลค่ายนวมินทราชินี</h4>
+          <h5>นายสมหมาย มิตรรัก</h5>
+          <h5>ตำแหน่ง</h5>
+          <!-- <h5>โรงพยาบาลค่ายนวมินทราชินี</h5> -->
         </div>
         <router-link :to="'/'"><img id="exit" src="../assets/arrow-right-from-bracket-solid.svg" alt="" /></router-link>
       </div>

@@ -3,9 +3,9 @@
     <div class="containerLogin">
       <form @submit.prevent="sendlogin" class="LoginHomePage">
         <div class="login100-form-avatar">
-          <img src="@/assets/logo_re.png" width="200"  alt="LOGO" />
+          <img src="@/assets/logo_re.png" width="300"  alt="LOGO" />
         </div>
-        <h1>
+        <div class="LoginInput">
           <p>
             <input
               type="text"
@@ -23,7 +23,7 @@
             />
           </p>
           <p><input class="LoginSubmit" type="submit" value="เข้าสู่ระบบ" /></p>
-        </h1>
+        </div>
       </form>
     </div>
   </main>
@@ -38,7 +38,7 @@ export default {
     return {
       username: "",
       password: "",
-      user1: "1234",
+      user1: "admin",
       pass1: "1234",
       Message: "Login Succesfully",
     };
@@ -67,24 +67,29 @@ export default {
   /* /* height: 100%; */
   text-align: center;
   width: 100%;
+  height: 100%;
   min-height: 100vh;
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
-  display: -ms-flexbox;
+  display: -ms-flexbox; */
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
-  align-items: center;
-  padding: 15px;
   background-image: url("@/assets/Login_BG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
+  opacity: 0.8;
   z-index: 1;
 }
 
+form.LoginHomePage{
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 form.LoginHomePage input {
   width: 340px;
   height: 57px;
@@ -106,6 +111,16 @@ form.LoginHomePage input.LoginSubmit {
 form.LoginHomePage input.LoginSubmit:hover {
   background: #114d3e;
   cursor: pointer;
+}
+
+.login100-form-avatar img{
+  position: relative;
+  top: 50px;
+}
+
+.LoginInput{
+  position: relative;
+  top: -120px;
 }
 
 </style>

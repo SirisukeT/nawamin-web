@@ -3,26 +3,26 @@
     <div class="topbox">
 
       <div class="doctorbox">
-        <h1>จำนวนผู้ป่วย</h1>
+        <h1>จำนวนผู้ป่วย (คน)</h1>
         <div class="line"></div>
         <div class="subdocb">
-          <b>1000คน</b>
+          <b>1000</b>
         </div>
       </div>
 
-      <div class="patientbox">
-        <h1>จำนวนแพทย์</h1>
+      <div class="doctorbox">
+        <h1>จำนวนแพทย์ (คน)</h1>
         <div class="line"></div>
-        <div class="subpatb">
-          <b>20คน</b>
+        <div class="subdocb">
+          <b>20</b>
         </div>
       </div>
 
-      <div class="forwardbox">
-        <h1>จำนวนการส่งต่อ</h1>
+      <div class="doctorbox">
+        <h1>จำนวนการส่งต่อ (คน)</h1>
         <div class="line"></div>
-        <div class="subforb">
-          <b>200คน</b>
+        <div class="subdocb">
+          <b>200</b>
         </div>
       </div>
     </div>
@@ -76,54 +76,22 @@ h1 {
   background-color: #c4c4c4;
   border-radius: 15px;
 }
-.patientbox {
-  width: 30%;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #c4c4c4;
-  border-radius: 15px;
-}
-.forwardbox {
-  width: 30%;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #c4c4c4;
-  border-radius: 15px;
+
+.doctorbox h1{
+  font-size: 25px; 
 }
 .subdocb {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin: 10px 0;
   width: 300px;
   height: 120px;
   background-color: #e7e7e7;
   border-radius: 15px;
+  font-size: 50px;
 }
-.subpatb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  width: 300px;
-  height: 120px;
-  background-color: #e7e7e7;
-  border-radius: 15px;
-}
-.subforb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  width: 300px;
-  height: 120px;
-  background-color: #e7e7e7;
-  border-radius: 15px;
-}
+
 .line {
   margin-top: 5px;
   width: 70%;

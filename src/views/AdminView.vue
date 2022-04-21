@@ -4,11 +4,13 @@
     <div class="main-content">
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
+        <TitleBar :Title="Title"/>
         <component :is="activeTab" />
         <!-- <PL11_View /> -->
         <!-- <Sidebar /> -->
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -17,6 +19,7 @@ import Sidebar from "../components/Sidebar.vue";
 import SO_1 from "../components/SO_1.vue";
 import PD_1 from "../components/PD_1.vue";
 import PL_11 from "../components/PL_11.vue";
+import TitleBar from "../components/TitleBar.vue";
 export default {
   name: "AdminView",
   components: {
@@ -25,15 +28,18 @@ export default {
     SO_1,
     PD_1,
     PL_11,
+    TitleBar
   },
   data() {
     return {
       activeTab: "SO_1",
+      Title: ""
     };
   },
   methods:{
     selectmenu(component){
-      this.activeTab = component;
+      this.activeTab = component[0];
+      this.Title  = component[1];
     }
   }
 };
