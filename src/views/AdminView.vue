@@ -4,7 +4,7 @@
     <div class="main-content">
       <Sidebar/>
       <div class="content">
-        <SO1_View/>
+        <PL11_View/>
         <!-- <Sidebar /> -->
       </div>
     </div>
@@ -14,13 +14,17 @@
 <script>
 import Navbar from "../components/Navbar.vue";
 import Sidebar from "../components/Sidebar.vue";
-import SO1_View from "../components/SQ_1.vue";
+import SO1_View from "../components/SO_1.vue";
+import PD1_View from "../components/PD_1.vue";
+import PL11_View from "../components/PL_11.vue";
 export default {
   name: "AdminView",
   components: {
     Sidebar,
     Navbar,
     SO1_View,
+    PD1_View,
+    PL11_View,
   },
 };
 </script>
