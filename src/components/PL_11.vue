@@ -57,7 +57,7 @@ h1 {
   height: 100px;
   display: flex;
   justify-content: space-between;
-  background-color: blue;
+  /* background-color: blue; */
 }
 .botbox {
   margin-top: 50px;
@@ -150,12 +150,27 @@ h1 {
   height: 100px;
   display: flex;
   justify-content: flex-end;
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
 }
 .subadd {
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 60px;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+  border: 1.75px solid black;
 }
 .subsearch {
-
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 60px;
+  background-color: #c4c4c4;
+  border-radius: 15px;
+  border: 1.75px solid black;
 }
 </style>

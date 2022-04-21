@@ -1,14 +1,13 @@
 <template>
-  <div class="main-admin">
-    <Navbar />
-    <div class="main-content">
-      <Sidebar/>
-      <div class="content">
-        <PL11_View/>
-        <!-- <Sidebar /> -->
+    <div class="main-admin">
+      <Navbar />
+      <div class="main-content">
+        <Sidebar />
+        <div class="content-naw">
+          <PL11_View />
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -53,5 +52,4 @@ div .main-content {
 .content-naw p {
   font-size: xx-large;
 }
-
 </style>
