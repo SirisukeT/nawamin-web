@@ -1,8 +1,8 @@
 <template>
   <div class="sidenav">
-    <router-link :to="'/admin'">ภาพรวมระบบ</router-link>
-    <router-link :to="'/admin'">รายชื่อผู้ป่วย</router-link>
-    <label @click="toggleSetting" for="">ตั้งค่าระบบ</label>
+    <button @click="selectMenu('SO_1')">ภาพรวมระบบ</button>
+    <button @click="selectMenu('PL_11')">รายชื่อผู้ป่วย</button>
+    <button @click="toggleSetting">ตั้งค่าระบบ</button>
     <div class="setting" v-show="isSetting">
       <router-link :to="'/admin'">โรงพยาบาล</router-link>
       <router-link :to="'/admin'">กลุ่มผู้ใช้งาน</router-link>
@@ -27,6 +27,9 @@ export default {
       this.isSetting = !this.isSetting;
       console.log(this.isSetting);
     },
+    selectMenu(name){
+      this.$emit("Select",name);
+    }
   },
 };
 </script>
@@ -57,8 +60,9 @@ div.sidenav * {
   background-color: rgb(37, 149, 122);
 }
 
-.sidenav label:hover {
-  cursor: pointer;
+div.sidenav button{
+  border: 0;
+  width: 100%;
 }
 
 div.setting{
