@@ -2,9 +2,13 @@
   <div class="main-admin">
     <Navbar />
     <div class="main-content">
-      <Sidebar/>
+      <Sidebar />
       <div class="content">
-        <SO1_View/>
+        <div class="title">
+          <fa :icon="['fas', 'arrow-left']" />
+          <h1>Hi</h1>
+        </div>
+        <SO1_View />
         <!-- <Sidebar /> -->
       </div>
     </div>
@@ -40,8 +44,10 @@ export default {
   /* padding: 1rem 2rem; */
 }
 
-.main-content * {
-  /* flex: 1; */
+.title {
+  height: 65px;
+  background-color: green;
+  border-radius: 20px;
 }
 
 .content {
@@ -52,6 +58,14 @@ export default {
 
 .content p {
   font-size: xx-large;
+}
+
+.title {
+  background-color: green;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  
 }
 /* .sidebar ul{
   margin: 0;
