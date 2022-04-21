@@ -38,12 +38,13 @@ div.sidenav {
   background-image: linear-gradient(rgb(37, 149, 122), rgb(129, 187, 173));
   overflow: hidden;
   height: 100%;
-  width: 12vw;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 div.sidenav * {
