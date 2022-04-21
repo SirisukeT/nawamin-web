@@ -47,7 +47,7 @@ h1 {
 }
 .bigbox{
   width: 100%;
-  height: 200vh;
+  /* height: 200vh; */
   display: flex;
   flex-direction: column;
   /* background-color: black; */
@@ -60,7 +60,7 @@ h1 {
   justify-content: space-between;
 }
 .botbox {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 100%;
   height: 600px;
   display: flex;
@@ -101,7 +101,7 @@ h1 {
 .graphbox {
   margin-top: 0px;
   width: 100%;
-  height: 600px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #c4c4c4;

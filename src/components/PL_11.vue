@@ -46,7 +46,7 @@ h1 {
 }
 .bigbox {
   width: 100%;
-  height: 200vh;
+  /* height: 200vh; */
   display: flex;
   flex-direction: column;
   /* background-color: black; */

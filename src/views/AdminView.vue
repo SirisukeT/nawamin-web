@@ -62,6 +62,7 @@ div .main-content {
 }
 .content-naw {
   max-width: 100%;
+  /* height: 100%; */
   margin-left: 250px;
   padding: 1rem 2rem;
 }
