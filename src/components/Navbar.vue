@@ -91,6 +91,7 @@ div.navbar-brand p {
 
 .navbar-brand p {
   margin: 0;
+  font-size: 30px;
 }
 
 .navbar-account {
