@@ -2,10 +2,10 @@
   <div class="main-admin">
     <Navbar />
     <div class="main-content">
-      <Sidebar />
+      <Sidebar @select="selectmenu" />
       <div class="content-naw">
-        <TitleBar/>
-        <SO1_View />
+        <component :is="activeTab" />
+        <!-- <PL11_View /> -->
         <!-- <Sidebar /> -->
       </div>
     </div>
@@ -15,16 +15,28 @@
 <script>
 import Navbar from "../components/Navbar.vue";
 import Sidebar from "../components/Sidebar.vue";
-import SO1_View from "../components/SQ_1.vue";
-import TitleBar from "../components/TitleBar.vue";
+import SO_1 from "../components/SO_1.vue";
+import PD_1 from "../components/PD_1.vue";
+import PL_11 from "../components/PL_11.vue";
 export default {
   name: "AdminView",
   components: {
     Sidebar,
     Navbar,
-    SO1_View,
-    TitleBar
+    SO_1,
+    PD_1,
+    PL_11,
   },
+  data() {
+    return {
+      activeTab: "SO_1",
+    };
+  },
+  methods:{
+    selectmenu(component){
+      this.activeTab = component;
+    }
+  }
 };
 </script>
 
@@ -52,5 +64,4 @@ div .main-content {
 .content-naw p {
   font-size: xx-large;
 }
-
 </style>
