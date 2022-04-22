@@ -1,10 +1,22 @@
 <template>
   <div class="titleBar">
-    <div class="icon"><img src="../assets/play-solid.svg" alt="" height="30"/></div>
-    <p>ภาพรวมระบบ</p>
+    <div class="listTitle" v-for="(t,index) in Title" :key="index">
+      <div v-if="!index" class="icon"><img src="../assets/play-solid.svg" alt="" height="40"/></div>
+      <div v-else class="icon"><img src="../assets/angle-right-solid.svg" alt="" height="40"/></div>
+      <b>{{t}}</b>
+    </div>
   </div>
 </template>
 
+<script>
+export default {
+  name: "TitleBar",
+  data() {
+    return {};
+  },
+  props: ["Title"],
+};
+</script>
 <style scoped>
 .titleBar {
   background-image: linear-gradient(
@@ -17,19 +29,23 @@
   width: 100%;
   margin-bottom: 20px;
   display: flex;
-  align-items: center;
-  /* flex-wrap: wrap; */
+  align-content: center;
 }
 
-.titleBar p{
-    height: 100%;
-    padding-top: 3px;
-    margin:0;
-    font-size: 30px;
+.listTitle{
+  display: flex;
+}
+.listTitle b{
+  margin: 0 10px;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 6px;
 }
 
-.icon{
-    display: flex;
-    margin: 0 20px;
+.icon {
+  display: flex;
+  margin-left: 20px;
+  padding-top: 10px;
 }
+
 </style>

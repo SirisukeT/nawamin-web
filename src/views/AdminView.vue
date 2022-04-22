@@ -4,9 +4,8 @@
     <div class="main-content">
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
-        <component :is="activeTab" />
-        <!-- <PL11_View /> -->
-        <!-- <Sidebar /> -->
+        <TitleBar :Title="Title"/>
+        <component :is="activeTab" @select="selectmenu"/>
       </div>
     </div>
   </div>
@@ -18,6 +17,8 @@ import Sidebar from "../components/Sidebar.vue";
 import SO_1 from "../components/SO_1.vue";
 import PD_1 from "../components/PD_1.vue";
 import PL_11 from "../components/PL_11.vue";
+import PH_1 from "../components/PH1.vue";
+import TitleBar from "../components/TitleBar.vue";
 export default {
   name: "AdminView",
   components: {
@@ -26,15 +27,21 @@ export default {
     SO_1,
     PD_1,
     PL_11,
+    PH_1,
+    TitleBar,
   },
   data() {
     return {
       activeTab: "SO_1",
+      Title: ["ภาพรวมระบบ"],
     };
   },
   methods:{
     selectmenu(component){
-      this.activeTab = component;
+      // alert(`ข้อมูลของ ${component[0]} ค่ะ`);
+      this.activeTab = component[0];
+      this.Title  = component.slice(1);
+      window.scrollTo(0,0)
     }
   }
 };
@@ -57,8 +64,9 @@ div .main-content {
 }
 .content-naw {
   max-width: 100%;
+  /* height: 100%; */
   margin-left: 250px;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
 }
 
 .content-naw p {

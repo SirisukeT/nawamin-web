@@ -16,23 +16,29 @@
       <div class="navbar-r">
         <img src="../assets/user-regular.svg" alt="" />
         <div class="navbar-account">
-          <h4>นายสมหมาย มิตรรัก</h4>
-          <h4>ตำแหน่ง</h4>
-          <h4>โรงพยาบาลค่ายนวมินทราชินี</h4>
+          <h5>นายสมหมาย มิตรรัก</h5>
+          <h5>ตำแหน่ง</h5>
+          <!-- <h5>โรงพยาบาลค่ายนวมินทราชินี</h5> -->
         </div>
-        <router-link :to="'/'"><img id="exit" src="../assets/arrow-right-from-bracket-solid.svg" alt="" /></router-link>
+        <a @click="logout"><img id="exit" src="../assets/arrow-right-from-bracket-solid.svg" alt="" /></a>
       </div>
     </div>
   </nav>
 </template>
 
-<script>
+<script>import { faLongArrowAltUp } from "@fortawesome/free-solid-svg-icons"
+
 export default {
   name: "Navbar",
+  methods:{
+    logout(){
+      this.$router.push("/");
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
 .navbar {
   background-image: linear-gradient(
     to right,
@@ -68,11 +74,10 @@ div.navbar-brand p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-right: 1rem; */
 }
 
 .navbar-r > * {
-  margin: 0 1rem;
+  margin-left: 2.5rem;
 }
 
 .navbar-r img {
@@ -80,6 +85,10 @@ div.navbar-brand p {
   border-radius: 50%;
   height: 70px;
   width: 70px;
+}
+
+.navbar-r a{
+  margin: 0 15px 0 20px;
 }
 
 .navbar-r img#exit {
@@ -101,4 +110,5 @@ div.navbar-brand p {
 .navbar-account > * {
   margin: 0;
 }
+
 </style>

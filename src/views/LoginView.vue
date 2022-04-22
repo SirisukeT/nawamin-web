@@ -1,9 +1,13 @@
 <template>
-  <main>
-    <TheLogin />
-  </main>
+  <Login />
 </template>
 
-<script setup>
-import TheLogin from "../components/TheLogin.vue";
+<script>
+import Login from "../components/Login/Login.vue";
+export default {
+  name: "LoginView",
+  components: {
+    Login,
+  },
+};
 </script>

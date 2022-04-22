@@ -16,4 +16,12 @@ html, body, #app{
   width: 100%;
 }
 
+button:hover{
+  transform: scale(1.05);
+}
+
+button:active{
+  transform: scale(0.95);
+}
+
 </style>
