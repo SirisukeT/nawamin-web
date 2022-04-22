@@ -5,8 +5,8 @@
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
         <TitleBar :Title="Title" />
-        <!-- <h1>{{side.title}}</h1> -->
-        <SO_1
+        <h1>{{store.state.title}}</h1>
+        <PL_11
           @select="selectmenu"
           @selectSub="selectmenuSubmenu"
         />
@@ -15,16 +15,17 @@
   </div>
 </template>
 
-<script>
-import { useSiteStore } from "./stores/useSiteStore";
+<script setup>
+import { useSiteStore } from "../stores/useSiteStore";
 const store = useSiteStore();
+</script>
+
+<!--<script>
 export default {
-    name: "AdminView",
-    data() {
+  name: "PatientListView",
+  data() {
         return {
-            previousTab: "",
-            activeTab: "SO_1",
-            Title: ["ภาพรวมระบบ"],
+            Title: ["รายชื่อผู้ป่วย"],
         };
     },
     methods: {
@@ -43,5 +44,4 @@ export default {
         },
     }
 };
-</script>
-
+</script>-->

@@ -14,13 +14,13 @@
         <p>โรงพยาบาลค่ายนวมินทราชินี</p>
       </div>
       <div class="navbar-r">
-        <img src="../assets/user-regular.svg" alt="" />
+        <img src="@/assets/user-regular.svg" alt="" />
         <div class="navbar-account">
           <h5>นายสมหมาย มิตรรัก</h5>
           <h5>ตำแหน่ง</h5>
           <!-- <h5>โรงพยาบาลค่ายนวมินทราชินี</h5> -->
         </div>
-        <a @click="logout"><img id="exit" src="../assets/arrow-right-from-bracket-solid.svg" alt="" /></a>
+        <a @click="logout"><img id="exit" src="@/assets/arrow-right-from-bracket-solid.svg" alt="" /></a>
       </div>
     </div>
   </nav>

@@ -5,7 +5,7 @@
     <th>{{ pdate }}</th>
     <th>{{ sdate }}</th>
     <th>{{ status }}</th>
-    <th id="info"><button @click="patientInfo(['PD_1','รายชื่อผู้ป่วย',name])">รายละเอียด</button></th>
+    <th id="info"><button @click="patientInfo(['PatientDetailsView','รายชื่อผู้ป่วย',name])">รายละเอียด</button></th>
   </tr>
 </template>
 

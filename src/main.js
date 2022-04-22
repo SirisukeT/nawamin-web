@@ -1,30 +1,34 @@
 import { createApp } from "vue";
+import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
-import Navbar from "./components/Navbar.vue";
-import Sidebar from "./components/Sidebar.vue";
+import Navbar from "./components/bar/Navbar.vue";
+import Sidebar from "./components/bar/Sidebar.vue";
+import TitleBar from "./components/bar/TitleBar.vue";
 import SO_1 from "./components/SO_1.vue";
 import PD_1 from "./components/PD_1.vue";
 import PL_11 from "./components/PL_11.vue";
 import PH_1 from "./components/PH_1.vue";
-import TitleBar from "./components/TitleBar.vue";
 import Login from "./components/Login/Login.vue";
 import Patient from "./components/DataList/Patient.vue";
 import PatientInfo from "./components/DataList/PatientInfo.vue";
 import PCD_11 from "./components/PCD_11.vue";
 import PCD_12 from "./components/PCD_12.vue";
-
+import PatientListView from './views/PatientListView.vue'
+import PatientDetailsView from './views/PatientDetailsView.vue'
 import { library } from "@fortawesome/fontawesome-svg-core";
 // import { faPhone } from "@fortawesome/free-solid-svg-icons";
 // import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 library.add(fas);
 library.add(far);
 
-
+const pinia = createPinia();
 const app = createApp(App);
+app.use(pinia);
 app.use(router);
 app.mount("#app");
 app.component('fa', FontAwesomeIcon);
@@ -40,4 +44,7 @@ app.component('Patient',Patient);
 app.component('PatientInfo',PatientInfo);
 app.component('PCD_11',PCD_11);
 app.component('PCD_12',PCD_12);
+
+app.component('PatientListView',PatientListView)
+app.component('PatientDetailsView',PatientDetailsView)
 

@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import { useSiteStore } from "./stores/useSiteStore";
+const store = useSiteStore();
 </script>
 
 <template>
@@ -7,8 +9,9 @@ import { RouterLink, RouterView } from "vue-router";
 </template>
 
 <style>
-
-html, body, #app{
+html,
+body,
+#app {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,12 +19,36 @@ html, body, #app{
   width: 100%;
 }
 
-button:hover{
+button:hover {
   transform: scale(1.05);
 }
 
-button:active{
+button:active {
   transform: scale(0.95);
 }
 
+.main-admin {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+div .main-content {
+  margin-top: 100px;
+  /* display: grid;
+  grid-template-columns: 12% 88%; */
+  height: 100%;
+  /* padding: 1rem 2rem; */
+}
+.content-naw {
+  max-width: 100%;
+  /* height: 100%; */
+  margin-left: 250px;
+  padding: 1rem 5rem;
+}
+
+.content-naw p {
+  font-size: xx-large;
+}
 </style>
