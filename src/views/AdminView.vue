@@ -12,24 +12,9 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
-import Sidebar from "../components/Sidebar.vue";
-import SO_1 from "../components/SO_1.vue";
-import PD_1 from "../components/PD_1.vue";
-import PL_11 from "../components/PL_11.vue";
-import PH_1 from "../components/PH1.vue";
-import TitleBar from "../components/TitleBar.vue";
+
 export default {
   name: "AdminView",
-  components: {
-    Sidebar,
-    Navbar,
-    SO_1,
-    PD_1,
-    PL_11,
-    PH_1,
-    TitleBar,
-  },
   data() {
     return {
       activeTab: "SO_1",
