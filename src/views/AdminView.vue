@@ -5,10 +5,11 @@
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
         <component :is="activeTab" />
-        <!-- <PL11_View /> -->
+        <PL11_View />
         <!-- <Sidebar /> -->
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -17,6 +18,7 @@ import Sidebar from "../components/Sidebar.vue";
 import SO_1 from "../components/SO_1.vue";
 import PD_1 from "../components/PD_1.vue";
 import PL_11 from "../components/PL_11.vue";
+import PH_1 from "../components/PH1.vue";
 export default {
   name: "AdminView",
   components: {
@@ -25,10 +27,11 @@ export default {
     SO_1,
     PD_1,
     PL_11,
+    PH_1,
   },
   data() {
     return {
-      activeTab: "SO_1",
+      activeTab: "PH_1",
     };
   },
   methods:{
