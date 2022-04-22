@@ -89,7 +89,8 @@
               <div class="infoleft">
                 <p>จังหวัด</p>
               </div>
-              <div class="inforight"></div>
+              <div class="inforight">
+              </div>
             </div>
             <div class="info">
               <div class="infoleft">
@@ -233,6 +234,7 @@ rb{
   width: 50%;
   height: 100%;
   align-items: flex-end;
+  text-align: right;
   /* background-color: greenyellow; */
 }
 </style>

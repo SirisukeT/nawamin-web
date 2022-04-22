@@ -16,69 +16,15 @@
         <div class="line"></div>
         <div class="boxin">
           <div class="info">
-            <div class="infoleft">
-              <label>โรค</label>
-            </div>
-            <div class="inforight">
-              <label>วันที่พบแพทย์ล่าสุด</label>
-            </div>
+            <label>โรค</label>
           </div>
           <div class="info2">
             <div class="infoleft">
-              <label>สภาวะหัวใจล้มเหลวเฉียบพลัน</label>
+              <label>หัวใจล้มเหลวเฉียบพลัน</label>
             </div>
             <button class="inforight">
               <label>13 กันยายน 2564</label>
             </button>
-          </div>
-          <div class="info2">
-            <div class="infoleft">
-              <label>โรคเบาหวาน</label>
-            </div>
-            <button class="inforight">
-              <label>13 กันยายน 2564</label>
-            </button>
-          </div>
-          <div class="info2">
-            <div class="infoleft">
-              <label>ความดันโลหิตสูง</label>
-            </div>
-            <button class="inforight">
-              <label>13 กันยายน 2564</label>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="botbox">
-        <div class="box">
-          <h1>ความดัน</h1>
-          <div class="line"></div>
-          <div class="subbox">
-            <img src="/public/pulse.png" alt="" />
-            <div class="line2"></div>
-            <p>
-              <label>140</label>SYS<br />
-              <label>90</label>DIA
-            </p>
-            <div class="line2"></div>
-            <p>
-              ตรวจเมื่อ<br />
-              13 ก.ย. 2564
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <h1>ชีพจร</h1>
-          <div class="line"></div>
-          <div class="subbox">
-            <img src="/public/pulse2.png" alt="" />
-            <div class="line2"></div>
-            <p><label>100</label>BPM</p>
-            <div class="line2"></div>
-            <p>
-              ตรวจเมื่อ<br />
-              13 ก.ย. 2564
-            </p>
           </div>
         </div>
       </div>
@@ -91,22 +37,11 @@
 
 <script>
 export default {
-  name: "PCD_11",
+  name: "PCD_12",
 };
 </script>
 
 <style scoped>
-.subbox p {
-  font-size: 20px;
-  text-align: center;
-}
-.subbox label {
-  font-size: 40px;
-  font-weight: 1000;
-}
-.CurrentDiseases {
-  margin-top: 10px;
-}
 .buttonbox {
 margin-top: 30px;
 padding-bottom: 60px;
@@ -179,15 +114,6 @@ padding-bottom: 60px;
   justify-content: top;
   align-items: center;
 }
-.botbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 30px;
-  width: 100%;
-  height: 100%;
-  /* background: pink; */
-}
 .historybox {
   display: flex;
   flex-direction: column;
@@ -204,11 +130,6 @@ padding-bottom: 60px;
   margin-top: 10px;
   width: 90%;
   height: 2px;
-  background-color: black;
-}
-.line2 {
-  width: 2px;
-  height: 90%;
   background-color: black;
 }
 .boxin {
@@ -238,7 +159,7 @@ padding-bottom: 60px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* background-color: skyblue; */
+  background-color: skyblue;
 }
 .inforight {
   display: flex;
@@ -247,7 +168,7 @@ padding-bottom: 60px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* background-color: greenyellow; */
+  background-color: greenyellow;
 }
 .info2 {
   margin-top: 15px;

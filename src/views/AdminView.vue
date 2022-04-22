@@ -20,6 +20,7 @@ import PL_11 from "../components/PL_11.vue";
 import PH_1 from "../components/PH1.vue";
 import TitleBar from "../components/TitleBar.vue";
 import PCD_11 from "../components/PCD_11.vue";
+import PCD_12 from "../components/PCD_12.vue";
 export default {
   name: "AdminView",
   components: {
@@ -31,6 +32,7 @@ export default {
     PH_1,
     TitleBar,
     PCD_11,
+    PCD_12,
   },
   data() {
     return {
