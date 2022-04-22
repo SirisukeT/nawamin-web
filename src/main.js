@@ -11,6 +11,8 @@ import TitleBar from "./components/TitleBar.vue";
 import Login from "./components/Login/Login.vue";
 import Patient from "./components/DataList/Patient.vue";
 import PatientInfo from "./components/DataList/PatientInfo.vue";
+import PCD_11 from "./components/PCD_11.vue";
+import PCD_12 from "./components/PCD_12.vue";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 // import { faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -36,4 +38,6 @@ app.component('PL_11', PL_11);
 app.component('PH_1', PH_1);
 app.component('Patient',Patient);
 app.component('PatientInfo',PatientInfo);
+app.component('PCD_11',PCD_11);
+app.component('PCD_12',PCD_12);
 
