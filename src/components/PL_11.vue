@@ -53,7 +53,6 @@
 </template>
 
 <script>
-import Patient from "./Patient.vue";
 export default {
   name: "PL_11",
   data() {
@@ -68,7 +67,6 @@ export default {
       ],
     };
   },
-  components: { Patient },
   methods: {
     patientInfo(component) {
       this.$emit("select", component);

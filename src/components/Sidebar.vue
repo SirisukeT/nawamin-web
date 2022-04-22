@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import { computed } from "@vue/runtime-core";
 export default {
   name: "Sidebar",
   data() {
