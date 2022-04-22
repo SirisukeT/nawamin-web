@@ -20,19 +20,25 @@
           <h5>ตำแหน่ง</h5>
           <!-- <h5>โรงพยาบาลค่ายนวมินทราชินี</h5> -->
         </div>
-        <router-link :to="'/'"><img id="exit" src="../assets/arrow-right-from-bracket-solid.svg" alt="" /></router-link>
+        <a @click="logout"><img id="exit" src="../assets/arrow-right-from-bracket-solid.svg" alt="" /></a>
       </div>
     </div>
   </nav>
 </template>
 
-<script>
+<script>import { faLongArrowAltUp } from "@fortawesome/free-solid-svg-icons"
+
 export default {
   name: "Navbar",
+  methods:{
+    logout(){
+      this.$router.push("/");
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
 .navbar {
   background-image: linear-gradient(
     to right,

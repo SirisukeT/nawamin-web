@@ -2,7 +2,13 @@
   <div class="sidenav">
     <button id="b1" @click="selectMenu(['SO_1','ภาพรวมระบบ'])">ภาพรวมระบบ</button>
     <button id="b2" @click="selectMenu(['PL_11','รายชื่อผู้ป่วย'])" >รายชื่อผู้ป่วย</button>
-    <button id="b3" @click="toggleSetting">ตั้งค่าระบบ<fa :icon="['fas', 'arrow-left']" /></button>
+    <button id="b3" @click="toggleSetting">
+      ตั้งค่าระบบ
+      <div>
+        <fa v-if="!isSetting"  :icon="['fas', 'angle-right']" />
+        <fa v-else :style="{ 'transform': 'rotate(90deg)','animation':'rotation 2s infinite linear' }" :icon="['fas', 'angle-right']" />
+      </div>
+    </button>
     <div class="setting" v-show="isSetting">
       <button id="b4" @click="selectMenu(['PL_11','โรงพยาบาล'])" >โรงพยาบาล</button>
       <button id="b5" @click="selectMenu(['PL_11','กลุ่มผู้ใช้งาน'])" >กลุ่มผู้ใช้งาน</button>
@@ -28,13 +34,13 @@ export default {
       console.log(this.isSetting);
     },
     selectMenu(component){
-      this.$emit("Select",component);
+      this.$emit("select",component);
     }
   },
 };
 </script>
 
-<style focused>
+<style scoped>
 div.sidenav {
   margin-top: 100px;
   text-align: center;
@@ -83,8 +89,9 @@ button#b3{
   padding-left: 70px;
 }
 
-button#b3 svg{
-  margin: 0 20px;
+button#b3 div{
+  background: none;
+  padding-left: 35px;
 }
 
 </style>

@@ -66,7 +66,7 @@ h1 {
   flex-direction: column;
 }
 .topbox {
-  margin: 0px;
+  margin-bottom: 25px;
   width: 100%;
   height: 200px;
   display: flex;

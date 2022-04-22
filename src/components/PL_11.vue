@@ -38,7 +38,7 @@
             <th></th>
           </tr>
           <Patient
-            @Select="patientInfo"
+            @select="patientInfo"
             v-for="(item, index) in patientList"
             :key="index"
             :name="item.name"
@@ -71,7 +71,7 @@ export default {
   components: { Patient },
   methods: {
     patientInfo(component) {
-      this.$emit("Select", component);
+      this.$emit("select", component);
     },
   },
 };

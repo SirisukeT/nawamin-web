@@ -41,6 +41,7 @@ export default {
       // alert(`ข้อมูลของ ${component[0]} ค่ะ`);
       this.activeTab = component[0];
       this.Title  = component.slice(1);
+      window.scrollTo(0,0)
     }
   }
 };
