@@ -6,7 +6,6 @@
       <div class="content-naw">
         <TitleBar :Title="Title"/>
         <component :is="activeTab" />
-        <PL11_View />
         <!-- <Sidebar /> -->
       </div>
     </div>
@@ -34,7 +33,7 @@ export default {
   },
   data() {
     return {
-      activeTab: "SO_1",
+      activeTab: "PH_1",
       Title: ""
     };
   },
