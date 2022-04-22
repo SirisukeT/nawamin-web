@@ -32,7 +32,6 @@ export default {
             this.$router.push(component[0]);
             this.activeTab = component[0];
             this.Title = component.slice(1);
-            alert(this.Title);
             window.scrollTo(0, 0);
         },
         selectmenuSubmenu(component) {

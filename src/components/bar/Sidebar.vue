@@ -52,7 +52,6 @@ export default {
       console.log(this.isSetting);
     },
     selectMenu(component) {
-      // alert(component[0]);
       this.$emit("select", component);
     },
   },

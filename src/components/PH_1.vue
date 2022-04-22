@@ -1,15 +1,6 @@
 <template>
   <div class="bigbox">
-    <div class="leftbox">
-      <div class="ppcolor">
-        <div class="pp">
-          <img src="../assets/user-regular.svg" alt="" />
-        </div>
-      </div>
-      <div class="phptext">
-        <h3>นายชอบ ไร้โรค</h3>
-      </div>
-    </div>
+    <PatientCard/>
     <div class="rightbox">
       <h1 class="rb">ประวัติผู้ป่วย</h1>
       <div class="line"></div>
@@ -49,7 +40,6 @@ export default {
   },
   methods:{
     previousPage(){
-      // alert(`ข้อมูลของ ${this.previous} ค่ะ`);
       this.$emit("selectSub",[this.previous])
     }
   }

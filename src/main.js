@@ -17,6 +17,7 @@ import PCD_12 from "./components/PCD_12.vue";
 import PatientListView from './views/PatientListView.vue'
 import PatientDetailsView from './views/PatientDetailsView.vue'
 import PatientInfoView from './views/PatientInfoView.vue'
+import PatientCard from './components/DataList/PatientCard.vue'
 import { library } from "@fortawesome/fontawesome-svg-core";
 // import { faPhone } from "@fortawesome/free-solid-svg-icons";
 // import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -45,6 +46,7 @@ app.component('Patient', Patient);
 app.component('PatientInfo', PatientInfo);
 app.component('PCD_11', PCD_11);
 app.component('PCD_12', PCD_12);
+app.component('PatientCard',PatientCard);
 
 app.component('PatientListView', PatientListView);
 app.component('PatientDetailsView', PatientDetailsView);
