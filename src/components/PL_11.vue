@@ -1,25 +1,27 @@
 <template>
   <div class="bigbox">
     <div class="topbox">
-      <div class="doctorbox">
-        <h1>ชื่อ-สกุล</h1>
-        <div class="subdocb"></div>
-      </div>
+      <grayBox>ชื่อ-สกุล</grayBox>
 
-      <div class="doctorbox">
-        <h1>วันที่</h1>
-        <div class="subdocb"></div>
-      </div>
+      <grayBox>วันที่</grayBox>
 
-      <div class="doctorbox">
-        <h1>ถึงวันที่</h1>
-        <div class="subdocb"></div>
-      </div>
+      <grayBox>ถึงวันที่</grayBox>
     </div>
 
     <div class="midbox">
       <div class="addbox">
-        <button class="subadd">เพิ่มผู้ป่วย</button>
+        <button
+          @click="
+            patientAdd([
+              '/PatientListViewAdd',
+              'รายชื่อผู้ป่วย',
+              'เพิ่มผู้ป่วย',
+            ])
+          "
+          class="subadd"
+        >
+          เพิ่มผู้ป่วย
+        </button>
       </div>
       <div class="addbox">
         <button class="subsearch">ค้นหา</button>
@@ -37,16 +39,16 @@
             <th>สถานะ</th>
             <th></th>
           </tr>
-          <Patient
-            @select="patientInfo"
-            v-for="(item, index) in data"
-            :key="index"
-            :id="item.cid"
-            :name="item.pname + ' ' + item.fname + ' ' + item.lname"
-            :pdate="item.firstday"
-            :sdate="item.sdate"
-            :status="item.status"
-          />
+            <Patient
+              @select="patientInfo"
+              v-for="(item, index) in data"
+              :key="index"
+              :id="item.cid"
+              :name="item.pname + ' ' + item.fname + ' ' + item.lname"
+              :pdate="item.firstday"
+              :sdate="item.sdate"
+              :status="item.status"
+            />
         </table>
       </div>
     </div>
@@ -64,6 +66,9 @@ export default {
   },
   methods: {
     patientInfo(component) {
+      this.$emit("select", component);
+    },
+    patientAdd(component) {
       this.$emit("select", component);
     },
   },
@@ -98,20 +103,6 @@ h1 {
   border-radius: 15px;
   border: 1.75px solid black;
 }
-.doctorbox {
-  width: 32%;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 15px;
-}
-
-.doctorbox h1 {
-  text-align: left;
-  font-weight: 800;
-  width: 100%;
-}
 .subdocb {
   display: flex;
   justify-content: center;
@@ -141,6 +132,7 @@ h1 {
   /* background-color: greenyellow; */
 }
 .subadd {
+  font-weight: bold;
   color: white;
   display: flex;
   justify-content: center;
@@ -152,6 +144,7 @@ h1 {
   border: 1.75px solid black;
 }
 .subsearch {
+  font-weight: bold;
   margin-left: 20px;
   display: flex;
   justify-content: center;
@@ -162,4 +155,5 @@ h1 {
   border-radius: 15px;
   border: 1.75px solid black;
 }
+
 </style>

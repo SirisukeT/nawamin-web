@@ -2,7 +2,7 @@
   <div class="leftbox">
     <div class="ppcolor">
       <div class="pp">
-        <img src="../assets/user-regular.svg" alt="" />
+        <img src="@/assets/user-regular.svg" alt="" />
       </div>
     </div>
     <div class="phptext">

@@ -4,7 +4,7 @@
       ภาพรวมระบบ
     </button>
     <!-- <router-link to="/admin">ภาพรวมระบบ 2</router-link> -->
-    <button id="b2" @click="selectMenu(['/PatientListView', 'รายชื่อผู้ป่วย'])">
+    <button To="/PatientListView" id="b2" @click="selectMenu(['/PatientListView', 'รายชื่อผู้ป่วย'])">
       รายชื่อผู้ป่วย
     </button>
     <!-- <router-link to="/admin/PatientListView">รายชื่อผู้ป่วย 2</router-link> -->

@@ -5,7 +5,7 @@
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
         <TitleBar :Title="Title" />
-        <PL_11
+        <PL_12
           @select="selectmenu"
           @selectSub="selectmenuSubmenu"
         />
@@ -16,10 +16,10 @@
 
 <script>
 export default {
-  name: "PatientListView",
+  name: "PatientListViewAdd",
   data() {
         return {
-            Title: ["รายชื่อผู้ป่วย"],
+            Title: ["รายชื่อผู้ป่วย","เพิ่มผู้ป่วย"],
         };
     },
     methods: {

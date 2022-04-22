@@ -62,6 +62,7 @@ div .main-content {
 }
 
 button.previous {
+  font-weight: bold;
   margin-top: 60px;
   width: 150px;
   height: 60px;
@@ -69,4 +70,57 @@ button.previous {
   border-radius: 15px;
   border: 1.75px solid black;
 }
+
+.dp-flex-r{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marginA-10{
+  margin: 10px;
+}
+
+.marginL-10{
+  margin-left: 10px;
+}
+.marginR-10{
+  margin-right: 10px;
+}
+.marginT-10{
+  margin-top: 10px;
+}
+.marginB-10{
+  margin-bottom: 10px;
+}
+.marginLR-10{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.marginA-10{
+  margin: 10px;
+}
+
+.marginL-25{
+  margin-left: 25px;
+}
+.marginR-25{
+  margin-right: 25px;
+}
+.marginT-25{
+  margin-top: 25px;
+}
+.marginB-25{
+  margin-bottom: 25px;
+}
+.marginLR-25{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.ta-c{
+  text-align: center;
+}
+
 </style>

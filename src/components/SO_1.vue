@@ -2,15 +2,15 @@
   <div class="bigbox">
     <div class="topbox">
 
-      <div class="doctorbox">
-        <h1>จำนวนผู้ป่วย (คน)</h1>
+      <div class="doctorbox" >
+        <h1 class="ta-c">จำนวนผู้ป่วย (คน)</h1>
         <div class="line"></div>
         <div class="subdocb">
           <b>1000</b>
         </div>
       </div>
 
-      <div class="doctorbox">
+      <div class="doctorbox ta-c">
         <h1>จำนวนแพทย์ (คน)</h1>
         <div class="line"></div>
         <div class="subdocb">
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div class="doctorbox">
+      <div class="doctorbox ta-c">
         <h1>จำนวนการส่งต่อ (คน)</h1>
         <div class="line"></div>
         <div class="subdocb">
@@ -78,7 +78,8 @@ h1 {
 }
 
 .doctorbox h1{
-  font-size: 25px; 
+  font-size: 25px;
+  text-align: center;
 }
 .subdocb {
   display: flex;

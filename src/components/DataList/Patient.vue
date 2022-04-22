@@ -5,28 +5,33 @@
     <th>{{ pdate }}</th>
     <th>{{ sdate }}</th>
     <th>{{ status }}</th>
-    <th id="info"><button @click="patientInfo(['/PatientDetailsView','รายชื่อผู้ป่วย',name])">รายละเอียด</button></th>
+    <th id="info">
+      <button
+        @click="patientInfo(['/PatientDetailsView', 'รายชื่อผู้ป่วย', name])"
+      >
+        รายละเอียด
+      </button>
+    </th>
   </tr>
 </template>
 
 <script>
-export default{
-    name:"Patient",
-    props:{
-        key:{type:Number},
-        name:{type:String, required:true},
-        pdate:{type:String},
-        sdate:{type:String},
-        status:{type:String},
-        something:{type:String},
+export default {
+  name: "Patient",
+  props: {
+    key: { type: Number },
+    name: { type: String, required: true },
+    pdate: { type: String },
+    sdate: { type: String },
+    status: { type: String },
+    something: { type: String },
+  },
+  methods: {
+    patientInfo(component) {
+      this.$emit("select", component);
     },
-    methods:{
-        patientInfo(component){
-            this.$emit("select",component);
-        },
-    }
-}
-    
+  },
+};
 </script>
 
 <style>
@@ -58,5 +63,4 @@ th#info button {
 /* th#info button:hover{
     transform: scale(.95);
 } */
-
 </style>
