@@ -108,7 +108,7 @@
 
 <script>
 export default {
-  name: "PH1",
+  name: "PH_1",
 };
 </script>
 

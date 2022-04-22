@@ -17,7 +17,7 @@ export default {
   name: "AdminView",
   data() {
     return {
-      activeTab: "SO_1",
+      activeTab: "PCD_11",
       Title: ["ภาพรวมระบบ"],
     };
   },
