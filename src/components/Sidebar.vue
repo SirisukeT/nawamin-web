@@ -1,7 +1,7 @@
 <template>
   <div class="sidenav">
-    <button @click="selectMenu('SO_1')">ภาพรวมระบบ</button>
-    <button @click="selectMenu('PL_11')">รายชื่อผู้ป่วย</button>
+    <button @click="selectMenu(['SO_1','ภาพรวมระบบ'])">ภาพรวมระบบ</button>
+    <button @click="selectMenu(['PL_11','รายชื่อผู้ป่วย'])" >รายชื่อผู้ป่วย</button>
     <button @click="toggleSetting">ตั้งค่าระบบ</button>
     <div class="setting" v-show="isSetting">
       <router-link :to="'/admin'">โรงพยาบาล</router-link>
@@ -27,8 +27,8 @@ export default {
       this.isSetting = !this.isSetting;
       console.log(this.isSetting);
     },
-    selectMenu(name){
-      this.$emit("Select",name);
+    selectMenu(component){
+      this.$emit("Select",component);
     }
   },
 };

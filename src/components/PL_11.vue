@@ -6,14 +6,14 @@
         <div class="subdocb"></div>
       </div>
 
-      <div class="patientbox">
+      <div class="doctorbox">
         <h1>วันที่</h1>
-        <div class="subpatb"></div>
+        <div class="subdocb"></div>
       </div>
 
-      <div class="forwardbox">
+      <div class="doctorbox">
         <h1>ถึงวันที่</h1>
-        <div class="subforb"></div>
+        <div class="subdocb"></div>
       </div>
     </div>
 
@@ -21,20 +21,49 @@
       <div class="addbox">
         <button class="subadd">เพิ่มผู้ป่วย</button>
       </div>
-      <div class="searchbox">
+      <div class="addbox">
         <button class="subsearch">ค้นหา</button>
       </div>
     </div>
 
     <div class="botbox">
-      <div class="graphbox"></div>
+      <div class="graphbox">
+        <table>
+          <tr>
+            <th>ลำดับ</th>
+            <th>ชื่อ - ชื่อ-สกุล</th>
+            <th>วันที่รับตัว</th>
+            <th>วันที่ส่งต่อ</th>
+            <th>สถานะ</th>
+            <th></th>
+          </tr>
+          <Patient 
+            v-for="(item,index) in patientList"
+            :key="index"
+            :name="item.name"
+            :pdate="item.pdate"
+            :sdate="item.sdate"
+            :status="item.status"
+            :something="item.something"
+          />
+        </table>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Patient from "./Patient.vue";
 export default {
-  name: "PL11_View",
+    name: "PL11_View",
+    data() {
+        return {
+            patientList: [
+                {name: "นายชอบ ไร้โรค", pdate: "-", sdate: "25 / 06 / 64", status: "ส่งต่อแล้ว", something: "รายละเอียด" },
+            ]
+        };
+    },
+    components: { Patient }
 };
 </script>
 
@@ -46,7 +75,7 @@ h1 {
 }
 .bigbox {
   width: 100%;
-  height: 200vh;
+  /* height: 200vh; */
   display: flex;
   flex-direction: column;
   /* background-color: black; */
@@ -60,7 +89,7 @@ h1 {
   /* background-color: blue; */
 }
 .botbox {
-  margin-top: 50px;
+  margin-top: 0px;
   width: 100%;
   height: 600px;
   display: flex;
@@ -69,96 +98,56 @@ h1 {
   border-radius: 15px;
   border: 1.75px solid black;
 }
-/* .doctorbox {
-  width: 30%;
-  height: 200px;
+.doctorbox {
+  width: 32%;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #c4c4c4;
   border-radius: 15px;
 }
-.patientbox {
-  width: 30%;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #c4c4c4;
-  border-radius: 15px;
+
+.doctorbox h1{
+  text-align: left;
+  font-weight: 800;
+  width: 100%;
 }
-.forwardbox {
-  width: 30%;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #c4c4c4;
-  border-radius: 15px;
-} */
 .subdocb {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -3px;
-  width: 375px;
+  /* width: 375px; */
   height: 60px;
+  width: 100%;
   background-color: #c4c4c4;
   border-radius: 15px;
   border: 1.75px solid black;
-}
-.subpatb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -3px;
-  width: 375px;
-  height: 60px;
-  background-color: #c4c4c4;
-  border-radius: 15px;
-  border: 1.75px solid black;
-}
-.subforb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -3px;
-  width: 375px;
-  height: 60px;
-  background-color: #c4c4c4;
-  border-radius: 15px;
-  border: 1.75px solid black;
-}
-.line {
-  margin-top: 5px;
-  width: 70%;
-  height: 1.5px;
-  background-color: black;
 }
 .graphbox {
   margin: 10px;
   width: 100%;
   height: 580px;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   background-color: #e7e7e7;
-  border: 1.75px solid black;
+  /* border: 1px solid black; */
 }
 .midbox{
-  padding-top: 10px;
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   /* background-color: greenyellow; */
 }
 .subadd {
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 150px;
   height: 60px;
-  background-color: #c4c4c4;
+  background-color: #31996e;
   border-radius: 15px;
   border: 1.75px solid black;
 }
@@ -169,8 +158,9 @@ h1 {
   align-items: center;
   width: 150px;
   height: 60px;
-  background-color: #c4c4c4;
+  background-color: white;
   border-radius: 15px;
   border: 1.75px solid black;
 }
+
 </style>
