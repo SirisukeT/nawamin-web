@@ -5,19 +5,19 @@
 
       <div class="box">
         <div class="subbox">
-          <b>ประวัติผู้ป่วย</b>
+          <button>ประวัติผู้ป่วย</button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <b>โรคปัจจุบัน</b>
+          <button>โรคปัจจุบัน</button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <b>ผลแลป</b>
+          <button>ผลแลป</button>
         </div>
       </div>
     </div>
@@ -26,19 +26,19 @@
 
       <div class="box">
         <div class="subbox">
-          <b>ยาที่ใ่ช้ในปัจจุบัน</b>
+          <button>ยาที่ใ่ช้ในปัจจุบัน</button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <b>ใบส่งตัว</b>
+          <button>ใบส่งตัว</button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <b>แบบแจ้งผลการตรวจการรักษา</b>
+          <button>แบบแจ้งผลการตรวจการรักษา</button>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@ h1 {
   flex-direction: column;
 }
 .topbox {
-  margin: 0px;
+  margin-bottom: 25px;
   width: 100%;
   height: 200px;
   display: flex;

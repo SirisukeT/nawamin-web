@@ -34,17 +34,12 @@ export default {
     PCD_11,
     PCD_12,
   },
-  data() {
-    return {
-      activeTab: "PCD_11",
-      Title: ["ภาพรวมระบบ"],
-    };
-  },
   methods:{
     selectmenu(component){
       // alert(`ข้อมูลของ ${component[0]} ค่ะ`);
       this.activeTab = component[0];
       this.Title  = component.slice(1);
+      window.scrollTo(0,0)
     }
   }
 };

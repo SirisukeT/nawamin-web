@@ -22,7 +22,7 @@ export default{
     },
     methods:{
         patientInfo(component){
-            this.$emit("Select",component);
+            this.$emit("select",component);
         },
     }
 }
@@ -51,10 +51,12 @@ th#info button {
   background-color: #25957a;
   border-radius: 10px;
   width: 100%;
+  color: white;
+  font-weight: bold;
 }
 
-th#info button:hover{
+/* th#info button:hover{
     transform: scale(.95);
-}
+} */
 
 </style>

@@ -17,11 +17,11 @@ html, body, #app{
 }
 
 button:hover{
-  transform: scale(0.95);
+  transform: scale(1.05);
 }
 
 button:active{
-  transform: scale(1.05);
+  transform: scale(0.95);
 }
 
 </style>

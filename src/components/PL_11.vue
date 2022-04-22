@@ -38,11 +38,12 @@
             <th></th>
           </tr>
           <Patient
-            @Select="patientInfo"
-            v-for="(item, index) in patientList"
+            @select="patientInfo"
+            v-for="(item, index) in data"
             :key="index"
-            :name="item.name"
-            :pdate="item.pdate"
+            :id="item.cid"
+            :name="item.pname + ' ' + item.fname + ' ' + item.lname"
+            :pdate="item.firstday"
             :sdate="item.sdate"
             :status="item.status"
           />
@@ -53,25 +54,17 @@
 </template>
 
 <script>
-import Patient from "./Patient.vue";
+import data from "../json/Test.json";
 export default {
   name: "PL_11",
   data() {
     return {
-      patientList: [
-        {
-          name: "นายชอบ ไร้โรค",
-          pdate: "-",
-          sdate: "25 / 06 / 64",
-          status: "ส่งต่อแล้ว",
-        },
-      ],
+      data,
     };
   },
-  components: { Patient },
   methods: {
     patientInfo(component) {
-      this.$emit("Select", component);
+      this.$emit("select", component);
     },
   },
 };
