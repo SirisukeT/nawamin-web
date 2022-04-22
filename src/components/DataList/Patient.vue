@@ -17,7 +17,7 @@ export default{
         name:{type:String, required:true},
         pdate:{type:String},
         sdate:{type:String},
-        status:{type:String, required:true},
+        status:{type:String},
         something:{type:String},
     },
     methods:{

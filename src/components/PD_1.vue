@@ -5,7 +5,7 @@
 
       <div class="box">
         <div class="subbox">
-          <button>ประวัติผู้ป่วย</button>
+          <button @click="selectMenu(['PH_1','ประวัติผู้ป่วย'])" >ประวัติผู้ป่วย</button>
         </div>
       </div>
 
@@ -49,6 +49,12 @@
 <script>
 export default {
   name: "PD_1",
+  methods:{
+    selectMenu(component){
+      // alert(`ข้อมูลของ ${component[0]} ค่ะ`);
+      this.$emit("selectSub",component);
+    }
+  }
 };
 </script>
 

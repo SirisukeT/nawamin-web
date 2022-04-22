@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="buttonbox">
-        <button class="return">ย้อนกลับ</button>
+        <button @click="previousPage" class="return">ย้อนกลับ</button>
       </div>
     </div>
   </div>
@@ -92,6 +92,15 @@
 <script>
 export default {
   name: "PCD_11",
+  props: 
+    ["previous"]
+  ,
+  methods:{
+    previousPage(){
+      alert(`ข้อมูลของ ${previous} ค่ะ`);
+      this.$emit("select",previous)
+    }
+  }
 };
 </script>
 

@@ -5,7 +5,7 @@
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
         <TitleBar :Title="Title"/>
-        <component :is="activeTab" @select="selectmenu"/>
+        <component  :previous="previousTab" :is="activeTab" @select="selectmenu" @selectSub="selectmenuSubmenu"/>
       </div>
     </div>
   </div>
@@ -16,16 +16,22 @@ export default {
   name: "AdminView",
   data(){
     return{
+      previousTab: "",
       activeTab: "SO_1",
       Title: ["ภาพรวมระบบ"]
     }
   },
   methods:{
     selectmenu(component){
-      // alert(`ข้อมูลของ ${component[0]} ค่ะ`);
+      this.previousTab = [this.activeTab,this.Title];
       this.activeTab = component[0];
-      this.Title  = component.slice(1);
-      window.scrollTo(0,0)
+      this.Title = component.slice(1);
+      window.scrollTo(0,0);
+    },
+    selectmenuSubmenu(component){
+      this.previousTab = [this.activeTab,this.Title];
+      this.activeTab = component[0];
+      this.Title.push(component.slice(1)[0]);
     }
   }
 };

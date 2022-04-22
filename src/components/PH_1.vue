@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="buttonbox">
-        <button class="return">ย้อนกลับ</button>
+        <button @click="previousPage" class="return">ย้อนกลับ</button>
       </div>
     </div>
   </div>
@@ -28,6 +28,7 @@
 <script>
 export default {
   name: "PH_1",
+  props:["previous"],
   data() {
     return {
       patientInfo: [
@@ -46,6 +47,12 @@ export default {
       ],
     };
   },
+  methods:{
+    previousPage(){
+      alert(`ข้อมูลของ ${this.previous} ค่ะ`);
+      this.$emit("selectSub",[this.previous])
+    }
+  }
 };
 </script>
 
