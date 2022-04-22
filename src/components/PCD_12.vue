@@ -1,15 +1,6 @@
 <template>
   <div class="bigbox">
-    <div class="leftbox">
-      <div class="ppcolor">
-        <div class="pp">
-          <img src="../assets/user-regular.svg" alt="" />
-        </div>
-      </div>
-      <div class="phptext">
-        <h3>นายชอบ ไร้โรค</h3>
-      </div>
-    </div>
+    <PatientCard/>
     <div class="rightbox">
       <div class="historybox">
         <h1 class="CurrentDiseases">โรคปัจจุบัน</h1>
