@@ -2,7 +2,7 @@
   <div class="sidenav">
     <button id="b1" @click="selectMenu(['SO_1','ภาพรวมระบบ'])">ภาพรวมระบบ</button>
     <button id="b2" @click="selectMenu(['PL_11','รายชื่อผู้ป่วย'])" >รายชื่อผู้ป่วย</button>
-    <button id="b3" @click="toggleSetting">ตั้งค่าระบบ<fa :icon="['fas', 'arrow-left']" /></button>
+    <button id="b3" @click="toggleSetting">ตั้งค่าระบบ<fa :icon="['fas', 'angle-right']" /></button>
     <div class="setting" v-show="isSetting">
       <button id="b4" @click="selectMenu(['PL_11','โรงพยาบาล'])" >โรงพยาบาล</button>
       <button id="b5" @click="selectMenu(['PL_11','กลุ่มผู้ใช้งาน'])" >กลุ่มผู้ใช้งาน</button>
@@ -84,7 +84,8 @@ button#b3{
 }
 
 button#b3 svg{
-  margin: 0 20px;
+  padding-left:35px;
+  background: none;
 }
 
 </style>

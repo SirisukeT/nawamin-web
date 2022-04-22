@@ -19,6 +19,7 @@ import PD_1 from "../components/PD_1.vue";
 import PL_11 from "../components/PL_11.vue";
 import PH_1 from "../components/PH1.vue";
 import TitleBar from "../components/TitleBar.vue";
+import PCD_11 from "../components/PCD_11.vue";
 export default {
   name: "AdminView",
   components: {
@@ -29,10 +30,11 @@ export default {
     PL_11,
     PH_1,
     TitleBar,
+    PCD_11,
   },
   data() {
     return {
-      activeTab: "SO_1",
+      activeTab: "PCD_11",
       Title: ["ภาพรวมระบบ"],
     };
   },

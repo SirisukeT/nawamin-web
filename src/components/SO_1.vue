@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: "SO1_View",
+  name: "SO_1",
 };
 </script>
 
