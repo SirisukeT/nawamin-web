@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import { useSiteStore } from "./stores/useSiteStore";
-const store = useSiteStore();
 export default {
     name: "AdminView",
     data() {

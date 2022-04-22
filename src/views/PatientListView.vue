@@ -5,7 +5,6 @@
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
         <TitleBar :Title="Title" />
-        <h1>{{store.state.title}}</h1>
         <PL_11
           @select="selectmenu"
           @selectSub="selectmenuSubmenu"
@@ -15,12 +14,7 @@
   </div>
 </template>
 
-<script setup>
-import { useSiteStore } from "../stores/useSiteStore";
-const store = useSiteStore();
-</script>
-
-<!--<script>
+<script>
 export default {
   name: "PatientListView",
   data() {
@@ -44,4 +38,4 @@ export default {
         },
     }
 };
-</script>-->
+</script>
