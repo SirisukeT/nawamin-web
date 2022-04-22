@@ -23,11 +23,11 @@
 
 <script>
 export default {
-  name: "PH_1",
+  name: "PH1",
 };
 </script>
 
-<style>
+<style scoped>
 
 .pp img{
   width: 170px;
@@ -57,6 +57,7 @@ rb{
     margin: 0px;
     padding: 0px;
 }
+
 .bigbox{
   width: 100%;
   height: 200vh;

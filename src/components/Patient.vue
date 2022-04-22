@@ -1,11 +1,11 @@
 <template>
   <tr>
-    <th>{{key}}</th>
-    <th>{{name}}</th>
-    <th>{{pdate}}</th>
-    <th>{{sdate}}</th>
-    <th>{{status}}</th>
-    <th id="info"><button @click="patientInfo" >{{something}}</button></th>
+    <th>{{ key }}</th>
+    <th>{{ name }}</th>
+    <th>{{ pdate }}</th>
+    <th>{{ sdate }}</th>
+    <th>{{ status }}</th>
+    <th id="info"><button @click="patientInfo(['PD_1','รายชื่อผู้ป่วย',name])">รายละเอียด</button></th>
   </tr>
 </template>
 
@@ -21,12 +21,12 @@ export default{
         something:{type:String},
     },
     methods:{
-        patientInfo(){
-            alert(`ข้อมูลของ ${this.name} ค่ะ`);
-        }
+        patientInfo(component){
+            this.$emit("Select",component);
+        },
     }
-    
 }
+    
 </script>
 
 <style>
@@ -36,19 +36,25 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   border: 1px solid black;
   text-align: center;
   padding: 8px;
 }
 
-th#info{
-    width: 150px;
+th#info {
+  width: 150px;
 }
-th#info button{
-    border: 1px solid black;
-    background-color: #25957A;
-    border-radius: 10px;
-    width: 100%;
+th#info button {
+  border: 1px solid black;
+  background-color: #25957a;
+  border-radius: 10px;
+  width: 100%;
 }
+
+th#info button:hover{
+    transform: scale(.95);
+}
+
 </style>
