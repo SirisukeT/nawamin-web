@@ -37,14 +37,14 @@
             <th>สถานะ</th>
             <th></th>
           </tr>
-          <Patient 
-            v-for="(item,index) in patientList"
+          <Patient
+            @Select="patientInfo"
+            v-for="(item, index) in patientList"
             :key="index"
             :name="item.name"
             :pdate="item.pdate"
             :sdate="item.sdate"
             :status="item.status"
-            :something="item.something"
           />
         </table>
       </div>
@@ -55,15 +55,25 @@
 <script>
 import Patient from "./Patient.vue";
 export default {
-    name: "PL11_View",
-    data() {
-        return {
-            patientList: [
-                {name: "นายชอบ ไร้โรค", pdate: "-", sdate: "25 / 06 / 64", status: "ส่งต่อแล้ว", something: "รายละเอียด" },
-            ]
-        };
+  name: "PL_11",
+  data() {
+    return {
+      patientList: [
+        {
+          name: "นายชอบ ไร้โรค",
+          pdate: "-",
+          sdate: "25 / 06 / 64",
+          status: "ส่งต่อแล้ว",
+        },
+      ],
+    };
+  },
+  components: { Patient },
+  methods: {
+    patientInfo(component) {
+      this.$emit("Select", component);
     },
-    components: { Patient }
+  },
 };
 </script>
 
@@ -75,10 +85,8 @@ h1 {
 }
 .bigbox {
   width: 100%;
-  /* height: 200vh; */
   display: flex;
   flex-direction: column;
-  /* background-color: black; */
 }
 .topbox {
   margin: 0px;
@@ -86,7 +94,6 @@ h1 {
   height: 100px;
   display: flex;
   justify-content: space-between;
-  /* background-color: blue; */
 }
 .botbox {
   margin-top: 0px;
@@ -107,7 +114,7 @@ h1 {
   border-radius: 15px;
 }
 
-.doctorbox h1{
+.doctorbox h1 {
   text-align: left;
   font-weight: 800;
   width: 100%;
@@ -132,7 +139,7 @@ h1 {
   background-color: #e7e7e7;
   /* border: 1px solid black; */
 }
-.midbox{
+.midbox {
   width: 100%;
   height: 100px;
   display: flex;
@@ -162,5 +169,4 @@ h1 {
   border-radius: 15px;
   border: 1.75px solid black;
 }
-
 </style>

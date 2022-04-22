@@ -68,11 +68,10 @@ div.navbar-brand p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-right: 1rem; */
 }
 
 .navbar-r > * {
-  margin: 0 1rem;
+  margin-left: 2.5rem;
 }
 
 .navbar-r img {
@@ -80,6 +79,10 @@ div.navbar-brand p {
   border-radius: 50%;
   height: 70px;
   width: 70px;
+}
+
+.navbar-r a{
+  margin: 0 15px 0 20px;
 }
 
 .navbar-r img#exit {

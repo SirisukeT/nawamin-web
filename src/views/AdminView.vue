@@ -5,8 +5,7 @@
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
         <TitleBar :Title="Title"/>
-        <component :is="activeTab" />
-        <!-- <Sidebar /> -->
+        <component :is="activeTab" @select="selectmenu"/>
       </div>
     </div>
   </div>
@@ -33,14 +32,15 @@ export default {
   },
   data() {
     return {
-      activeTab: "PH_1",
-      Title: ""
+      activeTab: "SO_1",
+      Title: ["ภาพรวมระบบ"],
     };
   },
   methods:{
     selectmenu(component){
+      // alert(`ข้อมูลของ ${component[0]} ค่ะ`);
       this.activeTab = component[0];
-      this.Title  = component[1];
+      this.Title  = component.slice(1);
     }
   }
 };
@@ -65,7 +65,7 @@ div .main-content {
   max-width: 100%;
   /* height: 100%; */
   margin-left: 250px;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
 }
 
 .content-naw p {

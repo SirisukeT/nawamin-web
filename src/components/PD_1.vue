@@ -48,7 +48,7 @@
 
 <script>
 export default {
-  name: "PD1_View",
+  name: "PD_1",
 };
 </script>
 
@@ -60,10 +60,10 @@ h1 {
 }
 .bigbox{
   width: 100%;
-  height: 200vh;
+  height: 100%;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* background-color: black; */
 }
 .topbox {
   margin: 0px;
@@ -81,7 +81,7 @@ h1 {
   /* background-color: blue; */
 }
 .box {
-  width: 320px;
+  width: 30%;
   height: 140px;
   display: flex;
   flex-direction: column;
@@ -89,66 +89,14 @@ h1 {
   background-color: #c4c4c4;
   border-radius: 15px;
 }
-/* .patientbox {
-  width: 320px;
-  height: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #c4c4c4;
-  border-radius: 15px;
-}
-.forwardbox {
-  width: 320px;
-  height: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #c4c4c4;
-  border-radius: 15px;
-} */
 .subbox {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px;
-  width: 300px;
-  height: 120px;
+  width: 95%;
+  height: 100%;
   background-color: #e7e7e7;
   border-radius: 15px;
 }
-/* .subpatb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  width: 300px;
-  height: 120px;
-  background-color: #e7e7e7;
-  border-radius: 15px;
-}
-.subforb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  width: 300px;
-  height: 120px;
-  background-color: #e7e7e7;
-  border-radius: 15px;
-}
-.line {
-  margin-top: 5px;
-  width: 70%;
-  height: 1.5px;
-  background-color: black;
-}
-.graphbox {
-  margin-top: 0px;
-  width: 100%;
-  height: 600px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #c4c4c4;
-} */
 </style>

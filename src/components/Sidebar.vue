@@ -1,13 +1,13 @@
 <template>
   <div class="sidenav">
-    <button @click="selectMenu(['SO_1','ภาพรวมระบบ'])">ภาพรวมระบบ</button>
-    <button @click="selectMenu(['PL_11','รายชื่อผู้ป่วย'])" >รายชื่อผู้ป่วย</button>
-    <button @click="toggleSetting">ตั้งค่าระบบ</button>
+    <button id="b1" @click="selectMenu(['SO_1','ภาพรวมระบบ'])">ภาพรวมระบบ</button>
+    <button id="b2" @click="selectMenu(['PL_11','รายชื่อผู้ป่วย'])" >รายชื่อผู้ป่วย</button>
+    <button id="b3" @click="toggleSetting">ตั้งค่าระบบ<fa :icon="['fas', 'arrow-left']" /></button>
     <div class="setting" v-show="isSetting">
-      <router-link :to="'/admin'">โรงพยาบาล</router-link>
-      <router-link :to="'/admin'">กลุ่มผู้ใช้งาน</router-link>
-      <router-link :to="'/admin'">ผู้ใช้งาน</router-link>
-      <router-link :to="'/admin'">แผนก</router-link>
+      <button id="b4" @click="selectMenu(['PL_11','โรงพยาบาล'])" >โรงพยาบาล</button>
+      <button id="b5" @click="selectMenu(['PL_11','กลุ่มผู้ใช้งาน'])" >กลุ่มผู้ใช้งาน</button>
+      <button id="b6" @click="selectMenu(['PL_11','ผู้ใช้งาน'])" >ผู้ใช้งาน</button>
+      <button id="b7" @click="selectMenu(['PL_11','แผนก'])" >แผนก</button>
     </div>
   </div>
 </template>
@@ -51,7 +51,6 @@ div.sidenav {
 }
 
 div.sidenav * {
-  padding: 6px 8px 6px 6px;
   text-decoration: none;
   font-size: 25px;
   color: #000;
@@ -61,16 +60,31 @@ div.sidenav * {
 }
 
 div.sidenav button{
+  padding: 0;
   border: 0;
   width: 100%;
+  height: 50px;
 }
 
-div.setting{
+div.sidenav button:hover{
   padding: 0;
+  background-color: rgb(240,240,240);
+  transform: scale(1);
+}
+
+
+div.setting button{
   font-weight: bold;
 }
-/* button.setting{
-  margin: 0;
-  border: none;
-} */
+
+button#b3{
+  display: flex;
+  align-items: center;
+  padding-left: 70px;
+}
+
+button#b3 svg{
+  margin: 0 20px;
+}
+
 </style>
