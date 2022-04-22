@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="buttonbox">
-        <button @click="previousPage" class="return">ย้อนกลับ</button>
+        <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@ export default {
   },
   methods:{
     previousPage(){
-      alert(`ข้อมูลของ ${this.previous} ค่ะ`);
+      // alert(`ข้อมูลของ ${this.previous} ค่ะ`);
       this.$emit("selectSub",[this.previous])
     }
   }
@@ -57,26 +57,6 @@ export default {
 </script>
 
 <style scoped>
-.buttonbox {
-  width: 100%;
-  height: 50px;
-  /* background-color: greenyellow; */
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.return {
-  margin-top: 40px;
-  margin-right: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 60px;
-  background-color: #f4d013;
-  border-radius: 15px;
-  border: 1.75px solid black;
-}
 .pp img {
   width: 170px;
   height: 170px;

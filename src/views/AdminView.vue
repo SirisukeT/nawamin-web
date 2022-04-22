@@ -5,7 +5,6 @@
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
         <TitleBar :Title="Title" />
-        <!-- <h1>{{side.title}}</h1> -->
         <SO_1
           @select="selectmenu"
           @selectSub="selectmenuSubmenu"

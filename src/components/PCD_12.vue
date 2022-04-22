@@ -23,13 +23,13 @@
               <label>หัวใจล้มเหลวเฉียบพลัน</label>
             </div>
             <button class="inforight">
-              <label>13 กันยายน 2564</label>
+              13 กันยายน 2564
             </button>
           </div>
         </div>
       </div>
       <div class="buttonbox">
-        <button class="return">ย้อนกลับ</button>
+        <button @click="$router.go(-1)">ย้อนกลับ</button>
       </div>
     </div>
   </div>
@@ -51,18 +51,6 @@ padding-bottom: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.return {
-  margin-top: 40px;
-  margin-right: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 60px;
-  background-color: #f4d013;
-  border-radius: 15px;
-  border: 1.75px solid black;
 }
 .pp img {
   width: 170px;

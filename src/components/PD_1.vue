@@ -1,60 +1,61 @@
 <template>
   <div class="bigbox">
-
     <div class="topbox">
-
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['PH_1','ประวัติผู้ป่วย'])" >ประวัติผู้ป่วย</button>
+          <button @click="selectMenu(['/PatientInfoView', 'ประวัติผู้ป่วย'])">
+            ประวัติผู้ป่วย
+          </button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button>โรคปัจจุบัน</button>
+          <button @click="selectMenu(['/PatientCurrentDisease', 'โรคปัจจุบัน'])" >โรคปัจจุบัน</button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button>ผลแลป</button>
+          <button @click="selectMenu(['/PatientInfoView', 'ประวัติผู้ป่วย'])">ผลแลป</button>
         </div>
       </div>
     </div>
 
     <div class="botbox">
-
       <div class="box">
         <div class="subbox">
-          <button>ยาที่ใ่ช้ในปัจจุบัน</button>
+          <button @click="selectMenu(['/PatientInfoView', 'ประวัติผู้ป่วย'])">ยาที่ใ่ช้ในปัจจุบัน</button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button>ใบส่งตัว</button>
+          <button @click="selectMenu(['/PatientInfoView', 'ประวัติผู้ป่วย'])">ใบส่งตัว</button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button>แบบแจ้งผลการตรวจการรักษา</button>
+          <button @click="selectMenu(['/PatientInfoView', 'ประวัติผู้ป่วย'])">แบบแจ้งผลการตรวจการรักษา</button>
         </div>
       </div>
     </div>
-
+  </div>
+  <div class="buttonbox">
+    <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "PD_1",
-  methods:{
-    selectMenu(component){
+  methods: {
+    selectMenu(component) {
       // alert(`ข้อมูลของ ${component[0]} ค่ะ`);
-      this.$emit("selectSub",component);
-    }
-  }
+      this.$emit("selectSub", component);
+    },
+  },
 };
 </script>
 
@@ -64,7 +65,7 @@ h1 {
   text-align: center;
   font-size: 20px;
 }
-.bigbox{
+.bigbox {
   width: 100%;
   height: 100%;
   max-height: 100vh;
@@ -81,7 +82,6 @@ h1 {
 .botbox {
   margin-top: -10px;
   width: 100%;
-  height: 600px;
   display: flex;
   justify-content: space-between;
   /* background-color: blue; */

@@ -51,4 +51,22 @@ div .main-content {
 .content-naw p {
   font-size: xx-large;
 }
+
+.buttonbox {
+  
+  width: 100%;
+  /* background-color: greenyellow; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+button.previous {
+  margin-top: 60px;
+  width: 150px;
+  height: 60px;
+  background-color: #f4d013;
+  border-radius: 15px;
+  border: 1.75px solid black;
+}
 </style>

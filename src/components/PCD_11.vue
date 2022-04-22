@@ -28,7 +28,7 @@
               <label>สภาวะหัวใจล้มเหลวเฉียบพลัน</label>
             </div>
             <button class="inforight">
-              <label>13 กันยายน 2564</label>
+              13 กันยายน 2564
             </button>
           </div>
           <div class="info2">
@@ -36,7 +36,7 @@
               <label>โรคเบาหวาน</label>
             </div>
             <button class="inforight">
-              <label>13 กันยายน 2564</label>
+              13 กันยายน 2564
             </button>
           </div>
           <div class="info2">
@@ -44,7 +44,7 @@
               <label>ความดันโลหิตสูง</label>
             </div>
             <button class="inforight">
-              <label>13 กันยายน 2564</label>
+              13 กันยายน 2564
             </button>
           </div>
         </div>
@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="buttonbox">
-        <button @click="previousPage" class="return">ย้อนกลับ</button>
+        <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
       </div>
     </div>
   </div>
@@ -96,10 +96,6 @@ export default {
     ["previous"]
   ,
   methods:{
-    previousPage(){
-      alert(`ข้อมูลของ ${previous} ค่ะ`);
-      this.$emit("select",previous)
-    }
   }
 };
 </script>
@@ -125,18 +121,6 @@ padding-bottom: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.return {
-  margin-top: 40px;
-  margin-right: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 60px;
-  background-color: #f4d013;
-  border-radius: 15px;
-  border: 1.75px solid black;
 }
 .pp img {
   width: 170px;
@@ -221,6 +205,7 @@ padding-bottom: 60px;
   background-color: black;
 }
 .boxin {
+  padding-bottom:20px;
   margin: 20px;
   width: 90%;
   height: 95%;
@@ -248,6 +233,10 @@ padding-bottom: 60px;
   align-items: center;
   text-align: center;
   /* background-color: skyblue; */
+}
+
+div.info label{
+  font-weight: bold;
 }
 .inforight {
   display: flex;

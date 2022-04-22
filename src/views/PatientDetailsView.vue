@@ -6,8 +6,6 @@
       <div class="content-naw">
         <TitleBar :Title="Title" />
         <PD_1
-          :previous="previousTab"
-          :is="activeTab"
           @select="selectmenu"
           @selectSub="selectmenuSubmenu"
         />
@@ -25,7 +23,7 @@ export default {
         return {
             previousTab: "",
             activeTab: "SO_1",
-            Title: ["ภาพรวมระบบ"],
+            Title: ""
         };
     },
     methods: {
@@ -34,6 +32,7 @@ export default {
             this.$router.push(component[0]);
             this.activeTab = component[0];
             this.Title = component.slice(1);
+            alert(this.Title);
             window.scrollTo(0, 0);
         },
         selectmenuSubmenu(component) {

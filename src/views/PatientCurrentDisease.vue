@@ -5,7 +5,7 @@
       <Sidebar @select="selectmenu" />
       <div class="content-naw">
         <TitleBar :Title="Title" />
-        <PL_11
+        <PCD_11
           @select="selectmenu"
           @selectSub="selectmenuSubmenu"
         />
@@ -16,10 +16,12 @@
 
 <script>
 export default {
-  name: "PatientListView",
-  data() {
+    name: "PatientCurrentDisease",
+    data() {
         return {
-            Title: ["รายชื่อผู้ป่วย"],
+            previousTab: "",
+            activeTab: "SO_1",
+            Title: ""
         };
     },
     methods: {
@@ -28,7 +30,7 @@ export default {
             this.$router.push(component[0]);
             this.activeTab = component[0];
             this.Title = component.slice(1);
-            // alert(this.Title);
+            alert(this.Title);
             window.scrollTo(0, 0);
         },
         selectmenuSubmenu(component) {
@@ -38,5 +40,9 @@ export default {
             this.Title.push(component.slice(1)[0]);
         },
     }
-};
+}
 </script>
+
+<style>
+
+</style>
