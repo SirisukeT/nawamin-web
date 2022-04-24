@@ -1,15 +1,23 @@
 <template>
-  <div v-for="(list, index) in info" class="info" :key="index">
+  <div v-for="(key, index) in keyword" class="info" :key="index">
     <div class="infoleft">
-      <p>{{ list[0] }}</p>
+      <!-- <p>{{ keyword[index] }}</p> -->
+      <p>{{ key[1] }}</p>
     </div>
     <div class="inforight">
-      <p>{{ list[1] }}</p>
+      <p v-if="store.getSomething(key[0],info)" >{{ store.patient.text }}</p>
+      <p v-else>{{ info[key[0]] }}</p>
     </div>
   </div>
 </template>
 
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
+
 <script>
+// import religion from '@/json/religion.json'
 export default {
   name: "PatientInfo",
   props: ["info"],
@@ -17,6 +25,25 @@ export default {
     patientInfo(component) {
       this.$emit("select", component);
     },
+  },
+  data() {
+    return {
+      keyword: [
+        ["cid", "เลขบัตรประจำตัวประชาชน"],
+        ["birthday", "วันเกิด"],
+        ["age", "อายุ"],
+        ["sex", "เพศ"],
+        ["religion", "ศาสนา"],
+        ["hometel", "เบอร์โทรศัพท์"],
+        ["informtel", "เบอร์โทรญาติ"],
+        ["addrpart", "ที่อยู่"],
+        ["tmbpart", "ตำบล/แขวง"],
+        ["amppart", "อำเภอ/เขต"],
+        ["chwpart", "จังหวัด"],
+        ["po_code", "รหัสไปรษณีย์"]
+      ],
+      data: "",
+    };
   },
 };
 </script>
@@ -50,7 +77,7 @@ th#info button {
 .info {
   margin-top: 10px;
   width: 90%;
-  height: 30px;
+  height: 40px;
   display: flex;
   /* background-color: red; */
 }

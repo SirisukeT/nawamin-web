@@ -3,7 +3,16 @@
     <div class="topbox">
       <div class="box">
         <div class="subbox">
-          <button @click="store.changePage(['ประวัติผู้ป่วย','รายละเอียดผู้ป่วย',$route.params.name,'ประวัติผู้ป่วย'])">
+          <button
+            @click="
+              store.changePage([
+                'ประวัติผู้ป่วย',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ประวัติผู้ป่วย',
+              ])
+            "
+          >
             ประวัติผู้ป่วย
           </button>
         </div>
@@ -12,7 +21,14 @@
       <div class="box">
         <div class="subbox">
           <button
-            @click="store.changePage(['/PatientCurrentDisease', 'โรคปัจจุบัน'])"
+            @click="
+              store.changePage([
+                'โรคปัจจุบัน',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'โรคปัจจุบัน',
+              ])
+            "
           >
             โรคปัจจุบัน
           </button>
@@ -21,7 +37,16 @@
 
       <div class="box">
         <div class="subbox">
-          <button @click="store.changePage(['/PatientLabReportView', 'ผลแลป'])">
+          <button
+            @click="
+              store.changePage([
+                'ผลแลป',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ผลแลป',
+              ])
+            "
+          >
             ผลแลป
           </button>
         </div>
@@ -33,10 +58,13 @@
         <div class="subbox">
           <button
             @click="
-              store.changePage(['/PatientCurrentdrugsView', 'ยาที่ใ่ช้ในปัจจุบัน'])
+              store.changePage([
+                '/PatientCurrentdrugsView',
+                'ยาที่ใช้ในปัจจุบัน',
+              ])
             "
           >
-            ยาที่ใ่ช้ในปัจจุบัน
+            ยาที่ใช้ในปัจจุบัน
           </button>
         </div>
       </div>

@@ -6,7 +6,7 @@
       <div class="line"></div>
       <div class="historybox">
         <div class="boxin">
-          <PatientInfo :info="patientInfo" />
+          <PatientInfo :info="store.patient.data" />
         </div>
       </div>
       <div class="buttonbox">
@@ -16,33 +16,14 @@
   </div>
 </template>
 
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
+
 <script>
 export default {
   name: "PH_1",
-  props: ["previous"],
-  data() {
-    return {
-      patientInfo: [
-        ["เลขบัตรประจำตัวประชาชน", "1234567891234"],
-        ["วันเกิด", "1 มกราคม 2000"],
-        ["อายุ", 22],
-        ["เพศ", "ชาย"],
-        ["ศาสนา", "พุทธ"],
-        ["เบอร์โทรศัพท์", "1234567891"],
-        ["เบอร์โทรญาติ", "9876543219"],
-        ["ที่อยู่", "xx/xxx"],
-        ["ตำบล/แขวง", "ตำบล"],
-        ["อำเภอ/เขต", "อำเภอ"],
-        ["จังหวัด", "จังหวัด"],
-        ["รหัสไปรษณีย์", "1150"],
-      ],
-    };
-  },
-  methods: {
-    previousPage() {
-      this.$emit("selectSub", [this.previous]);
-    },
-  },
 };
 </script>
 
@@ -101,6 +82,7 @@ rb {
   /* background-color: red; */
   justify-content: top;
   align-items: center;
+  /* overflow: hidden; */
 }
 .historybox {
   display: flex;
@@ -108,7 +90,7 @@ rb {
   align-items: center;
   margin-top: 10px;
   width: 100%;
-  height: 525px;
+  height: 650px;
   background-color: #c4c4c4;
   border-radius: 50px;
   border: 1.75px solid white;

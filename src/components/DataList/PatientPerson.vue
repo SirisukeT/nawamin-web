@@ -7,7 +7,9 @@
     <th>{{ status }}</th>
     <th id="info">
       <button
-        @click="store.changePage(['รายละเอียดผู้ป่วย', 'รายละเอียดผู้ป่วย', name])"
+        @click="
+          store.sendPatient(['รายละเอียดผู้ป่วย', 'รายละเอียดผู้ป่วย', name],patient)
+        "
       >
         รายละเอียด
       </button>
@@ -30,6 +32,7 @@ export default {
     sdate: { type: String },
     status: { type: String },
     something: { type: String },
+    patient: {},
   },
 };
 </script>

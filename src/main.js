@@ -41,8 +41,8 @@ library.add(fas);
 library.add(far);
 
 const pinia = createPinia();
-pinia.use(({store}) => {
-    store.$router = markRaw(router)
+pinia.use(({ store }) => {
+  store.$router = markRaw(router);
 });
 const app = createApp(App);
 app.use(router);

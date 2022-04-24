@@ -1,13 +1,13 @@
 <template>
   <div class="sidenav">
-    <button id="b1" @click="store.changePage(['ภาพรวมระบบ','ภาพรวมระบบ'])">
+    <button id="b1" @click="store.changePage(['ภาพรวมระบบ', 'ภาพรวมระบบ'])">
       ภาพรวมระบบ
     </button>
     <!-- <router-link to="/admin">ภาพรวมระบบ 2</router-link> -->
     <button
       To="/PatientListView"
       id="b2"
-      @click="store.changePage(['รายชื่อผู้ป่วย','รายชื่อผู้ป่วย'])"
+      @click="store.changePage(['รายชื่อผู้ป่วย', 'รายชื่อผู้ป่วย'])"
     >
       รายชื่อผู้ป่วย
     </button>
@@ -27,7 +27,7 @@
       </div>
     </button>
     <div class="setting" v-show="isSetting">
-      <button id="b4" @click="store.changePage(['โรงพยาบาล',])">
+      <button id="b4" @click="store.changePage(['โรงพยาบาล'])">
         โรงพยาบาล
       </button>
       <button id="b5" @click="store.changePage(['กลุ่มผู้ใช้งาน'])">
@@ -54,11 +54,11 @@ export default {
       isSetting: false,
     };
   },
-  methods:{
-    toggleSetting(){
+  methods: {
+    toggleSetting() {
       this.isSetting = !this.isSetting;
-    }
-  }
+    },
+  },
 };
 </script>
 

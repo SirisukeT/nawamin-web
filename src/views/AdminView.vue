@@ -5,7 +5,7 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <SO_1/>
+        <SO_1 />
       </div>
     </div>
   </div>
@@ -13,6 +13,6 @@
 
 <script>
 export default {
-    name: "AdminView",
+  name: "AdminView",
 };
 </script>

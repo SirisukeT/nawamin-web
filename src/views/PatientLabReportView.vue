@@ -2,10 +2,10 @@
   <div class="main-admin">
     <NavBar />
     <div class="main-content">
-      <SideBar  />
+      <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <PLR_1/>
+        <PLR_1 />
       </div>
     </div>
   </div>

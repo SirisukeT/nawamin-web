@@ -37,6 +37,7 @@
             @select="patientInfo"
             v-for="(item, index) in data"
             :key="index"
+            :patient="item"
             :id="index + 1"
             :name="item.pname + ' ' + item.fname + ' ' + item.lname"
             :pdate="item.firstday"
