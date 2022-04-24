@@ -3,7 +3,7 @@
     <PatientCard/>
     <div class="rightbox">
       <div class="historybox">
-        <h1 class="CurrentDiseases">ผลแลป</h1>
+        <h1 class="CurrentDiseases">ยาที่ใช้ในปัจจุบัน</h1>
         <div class="line"></div>
         <div class="boxin">
           <div class="info">
@@ -11,10 +11,49 @@
               <h5>รายการ</h5>
             </div>
             <div class="subinfo">
-              <h5>ผลแลป</h5>
+              <h5>จำนวน</h5>
             </div>
             <div class="subinfo">
-             <h5>วันที่ตรวจ</h5>
+             <h5>การใช้งาน</h5>
+            </div>
+          </div>
+          <div class="info2">
+            <div class="subinfo">
+              <h5>น้ำตาลในเลือด</h5>
+            </div>
+            <div class="subinfo">
+              <h5>77 mg/dL</h5>
+            </div>
+            <div class="subinfo">
+             <h5>13 กันยายน 2564</h5>
+            </div>
+          </div>
+          <div class="info2">
+            <div class="subinfo">
+              <h5>ไขมันในเลือด</h5>
+            </div>
+            <div class="subinfo">
+              <h5>120 mg/dL</h5>
+            </div>
+            <div class="subinfo">
+              <h5>13 กันยายน 2564</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="historybox">
+        <h1 class="CurrentDiseases">ยาที่ใช้ในปัจจุบัน</h1>
+        <div class="line"></div>
+        <div class="boxin">
+          <div class="info">
+            <div class="subinfo">
+              <h5>รายการ</h5>
+            </div>
+            <div class="subinfo">
+              <h5>จำนวน</h5>
+            </div>
+            <div class="subinfo">
+             <h5>การใช้งาน</h5>
             </div>
           </div>
           <div class="info2">

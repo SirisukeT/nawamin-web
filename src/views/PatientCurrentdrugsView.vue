@@ -1,8 +1,8 @@
 <template>
     <div class="main-admin">
-      <Navbar />
+      <NavBar />
       <div class="main-content">
-        <Sidebar @select="selectmenu" />
+        <SideBar @select="selectmenu" />
         <div class="content-naw">
           <TitleBar :Title="Title" />
           <PM_1 @select="selectmenu" @selectSub="selectmenuSubmenu" />
