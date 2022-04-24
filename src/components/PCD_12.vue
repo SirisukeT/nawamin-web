@@ -14,7 +14,7 @@
               <h5>วันที่พบแพทย์ล่าสุด</h5>
             </div>
             <div class="inforight">
-             <h5>13 กันยายน 2564</h5>
+              <h5>13 กันยายน 2564</h5>
             </div>
           </div>
           <div class="info2">
@@ -214,12 +214,12 @@ export default {
 .subbox img {
   width: 20%;
 }
-* p{
+* p {
   margin: 0;
   padding: 0;
   text-align: center;
 }
-h1.CurrentDiseases{
+h1.CurrentDiseases {
   padding-top: 10px;
   margin-bottom: 0px;
 }

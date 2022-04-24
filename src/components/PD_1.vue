@@ -21,7 +21,9 @@
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/PatientLabReportView', 'ผลแลป'])">ผลแลป</button>
+          <button @click="selectMenu(['/PatientLabReportView', 'ผลแลป'])">
+            ผลแลป
+          </button>
         </div>
       </div>
     </div>
@@ -29,7 +31,11 @@
     <div class="botbox">
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/PatientCurrentdrugsView', 'ยาที่ใ่ช้ในปัจจุบัน'])">
+          <button
+            @click="
+              selectMenu(['/PatientCurrentdrugsView', 'ยาที่ใ่ช้ในปัจจุบัน'])
+            "
+          >
             ยาที่ใ่ช้ในปัจจุบัน
           </button>
         </div>
@@ -48,7 +54,6 @@
           </button>
         </div>
       </div>
-      
     </div>
   </div>
   <div class="buttonbox">

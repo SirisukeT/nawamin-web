@@ -18,9 +18,6 @@ import PatientCard from "./components/DataList/PatientCard.vue";
 import PCD_11 from "./components/PCD_11.vue";
 import PCD_12 from "./components/PCD_12.vue";
 import PLR_1 from "./components/PLR_1.vue";
-import PatientListView from "./views/PatientListView.vue";
-import PatientDetailsView from "./views/PatientDetailsView.vue";
-import PatientInfoView from "./views/PatientInfoView.vue";
 
 import GrayBox from "./components/Boxes/GrayBox.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -56,6 +53,3 @@ app.component("PCD_12", PCD_12);
 app.component("PLR_1", PLR_1);
 app.component("PatientCard", PatientCard);
 app.component("GrayBox", GrayBox);
-app.component("PatientListView", PatientListView);
-app.component("PatientDetailsView", PatientDetailsView);
-app.component("PatientInfoView", PatientInfoView);

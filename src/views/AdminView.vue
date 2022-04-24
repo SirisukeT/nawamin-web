@@ -19,7 +19,7 @@ export default {
       Title: ["ภาพรวมระบบ"],
     };
   },
-  emits: ["selectmenu(component)","selectmenuSubmenu(component)"],
+  emits: ["selectmenu(component)", "selectmenuSubmenu(component)"],
   methods: {
     selectmenu(component) {
       this.$router.push(component[0]);
