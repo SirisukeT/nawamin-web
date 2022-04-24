@@ -3,7 +3,7 @@
     <div class="topbox">
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/PatientInfoView', 'ประวัติผู้ป่วย'])">
+          <button @click="store.changePage(['ประวัติผู้ป่วย','รายละเอียดผู้ป่วย',$route.params.name,'ประวัติผู้ป่วย'])">
             ประวัติผู้ป่วย
           </button>
         </div>
@@ -12,7 +12,7 @@
       <div class="box">
         <div class="subbox">
           <button
-            @click="selectMenu(['/PatientCurrentDisease', 'โรคปัจจุบัน'])"
+            @click="store.changePage(['/PatientCurrentDisease', 'โรคปัจจุบัน'])"
           >
             โรคปัจจุบัน
           </button>
@@ -21,7 +21,7 @@
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/PatientLabReportView', 'ผลแลป'])">
+          <button @click="store.changePage(['/PatientLabReportView', 'ผลแลป'])">
             ผลแลป
           </button>
         </div>
@@ -33,7 +33,7 @@
         <div class="subbox">
           <button
             @click="
-              selectMenu(['/PatientCurrentdrugsView', 'ยาที่ใ่ช้ในปัจจุบัน'])
+              store.changePage(['/PatientCurrentdrugsView', 'ยาที่ใ่ช้ในปัจจุบัน'])
             "
           >
             ยาที่ใ่ช้ในปัจจุบัน
@@ -43,13 +43,13 @@
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/', 'ใบส่งตัว'])">ใบส่งตัว</button>
+          <button @click="store.changePage(['/', 'ใบส่งตัว'])">ใบส่งตัว</button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/', 'แบบแจ้งผลการตรวจการรักษา'])">
+          <button @click="store.changePage(['/', 'แบบแจ้งผลการตรวจการรักษา'])">
             แบบแจ้งผลการตรวจการรักษา
           </button>
         </div>
@@ -61,15 +61,14 @@
   </div>
 </template>
 
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
+
 <script>
 export default {
   name: "PD_1",
-  methods: {
-    selectMenu(component) {
-      // alert(`ข้อมูลของ ${component[0]} ค่ะ`);
-      this.$emit("selectSub", component);
-    },
-  },
 };
 </script>
 

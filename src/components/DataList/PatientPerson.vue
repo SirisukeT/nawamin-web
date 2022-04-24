@@ -7,13 +7,18 @@
     <th>{{ status }}</th>
     <th id="info">
       <button
-        @click="patientInfo(['/PatientDetailsView', 'รายชื่อผู้ป่วย', name])"
+        @click="store.changePage(['รายละเอียดผู้ป่วย', 'รายละเอียดผู้ป่วย', name])"
       >
         รายละเอียด
       </button>
     </th>
   </tr>
 </template>
+
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <script>
 export default {
@@ -25,11 +30,6 @@ export default {
     sdate: { type: String },
     status: { type: String },
     something: { type: String },
-  },
-  methods: {
-    patientInfo(component) {
-      this.$emit("select", component);
-    },
   },
 };
 </script>

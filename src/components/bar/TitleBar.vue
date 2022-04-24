@@ -2,13 +2,17 @@
   <div class="titleBar">
     <!-- <div class="listTitle" v-for="(t, index) in Title" :key="index"> -->
     <div class="listTitle">
-      <div v-if="store.title.title" class="icon">
+      <div class="icon">
         <img src="@/assets/play-solid.svg" alt="" height="40" />
       </div>
-      <div v-else class="icon">
-        <img src="@/assets/angle-right-solid.svg" alt="" height="40" />
+      <b v-if="!$route.params.main">{{$route.name}}</b>
+      <b>{{ $route.params.main }}</b>
+      <div class="subtitle dp-flex-r" v-for="(text,index) in $route.params" :key="index" >
+        <div v-if="index !='main'&& text !=''" class="icon">
+          <img src="@/assets/angle-right-solid.svg" alt="" height="40" />
+        </div>
+        <b v-if="index !='main'&& text !=''">{{ text }}</b>
       </div>
-      <b>{{ store.title.text[0] }}</b>
     </div>
   </div>
 </template>
@@ -30,14 +34,15 @@ const store = useTitleStore();
   width: 100%;
   margin-bottom: 20px;
   display: flex;
-  align-content: center;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 .listTitle {
   display: flex;
 }
 .listTitle b {
-  margin: 0 10px;
+  margin-left: 20px;
   font-size: 30px;
   text-align: center;
   padding-top: 6px;

@@ -2,10 +2,10 @@
   <div class="main-admin">
     <NavBar />
     <div class="main-content">
-      <SideBar @select="selectmenu" />
+      <SideBar />
       <div class="content-naw">
-        <TitleBar :Title="Title" />
-        <PD_1 @select="selectmenu" @selectSub="selectmenuSubmenu" />
+        <TitleBar />
+        <PD_1 />
       </div>
     </div>
   </div>
@@ -18,20 +18,6 @@ export default {
     return {
       Title: ["รายชื่อผู้ป่วย"],
     };
-  },
-  methods: {
-    selectmenu(component) {
-      this.$router.push(component[0]);
-      this.Title = component.slice(1);
-      alert(Title);
-      window.scrollTo(0, 0);
-    },
-    selectmenuSubmenu(component) {
-      this.$router.push(component[0]);
-      alert(Title);
-      // this.Title.push(component.slice(1)[0]);
-      window.scrollTo(0, 0);
-    },
   },
 };
 </script>

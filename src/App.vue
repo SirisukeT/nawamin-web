@@ -4,7 +4,7 @@ const store = useTitleStore();
 </script>
 
 <template>
-  <RouterView/>
+  <RouterView />
 </template>
 
 <style>

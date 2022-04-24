@@ -1,10 +1,7 @@
 <template>
   <main>
     <div class="containerLogin">
-      <form
-        @submit.prevent="sendLogin"
-        class="LoginHomePage"
-      >
+      <form @submit.prevent="sendLogin" class="LoginHomePage">
         <div class="login100-form-avatar">
           <img src="@/assets/logo_re.png" width="300" alt="LOGO" />
         </div>
@@ -33,22 +30,22 @@
 </template>
 
 <script setup>
-import {ref} from "vue"
+import { ref } from "vue";
 import { useTitleStore } from "@/stores/TitleStore";
 const store = useTitleStore();
 const username = ref("");
 const password = ref("");
 
-const sendLogin = () =>{
-  store.sendLogin(username.value,password.value);
+const sendLogin = () => {
+  store.sendLogin(username.value, password.value);
   username.value = "";
   password.value = "";
-}
+};
 </script>
 
 <script>
 export default {
-  name: "LoginP"
+  name: "LoginP",
 };
 </script>
 <style scoped>

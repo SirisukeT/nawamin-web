@@ -11,13 +11,7 @@
     <div class="midbox">
       <div class="addbox">
         <button
-          @click="
-            store.changePage([
-              '/PatientListViewAdd',
-              'รายชื่อผู้ป่วย',
-              'เพิ่มผู้ป่วย',
-            ])
-          "
+          @click="store.changePage(['เพิ่มรายชื่อผู้ป่วย'])"
           class="subadd"
         >
           เพิ่มผู้ป่วย

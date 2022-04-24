@@ -7,13 +7,9 @@ export const useTitleStore = defineStore("TitleStore", () => {
     username: "",
     password: "",
     isLogin: false,
+    text: ["Text"],
   });
 
-  const title = ref({
-    text: ["Text"]
-  })
-
-  title.text
   if (localStorage.getItem("user")){
     user.value = JSON.parse(localStorage.getItem("user"));
   }
@@ -34,20 +30,20 @@ export const useTitleStore = defineStore("TitleStore", () => {
     user.value.username = username;
     user.value.password = password;
     user.value.isLogin = true;
-    router.push({name: "admin"});
+    router.push({name: "ภาพรวมระบบ"});
     window.scrollTo(0, 0);
   };
 
   const changePage = (component) =>{
-    router.push({name: component[0]});
-    title.value.text = component.slice(1);
+    // router.push({ name: 'user'      , params:     { username: 'erina' } });
+    router.push({ name: component[0], params:     { main: component[1],name:component[2],sub: component[3]} });
+    user.value.text = component;
     window.scrollTo(0, 0);
   }
 
   return{
     user,
     sendLogin,
-    title,
     changePage,
   }
 });
