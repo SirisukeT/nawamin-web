@@ -4,15 +4,19 @@
       ภาพรวมระบบ
     </button>
     <!-- <router-link to="/admin">ภาพรวมระบบ 2</router-link> -->
-    <button To="/PatientListView" id="b2" @click="selectMenu(['/PatientListView', 'รายชื่อผู้ป่วย'])">
+    <button
+      To="/PatientListView"
+      id="b2"
+      @click="selectMenu(['/PatientListView', 'รายชื่อผู้ป่วย'])"
+    >
       รายชื่อผู้ป่วย
     </button>
     <!-- <router-link to="/admin/PatientListView">รายชื่อผู้ป่วย 2</router-link> -->
     <button id="b3" @click="toggleSetting">
       ตั้งค่าระบบ
       <div>
-        <fa v-if="!isSetting" :icon="['fas', 'angle-right']" />
-        <fa
+        <fa_c v-if="!isSetting" :icon="['fas', 'angle-right']" />
+        <fa_c
           v-else
           :style="{
             transform: 'rotate(90deg)',
@@ -39,7 +43,7 @@
 
 <script>
 export default {
-  name: "Sidebar",
+  name: "SideBar",
   data() {
     return {
       isSetting: false,

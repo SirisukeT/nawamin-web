@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <th>{{ key }}</th>
+    <th>{{ id }}</th>
     <th>{{ name }}</th>
     <th>{{ pdate }}</th>
     <th>{{ sdate }}</th>
@@ -17,9 +17,9 @@
 
 <script>
 export default {
-  name: "Patient",
+  name: "PatientPerson",
   props: {
-    key: { type: Number },
+    id: { type: String },
     name: { type: String, required: true },
     pdate: { type: String },
     sdate: { type: String },

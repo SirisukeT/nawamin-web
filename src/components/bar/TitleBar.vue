@@ -1,9 +1,13 @@
 <template>
   <div class="titleBar">
-    <div class="listTitle" v-for="(t,index) in Title" :key="index">
-      <div v-if="!index" class="icon"><img src="@/assets/play-solid.svg" alt="" height="40"/></div>
-      <div v-else class="icon"><img src="@/assets/angle-right-solid.svg" alt="" height="40"/></div>
-      <b>{{t}}</b>
+    <div class="listTitle" v-for="(t, index) in Title" :key="index">
+      <div v-if="!index" class="icon">
+        <img src="@/assets/play-solid.svg" alt="" height="40" />
+      </div>
+      <div v-else class="icon">
+        <img src="@/assets/angle-right-solid.svg" alt="" height="40" />
+      </div>
+      <b>{{ t }}</b>
     </div>
   </div>
 </template>
@@ -32,10 +36,10 @@ export default {
   align-content: center;
 }
 
-.listTitle{
+.listTitle {
   display: flex;
 }
-.listTitle b{
+.listTitle b {
   margin: 0 10px;
   font-size: 30px;
   text-align: center;
@@ -47,5 +51,4 @@ export default {
   margin-left: 20px;
   padding-top: 10px;
 }
-
 </style>

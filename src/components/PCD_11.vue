@@ -1,6 +1,6 @@
 <template>
   <div class="bigbox">
-    <PatientCard/>
+    <PatientCard />
     <div class="rightbox">
       <div class="historybox">
         <h1 class="CurrentDiseases">โรคปัจจุบัน</h1>
@@ -18,25 +18,19 @@
             <div class="infoleft">
               <label>สภาวะหัวใจล้มเหลวเฉียบพลัน</label>
             </div>
-            <button class="inforight">
-              13 กันยายน 2564
-            </button>
+            <button class="inforight">13 กันยายน 2564</button>
           </div>
           <div class="info2">
             <div class="infoleft">
               <label>โรคเบาหวาน</label>
             </div>
-            <button class="inforight">
-              13 กันยายน 2564
-            </button>
+            <button class="inforight">13 กันยายน 2564</button>
           </div>
           <div class="info2">
             <div class="infoleft">
               <label>ความดันโลหิตสูง</label>
             </div>
-            <button class="inforight">
-              13 กันยายน 2564
-            </button>
+            <button class="inforight">13 กันยายน 2564</button>
           </div>
         </div>
       </div>
@@ -83,11 +77,8 @@
 <script>
 export default {
   name: "PCD_11",
-  props: 
-    ["previous"]
-  ,
-  methods:{
-  }
+  props: ["previous"],
+  methods: {},
 };
 </script>
 
@@ -104,8 +95,8 @@ export default {
   margin-top: 10px;
 }
 .buttonbox {
-margin-top: 30px;
-padding-bottom: 60px;
+  margin-top: 30px;
+  padding-bottom: 60px;
   width: 100%;
   height: 500px;
   /* background-color: greenyellow; */
@@ -196,7 +187,7 @@ padding-bottom: 60px;
   background-color: black;
 }
 .boxin {
-  padding-bottom:20px;
+  padding-bottom: 20px;
   margin: 20px;
   width: 90%;
   height: 95%;
@@ -226,7 +217,7 @@ padding-bottom: 60px;
   /* background-color: skyblue; */
 }
 
-div.info label{
+div.info label {
   font-weight: bold;
 }
 .inforight {

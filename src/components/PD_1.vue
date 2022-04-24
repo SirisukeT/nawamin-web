@@ -11,7 +11,11 @@
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/PatientCurrentDisease', 'โรคปัจจุบัน'])" >โรคปัจจุบัน</button>
+          <button
+            @click="selectMenu(['/PatientCurrentDisease', 'โรคปัจจุบัน'])"
+          >
+            โรคปัจจุบัน
+          </button>
         </div>
       </div>
 
@@ -25,7 +29,9 @@
     <div class="botbox">
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/', 'ยาที่ใ่ช้ในปัจจุบัน'])">ยาที่ใ่ช้ในปัจจุบัน</button>
+          <button @click="selectMenu(['/', 'ยาที่ใ่ช้ในปัจจุบัน'])">
+            ยาที่ใ่ช้ในปัจจุบัน
+          </button>
         </div>
       </div>
 
@@ -37,7 +43,9 @@
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/', 'แบบแจ้งผลการตรวจการรักษา'])">แบบแจ้งผลการตรวจการรักษา</button>
+          <button @click="selectMenu(['/', 'แบบแจ้งผลการตรวจการรักษา'])">
+            แบบแจ้งผลการตรวจการรักษา
+          </button>
         </div>
       </div>
     </div>

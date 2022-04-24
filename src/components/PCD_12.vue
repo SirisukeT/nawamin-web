@@ -1,6 +1,6 @@
 <template>
   <div class="bigbox">
-    <PatientCard/>
+    <PatientCard />
     <div class="rightbox">
       <div class="historybox">
         <h1 class="CurrentDiseases">โรคปัจจุบัน</h1>
@@ -40,6 +40,7 @@
             <div class="inforight">
               <h5>13 กันยายน 2564</h5>
             </div>
+            <button class="inforight">13 กันยายน 2564</button>
           </div>
         </div>
       </div>
@@ -58,8 +59,8 @@ export default {
 
 <style scoped>
 .buttonbox {
-margin-top: 30px;
-padding-bottom: 60px;
+  margin-top: 30px;
+  padding-bottom: 60px;
   width: 100%;
   height: 500px;
   /* background-color: greenyellow; */
