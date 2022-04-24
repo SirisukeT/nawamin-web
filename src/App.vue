@@ -1,8 +1,4 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
-import { useSiteStore } from "./stores/useSiteStore";
-const store = useSiteStore();
-</script>
+<script setup></script>
 
 <template>
   <RouterView />
@@ -53,7 +49,6 @@ div .main-content {
 }
 
 .buttonbox {
-  
   width: 100%;
   /* background-color: greenyellow; */
   display: flex;
@@ -71,56 +66,55 @@ button.previous {
   border: 1.75px solid black;
 }
 
-.dp-flex-r{
+.dp-flex-r {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.marginA-10{
+.marginA-10 {
   margin: 10px;
 }
 
-.marginL-10{
+.marginL-10 {
   margin-left: 10px;
 }
-.marginR-10{
+.marginR-10 {
   margin-right: 10px;
 }
-.marginT-10{
+.marginT-10 {
   margin-top: 10px;
 }
-.marginB-10{
+.marginB-10 {
   margin-bottom: 10px;
 }
-.marginLR-10{
+.marginLR-10 {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.marginA-10{
+.marginA-10 {
   margin: 10px;
 }
 
-.marginL-25{
+.marginL-25 {
   margin-left: 25px;
 }
-.marginR-25{
+.marginR-25 {
   margin-right: 25px;
 }
-.marginT-25{
+.marginT-25 {
   margin-top: 25px;
 }
-.marginB-25{
+.marginB-25 {
   margin-bottom: 25px;
 }
-.marginLR-25{
+.marginLR-25 {
   margin-left: 25px;
   margin-right: 25px;
 }
 
-.ta-c{
+.ta-c {
   text-align: center;
 }
-
 </style>

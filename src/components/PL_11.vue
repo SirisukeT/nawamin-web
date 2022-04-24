@@ -1,11 +1,11 @@
 <template>
   <div class="bigbox">
     <div class="topbox">
-      <grayBox>ชื่อ-สกุล</grayBox>
+      <GrayBox>ชื่อ-สกุล</GrayBox>
 
-      <grayBox>วันที่</grayBox>
+      <GrayBox>วันที่</GrayBox>
 
-      <grayBox>ถึงวันที่</grayBox>
+      <GrayBox>ถึงวันที่</GrayBox>
     </div>
 
     <div class="midbox">
@@ -39,16 +39,16 @@
             <th>สถานะ</th>
             <th></th>
           </tr>
-            <Patient
-              @select="patientInfo"
-              v-for="(item, index) in data"
-              :key="index"
-              :id="item.cid"
-              :name="item.pname + ' ' + item.fname + ' ' + item.lname"
-              :pdate="item.firstday"
-              :sdate="item.sdate"
-              :status="item.status"
-            />
+          <PatientPerson
+            @select="patientInfo"
+            v-for="(item, index) in data"
+            :key="index"
+            :id="item.cid"
+            :name="item.pname + ' ' + item.fname + ' ' + item.lname"
+            :pdate="item.firstday"
+            :sdate="item.sdate"
+            :status="item.status"
+          />
         </table>
       </div>
     </div>
@@ -155,5 +155,4 @@ h1 {
   border-radius: 15px;
   border: 1.75px solid black;
 }
-
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="bigbox">
-    <PatientCard/>
+    <PatientCard />
     <div class="rightbox">
       <h1 class="rb">ประวัติผู้ป่วย</h1>
       <div class="line"></div>
@@ -19,7 +19,7 @@
 <script>
 export default {
   name: "PH_1",
-  props:["previous"],
+  props: ["previous"],
   data() {
     return {
       patientInfo: [
@@ -38,11 +38,11 @@ export default {
       ],
     };
   },
-  methods:{
-    previousPage(){
-      this.$emit("selectSub",[this.previous])
-    }
-  }
+  methods: {
+    previousPage() {
+      this.$emit("selectSub", [this.previous]);
+    },
+  },
 };
 </script>
 
@@ -130,5 +130,4 @@ rb {
   align-items: center;
   padding: 0 1rem;
 }
-
 </style>

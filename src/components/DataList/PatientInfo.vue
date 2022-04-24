@@ -1,9 +1,5 @@
 <template>
-  <div
-    v-for="(list,index) in info"
-    class="info"
-    :key="index"
-  >
+  <div v-for="(list, index) in info" class="info" :key="index">
     <div class="infoleft">
       <p>{{ list[0] }}</p>
     </div>
@@ -16,9 +12,7 @@
 <script>
 export default {
   name: "PatientInfo",
-  props: 
-    ["info"]
-  ,
+  props: ["info"],
   methods: {
     patientInfo(component) {
       this.$emit("select", component);
