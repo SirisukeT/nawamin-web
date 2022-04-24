@@ -3,41 +3,39 @@
     <PatientCard/>
     <div class="rightbox">
       <div class="historybox">
-        <h1 class="CurrentDiseases">โรคปัจจุบัน</h1>
+        <h1 class="CurrentDiseases">ผลแลป</h1>
         <div class="line"></div>
         <div class="boxin">
           <div class="info">
-            <p>โรค</p>
+            <div class="subinfo">
+              <h5>รายการ</h5>
+            </div>
+            <div class="subinfo">
+              <h5>ผลแลป</h5>
+            </div>
+            <div class="subinfo">
+             <h5>วันที่ตรวจ</h5>
+            </div>
           </div>
           <div class="info2">
-            <div class="infoleft">
-              <h5>วันที่พบแพทย์ล่าสุด</h5>
+            <div class="subinfo">
+              <h5>น้ำตาลในเลือด</h5>
             </div>
-            <div class="inforight">
+            <div class="subinfo">
+              <h5>77 mg/dL</h5>
+            </div>
+            <div class="subinfo">
              <h5>13 กันยายน 2564</h5>
             </div>
           </div>
           <div class="info2">
-            <div class="infoleft">
-              <h5>อาการ/ข้อบ่งชี้โรค</h5>
+            <div class="subinfo">
+              <h5>ไขมันในเลือด</h5>
             </div>
-            <div class="inforight">
-              <h5>อาการ/ข้อบ่งชี้โรค</h5>
+            <div class="subinfo">
+              <h5>120 mg/dL</h5>
             </div>
-          </div>
-          <div class="info2">
-            <div class="infoleft">
-              <h5>ตรวจตาล่าสุด</h5>
-            </div>
-            <div class="inforight">
-              <h5>13 กันยายน 2564</h5>
-            </div>
-          </div>
-          <div class="info2">
-            <div class="infoleft">
-              <h5>ตรวจเท้าล่าสุด</h5>
-            </div>
-            <div class="inforight">
+            <div class="subinfo">
               <h5>13 กันยายน 2564</h5>
             </div>
           </div>
@@ -52,11 +50,14 @@
 
 <script>
 export default {
-  name: "PCD_12",
+  name: "PM_1",
 };
 </script>
 
 <style scoped>
+* h5{
+  margin: 0;
+}
 .buttonbox {
 margin-top: 30px;
 padding-bottom: 60px;
@@ -153,10 +154,10 @@ padding-bottom: 60px;
   height: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: whitesmoke;
 }
-.infoleft {
+.subinfo {
   display: flex;
   width: 30%;
   height: 100%;
@@ -164,15 +165,6 @@ padding-bottom: 60px;
   align-items: center;
   text-align: center;
   /* background-color: skyblue; */
-}
-.inforight {
-  display: flex;
-  width: 30%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  /* background-color: greenyellow; */
 }
 .info2 {
   margin-top: 15px;

@@ -17,7 +17,7 @@
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/', 'ผลแลป'])">ผลแลป</button>
+          <button @click="selectMenu(['/PatientLabReportView', 'ผลแลป'])">ผลแลป</button>
         </div>
       </div>
     </div>
