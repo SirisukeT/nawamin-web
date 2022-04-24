@@ -16,18 +16,19 @@ export default {
   name: "PatientDetails",
   data() {
     return {
-      Title: "",
+      Title: ["รายชื่อผู้ป่วย"],
     };
   },
-  emits: ["selectmenu(component)", "selectmenuSubmenu(component)"],
   methods: {
     selectmenu(component) {
       this.$router.push(component[0]);
       this.Title = component.slice(1);
+      alert(Title);
       window.scrollTo(0, 0);
     },
     selectmenuSubmenu(component) {
       this.$router.push(component[0]);
+      alert(Title);
       // this.Title.push(component.slice(1)[0]);
       window.scrollTo(0, 0);
     },

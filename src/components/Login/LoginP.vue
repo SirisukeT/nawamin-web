@@ -1,7 +1,10 @@
 <template>
   <main>
     <div class="containerLogin">
-      <form @submit.prevent="sendlogin" class="LoginHomePage">
+      <form
+        @submit.prevent="sendLogin"
+        class="LoginHomePage"
+      >
         <div class="login100-form-avatar">
           <img src="@/assets/logo_re.png" width="300" alt="LOGO" />
         </div>
@@ -29,28 +32,23 @@
   </main>
 </template>
 
+<script setup>
+import {ref} from "vue"
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+const username = ref("");
+const password = ref("");
+
+const sendLogin = () =>{
+  store.sendLogin(username.value,password.value);
+  username.value = "";
+  password.value = "";
+}
+</script>
+
 <script>
 export default {
-  name: "LoginP",
-  data() {
-    return {
-      username: "",
-      password: "",
-      user1: "admin",
-      pass1: "1234",
-      Message: "Login Succesfully",
-    };
-  },
-  methods: {
-    sendlogin() {
-      if (this.username === this.user1 && this.password === this.pass1) {
-        alert(`ยินดีต้อนรับ ${this.username} ค่ะ`);
-
-        this.$router.push("/admin");
-      }
-      //   alert(`${this.$refs.username.value}\n${this.$refs.password.value}`);
-    },
-  },
+  name: "LoginP"
 };
 </script>
 <style scoped>

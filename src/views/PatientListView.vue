@@ -22,6 +22,7 @@ export default {
   emits: ["selectmenu(component)", "selectmenuSubmenu(component)"],
   methods: {
     selectmenu(component) {
+      alert(component);
       this.$router.push(component[0]);
       this.Title = component.slice(1);
       window.scrollTo(0, 0);

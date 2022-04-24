@@ -1,13 +1,13 @@
 <template>
   <div class="sidenav">
-    <button id="b1" @click="selectMenu(['/admin', 'ภาพรวมระบบ'])">
+    <button id="b1" @click="store.changePage(['admin', 'ภาพรวมระบบ'])">
       ภาพรวมระบบ
     </button>
     <!-- <router-link to="/admin">ภาพรวมระบบ 2</router-link> -->
     <button
       To="/PatientListView"
       id="b2"
-      @click="selectMenu(['/PatientListView', 'รายชื่อผู้ป่วย'])"
+      @click="store.changePage(['PatientListView', 'รายชื่อผู้ป่วย'])"
     >
       รายชื่อผู้ป่วย
     </button>
@@ -27,19 +27,24 @@
       </div>
     </button>
     <div class="setting" v-show="isSetting">
-      <button id="b4" @click="selectMenu(['PL_11', 'โรงพยาบาล'])">
+      <button id="b4" @click="store.changePage(['PL_11', 'โรงพยาบาล'])">
         โรงพยาบาล
       </button>
-      <button id="b5" @click="selectMenu(['PL_11', 'กลุ่มผู้ใช้งาน'])">
+      <button id="b5" @click="store.changePage(['PL_11', 'กลุ่มผู้ใช้งาน'])">
         กลุ่มผู้ใช้งาน
       </button>
-      <button id="b6" @click="selectMenu(['PL_11', 'ผู้ใช้งาน'])">
+      <button id="b6" @click="store.changePage(['PL_11', 'ผู้ใช้งาน'])">
         ผู้ใช้งาน
       </button>
-      <button id="b7" @click="selectMenu(['PL_11', 'แผนก'])">แผนก</button>
+      <button id="b7" @click="store.changePage(['PL_11', 'แผนก'])">แผนก</button>
     </div>
   </div>
 </template>
+
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <script>
 export default {
@@ -54,9 +59,6 @@ export default {
       console.log("Click");
       this.isSetting = !this.isSetting;
       console.log(this.isSetting);
-    },
-    selectMenu(component) {
-      this.$emit("select", component);
     },
   },
 };

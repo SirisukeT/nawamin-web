@@ -1,7 +1,10 @@
-<script setup></script>
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <template>
-  <RouterView />
+  <RouterView/>
 </template>
 
 <style>

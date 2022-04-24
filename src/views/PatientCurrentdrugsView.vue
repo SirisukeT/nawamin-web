@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "PatientCurrentdrugsView",
+  name: "PatientCurrentDrugsView",
   data() {
     return {
       Title: ["รายชื่อผู้ป่วย"],

@@ -1,26 +1,23 @@
 <template>
   <div class="titleBar">
-    <div class="listTitle" v-for="(t, index) in Title" :key="index">
-      <div v-if="!index" class="icon">
+    <!-- <div class="listTitle" v-for="(t, index) in Title" :key="index"> -->
+    <div class="listTitle">
+      <div v-if="store.title.title" class="icon">
         <img src="@/assets/play-solid.svg" alt="" height="40" />
       </div>
       <div v-else class="icon">
         <img src="@/assets/angle-right-solid.svg" alt="" height="40" />
       </div>
-      <b>{{ t }}</b>
+      <b>{{ store.title.text[0] }}</b>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "TitleBar",
-  data() {
-    return {};
-  },
-  props: ["Title"],
-};
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
 </script>
+
 <style scoped>
 .titleBar {
   background-image: linear-gradient(

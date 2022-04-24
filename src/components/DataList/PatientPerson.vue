@@ -19,7 +19,7 @@
 export default {
   name: "PatientPerson",
   props: {
-    id: { type: String },
+    id: { type: Number },
     name: { type: String, required: true },
     pdate: { type: String },
     sdate: { type: String },

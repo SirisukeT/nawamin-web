@@ -24,11 +24,13 @@ export default {
     selectmenu(component) {
       this.$router.push(component[0]);
       this.Title = component.slice(1);
+      alert(Title);
       window.scrollTo(0, 0);
     },
     selectmenuSubmenu(component) {
       this.$router.push(component[0]);
       this.Title.push(component.slice(1)[0]);
+      alert(Title);
       window.scrollTo(0, 0);
     },
   },
