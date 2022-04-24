@@ -68,30 +68,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.pp img {
-  width: 170px;
-  height: 170px;
-  background-color: white;
-  border-radius: 100%;
-}
-.ppcolor {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.phptext {
-  margin-top: 20px;
-  width: 100%;
-  height: 100px;
-  /* background-color: greenyellow; */
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+
 .bigbox {
   width: 100%;
   height: 100%;
@@ -99,16 +76,7 @@ export default {
   justify-content: space-between;
   /* background-color: black; */
 }
-.leftbox {
-  margin-left: 20px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350px;
-  height: 600px;
-  /* background-color: blue; */
-}
+
 .rightbox {
   display: flex;
   flex-direction: column;

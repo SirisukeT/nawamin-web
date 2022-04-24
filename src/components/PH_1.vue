@@ -43,15 +43,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
-.phptext {
-  margin-top: 20px;
-  width: 100%;
-  height: 100px;
-  /* background-color: greenyellow; */
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+
 rb {
   margin: 0px;
   padding: 0px;

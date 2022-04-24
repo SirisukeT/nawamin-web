@@ -4,6 +4,7 @@
       <div class="box">
         <div class="subbox">
           <button
+            class="subbox"
             @click="
               store.changePage([
                 'ประวัติผู้ป่วย',
@@ -21,6 +22,7 @@
       <div class="box">
         <div class="subbox">
           <button
+            class="subbox"
             @click="
               store.changePage([
                 'โรคปัจจุบัน',
@@ -38,6 +40,7 @@
       <div class="box">
         <div class="subbox">
           <button
+            class="subbox"
             @click="
               store.changePage([
                 'ผลแลป',
@@ -57,6 +60,7 @@
       <div class="box">
         <div class="subbox">
           <button
+            class="subbox"
             @click="
               store.changePage([
                 '/PatientCurrentdrugsView',
@@ -71,13 +75,18 @@
 
       <div class="box">
         <div class="subbox">
-          <button @click="store.changePage(['/', 'ใบส่งตัว'])">ใบส่งตัว</button>
+          <button class="subbox" @click="store.changePage(['/', 'ใบส่งตัว'])">
+            ใบส่งตัว
+          </button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button @click="store.changePage(['/', 'แบบแจ้งผลการตรวจการรักษา'])">
+          <button
+            class="subbox"
+            @click="store.changePage(['/', 'แบบแจ้งผลการตรวจการรักษา'])"
+          >
             แบบแจ้งผลการตรวจการรักษา
           </button>
         </div>
@@ -145,5 +154,12 @@ h1 {
   height: 100%;
   background-color: #e7e7e7;
   border-radius: 15px;
+}
+
+.subbox button {
+  background-color: transparent;
+  border: 0;
+  font-size: 30px;
+  font-weight: bold;
 }
 </style>
