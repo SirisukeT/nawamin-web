@@ -12,6 +12,8 @@ body,
   padding: 0;
   box-sizing: border-box;
   width: 100%;
+  height: 100%;
+  background-color: #CDDAD7;
 }
 
 button:hover {
@@ -27,18 +29,15 @@ button:active {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #CDDAD7;
 }
 
 div .main-content {
-  /* background-color: #CDDAD7; */
   margin-top: 100px;
   /* display: grid;
   grid-template-columns: 12% 88%; */
   /* padding: 1rem 2rem; */
 }
 .content-naw {
-  /* background-color: #CDDAD7; */
   max-width: 100%;
   /* height: 100%; */
   margin-left: 250px;
