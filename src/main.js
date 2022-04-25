@@ -15,6 +15,9 @@ import PM_1 from "./components/PM_1.vue";
 import SU_11 from "./components/SU_11.vue";
 import SU_12 from "./components/SU_12.vue";
 
+import Drugallergy from "./components/DataList/Drugallergy.vue";
+import Disease from "./components/DataList/Disease.vue";
+import Medicine from "./components/DataList/Medicine.vue";
 import Hospital from "./components/DataList/Hospital.vue";
 import PatientPerson from "./components/DataList/PatientPerson.vue";
 import PatientInfo from "./components/DataList/PatientInfo.vue";
@@ -69,6 +72,9 @@ app.component("PL_12", PL_12);
 app.component("PH_1", PH_1);
 app.component("PM_1", PM_1);
 
+app.component("Drugallergy",Drugallergy);
+app.component("Disease",Disease);
+app.component("Medicine",Medicine)
 app.component("Hospital", Hospital);
 app.component("PatientPerson", PatientPerson);
 app.component("PatientInfo", PatientInfo);

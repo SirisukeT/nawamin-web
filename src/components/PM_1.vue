@@ -25,7 +25,9 @@
               <h5>30 เม็ด</h5>
             </div>
             <div class="subinfo">
-             <h5 class="use">รับประทานวันละ 2 ครั้ง เช้า เย็น ครั้งละ 2 เม็ด / ก่อนอาหาร</h5>
+              <h5 class="use">
+                รับประทานวันละ 2 ครั้ง เช้า เย็น ครั้งละ 2 เม็ด / ก่อนอาหาร
+              </h5>
             </div>
           </div>
           <div class="info2">
@@ -36,13 +38,15 @@
               <h5>40 เม็ด</h5>
             </div>
             <div class="subinfo">
-              <h5 class="use">รับประทานวันละ 2 ครั้ง เช้า เย็น ครั้งละ 2 เม็ด / ก่อนอาหาร</h5>
+              <h5 class="use">
+                รับประทานวันละ 2 ครั้ง เช้า เย็น ครั้งละ 2 เม็ด / ก่อนอาหาร
+              </h5>
             </div>
           </div>
         </div>
       </div>
       <div class="historybox">
-        <h1 class="CurrentDiseases" style="color:red">ยาที่แพ้</h1>
+        <h1 class="CurrentDiseases" style="color: red">ยาที่แพ้</h1>
         <div class="line"></div>
         <div class="boxin">
           <div class="info">
@@ -50,17 +54,12 @@
               <h5>รายการ</h5>
             </div>
             <div class="subinfo">
-             <h5>การจัดการ</h5>
+              <h5>การจัดการ</h5>
             </div>
           </div>
-         
+
           <div class="info2">
-            <div class="subinfo">
-              <h5 class="red">Penicilin</h5>
-            </div>
-            <div class="subinfo">
-              <h5 class="red">รายละเอียดอาการ</h5>
-            </div>
+            <Medicine><template #key>Penicilin</template><template #value>รายละเอียด</template></Medicine>
           </div>
         </div>
       </div>
@@ -72,8 +71,10 @@
 </template>
 
 <script>
+import Medicine from "./DataList/Medicine.vue";
 export default {
   name: "PM_1",
+  components: { Medicine },
 };
 </script>
 
@@ -176,11 +177,11 @@ h1.CurrentDiseases {
   padding-top: 10px;
   margin-bottom: 0px;
 }
-h5.red{
-    color: red;
+h5.red {
+  color: red;
 }
-h5.use{
-    vertical-align:baseline;
-    text-align: justify;
+h5.use {
+  vertical-align: baseline;
+  text-align: justify;
 }
 </style>

@@ -14,24 +14,9 @@
               <label>วันที่พบแพทย์ล่าสุด</label>
             </div>
           </div>
-          <div class="info2">
-            <div class="infoleft">
-              <label>สภาวะหัวใจล้มเหลวเฉียบพลัน</label>
-            </div>
-            <button class="inforight">13 กันยายน 2564</button>
-          </div>
-          <div class="info2">
-            <div class="infoleft">
-              <label>โรคเบาหวาน</label>
-            </div>
-            <button class="inforight">13 กันยายน 2564</button>
-          </div>
-          <div class="info2">
-            <div class="infoleft">
-              <label>ความดันโลหิตสูง</label>
-            </div>
-            <button class="inforight">13 กันยายน 2564</button>
-          </div>
+          <template v-for="(item,index) in disease" :key="index" >
+            <Disease v-if="item['cid']==store.patient.data.cid" :diseases="item['diseases']"/>
+          </template>
         </div>
       </div>
       <div class="botbox">
@@ -39,7 +24,7 @@
           <h1>ความดัน</h1>
           <div class="line"></div>
           <div class="subbox">
-            <img src="/public/pulse.png" alt="" />
+            <img src="/pulse.png" alt="" />
             <div class="line2"></div>
             <p>
               <label>140</label>SYS<br />
@@ -56,7 +41,7 @@
           <h1>ชีพจร</h1>
           <div class="line"></div>
           <div class="subbox">
-            <img src="/public/pulse2.png" alt="" />
+            <img src="/pulse2.png" alt="" />
             <div class="line2"></div>
             <p><label>100</label>BPM</p>
             <div class="line2"></div>
@@ -74,11 +59,20 @@
   </div>
 </template>
 
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
+
 <script>
+import disease from "../json/disease.json";
 export default {
   name: "PCD_11",
-  props: ["previous"],
-  methods: {},
+  data() {
+    return {
+      disease: "",
+    };
+  },
 };
 </script>
 
@@ -95,30 +89,16 @@ export default {
   margin-top: 10px;
 }
 .buttonbox {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   padding-bottom: 60px;
   width: 100%;
-  height: 500px;
+  height: 100px;
   /* background-color: greenyellow; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.pp img {
-  width: 170px;
-  height: 170px;
-  background-color: white;
-  border-radius: 100%;
-}
-.ppcolor {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .bigbox {
   width: 100%;
   height: 100%;
@@ -130,7 +110,7 @@ export default {
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
   height: 700px;
   /* background-color: red; */
   justify-content: top;
