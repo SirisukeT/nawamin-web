@@ -65,7 +65,7 @@
             <div class="custom-select">
               <select>
                 <option v-for="(item, index) in sex" :key="index" value="">
-                  {{ item.name }}
+                  {{ item }}
                 </option>
               </select>
             </div>
@@ -273,7 +273,8 @@ export default {
       depart,
       status:[
         "สถานะ","ปกติ","ผิดปกติ"
-      ]
+      ],
+      sex:["เพศ","ชาย","หญิง","ไม่ระบุ"]
     };
   },
   mounted() {
