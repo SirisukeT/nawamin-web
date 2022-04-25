@@ -19,30 +19,30 @@
           </div>
           <div class="info2">
             <div class="subinfo">
-              <h5>น้ำตาลในเลือด</h5>
+              <h5>Glibenclamide</h5>
             </div>
             <div class="subinfo">
-              <h5>77 mg/dL</h5>
+              <h5>30 เม็ด</h5>
             </div>
             <div class="subinfo">
-              <h5>13 กันยายน 2564</h5>
+             <h5 class="use">รับประทานวันละ 2 ครั้ง เช้า เย็น ครั้งละ 2 เม็ด / ก่อนอาหาร</h5>
             </div>
           </div>
           <div class="info2">
             <div class="subinfo">
-              <h5>ไขมันในเลือด</h5>
+              <h5>Clonazepam</h5>
             </div>
             <div class="subinfo">
-              <h5>120 mg/dL</h5>
+              <h5>40 เม็ด</h5>
             </div>
             <div class="subinfo">
-              <h5>13 กันยายน 2564</h5>
+              <h5 class="use">รับประทานวันละ 2 ครั้ง เช้า เย็น ครั้งละ 2 เม็ด / ก่อนอาหาร</h5>
             </div>
           </div>
         </div>
       </div>
       <div class="historybox">
-        <h1 class="CurrentDiseases">ยาที่ใช้ในปัจจุบัน</h1>
+        <h1 class="CurrentDiseases" style="color:red">ยาที่แพ้</h1>
         <div class="line"></div>
         <div class="boxin">
           <div class="info">
@@ -50,32 +50,16 @@
               <h5>รายการ</h5>
             </div>
             <div class="subinfo">
-              <h5>จำนวน</h5>
-            </div>
-            <div class="subinfo">
-              <h5>การใช้งาน</h5>
+             <h5>การจัดการ</h5>
             </div>
           </div>
+         
           <div class="info2">
             <div class="subinfo">
-              <h5>น้ำตาลในเลือด</h5>
+              <h5 class="red">Penicilin</h5>
             </div>
             <div class="subinfo">
-              <h5>77 mg/dL</h5>
-            </div>
-            <div class="subinfo">
-              <h5>13 กันยายน 2564</h5>
-            </div>
-          </div>
-          <div class="info2">
-            <div class="subinfo">
-              <h5>ไขมันในเลือด</h5>
-            </div>
-            <div class="subinfo">
-              <h5>120 mg/dL</h5>
-            </div>
-            <div class="subinfo">
-              <h5>13 กันยายน 2564</h5>
+              <h5 class="red">รายละเอียดอาการ</h5>
             </div>
           </div>
         </div>
@@ -190,5 +174,12 @@ export default {
 h1.CurrentDiseases {
   padding-top: 10px;
   margin-bottom: 0px;
+}
+h5.red{
+    color: red;
+}
+h5.use{
+    vertical-align:baseline;
+    text-align: justify;
 }
 </style>
