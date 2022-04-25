@@ -1,7 +1,9 @@
 <template>
   <div class="doctorbox">
     <h1><slot></slot></h1>
-    <div class="subdocb"></div>
+    <div class="subdocb">
+      <input type="text">
+    </div>
   </div>
 </template>
 
@@ -30,6 +32,7 @@ export default {
 }
 
 .subdocb {
+  padding: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +40,16 @@ export default {
   height: 60px;
   width: 100%;
   background-color: #c4c4c4;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1.75px solid black;
+}
+
+.subdocb input{
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 20px;
 }
 </style>

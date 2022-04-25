@@ -1,20 +1,20 @@
 <template>
   <div class="bigbox">
     <div class="topbox">
-      <GrayBox>ชื่อ-สกุล</GrayBox>
+      <GrayBox>โรงพยาบาล</GrayBox>
+
+      <GrayBox>ชื่อกลุ่ม</GrayBox>
 
       <GrayBox>วันที่</GrayBox>
-
-      <GrayBox>ถึงวันที่</GrayBox>
     </div>
 
     <div class="midbox">
       <div class="addbox">
         <button
-          @click="store.changePage(['เพิ่มรายชื่อผู้ป่วย'])"
+          @click="store.changePage(['เพิ่มโรงพยาบาล'])"
           class="subadd"
         >
-          เพิ่มผู้ป่วย
+          เพิ่มโรงพยาบาล
         </button>
       </div>
       <div class="addbox">
@@ -25,24 +25,17 @@
     <div class="botbox">
       <div class="graphbox">
         <table>
-          <tr>
-            <th>ลำดับ</th>
-            <th>ชื่อ - ชื่อ-สกุล</th>
-            <th>วันที่รับตัว</th>
-            <th>วันที่ส่งต่อ</th>
-            <th>สถานะ</th>
-            <th></th>
+          <tr style="font-size: 25px">
+            <th >ลำดับ</th>
+            <th>โรงพยาบาล</th>
+            <th>วันที่สร้าง</th>
           </tr>
-          <PatientPerson
-            @select="patientInfo"
-            v-for="(item, index) in data"
+          <Hospital
+            v-for="(item, index) in hospital"
             :key="index"
-            :patient="item"
-            :id="index + 1"
-            :name="item.pname + ' ' + item.fname + ' ' + item.lname"
-            :pdate="item.firstday"
-            :sdate="item.sdate"
-            :status="item.status"
+            :id="item.index"
+            :hospname="item.hospname"
+            :cdate="item.cdate"
           />
         </table>
       </div>
@@ -56,12 +49,12 @@ const store = useTitleStore();
 </script>
 
 <script>
-import data from "../json/Test.json";
+import hospital from "@/json/hospital"
 export default {
-  name: "PL_11",
+  name: "SU_11",
   data() {
     return {
-      data,
+      hospital,
     };
   },
 };

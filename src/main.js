@@ -12,6 +12,9 @@ import PL_11 from "./components/PL_11.vue";
 import PL_12 from "./components/PL_12.vue";
 import PH_1 from "./components/PH_1.vue";
 import PM_1 from "./components/PM_1.vue";
+import SU_11 from "./components/SU_11.vue";
+
+import Hospital from "./components/DataList/Hospital.vue";
 import PatientPerson from "./components/DataList/PatientPerson.vue";
 import PatientInfo from "./components/DataList/PatientInfo.vue";
 import PatientCard from "./components/DataList/PatientCard.vue";
@@ -63,13 +66,17 @@ app.component("PL_11", PL_11);
 app.component("PL_12", PL_12);
 app.component("PH_1", PH_1);
 app.component("PM_1", PM_1);
+
+app.component("Hospital", Hospital);
 app.component("PatientPerson", PatientPerson);
 app.component("PatientInfo", PatientInfo);
 app.component("PatientRef", PatientRef);
+
 app.component("PCD_11", PCD_11);
 app.component("PCD_12", PCD_12);
 app.component("PLR_1", PLR_1);
 app.component("PRL_1",PRL_1);
+app.component("SU_11",SU_11);
 app.component("PatientCard", PatientCard);
 app.component("GrayBox", GrayBox);
 // app.component("AdminView", AdminView);

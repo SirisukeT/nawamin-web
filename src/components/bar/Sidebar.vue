@@ -27,7 +27,7 @@
       </div>
     </button>
     <div class="setting" v-show="isSetting">
-      <button id="b4" @click="store.changePage(['โรงพยาบาล'])">
+      <button id="b4" @click="store.changePage(['ตั้งค่าโรงพยาบาล','ตั้งค่าโรงพยาบาล'])">
         โรงพยาบาล
       </button>
       <button id="b5" @click="store.changePage(['กลุ่มผู้ใช้งาน'])">
