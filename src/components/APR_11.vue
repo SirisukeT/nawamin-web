@@ -116,56 +116,143 @@
         <div class="box3">
           <div class="inputbox">
             <h5>1. ประวัติการป่วยในอดีตและประวัติครอบครัว</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox">
             <h5>2. ประวัติการป่วยปัจจุบัน</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
-         <div class="box3">
+        <div class="box3">
           <div class="inputbox2">
             <h5>3. ผลการตรวจชันสูตรทางห้องทดลองที่สำคัญ</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox2">
             <h5>4. ผลการวินิจฉัยโรคชั้นต้น</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox3">
             <h5>5. การรักษาหรือยาที่ได้ให้ไว้แล้ว</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox4">
             <h5>6. สาเหตุที่ส่ง</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox2">
             <h5>7. รายละเอียดอื่น ๆ</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox4">
             <h5>8. สิทธิการรักษา</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
       </div>
       <div class="historybox2">
-        <div class="box235">
-          <div class="inputbox">
-            
+        <h4 style="margin: 10px 0px 0px 10px">การตรวจร่างกาย</h4>
+        <div class="inputboxrow">
+          <div class="item1">
+            <h5>HEENT</h5>
+            <div class="custom-select">
+              <select>
+                <option v-for="(item, index) in status" :key="index" value="">
+                  {{ item }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="item2">
+            <textarea type="text" />
+          </div>
+        </div>
+
+        <div class="inputboxrow">
+          <div class="item1">
+            <h5>HEART</h5>
+            <div class="custom-select">
+              <select>
+                <option v-for="(item, index) in status" :key="index" value="">
+                  {{ item }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="item2">
+            <textarea type="text" />
+          </div>
+        </div>
+        <div class="inputboxrow">
+          <div class="item1">
+            <h5>LUNG</h5>
+            <div class="custom-select">
+              <select>
+                <option v-for="(item, index) in status" :key="index" value="">
+                  {{ item }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="item2">
+            <textarea type="text" />
+          </div>
+        </div>
+        <div class="inputboxrow">
+          <div class="item1">
+            <h5>Ab</h5>
+            <div class="custom-select">
+              <select>
+                <option v-for="(item, index) in status" :key="index" value="">
+                  {{ item }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="item2">
+            <textarea type="text" />
+          </div>
+        </div>
+        <div class="inputboxrow">
+          <div class="item1">
+            <h5>Exr</h5>
+            <div class="custom-select">
+              <select>
+                <option v-for="(item, index) in status" :key="index" value="">
+                  {{ item }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="item2">
+            <textarea type="text" />
+          </div>
+        </div>
+        <div class="inputboxrow">
+          <div class="item1">
+            <h5>PE text</h5>
+            <div class="custom-select">
+              <select>
+                <option v-for="(item, index) in status" :key="index" value="">
+                  {{ item }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="item2">
+            <textarea type="text" />
           </div>
         </div>
       </div>
@@ -182,6 +269,9 @@ export default {
   data() {
     return {
       depart: [
+        {
+          name: "เลือกแผนก",
+        },
         {
           spclty: "01",
           name: "อายุรกรรม",
@@ -540,56 +630,91 @@ export default {
           active_status: null,
         },
       ],
+      status:[
+        "สถานะ","ปกติ","ผิดปกติ"
+      ]
     };
   },
 };
 </script>
 
 <style scoped>
-.lb{
-  width: 20%;
-  background: red;
-  height: 50%;
+.item1 h5 {
+  margin-right: 10px;
+  margin-bottom: 0px;
 }
-.inputbox textarea:focus{
+.item1 {
+  margin-top: 20px;
+  padding: 0px 10px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  /* background: red; */
+  height: 100px;
+  flex-direction: row;
+}
+.item2 {
+  margin-top: 20px;
+  width: 60%;
+  /* background: skyblue; */
+  justify-content: start;
+  align-items: top;
+  height: 100px;
+  display: flex;
+}
+.inputbox textarea:focus {
   outline: none;
 }
-.inputbox2 textarea:focus{
+.inputbox2 textarea:focus {
   outline: none;
 }
-.inputbox3 textarea:focus{
+.inputbox3 textarea:focus {
   outline: none;
 }
-.inputbox4 textarea:focus{
+.inputbox4 textarea:focus {
   outline: none;
 }
-.inputbox textarea{
-  border-radius:20px ;
+.inputbox textarea {
+  border-radius: 20px;
   padding: 8px 8px 8px 15px;
   width: 99%;
   height: 150px;
 }
-.inputbox2 textarea{
-  border-radius:20px ;
+.inputbox2 textarea {
+  border-radius: 20px;
   padding: 8px 8px 8px 15px;
   width: 99%;
   height: 100px;
 }
-.inputbox3 textarea{
-  border-radius:20px ;
+.inputbox3 textarea {
+  border-radius: 20px;
   padding: 8px 8px 8px 15px;
   width: 99%;
   height: 300px;
 }
-.inputbox4 textarea{
-  border-radius:20px ;
+.inputbox4 textarea {
+  border-radius: 20px;
   padding: 8px 8px 8px 15px;
   width: 99%;
   height: 50px;
 }
-select{
-  width : 97%;
-  border-radius:20px ;
+.item2 textarea {
+  border-radius: 20px;
+  padding: 8px 8px 8px 15px;
+  width: 98%;
+  height: 70px;
+}
+.item1 .custom-select select {
+  width: 250px;
+  border-radius: 20px;
+  padding-left: 10px;
+  height: 28px;
+  border: 2px solid;
+}
+.inputbox select {
+  width: 97%;
+  border-radius: 20px;
   padding-left: 10px;
   height: 28px;
   border: 2px solid;
@@ -604,6 +729,12 @@ select{
   width: 97%;
   border-radius: 20px;
   padding-left: 15px;
+}
+.inputboxrow {
+  display: flex;
+  flex-direction: row;
+  /* background: aquamarine;    */
+  height: 100%;
 }
 .inputbox {
   flex-direction: column;
@@ -635,15 +766,6 @@ select{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* background: greenyellow; */
-}
-.box235 {
-  margin-top: 10px;
-  padding-left: 10px;
-  width: 100%;
-  height: 65px;
-  display: grid;
-  grid-template-columns: 2fr 3fr 5fr;
-  background: greenyellow;
 }
 .bigbox {
   width: 100%;
@@ -683,7 +805,8 @@ select{
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
-}.historybox3 {
+}
+.historybox3 {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
