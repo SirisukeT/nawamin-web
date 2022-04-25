@@ -85,7 +85,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 10px 0;
-  width: 300px;
+  width: 80%;
   height: 120px;
   background-color: #e7e7e7;
   border-radius: 15px;
