@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp, markRaw } from "vue";
 import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
@@ -18,9 +18,16 @@ import PatientCard from "./components/DataList/PatientCard.vue";
 import PCD_11 from "./components/PCD_11.vue";
 import PCD_12 from "./components/PCD_12.vue";
 import PLR_1 from "./components/PLR_1.vue";
-import PatientListView from "./views/PatientListView.vue";
+
+import AdminView from "./views/AdminView.vue";
+import LoginView from "./views/LoginView.vue";
+import PatientCurrentDisease from "./views/PatientCurrentDisease.vue";
+import PatientCurrentDrugsView from "./views/PatientCurrentDrugsView.vue";
 import PatientDetailsView from "./views/PatientDetailsView.vue";
 import PatientInfoView from "./views/PatientInfoView.vue";
+import PatientLabReportView from "./views/PatientLabReportView.vue";
+import PatientListView from "./views/PatientListView.vue";
+import PatientListViewAdd from "./views/PatientListViewAdd.vue";
 
 import GrayBox from "./components/Boxes/GrayBox.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -34,9 +41,12 @@ library.add(fas);
 library.add(far);
 
 const pinia = createPinia();
+pinia.use(({ store }) => {
+  store.$router = markRaw(router);
+});
 const app = createApp(App);
-app.use(pinia);
 app.use(router);
+app.use(pinia);
 app.mount("#app");
 app.component("fa_c", FontAwesomeIcon);
 app.component("SideBar", SideBar);
@@ -56,6 +66,12 @@ app.component("PCD_12", PCD_12);
 app.component("PLR_1", PLR_1);
 app.component("PatientCard", PatientCard);
 app.component("GrayBox", GrayBox);
-app.component("PatientListView", PatientListView);
+app.component("AdminView", AdminView);
+app.component("LoginView", LoginView);
+app.component("PatientCurrentDisease", PatientCurrentDisease);
+app.component("PatientCurrentDrugsView", PatientCurrentDrugsView);
 app.component("PatientDetailsView", PatientDetailsView);
 app.component("PatientInfoView", PatientInfoView);
+app.component("PatientLabReportView", PatientLabReportView);
+app.component("PatientListView", PatientListView);
+app.component("PatientListViewAdd", PatientListViewAdd);

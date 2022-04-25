@@ -11,13 +11,7 @@
     <div class="midbox">
       <div class="addbox">
         <button
-          @click="
-            patientAdd([
-              '/PatientListViewAdd',
-              'รายชื่อผู้ป่วย',
-              'เพิ่มผู้ป่วย',
-            ])
-          "
+          @click="store.changePage(['เพิ่มรายชื่อผู้ป่วย'])"
           class="subadd"
         >
           เพิ่มผู้ป่วย
@@ -43,7 +37,8 @@
             @select="patientInfo"
             v-for="(item, index) in data"
             :key="index"
-            :id="item.cid"
+            :patient="item"
+            :id="index + 1"
             :name="item.pname + ' ' + item.fname + ' ' + item.lname"
             :pdate="item.firstday"
             :sdate="item.sdate"
@@ -54,6 +49,11 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <script>
 import data from "../json/Test.json";
@@ -96,7 +96,7 @@ h1 {
 .botbox {
   margin-top: 0px;
   width: 100%;
-  height: 600px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #c4c4c4;
@@ -117,7 +117,7 @@ h1 {
 .graphbox {
   margin: 10px;
   width: 100%;
-  height: 580px;
+  height: 100%;
   /* display: flex;
   justify-content: space-between; */
   background-color: #e7e7e7;

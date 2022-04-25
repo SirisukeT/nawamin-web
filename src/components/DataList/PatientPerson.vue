@@ -7,7 +7,9 @@
     <th>{{ status }}</th>
     <th id="info">
       <button
-        @click="patientInfo(['/PatientDetailsView', 'รายชื่อผู้ป่วย', name])"
+        @click="
+          store.sendPatient(['รายละเอียดผู้ป่วย', 'รายละเอียดผู้ป่วย', name],patient)
+        "
       >
         รายละเอียด
       </button>
@@ -15,21 +17,22 @@
   </tr>
 </template>
 
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
+
 <script>
 export default {
   name: "PatientPerson",
   props: {
-    id: { type: String },
+    id: { type: Number },
     name: { type: String, required: true },
     pdate: { type: String },
     sdate: { type: String },
     status: { type: String },
     something: { type: String },
-  },
-  methods: {
-    patientInfo(component) {
-      this.$emit("select", component);
-    },
+    patient: {},
   },
 };
 </script>

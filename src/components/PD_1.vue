@@ -3,7 +3,17 @@
     <div class="topbox">
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/PatientInfoView', 'ประวัติผู้ป่วย'])">
+          <button
+            class="subbox"
+            @click="
+              store.changePage([
+                'ประวัติผู้ป่วย',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ประวัติผู้ป่วย',
+              ])
+            "
+          >
             ประวัติผู้ป่วย
           </button>
         </div>
@@ -12,7 +22,15 @@
       <div class="box">
         <div class="subbox">
           <button
-            @click="selectMenu(['/PatientCurrentDisease', 'โรคปัจจุบัน'])"
+            class="subbox"
+            @click="
+              store.changePage([
+                'โรคปัจจุบัน',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'โรคปัจจุบัน',
+              ])
+            "
           >
             โรคปัจจุบัน
           </button>
@@ -21,7 +39,19 @@
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/PatientLabReportView', 'ผลแลป'])">ผลแลป</button>
+          <button
+            class="subbox"
+            @click="
+              store.changePage([
+                'ผลแลป',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ผลแลป',
+              ])
+            "
+          >
+            ผลแลป
+          </button>
         </div>
       </div>
     </div>
@@ -29,26 +59,38 @@
     <div class="botbox">
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/PatientCurrentdrugsView', 'ยาที่ใ่ช้ในปัจจุบัน'])">
-            ยาที่ใ่ช้ในปัจจุบัน
+          <button
+            class="subbox"
+            @click="
+              store.changePage([
+                '/PatientCurrentdrugsView',
+                'ยาที่ใช้ในปัจจุบัน',
+              ])
+            "
+          >
+            ยาที่ใช้ในปัจจุบัน
           </button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/', 'ใบส่งตัว'])">ใบส่งตัว</button>
+          <button class="subbox" @click="store.changePage(['/', 'ใบส่งตัว'])">
+            ใบส่งตัว
+          </button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button @click="selectMenu(['/', 'แบบแจ้งผลการตรวจการรักษา'])">
+          <button
+            class="subbox"
+            @click="store.changePage(['/', 'แบบแจ้งผลการตรวจการรักษา'])"
+          >
             แบบแจ้งผลการตรวจการรักษา
           </button>
         </div>
       </div>
-      
     </div>
   </div>
   <div class="buttonbox">
@@ -56,15 +98,14 @@
   </div>
 </template>
 
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
+
 <script>
 export default {
   name: "PD_1",
-  methods: {
-    selectMenu(component) {
-      // alert(`ข้อมูลของ ${component[0]} ค่ะ`);
-      this.$emit("selectSub", component);
-    },
-  },
 };
 </script>
 
@@ -113,5 +154,12 @@ h1 {
   height: 100%;
   background-color: #e7e7e7;
   border-radius: 15px;
+}
+
+.subbox button {
+  background-color: transparent;
+  border: 0;
+  font-size: 30px;
+  font-weight: bold;
 }
 </style>

@@ -2,7 +2,7 @@
   <nav class="navbar fixed-top">
     <div class="container-fluid">
       <div class="navbar-brand">
-        <router-link :to="'/admin'">
+        <router-link :to="'/Overall'">
           <img
             id="logo"
             src="@/assets/logo_re.png"

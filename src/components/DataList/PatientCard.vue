@@ -6,10 +6,15 @@
       </div>
     </div>
     <div class="phptext">
-      <h3>นายชอบ ไร้โรค</h3>
+      <h3>{{store.patient.name}}</h3>
     </div>
   </div>
 </template>
+
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <script>
 export default {
@@ -44,5 +49,15 @@ export default {
   height: 170px;
   background-color: white;
   border-radius: 100%;
+}
+
+.phptext {
+  margin-top: 20px;
+  width: 100%;
+  height: 100px;
+  /* background-color: greenyellow; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 </style>

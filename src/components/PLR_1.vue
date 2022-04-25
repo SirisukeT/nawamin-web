@@ -1,6 +1,6 @@
 <template>
   <div class="bigbox">
-    <PatientCard/>
+    <PatientCard />
     <div class="rightbox">
       <div class="historybox">
         <h1 class="CurrentDiseases">ผลแลป</h1>
@@ -14,7 +14,7 @@
               <h5>ผลแลป</h5>
             </div>
             <div class="subinfo">
-             <h5>วันที่ตรวจ</h5>
+              <h5>วันที่ตรวจ</h5>
             </div>
           </div>
           <div class="info2">
@@ -25,7 +25,7 @@
               <h5>77 mg/dL</h5>
             </div>
             <div class="subinfo">
-             <h5>13 กันยายน 2564</h5>
+              <h5>13 กันยายน 2564</h5>
             </div>
           </div>
           <div class="info2">
@@ -55,12 +55,12 @@ export default {
 </script>
 
 <style scoped>
-* h5{
+* h5 {
   margin: 0;
 }
 .buttonbox {
-margin-top: 30px;
-padding-bottom: 60px;
+  margin-top: 30px;
+  padding-bottom: 60px;
   width: 100%;
   height: 500px;
   /* background-color: greenyellow; */
@@ -68,30 +68,7 @@ padding-bottom: 60px;
   justify-content: center;
   align-items: center;
 }
-.pp img {
-  width: 170px;
-  height: 170px;
-  background-color: white;
-  border-radius: 100%;
-}
-.ppcolor {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.phptext {
-  margin-top: 20px;
-  width: 100%;
-  height: 100px;
-  /* background-color: greenyellow; */
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+
 .bigbox {
   width: 100%;
   height: 100%;
@@ -99,16 +76,7 @@ padding-bottom: 60px;
   justify-content: space-between;
   /* background-color: black; */
 }
-.leftbox {
-  margin-left: 20px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350px;
-  height: 600px;
-  /* background-color: blue; */
-}
+
 .rightbox {
   display: flex;
   flex-direction: column;
@@ -205,12 +173,12 @@ padding-bottom: 60px;
 .subbox img {
   width: 20%;
 }
-* p{
+* p {
   margin: 0;
   padding: 0;
   text-align: center;
 }
-h1.CurrentDiseases{
+h1.CurrentDiseases {
   padding-top: 10px;
   margin-bottom: 0px;
 }
