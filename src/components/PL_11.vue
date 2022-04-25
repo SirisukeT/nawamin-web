@@ -34,7 +34,6 @@
             <th></th>
           </tr>
           <PatientPerson
-            @select="patientInfo"
             v-for="(item, index) in data"
             :key="index"
             :patient="item"

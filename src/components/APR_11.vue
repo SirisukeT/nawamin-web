@@ -54,17 +54,17 @@
         <div class="box111">
           <div class="inputbox">
             <h5>ชื่อ - สกุลผู้ป่วย</h5>
-            <input type="text" />
+            <input type="text" id="name"/>
           </div>
           <div class="inputbox">
             <h5>เลขบัตรประชาชน</h5>
-            <input type="text" />
+            <input type="text" id="cid" />
           </div>
           <div class="inputbox">
             <h5>เพศ</h5>
             <div class="custom-select">
               <select>
-                <option v-for="(item, index) in depart" :key="index" value="">
+                <option v-for="(item, index) in sex" :key="index" value="">
                   {{ item.name }}
                 </option>
               </select>
@@ -116,57 +116,55 @@
         <div class="box3">
           <div class="inputbox">
             <h5>1. ประวัติการป่วยในอดีตและประวัติครอบครัว</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox">
             <h5>2. ประวัติการป่วยปัจจุบัน</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
-         <div class="box3">
+        <div class="box3">
           <div class="inputbox2">
             <h5>3. ผลการตรวจชันสูตรทางห้องทดลองที่สำคัญ</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox2">
             <h5>4. ผลการวินิจฉัยโรคชั้นต้น</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox3">
             <h5>5. การรักษาหรือยาที่ได้ให้ไว้แล้ว</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox4">
             <h5>6. สาเหตุที่ส่ง</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox2">
             <h5>7. รายละเอียดอื่น ๆ</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox4">
             <h5>8. สิทธิการรักษา</h5>
-            <textarea type="text"/>
+            <textarea type="text" />
           </div>
         </div>
       </div>
       <div class="historybox2">
         <div class="box235">
-          <div class="inputbox">
-            
-          </div>
+          <div class="inputbox"></div>
         </div>
       </div>
       <div class="buttonbox">
@@ -177,11 +175,13 @@
 </template>
 
 <script>
+import { useTitleStore } from "@/stores/TitleStore";
 export default {
   name: "APR_1",
   data() {
     return {
       depart: [
+        { name: "" },
         {
           spclty: "01",
           name: "อายุรกรรม",
@@ -542,54 +542,59 @@ export default {
       ],
     };
   },
+  mounted() {
+    const store = useTitleStore();
+    document.getElementById("name").defaultValue = store.patient.data["pname"]+''+store.patient.data["fname"]+' '+store.patient.data["lname"];
+    document.getElementById("cid").defaultValue = store.patient.data["cid"];
+  },
 };
 </script>
 
 <style scoped>
-.lb{
+.lb {
   width: 20%;
   background: red;
   height: 50%;
 }
-.inputbox textarea:focus{
+.inputbox textarea:focus {
   outline: none;
 }
-.inputbox2 textarea:focus{
+.inputbox2 textarea:focus {
   outline: none;
 }
-.inputbox3 textarea:focus{
+.inputbox3 textarea:focus {
   outline: none;
 }
-.inputbox4 textarea:focus{
+.inputbox4 textarea:focus {
   outline: none;
 }
-.inputbox textarea{
-  border-radius:20px ;
+.inputbox textarea {
+  border-radius: 20px;
   padding: 8px 8px 8px 15px;
   width: 99%;
   height: 150px;
 }
-.inputbox2 textarea{
-  border-radius:20px ;
+.inputbox2 textarea {
+  border-radius: 20px;
   padding: 8px 8px 8px 15px;
   width: 99%;
   height: 100px;
 }
-.inputbox3 textarea{
-  border-radius:20px ;
+.inputbox3 textarea {
+  border-radius: 20px;
   padding: 8px 8px 8px 15px;
   width: 99%;
   height: 300px;
 }
-.inputbox4 textarea{
-  border-radius:20px ;
+.inputbox4 textarea {
+  border-radius: 20px;
   padding: 8px 8px 8px 15px;
   width: 99%;
   height: 50px;
 }
-select{
-  width : 97%;
-  border-radius:20px ;
+select {
+  width: 97%;
+  border-radius: 20px;
   padding-left: 10px;
   height: 28px;
   border: 2px solid;
@@ -643,7 +648,7 @@ select{
   height: 65px;
   display: grid;
   grid-template-columns: 2fr 3fr 5fr;
-  background: greenyellow;
+  /* background: greenyellow; */
 }
 .bigbox {
   width: 100%;
@@ -683,7 +688,8 @@ select{
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
-}.historybox3 {
+}
+.historybox3 {
   display: flex;
   flex-direction: column;
   margin-top: 10px;

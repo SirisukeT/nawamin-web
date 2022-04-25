@@ -11,7 +11,7 @@
     <div class="midbox">
       <div class="addbox">
         <button
-          @click="store.changePage(['เพิ่มใบส่งตัว'])"
+          @click="store.changePage(['เพิ่มใบส่งตัว','รายละเอียดผู้ป่วย',store.patient.name,'เพิ่มใบส่งตัว'])"
           class="subadd"
         >
           เพิ่มใบส่งตัว

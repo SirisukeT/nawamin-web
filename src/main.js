@@ -1,5 +1,6 @@
 import { createApp, markRaw } from "vue";
 import { createPinia } from "pinia";
+import { useTitleStore } from '@/stores/TitleStore.js'
 import App from "./App.vue";
 import router from "./router";
 import LoginP from "./components/Login/LoginP.vue";
@@ -89,6 +90,8 @@ app.component("SU_11",SU_11);
 app.component("SU_12",SU_12);
 app.component("PatientCard", PatientCard);
 app.component("GrayBox", GrayBox);
+
+const store = useTitleStore();
 // app.component("AdminView", AdminView);
 // app.component("LoginView", LoginView);
 // app.component("PatientCurrentDisease", PatientCurrentDisease);
