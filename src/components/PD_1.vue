@@ -77,7 +77,17 @@
 
       <div class="box">
         <div class="subbox">
-          <button class="subbox" @click="store.changePage(['/', 'ใบส่งตัว'])">
+          <button
+            class="subbox"
+            @click="
+              store.changePage([
+                'ใบส่งตัว',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ใบส่งตัว',
+              ])
+            "
+          >
             ใบส่งตัว
           </button>
         </div>

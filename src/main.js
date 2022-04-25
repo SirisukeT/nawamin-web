@@ -18,6 +18,8 @@ import PatientCard from "./components/DataList/PatientCard.vue";
 import PCD_11 from "./components/PCD_11.vue";
 import PCD_12 from "./components/PCD_12.vue";
 import PLR_1 from "./components/PLR_1.vue";
+import PRL_1 from "./components/PRL_1.vue";
+import APR_11 from "./components/APR_11.vue";
 
 import AdminView from "./views/AdminView.vue";
 import LoginView from "./views/LoginView.vue";
@@ -64,6 +66,8 @@ app.component("PatientInfo", PatientInfo);
 app.component("PCD_11", PCD_11);
 app.component("PCD_12", PCD_12);
 app.component("PLR_1", PLR_1);
+app.component("PRL_1", PRL_1);
+app.component("APR_11", APR_11);
 app.component("PatientCard", PatientCard);
 app.component("GrayBox", GrayBox);
 app.component("AdminView", AdminView);

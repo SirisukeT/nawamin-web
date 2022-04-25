@@ -38,6 +38,7 @@ div .main-content {
   /* padding: 1rem 2rem; */
 }
 .content-naw {
+  background-color :#CDDAD7;
   max-width: 100%;
   /* height: 100%; */
   margin-left: 250px;

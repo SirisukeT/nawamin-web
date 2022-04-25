@@ -47,7 +47,7 @@ export default {
   background-image: linear-gradient(
     to right,
     rgb(37, 149, 122),
-    rgb(129, 187, 173)
+    rgb(205, 218, 215)
   );
   width: 100%;
   height: 100px;

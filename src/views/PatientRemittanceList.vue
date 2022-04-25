@@ -5,7 +5,7 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <APR_11 />
+        <PRL_1 />
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "PatientLabReportView",
+  name: "PatientRemittanceList",
   data() {
     return {
       Title: ["รายชื่อผู้ป่วย"],
