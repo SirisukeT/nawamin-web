@@ -101,7 +101,7 @@
             <input type="text" />
           </div>
           <div class="inputbox">
-            <h5>จังหวะ</h5>
+            <h5>จังหวัด</h5>
             <input type="text" />
           </div>
         </div>
@@ -115,8 +115,57 @@
       <div class="historybox2">
         <div class="box3">
           <div class="inputbox">
-            <h5>1.ประวัติการป่วยในอดีตและประวัติครอบครัว</h5>
-            <textarea type="text" />
+            <h5>1. ประวัติการป่วยในอดีตและประวัติครอบครัว</h5>
+            <textarea type="text"/>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="inputbox">
+            <h5>2. ประวัติการป่วยปัจจุบัน</h5>
+            <textarea type="text"/>
+          </div>
+        </div>
+         <div class="box3">
+          <div class="inputbox2">
+            <h5>3. ผลการตรวจชันสูตรทางห้องทดลองที่สำคัญ</h5>
+            <textarea type="text"/>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="inputbox2">
+            <h5>4. ผลการวินิจฉัยโรคชั้นต้น</h5>
+            <textarea type="text"/>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="inputbox3">
+            <h5>5. การรักษาหรือยาที่ได้ให้ไว้แล้ว</h5>
+            <textarea type="text"/>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="inputbox4">
+            <h5>6. สาเหตุที่ส่ง</h5>
+            <textarea type="text"/>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="inputbox2">
+            <h5>7. รายละเอียดอื่น ๆ</h5>
+            <textarea type="text"/>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="inputbox4">
+            <h5>8. สิทธิการรักษา</h5>
+            <textarea type="text"/>
+          </div>
+        </div>
+      </div>
+      <div class="historybox2">
+        <div class="box235">
+          <div class="inputbox">
+            
           </div>
         </div>
       </div>
@@ -497,6 +546,47 @@ export default {
 </script>
 
 <style scoped>
+.lb{
+  width: 20%;
+  background: red;
+  height: 50%;
+}
+.inputbox textarea:focus{
+  outline: none;
+}
+.inputbox2 textarea:focus{
+  outline: none;
+}
+.inputbox3 textarea:focus{
+  outline: none;
+}
+.inputbox4 textarea:focus{
+  outline: none;
+}
+.inputbox textarea{
+  border-radius:20px ;
+  padding: 8px 8px 8px 15px;
+  width: 99%;
+  height: 150px;
+}
+.inputbox2 textarea{
+  border-radius:20px ;
+  padding: 8px 8px 8px 15px;
+  width: 99%;
+  height: 100px;
+}
+.inputbox3 textarea{
+  border-radius:20px ;
+  padding: 8px 8px 8px 15px;
+  width: 99%;
+  height: 300px;
+}
+.inputbox4 textarea{
+  border-radius:20px ;
+  padding: 8px 8px 8px 15px;
+  width: 99%;
+  height: 50px;
+}
 select{
   width : 97%;
   border-radius:20px ;
@@ -546,6 +636,15 @@ select{
   grid-template-columns: repeat(3, 1fr);
   /* background: greenyellow; */
 }
+.box235 {
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 65px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 5fr;
+  background: greenyellow;
+}
 .bigbox {
   width: 100%;
   height: 100vh;
@@ -580,8 +679,17 @@ select{
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
-  height: 500px;
-  /* background-color: blue; */
+  height: 300vh;
+  background-color: #c4c4c4;
+  border-radius: 30px;
+  border: 1.75px solid black;
+}.historybox3 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+  height: 1000px;
+  background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
 }
