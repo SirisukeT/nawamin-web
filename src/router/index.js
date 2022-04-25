@@ -44,7 +44,7 @@ const router = createRouter({
     },
 
     {
-      path: "/:main/:name/:sub",
+      path: "/:main/:name/1:sub",
       name: "ประวัติผู้ป่วย",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -52,7 +52,7 @@ const router = createRouter({
       component: () => import("../views/PatientInfoView.vue"),
     },
     {
-      path: "/:main/:name/:sub",
+      path: "/:main/:name/2:sub",
       name: "โรคปัจจุบัน",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -60,7 +60,7 @@ const router = createRouter({
       component: () => import("../views/PatientCurrentDisease.vue"),
     },
     {
-      path: "/:main/:name/:sub",
+      path: "/:main/:name/3:sub",
       name: "ผลแลป",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -68,7 +68,7 @@ const router = createRouter({
       component: () => import("../views/PatientLabReportView.vue"),
     },
     {
-      path: "/:main/:name/:sub",
+      path: "/:main/:name/4:sub",
       name: "ยาที่ใช้ในปัจจุบัน",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -76,7 +76,7 @@ const router = createRouter({
       component: () => import("../views/PatientCurrentdrugsView.vue"),
     },
     {
-      path: "/:main/:name/:sub",
+      path: "/:main/:name/5:sub",
       name: "ใบส่งตัว",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -90,6 +90,14 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/SetupView.vue"),
+    },
+    {
+      path: "/SetupAdd",
+      name: "เพิ่มโรงพยาบาล",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/SetupAddView.vue"),
     },
     
   ],
