@@ -63,7 +63,9 @@
             class="subbox"
             @click="
               store.changePage([
-                '/PatientCurrentdrugsView',
+                'ยาที่ใช้ในปัจจุบัน',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
                 'ยาที่ใช้ในปัจจุบัน',
               ])
             "
