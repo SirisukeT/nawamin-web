@@ -5,7 +5,7 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <SO_1 />
+        <PCD_11 />
       </div>
     </div>
   </div>
@@ -13,6 +13,13 @@
 
 <script>
 export default {
-  name: "AdminView",
+  name: "PatientCurrentDisease",
+  data() {
+    return {
+      Title: "",
+    };
+  },
 };
 </script>
+
+<style></style>

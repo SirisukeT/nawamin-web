@@ -1,50 +1,119 @@
 <template>
   <div class="bigbox">
-
     <div class="topbox">
-
       <div class="box">
         <div class="subbox">
-          <button>ประวัติผู้ป่วย</button>
+          <button
+            class="subbox"
+            @click="
+              store.changePage([
+                'ประวัติผู้ป่วย',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ประวัติผู้ป่วย',
+              ])
+            "
+          >
+            ประวัติผู้ป่วย
+          </button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button>โรคปัจจุบัน</button>
+          <button
+            class="subbox"
+            @click="
+              store.changePage([
+                'โรคปัจจุบัน',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'โรคปัจจุบัน',
+              ])
+            "
+          >
+            โรคปัจจุบัน
+          </button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button>ผลแลป</button>
+          <button
+            class="subbox"
+            @click="
+              store.changePage([
+                'ผลแลป',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ผลแลป',
+              ])
+            "
+          >
+            ผลแลป
+          </button>
         </div>
       </div>
     </div>
 
     <div class="botbox">
-
       <div class="box">
         <div class="subbox">
-          <button>ยาที่ใ่ช้ในปัจจุบัน</button>
+          <button
+            class="subbox"
+            @click="
+              store.changePage([
+                'ยาที่ใช้ในปัจจุบัน',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ยาที่ใช้ในปัจจุบัน',
+              ])
+            "
+          >
+            ยาที่ใช้ในปัจจุบัน
+          </button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button>ใบส่งตัว</button>
+          <button
+            class="subbox"
+            @click="
+              store.changePage([
+                'ใบส่งตัว',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ใบส่งตัว',
+              ])
+            "
+          >
+            ใบส่งตัว
+          </button>
         </div>
       </div>
 
       <div class="box">
         <div class="subbox">
-          <button>แบบแจ้งผลการตรวจการรักษา</button>
+          <button
+            class="subbox"
+            @click="store.changePage(['/', 'แบบแจ้งผลการตรวจการรักษา'])"
+          >
+            แบบแจ้งผลการตรวจการรักษา
+          </button>
         </div>
       </div>
     </div>
-
+  </div>
+  <div class="buttonbox">
+    <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
   </div>
 </template>
+
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <script>
 export default {
@@ -58,7 +127,7 @@ h1 {
   text-align: center;
   font-size: 20px;
 }
-.bigbox{
+.bigbox {
   width: 100%;
   height: 100%;
   max-height: 100vh;
@@ -75,7 +144,6 @@ h1 {
 .botbox {
   margin-top: -10px;
   width: 100%;
-  height: 600px;
   display: flex;
   justify-content: space-between;
   /* background-color: blue; */
@@ -98,5 +166,12 @@ h1 {
   height: 100%;
   background-color: #e7e7e7;
   border-radius: 15px;
+}
+
+.subbox button {
+  background-color: transparent;
+  border: 0;
+  font-size: 30px;
+  font-weight: bold;
 }
 </style>

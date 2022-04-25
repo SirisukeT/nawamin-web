@@ -2,7 +2,7 @@
   <nav class="navbar fixed-top">
     <div class="container-fluid">
       <div class="navbar-brand">
-        <router-link :to="'/admin'">
+        <router-link :to="'/Overall'">
           <img
             id="logo"
             src="@/assets/logo_re.png"
@@ -14,27 +14,31 @@
         <p>โรงพยาบาลค่ายนวมินทราชินี</p>
       </div>
       <div class="navbar-r">
-        <img src="../assets/user-regular.svg" alt="" />
+        <img src="@/assets/user-regular.svg" alt="" />
         <div class="navbar-account">
           <h5>นายสมหมาย มิตรรัก</h5>
           <h5>ตำแหน่ง</h5>
           <!-- <h5>โรงพยาบาลค่ายนวมินทราชินี</h5> -->
         </div>
-        <a @click="logout"><img id="exit" src="../assets/arrow-right-from-bracket-solid.svg" alt="" /></a>
+        <a @click="logout"
+          ><img
+            id="exit"
+            src="@/assets/arrow-right-from-bracket-solid.svg"
+            alt=""
+        /></a>
       </div>
     </div>
   </nav>
 </template>
 
-<script>import { faLongArrowAltUp } from "@fortawesome/free-solid-svg-icons"
-
+<script>
 export default {
-  name: "Navbar",
-  methods:{
-    logout(){
+  name: "NavBar",
+  methods: {
+    logout() {
       this.$router.push("/");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -43,7 +47,7 @@ export default {
   background-image: linear-gradient(
     to right,
     rgb(37, 149, 122),
-    rgb(129, 187, 173)
+    rgb(205, 218, 215)
   );
   width: 100%;
   height: 100px;
@@ -87,7 +91,7 @@ div.navbar-brand p {
   width: 70px;
 }
 
-.navbar-r a{
+.navbar-r a {
   margin: 0 15px 0 20px;
 }
 
@@ -95,7 +99,7 @@ div.navbar-brand p {
   background: none;
   border-radius: 0;
   height: 30px;
-  width:  30px;
+  width: 30px;
 }
 
 .navbar-brand p {
@@ -110,5 +114,4 @@ div.navbar-brand p {
 .navbar-account > * {
   margin: 0;
 }
-
 </style>

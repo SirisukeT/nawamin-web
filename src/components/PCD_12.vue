@@ -7,48 +7,40 @@
         <div class="line"></div>
         <div class="boxin">
           <div class="info">
+            <p>โรค</p>
+          </div>
+          <div class="info2">
             <div class="infoleft">
-              <label>โรค</label>
+              <h5>วันที่พบแพทย์ล่าสุด</h5>
             </div>
             <div class="inforight">
-              <label>วันที่พบแพทย์ล่าสุด</label>
+              <h5>13 กันยายน 2564</h5>
             </div>
           </div>
-          <template v-for="(item,index) in disease" :key="index" >
-            <Disease v-if="item['cid']==store.patient.data.cid" :diseases="item['diseases']"/>
-          </template>
-        </div>
-      </div>
-      <div class="botbox">
-        <div class="box">
-          <h1>ความดัน</h1>
-          <div class="line"></div>
-          <div class="subbox">
-            <img src="/pulse.png" alt="" />
-            <div class="line2"></div>
-            <p>
-              <label>140</label>SYS<br />
-              <label>90</label>DIA
-            </p>
-            <div class="line2"></div>
-            <p>
-              ตรวจเมื่อ<br />
-              13 ก.ย. 2564
-            </p>
+          <div class="info2">
+            <div class="infoleft">
+              <h5>อาการ/ข้อบ่งชี้โรค</h5>
+            </div>
+            <div class="inforight">
+              <h5>อาการ/ข้อบ่งชี้โรค</h5>
+            </div>
           </div>
-        </div>
-        <div class="box">
-          <h1>ชีพจร</h1>
-          <div class="line"></div>
-          <div class="subbox">
-            <img src="/pulse2.png" alt="" />
-            <div class="line2"></div>
-            <p><label>100</label>BPM</p>
-            <div class="line2"></div>
-            <p>
-              ตรวจเมื่อ<br />
-              13 ก.ย. 2564
-            </p>
+          <div class="info2">
+            <div class="infoleft">
+              <h5>ตรวจตาล่าสุด</h5>
+            </div>
+            <div class="inforight">
+              <h5>13 กันยายน 2564</h5>
+            </div>
+          </div>
+          <div class="info2">
+            <div class="infoleft">
+              <h5>ตรวจเท้าล่าสุด</h5>
+            </div>
+            <div class="inforight">
+              <h5>13 กันยายน 2564</h5>
+            </div>
+            <button class="inforight">13 กันยายน 2564</button>
           </div>
         </div>
       </div>
@@ -59,44 +51,37 @@
   </div>
 </template>
 
-<script setup>
-import { useTitleStore } from "@/stores/TitleStore";
-const store = useTitleStore();
-</script>
-
 <script>
-import disease from "../json/disease.json";
 export default {
-  name: "PCD_11",
-  data() {
-    return {
-      disease: "",
-    };
-  },
+  name: "PCD_12",
 };
 </script>
 
 <style scoped>
-.subbox p {
-  font-size: 20px;
-  text-align: center;
-}
-.subbox label {
-  font-size: 40px;
-  font-weight: 1000;
-}
-.CurrentDiseases {
-  margin-top: 10px;
-}
 .buttonbox {
-  /* margin-top: 30px; */
+  margin-top: 30px;
   padding-bottom: 60px;
   width: 100%;
-  height: 100px;
+  height: 500px;
   /* background-color: greenyellow; */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.pp img {
+  width: 170px;
+  height: 170px;
+  background-color: white;
+  border-radius: 100%;
+}
+.ppcolor {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bigbox {
@@ -106,24 +91,24 @@ export default {
   justify-content: space-between;
   /* background-color: black; */
 }
-
+.leftbox {
+  margin-left: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 600px;
+  /* background-color: blue; */
+}
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 700px;
   /* background-color: red; */
   justify-content: top;
   align-items: center;
-}
-.botbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 30px;
-  width: 100%;
-  height: 100%;
-  /* background: pink; */
 }
 .historybox {
   display: flex;
@@ -143,14 +128,9 @@ export default {
   height: 2px;
   background-color: black;
 }
-.line2 {
-  width: 2px;
-  height: 90%;
-  background-color: black;
-}
 .boxin {
-  padding-bottom: 20px;
   margin: 20px;
+  padding-bottom: 15px;
   width: 90%;
   height: 95%;
   background-color: #e7e7e7;
@@ -166,21 +146,17 @@ export default {
   height: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: whitesmoke;
 }
 .infoleft {
   display: flex;
-  width: 20%;
+  width: 30%;
   height: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
   /* background-color: skyblue; */
-}
-
-div.info label {
-  font-weight: bold;
 }
 .inforight {
   display: flex;
@@ -229,5 +205,14 @@ div.info label {
 }
 .subbox img {
   width: 20%;
+}
+* p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h1.CurrentDiseases {
+  padding-top: 10px;
+  margin-bottom: 0px;
 }
 </style>

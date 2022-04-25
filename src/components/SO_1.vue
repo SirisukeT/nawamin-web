@@ -1,16 +1,15 @@
 <template>
   <div class="bigbox">
     <div class="topbox">
-
       <div class="doctorbox">
-        <h1>จำนวนผู้ป่วย (คน)</h1>
+        <h1 class="ta-c">จำนวนผู้ป่วย (คน)</h1>
         <div class="line"></div>
         <div class="subdocb">
           <b>1000</b>
         </div>
       </div>
 
-      <div class="doctorbox">
+      <div class="doctorbox ta-c">
         <h1>จำนวนแพทย์ (คน)</h1>
         <div class="line"></div>
         <div class="subdocb">
@@ -18,7 +17,7 @@
         </div>
       </div>
 
-      <div class="doctorbox">
+      <div class="doctorbox ta-c">
         <h1>จำนวนการส่งต่อ (คน)</h1>
         <div class="line"></div>
         <div class="subdocb">
@@ -27,9 +26,9 @@
       </div>
     </div>
 
-      <div class="botbox">
-        <div class="graphbox"></div>
-      </div>
+    <div class="botbox">
+      <div class="graphbox"></div>
+    </div>
   </div>
 </template>
 
@@ -45,7 +44,7 @@ h1 {
   text-align: center;
   font-size: 20px;
 }
-.bigbox{
+.bigbox {
   width: 100%;
   /* height: 200vh; */
   display: flex;
@@ -77,15 +76,16 @@ h1 {
   border-radius: 15px;
 }
 
-.doctorbox h1{
-  font-size: 25px; 
+.doctorbox h1 {
+  font-size: 25px;
+  text-align: center;
 }
 .subdocb {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
-  width: 300px;
+  width: 80%;
   height: 120px;
   background-color: #e7e7e7;
   border-radius: 15px;

@@ -11,10 +11,10 @@
     <div class="midbox">
       <div class="addbox">
         <button
-          @click="store.changePage(['เพิ่มรายชื่อผู้ป่วย'])"
+          @click="store.changePage(['เพิ่มใบส่งตัว','รายละเอียดผู้ป่วย',store.patient.name,'เพิ่มใบส่งตัว'])"
           class="subadd"
         >
-          เพิ่มผู้ป่วย
+          เพิ่มใบส่งตัว
         </button>
       </div>
       <div class="addbox">
@@ -27,21 +27,19 @@
         <table>
           <tr>
             <th>ลำดับ</th>
-            <th>ชื่อ - ชื่อ-สกุล</th>
-            <th>วันที่รับตัว</th>
             <th>วันที่ส่งต่อ</th>
-            <th>สถานะ</th>
+            <th>โรงพยาบาลต้นทาง</th>
+            <th>โรงพยาบาลปลายทาง</th>
+            <th>ผู้ส่งต่อ</th>
+            <th>แผนก</th>
             <th></th>
           </tr>
-          <PatientPerson
+          <PatientRef
             v-for="(item, index) in data"
             :key="index"
             :patient="item"
             :id="index + 1"
-            :name="item.pname + ' ' + item.fname + ' ' + item.lname"
-            :pdate="item.firstday"
             :sdate="item.sdate"
-            :status="item.status"
           />
         </table>
       </div>
@@ -57,7 +55,7 @@ const store = useTitleStore();
 <script>
 import data from "../json/Test.json";
 export default {
-  name: "PL_11",
+  name: "PRL_1",
   data() {
     return {
       data,
