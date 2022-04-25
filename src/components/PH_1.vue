@@ -69,12 +69,10 @@ rb {
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 70%;
   height: 100%;
-  /* background-color: red; */
   justify-content: top;
   align-items: center;
-  /* overflow: hidden; */
 }
 .historybox {
   display: flex;

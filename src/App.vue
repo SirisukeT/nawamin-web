@@ -11,8 +11,9 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  background-color: #CDDAD7;
 }
 
 button:hover {
@@ -24,7 +25,7 @@ button:active {
 }
 
 .main-admin {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -34,7 +35,6 @@ div .main-content {
   margin-top: 100px;
   /* display: grid;
   grid-template-columns: 12% 88%; */
-  height: 100%;
   /* padding: 1rem 2rem; */
 }
 .content-naw {

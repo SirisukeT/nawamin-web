@@ -65,7 +65,7 @@ export default {
   height: 500px;
   /* background-color: greenyellow; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -80,7 +80,7 @@ export default {
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
   height: 700px;
   /* background-color: red; */
   justify-content: top;
@@ -142,37 +142,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.box {
-  width: 48%;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #c4c4c4;
-  border-radius: 15px;
-  border: 2px solid white;
-}
 
-.box h1 {
-  margin-top: 10px;
-  font-size: 25px;
-}
-.subbox {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px;
-  padding: 0px 10px 0px;
-  width: 90%;
-  height: 90%;
-  background-color: #e7e7e7;
-  border-radius: 15px;
-  font-size: 50px;
-  border: 2px solid white;
-}
-.subbox img {
-  width: 20%;
-}
 * p {
   margin: 0;
   padding: 0;

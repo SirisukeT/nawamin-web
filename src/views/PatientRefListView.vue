@@ -5,7 +5,7 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <PL_12 />
+        <PRL_1 />
       </div>
     </div>
   </div>
@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: "PatientListViewAdd",
+  name: "PatientRefListView",
 };
 </script>

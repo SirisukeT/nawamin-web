@@ -11,10 +11,10 @@
     <div class="midbox">
       <div class="addbox">
         <button
-          @click="store.changePage(['เพิ่มรายชื่อผู้ป่วย'])"
+          @click="store.changePage(['เพิ่มใบส่งตัว'])"
           class="subadd"
         >
-          เพิ่มผู้ป่วย
+          เพิ่มใบส่งตัว
         </button>
       </div>
       <div class="addbox">
@@ -34,16 +34,12 @@
             <th>แผนก</th>
             <th></th>
           </tr>
-          <PatientPerson
-            @select="patientInfo"
+          <PatientRef
             v-for="(item, index) in data"
             :key="index"
             :patient="item"
             :id="index + 1"
-            :name="item.pname + ' ' + item.fname + ' ' + item.lname"
-            :pdate="item.firstday"
             :sdate="item.sdate"
-            :status="item.status"
           />
         </table>
       </div>
@@ -64,14 +60,6 @@ export default {
     return {
       data,
     };
-  },
-  methods: {
-    patientInfo(component) {
-      this.$emit("select", component);
-    },
-    patientAdd(component) {
-      this.$emit("select", component);
-    },
   },
 };
 </script>
