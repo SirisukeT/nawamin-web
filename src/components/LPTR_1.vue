@@ -52,6 +52,29 @@ import ReportResult from "./DataList/ReportResult.vue";
 const store = useTitleStore();
 </script>
 
+<script>
+import depart from "../json/depart.json";
+import { useTitleStore } from "@/stores/TitleStore";
+export default {
+  name: "LPTR_1",
+  data() {
+    return {
+      depart,
+    };
+  },
+//   mounted() {
+//     const store = useTitleStore();
+//     document.getElementById("name").defaultValue =
+//       store.patient.data["pname"] +
+//       "" +
+//       store.patient.data["fname"] +
+//       " " +
+//       store.patient.data["lname"];
+//     document.getElementById("cid").defaultValue = store.patient.data["cid"];
+//   },
+};
+</script>
+
 <style scoped>
 h1 {
   margin-top: 10px;

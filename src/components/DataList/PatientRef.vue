@@ -2,8 +2,8 @@
   <tr>
     <th>{{ id }}</th>
     <th>{{ sdate }}</th>
-    <th>{{ ohos }}</th>
-    <th>{{ dhos }}</th>
+    <th>{{ ohosp }}</th>
+    <th>{{ dhosp }}</th>
     <th>{{ whos }}</th>
     <th>{{ department }}</th>
     <th id="info">
@@ -29,8 +29,8 @@ export default {
   props: {
     id: { type: Number },
     sdate: { type: String },
-    ohos: { type: String },
-    dhos: { type: String },
+    ohosp: { type: String },
+    dhosp: { type: String },
     whos: { type: String },
     department: { type: String },
     patient: {},

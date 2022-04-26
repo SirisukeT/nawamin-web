@@ -35,11 +35,15 @@
             <th></th>
           </tr>
           <PatientRef
-            v-for="(item, index) in data"
+            v-for="(item, index) in refer"
             :key="index"
             :patient="item"
             :id="index + 1"
             :sdate="item.sdate"
+            :ohosp="item.ohosp"
+            :dhosp="item.dhosp"
+            :whos="item.whos"
+            :department="item.depart"
           />
         </table>
       </div>
@@ -53,12 +57,12 @@ const store = useTitleStore();
 </script>
 
 <script>
-import data from "../json/Test.json";
+import refer from "../json/refer.json";
 export default {
   name: "PRL_1",
   data() {
     return {
-      data,
+      refer,
     };
   },
 };

@@ -84,7 +84,7 @@ const router = createRouter({
       component: () => import("../views/PatientRefListView.vue"),
     },
     {
-      path: "/:main/:name/6:sub/",
+      path: "/:main/:name/6:sub",
       name: "ใบแจ้งผล",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -92,7 +92,7 @@ const router = createRouter({
       component: () => import("../views/ListPatientTransferResultView.vue"),
     },
     {
-      path: "/:main/:name/6.1:sub/",
+      path: "/:main/:name/6:sub/1",
       name: "เพิ่มใบแจ้งผล",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -100,7 +100,7 @@ const router = createRouter({
       component: () => import("../views/AddPatientTransferResultView.vue"),
     },
     {
-      path: "/:main/:name/5.1:sub/",
+      path: "/:main/:name/5:sub/1",
       name: "เพิ่มใบส่งตัว",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route

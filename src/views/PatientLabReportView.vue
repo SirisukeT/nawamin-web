@@ -5,20 +5,22 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <APTR_1 />
+        <PLR_1 />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import PLR_1 from "../components/PLR_1.vue";
 export default {
-  name: "PatientLabReportView",
-  data() {
-    return {
-      Title: ["รายชื่อผู้ป่วย"],
-    };
-  },
+    name: "PatientLabReportView",
+    data() {
+        return {
+            Title: ["รายชื่อผู้ป่วย"],
+        };
+    },
+    components: { PLR_1 }
 };
 </script>
 
