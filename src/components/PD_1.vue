@@ -97,7 +97,12 @@
         <div class="subbox">
           <button
             class="subbox"
-            @click="store.changePage(['/', 'แบบแจ้งผลการตรวจการรักษา'])"
+            @click="store.changePage([
+                'ใบแจ้งผล',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'ใบแจ้งผล',
+              ])"
           >
             แบบแจ้งผลการตรวจการรักษา
           </button>

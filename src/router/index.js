@@ -85,6 +85,22 @@ const router = createRouter({
     },
     {
       path: "/:main/:name/6:sub/",
+      name: "ใบแจ้งผล",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/ListPatientTransferResultView.vue"),
+    },
+    {
+      path: "/:main/:name/6.1:sub/",
+      name: "เพิ่มใบแจ้งผล",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/AddPatientTransferResultView.vue"),
+    },
+    {
+      path: "/:main/:name/5.1:sub/",
       name: "เพิ่มใบส่งตัว",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -92,7 +108,7 @@ const router = createRouter({
       component: () => import("../views/PatientAddRefView.vue"),
     },
     {
-      path: "/setup",
+      path: "/setup", 
       name: "ตั้งค่าโรงพยาบาล",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
