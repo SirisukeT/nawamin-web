@@ -5,8 +5,11 @@
       <div class="icon">
         <img src="@/assets/play-solid.svg" alt="" height="40" />
       </div>
-      <b v-if="!$route.params.main">{{ $route.name }}</b>
-      <b>{{ $route.params.main }}</b>
+      <div class="subtitle dp-flex-r">
+        <b v-if="!$route.params.main">{{ $route.name }}</b>
+        <b>{{ $route.params.main }}</b>
+      </div>
+
       <div
         class="subtitle dp-flex-r"
         v-for="(text, index) in $route.params"
@@ -47,7 +50,7 @@
 }
 .listTitle b {
   margin-left: 20px;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   padding-top: 6px;
 }
