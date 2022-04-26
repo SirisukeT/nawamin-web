@@ -12,16 +12,6 @@
             <h5>วันที่</h5>
             <input type="date" id="dmy" />
           </div>
-          <div class="inputbox">
-            <h5>แผนก</h5>
-            <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in depart" :key="index" value="">
-                  {{ item.name }}
-                </option>
-              </select>
-            </div>
-          </div>
         </div>
         <div class="box21">
           <div class="inputbox">
@@ -51,212 +41,53 @@
             </div>
           </div>
         </div>
-        <div class="box111">
+        <div class="box21">
           <div class="inputbox">
             <h5>ชื่อ - สกุลผู้ป่วย</h5>
-            <input type="text" id="name"/>
-          </div>
-          <div class="inputbox">
-            <h5>เลขบัตรประชาชน</h5>
-            <input type="text" id="cid" />
-          </div>
-          <div class="inputbox">
-            <h5>เพศ</h5>
-            <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in sex" :key="index" value="">
-                  {{ item }}
-                </option>
-              </select>
-            </div>
+            <input type="text" id="name" />
           </div>
         </div>
+
         <div class="box111">
+          <div class="inputbox">
+            <h5>เพศ</h5>
+            <input type="text" />
+          </div>
           <div class="inputbox">
             <h5>อายุ (ปี)</h5>
             <input type="text" />
           </div>
         </div>
-        <div class="box111">
-          <div class="inputbox">
-            <h5>บ้านเลขที่</h5>
-            <input type="text" />
-          </div>
-          <div class="inputbox">
-            <h5>หมู่บ้าน</h5>
-            <input type="text" />
-          </div>
-          <div class="inputbox">
-            <h5>หมู่ที่</h5>
-            <input type="text" />
-          </div>
-        </div>
-        <div class="box111">
-          <div class="inputbox">
-            <h5>ตำบล</h5>
-            <input type="text" />
-          </div>
-          <div class="inputbox">
-            <h5>อำเภอ</h5>
-            <input type="text" />
-          </div>
-          <div class="inputbox">
-            <h5>จังหวัด</h5>
-            <input type="text" />
-          </div>
-        </div>
-        <div class="box3">
-          <div class="inputbox">
-            <h5>เหตุผลการส่งตัว</h5>
-            <input type="text" />
-          </div>
-        </div>
       </div>
       <div class="historybox2">
         <div class="box3">
-          <div class="inputbox">
-            <h5>1. ประวัติการป่วยในอดีตและประวัติครอบครัว</h5>
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="box3">
-          <div class="inputbox">
-            <h5>2. ประวัติการป่วยปัจจุบัน</h5>
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="box3">
-          <div class="inputbox2">
-            <h5>3. ผลการตรวจชันสูตรทางห้องทดลองที่สำคัญ</h5>
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="box3">
-          <div class="inputbox2">
-            <h5>4. ผลการวินิจฉัยโรคชั้นต้น</h5>
+          <div class="inputbox3">
+            <h5>1. ผลการชันสูตรที่สำคัญ</h5>
             <textarea type="text" />
           </div>
         </div>
         <div class="box3">
           <div class="inputbox3">
-            <h5>5. การรักษาหรือยาที่ได้ให้ไว้แล้ว</h5>
+            <h5>2. การวินิจฉัยโรคขั้นสุดท้าย</h5>
             <textarea type="text" />
           </div>
         </div>
         <div class="box3">
-          <div class="inputbox4">
-            <h5>6. สาเหตุที่ส่ง</h5>
+          <div class="inputbox3">
+            <h5>3. การรักษาที่ให้</h5>
             <textarea type="text" />
           </div>
         </div>
         <div class="box3">
-          <div class="inputbox2">
-            <h5>7. รายละเอียดอื่น ๆ</h5>
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="box3">
-          <div class="inputbox4">
-            <h5>8. สิทธิการรักษา</h5>
+          <div class="inputbox3">
+            <h5>4. ขอให้ดำเนินการต่อ ดังนี้</h5>
             <textarea type="text" />
           </div>
         </div>
       </div>
-      <div class="historybox2">
-        <h4 style="margin: 10px 0px 0px 10px">การตรวจร่างกาย</h4>
-        <div class="inputboxrow">
-          <div class="item1">
-            <h5>HEENT</h5>
-            <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="item2">
-            <textarea type="text" />
-          </div>
-        </div>
 
-        <div class="inputboxrow">
-          <div class="item1">
-            <h5>HEART</h5>
-            <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="item2">
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="inputboxrow">
-          <div class="item1">
-            <h5>LUNG</h5>
-            <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="item2">
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="inputboxrow">
-          <div class="item1">
-            <h5>Ab</h5>
-            <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="item2">
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="inputboxrow">
-          <div class="item1">
-            <h5>Exr</h5>
-            <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="item2">
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="inputboxrow">
-          <div class="item1">
-            <h5>PE text</h5>
-            <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="item2">
-            <textarea type="text" />
-          </div>
-        </div>
-      </div>
       <div class="buttonbox">
+        <button class="save">บันทึก</button>
         <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
       </div>
     </div>
@@ -270,12 +101,17 @@ export default {
   name: "APTR_1",
   data() {
     return {
-      depart, 
+      depart,
     };
   },
   mounted() {
     const store = useTitleStore();
-    document.getElementById("name").defaultValue = store.patient.data["pname"]+''+store.patient.data["fname"]+' '+store.patient.data["lname"];
+    document.getElementById("name").defaultValue =
+      store.patient.data["pname"] +
+      "" +
+      store.patient.data["fname"] +
+      " " +
+      store.patient.data["lname"];
     document.getElementById("cid").defaultValue = store.patient.data["cid"];
   },
 };

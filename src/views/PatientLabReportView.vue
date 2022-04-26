@@ -5,7 +5,7 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <PLR_1 />
+        <APTR_1 />
       </div>
     </div>
   </div>

@@ -66,6 +66,16 @@ button.previous {
   border-radius: 15px;
   border: 1.75px solid black;
 }
+button.save {
+  font-weight: bold;
+  margin-top: 60px;
+  margin-right: 20px;
+  width: 150px;
+  height: 60px;
+  background-color: #25957A;
+  border-radius: 15px;
+  border: 1.75px solid black;
+}
 
 .dp-flex-r {
   display: flex;
