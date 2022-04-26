@@ -31,6 +31,7 @@ import PLR_1 from "./components/PLR_1.vue";
 import PRL_1 from "./components/PRL_1.vue";
 import APR_11 from "./components/APR_11.vue";
 import APTR_1 from "./components/APTR_1.vue";
+import VPTR_1 from "./components/VPTR_1.vue";
 
 // import AdminView from "./views/AdminView.vue";
 // import LoginView from "./views/LoginView.vue";
@@ -88,6 +89,7 @@ app.component("PLR_1", PLR_1);
 app.component("PRL_1", PRL_1);
 app.component("APR_11", APR_11);
 app.component("APTR_1", APTR_1);
+app.component("VPTR_1", VPTR_1);
 app.component("SU_11",SU_11);
 app.component("SU_12",SU_12);
 app.component("PatientCard", PatientCard);
