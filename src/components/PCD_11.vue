@@ -14,8 +14,11 @@
               <label>วันที่พบแพทย์ล่าสุด</label>
             </div>
           </div>
-          <template v-for="(item,index) in disease" :key="index" >
-            <Disease v-if="item['cid']==store.patient.data.cid" :diseases="item['diseases']"/>
+          <template v-for="(item, index) in disease" :key="index">
+            <Disease
+              v-if="item['cid'] == store.patient.data.cid"
+              :diseases="item['diseases']"
+            />
           </template>
         </div>
       </div>
@@ -24,31 +27,41 @@
           <h1>ความดัน</h1>
           <div class="line"></div>
           <div class="subbox">
+            <div class="mbox">
             <img src="/pulse.png" alt="" />
-            <div class="line2"></div>
+            </div>
+            <div class="mbox2">
             <p>
               <label>140</label>SYS<br />
               <label>90</label>DIA
             </p>
-            <div class="line2"></div>
+            </div>
+            <div class="mbox">
             <p>
               ตรวจเมื่อ<br />
               13 ก.ย. 2564
             </p>
+           </div>
           </div>
         </div>
         <div class="box">
           <h1>ชีพจร</h1>
           <div class="line"></div>
           <div class="subbox">
+            <div class="mbox">
             <img src="/pulse2.png" alt="" />
-            <div class="line2"></div>
-            <p><label>100</label>BPM</p>
-            <div class="line2"></div>
+            </div>
+            <div class="mbox2">
+            <p>
+              <label>100</label>BPM
+            </p>
+            </div>
+            <div class="mbox">
             <p>
               ตรวจเมื่อ<br />
               13 ก.ย. 2564
             </p>
+           </div>
           </div>
         </div>
       </div>
@@ -77,12 +90,46 @@ export default {
 </script>
 
 <style scoped>
+.mbox img{
+  width: 70px;
+  height: 70px;
+}
+.mbox2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 33%;
+  /* background: red; */
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.mbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 33%;
+  /* background: red; */
+}
+/* .box111 {
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;  
+  align-content:center;
+  grid-template-columns: repeat(3, 1fr);
+  background: greenyellow;
+} */
 .subbox p {
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
+  margin-bottom: 0px;
 }
 .subbox label {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 1000;
 }
 .CurrentDiseases {
@@ -216,18 +263,15 @@ div.info label {
 }
 .subbox {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 10px;
-  padding: 0px 10px 0px;
+  
   width: 90%;
   height: 90%;
   background-color: #e7e7e7;
   border-radius: 15px;
   font-size: 50px;
   border: 2px solid white;
-}
-.subbox img {
-  width: 20%;
 }
 </style>
