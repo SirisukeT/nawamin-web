@@ -17,7 +17,7 @@
             <div class="custom-select">
               <select>
                 <option v-for="(item, index) in depart" :key="index" value="">
-                  {{ item.name }}
+                  {{ item.shortname }}
                 </option>
               </select>
             </div>

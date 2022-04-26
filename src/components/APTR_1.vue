@@ -51,7 +51,7 @@
         <div class="box111">
           <div class="inputbox">
             <h5>เพศ</h5>
-            <input type="text" />
+            <input type="text"/>
           </div>
           <div class="inputbox">
             <h5>อายุ (ปี)</h5>
@@ -112,7 +112,7 @@ export default {
       store.patient.data["fname"] +
       " " +
       store.patient.data["lname"];
-    document.getElementById("cid").defaultValue = store.patient.data["cid"];
+    // document.getElementById("cid").defaultValue = store.patient.data["cid"];
   },
 };
 </script>

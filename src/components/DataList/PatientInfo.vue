@@ -81,6 +81,10 @@ th#info button {
   display: flex;
   /* background-color: red; */
 }
+
+.info p{
+  margin: 0;
+}
 .infoleft {
   width: 50%;
   /* height: 100%; */
