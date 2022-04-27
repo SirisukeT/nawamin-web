@@ -5,7 +5,7 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <SU_12/>
+        <SU_31/>
       </div>
     </div>
   </div>
@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: "SetupAddView",
+  name: "Setup3_1View",
 };
 </script>

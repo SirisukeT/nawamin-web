@@ -108,20 +108,52 @@ const router = createRouter({
       component: () => import("../views/PatientAddRefView.vue"),
     },
     {
-      path: "/setup", 
+      path: "/SetupHospital", 
       name: "ตั้งค่าโรงพยาบาล",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/SetupView.vue"),
+      component: () => import("../views/Setup1_1View.vue"),
     },
     {
-      path: "/SetupAdd",
+      path: "/AddHospital",
       name: "เพิ่มโรงพยาบาล",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/SetupAddView.vue"),
+      component: () => import("../views/Setup1_2View.vue"),
+    },
+    {
+      path: "/SetupUserGroup",
+      name: "ตั้งค่ากลุ่มผู้ใช้งาน",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Setup2_1View.vue"),
+    },
+    {
+      path: "/SetupUser",
+      name: "ตั้งค่าผู้ใช้งาน",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Setup3_1View.vue"),
+    },
+    {
+      path: "/SetupDepartment",
+      name: "ตั้งค่าแผนก",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Setup4_1View.vue"),
+    },
+    {
+      path: "/AddDepartment",
+      name: "เพิ่มแผนก",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Setup4_2View.vue"),
     },
   ],
 });

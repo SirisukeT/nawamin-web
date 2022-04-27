@@ -18,7 +18,7 @@
             <h5>จากโรงพยาบาล</h5>
             <div class="custom-select">
               <select>
-                <option v-for="(item, index) in depart" :key="index" value="">
+                <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
               </select>
@@ -34,7 +34,7 @@
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
               <select>
-                <option v-for="(item, index) in depart" :key="index" value="">
+                <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
               </select>
@@ -95,13 +95,13 @@
 </template>
 
 <script>
-import depart from "../json/depart.json";
+import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 export default {
   name: "APTR_1",
   data() {
     return {
-      depart,
+      departs,
     };
   },
   mounted() {

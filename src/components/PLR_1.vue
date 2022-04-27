@@ -137,7 +137,7 @@ export default {
 .info2 {
   margin-top: 15px;
   width: 90%;
-  height: 40px;
+  /* height: 40px; */
   display: flex;
   align-items: center;
   justify-content: space-between;

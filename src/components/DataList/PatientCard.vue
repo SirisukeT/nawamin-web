@@ -24,7 +24,7 @@ export default {
 
 <style>
 .leftbox {
-  margin-left: 20px;
+  margin-right: 30px;
   margin-top: 50px;
   display: flex;
   flex-direction: column;

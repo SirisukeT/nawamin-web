@@ -238,14 +238,7 @@ div.info label {
   text-align: center;
   /* background-color: greenyellow; */
 }
-.info2 {
-  margin-top: 15px;
-  width: 90%;
-  /* height: 40px; */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 .box {
   width: 48%;
   height: 250px;

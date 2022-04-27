@@ -15,6 +15,10 @@ import PH_1 from "./components/PH_1.vue";
 import PM_1 from "./components/PM_1.vue";
 import SU_11 from "./components/SU_11.vue";
 import SU_12 from "./components/SU_12.vue";
+import SU_21 from "./components/SU_21.vue";
+import SU_31 from "./components/SU_31.vue";
+import SU_41 from "./components/SU_41.vue";
+import SU_42 from "./components/SU_42.vue";
 
 import Drugallergy from "./components/DataList/Drugallergy.vue";
 import Disease from "./components/DataList/Disease.vue";
@@ -92,6 +96,10 @@ app.component("APTR_1", APTR_1);
 app.component("VPTR_1", VPTR_1);
 app.component("SU_11",SU_11);
 app.component("SU_12",SU_12);
+app.component("SU_21",SU_21);
+app.component("SU_31",SU_31);
+app.component("SU_41",SU_41);
+app.component("SU_42",SU_42);
 app.component("PatientCard", PatientCard);
 app.component("GrayBox", GrayBox);
 
