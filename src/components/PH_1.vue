@@ -80,7 +80,7 @@ rb {
   align-items: center;
   margin-top: 10px;
   width: 100%;
-  height: 650px;
+  /* height: 650px; */
   background-color: #c4c4c4;
   border-radius: 50px;
   border: 1.75px solid white;

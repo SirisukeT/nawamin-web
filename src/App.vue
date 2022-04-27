@@ -55,6 +55,7 @@ div .main-content {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 button.previous {
