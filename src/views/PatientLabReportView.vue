@@ -5,7 +5,7 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <PCD_11 />
+        <PLR_1 />
       </div>
     </div>
   </div>
