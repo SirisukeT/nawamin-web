@@ -104,7 +104,7 @@
                 'ใบแจ้งผล',
               ])"
           >
-            แบบแจ้งผลการตรวจการรักษา
+            แบบแจ้งผล<br>การตรวจการรักษา
           </button>
         </div>
       </div>
@@ -167,7 +167,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 10px;
-  width: 95%;
+  width: 90%;
   height: 100%;
   background-color: #e7e7e7;
   border-radius: 15px;
@@ -178,5 +178,141 @@ h1 {
   border: 0;
   font-size: 30px;
   font-weight: bold;
+}
+@media (max-width: 1400px) {
+  .subbox button{
+    font-size: 24px;
+  }
+  .box{
+    width: 80%;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  .bigbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+  .topbox{
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0px;
+  }
+  .botbox{
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 1024px) {
+  .subbox button{
+    font-size: 20px;
+  }
+  .box{
+    width: 80%;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  .bigbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+  .topbox{
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0px;
+  }
+  .botbox{
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0px;
+  }
+}
+@media (max-width: 960px) {
+  .subbox button{
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .subbox button{
+    font-size: 20px;
+  }
+  .box{
+    width: 90%;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  .bigbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  .topbox{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 10%;
+  }
+  .botbox{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0px;
+  }
+}
+@media (max-width: 480px) {
+  .subbox button{
+    font-size: 20px;
+  }
+  .box{
+    width: 90%;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  .bigbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  .topbox{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 10%;
+  }
+  .botbox{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0px;
+  }
 }
 </style>

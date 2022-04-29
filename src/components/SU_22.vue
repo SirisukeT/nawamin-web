@@ -1,9 +1,9 @@
 <template>
   <div class="topbox dp-flex-r" style="margin-top: 50px">
-    <GrayBox class="marginLR-25">แผนก</GrayBox>
+    <GrayBox class="marginLR-25">โรงพยาบาล</GrayBox>
+    <GrayBox class="marginLR-25">ชื่อกลุ่ม</GrayBox>
   </div>
   <div class="buttonbox" style="justify-content: center">
-    <!-- <button class="btn btn-success"></button> -->
     <button class="save">บันทึก</button>
     <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
   </div>
@@ -11,8 +11,13 @@
 
 <script>
 export default {
-  name: "SU_42",
+  name: "SU_22",
 };
 </script>
 
-<style></style>
+<style scoped>
+.topbox{
+    display: flex;
+    flex-direction: column;
+}
+</style>

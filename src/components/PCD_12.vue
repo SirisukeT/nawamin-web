@@ -40,7 +40,7 @@
             <div class="inforight">
               <h5>13 กันยายน 2564</h5>
             </div>
-            <button class="inforight">13 กันยายน 2564</button>
+            <!-- <button class="inforight">13 กันยายน 2564</button> -->
           </div>
         </div>
       </div>

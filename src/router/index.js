@@ -33,7 +33,7 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/PatientListViewAdd.vue"),
     },
-
+    
     {
       path: "/:main/:name",
       name: "รายละเอียดผู้ป่วย",
@@ -58,6 +58,14 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/PatientCurrentDisease.vue"),
+    },
+    {
+      path: "/:main/:name/2:sub/detail", 
+      name: "รายละเอียดโรค",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/PatientCurrentDisease2.vue"),
     },
     {
       path: "/:main/:name/3:sub",
@@ -132,12 +140,28 @@ const router = createRouter({
       component: () => import("../views/Setup2_1View.vue"),
     },
     {
+      path: "/AddUserGroup",
+      name: "เพิ่มกลุ่มผู้ใช้งาน",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Setup2_2View.vue"),
+    },
+    {
       path: "/SetupUser",
       name: "ตั้งค่าผู้ใช้งาน",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/Setup3_1View.vue"),
+    },
+    {
+      path: "/AddUser",
+      name: "เพิ่มผู้ใช้งาน",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Setup3_2View.vue"),
     },
     {
       path: "/SetupDepartment",

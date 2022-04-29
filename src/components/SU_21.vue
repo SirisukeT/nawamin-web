@@ -11,7 +11,7 @@
     <div class="midbox">
       <div class="addbox">
         <button
-          @click="store.changePage(['ตั้งค่ากลุ่มผู้ใช้งาน','ตั้งค่ากลุ่มผู้ใช้งาน'])"
+          @click="store.changePage(['เพิ่มกลุ่มผู้ใช้งาน','ตั้งค่ากลุ่มผู้ใช้งาน'])"
           class="subadd"
         >
           เพิ่มกลุ่มผู้ใช้งาน

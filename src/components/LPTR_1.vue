@@ -53,7 +53,7 @@ const store = useTitleStore();
 </script>
 
 <script>
-import depart from "../json/depart.json";
+import depart from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 export default {
   name: "LPTR_1",

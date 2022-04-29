@@ -257,6 +257,7 @@
         </div>
       </div>
       <div class="buttonbox">
+        <button class="save">บันทึก</button>
         <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
       </div>
     </div>

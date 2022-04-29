@@ -102,4 +102,29 @@ rb {
   align-items: center;
   padding: 0 1rem;
 }
+@media (max-width: 1400px) {
+  .bigbox{
+    flex-direction: column;
+    align-items: center;
+  }
+  .leftbox{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 50%;
+  }  
+}
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 670px) {
+  
+}
 </style>

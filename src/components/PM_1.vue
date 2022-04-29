@@ -185,4 +185,32 @@ h5.use {
   vertical-align: baseline;
   text-align: justify;
 }
+@media (max-width: 1400px) {
+  .bigbox{
+    flex-direction: column;
+    align-items: center;
+  }
+  .leftbox{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 50%;
+  }
+  .rightbox{
+    padding: 0;
+  }  
+}
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 670px) {
+  
+}
 </style>

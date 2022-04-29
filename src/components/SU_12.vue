@@ -3,6 +3,7 @@
     <GrayBox class="marginLR-25">โรงพยาบาล</GrayBox>
   </div>
   <div class="buttonbox" style="justify-content: center">
+    <button class="save">บันทึก</button>
     <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
   </div>
 </template>
