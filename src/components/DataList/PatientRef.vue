@@ -9,7 +9,12 @@
     <th id="info">
       <button
         @click="
-          store.sendPatient(['รายละเอียดใบส่งตัว', 'รายละเอียดใบส่งตัว', name],patient)
+          store.changePage([
+                'รายละเอียดใบส่งตัว',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'รายละเอียดใบส่งตัว',
+              ])
         "
       >
         รายละเอียด

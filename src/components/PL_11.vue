@@ -120,6 +120,7 @@ h1 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin:  10px 0;
   /* background-color: greenyellow; */
 }
 .subadd {

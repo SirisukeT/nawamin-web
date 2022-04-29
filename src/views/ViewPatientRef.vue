@@ -1,11 +1,11 @@
 <template>
   <div class="main-admin">
-    <NavBar2 />
+    <NavBar />
     <div class="main-content">
-      <!-- <SideBar /> -->
+      <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <APR_11/>
+        <VPR_11/>
       </div>
     </div>
   </div>
@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: "PatientAddRefView",
+  name: "ViewPatientRef",
 };
 </script>

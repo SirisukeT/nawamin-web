@@ -37,6 +37,7 @@ import PCD_12 from "./components/PCD_12.vue";
 import PLR_1 from "./components/PLR_1.vue";
 import PRL_1 from "./components/PRL_1.vue";
 import APR_11 from "./components/APR_11.vue";
+import VPR_11 from "./components/VPR_11.vue";
 import APTR_1 from "./components/APTR_1.vue";
 import VPTR_1 from "./components/VPTR_1.vue";
 
@@ -59,6 +60,8 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
+
+
 library.add(fas);
 library.add(far);
 
@@ -69,6 +72,8 @@ pinia.use(({ store }) => {
 const app = createApp(App);
 app.use(router);
 app.use(pinia);
+
+
 app.mount("#app");
 app.component("fa_c", FontAwesomeIcon);
 app.component("SideBar", SideBar);
@@ -96,6 +101,7 @@ app.component("PCD_12", PCD_12);
 app.component("PLR_1", PLR_1);
 app.component("PRL_1", PRL_1);
 app.component("APR_11", APR_11);
+app.component("VPR_11", VPR_11);
 app.component("APTR_1", APTR_1);
 app.component("VPTR_1", VPTR_1);
 app.component("SU_11",SU_11);

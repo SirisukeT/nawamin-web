@@ -64,7 +64,7 @@ export default {
 
 <style scoped>
 div.sidenav {
-  margin-top: 100px;
+  margin-top: 71px;
   text-align: center;
   background-image: linear-gradient(rgb(37, 149, 122), rgb(129, 187, 173));
   overflow: hidden;

@@ -1,31 +1,48 @@
 <template>
-  <nav class="navbar fixed-top">
+  <nav
+    class="navbar navbar-box navbar-expand-lg navbar-dark static-top fixed-top"
+  >
     <div class="container-fluid">
-      <div class="navbar-brand">
-        <router-link :to="'/Overall'">
-          <img
-            id="logo"
-            src="@/assets/logo_re.png"
-            alt=""
-            width="90"
-            height="90"
-            class="d-inline-block align-text-top"
-        /></router-link>
-        <p>โรงพยาบาลค่ายนวมินทราชินี</p>
-      </div>
-      <div class="navbar-r">
-        <img src="@/assets/user-regular.svg" alt="" />
-        <div class="navbar-account">
-          <h5>นายสมหมาย มิตรรัก</h5>
-          <h5>ตำแหน่ง</h5>
-          <!-- <h5>โรงพยาบาลค่ายนวมินทราชินี</h5> -->
-        </div>
-        <a @click="logout"
-          ><img
-            id="exit"
-            src="@/assets/arrow-right-from-bracket-solid.svg"
-            alt=""
-        /></a>
+      <router-link :to="'/Overall'">
+        <img
+          id="logo"
+          src="@/assets/logo_re.png"
+          alt=""
+          width="55"
+          height="55"
+          class="d-inline-block align-text-top"
+      /></router-link>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item1 mx-4">
+            <router-link class="nav-link" aria-current="page" to="/Overall"
+              >หน้าหลัก</router-link
+            >
+          </li>
+          <li class="nav-item1 mx-4">
+            <router-link class="nav-link" to="/profile">ข้อมูล</router-link>
+          </li>
+          <li class="nav-item1 mx-4">
+            <router-link class="nav-link" to="/history">ประวัติ</router-link>
+          </li>
+          <li class="nav-item1 ms-4">
+            <router-link class="nav-link" to="/contact">ติดต่อ</router-link>
+          </li>
+          <li class="nav-item ms-4 logout-bg">
+            <button @click="logout" class="logout-btn">ออกจากระบบ</button>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -33,10 +50,10 @@
 
 <script>
 export default {
-  name: "NavBar",
+  name: "NavBar2",
   methods: {
     logout() {
-      this.$router.push("/");
+      return this.$router.push("/");
     },
   },
 };
@@ -49,69 +66,79 @@ export default {
     rgb(37, 149, 122),
     rgb(205, 218, 215)
   );
-  width: 100%;
-  height: 100px;
-  max-height: 100px;
-  padding: 0;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  height: auto;
+  /* min-height: 71px; */
 }
-
 .container-fluid {
-  height: 100%;
-  padding: 0 1rem;
+  width: 1570px;
+  /* margin: 0; */
 }
-
-div.navbar-brand {
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-div.navbar-brand p {
-  margin-left: 1rem;
-}
-
-.navbar-r {
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar-r > * {
-  margin-left: 2.5rem;
-}
-
-.navbar-r img {
-  background: white;
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-}
-
-.navbar-r a {
-  margin: 0 15px 0 20px;
-}
-
-.navbar-r img#exit {
-  background: none;
-  border-radius: 0;
-  height: 30px;
-  width: 30px;
-}
-
-.navbar-brand p {
-  margin: 0;
+.navbar-brand {
   font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  font-size: 20px;
+}
+.logout-bg {
+  /* height: 50px; */
+  margin: 4px 0;
 }
 
-.navbar-account {
-  text-align: center;
+/* .collapse ul{
+  background-color: #18d083;
+} */
+
+button.logout-btn {
+  width: 140px;
+  height: 35px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #18d083;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.3s;
+}
+button.logout-btn:hover {
+  transform: scale(1.05);
+}
+button.logout-btn:active {
+  transform: scale(0.95);
 }
 
-.navbar-account > * {
-  margin: 0;
+@media (max-width: 1600px) {
+  .container-fluid {
+    max-width: 1320px;
+  }
+}
+@media (max-width: 1400px) {
+  .container-fluid {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
+  .container-fluid {
+    max-width: 960px;
+  }
+}
+@media (max-width: 992px) {
+  .container-fluid {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    width: 670px;
+  }
+}
+@media (max-width: 670px) {
+  .container-fluid {
+    width: 100%;
+  }
 }
 </style>

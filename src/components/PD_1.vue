@@ -183,11 +183,6 @@ h1 {
   .subbox button{
     font-size: 24px;
   }
-  .box{
-    width: 80%;
-    height: 120px;
-    margin-bottom: 20px;
-  }
   .bigbox{
     display: flex;
     flex-direction: row;
@@ -211,7 +206,7 @@ h1 {
     margin: 0px;
   }
 }
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   
 }
 @media (max-width: 1024px) {
@@ -282,8 +277,8 @@ h1 {
     height: auto;
     margin: 0px;
   }
-}
-@media (max-width: 480px) {
+} */
+/* @media (max-width: 480px) {
   .subbox button{
     font-size: 20px;
   }
@@ -314,5 +309,5 @@ h1 {
     height: auto;
     margin: 0px;
   }
-}
+} */
 </style>
