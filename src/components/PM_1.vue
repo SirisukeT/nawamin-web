@@ -101,7 +101,6 @@ export default {
 }
 
 .rightbox {
-  padding-left: 100px;
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -12,6 +12,7 @@
           height="55"
           class="d-inline-block align-text-top"
       /></router-link>
+      <div class="hidenav">
       <button
         class="navbar-toggler"
         type="button"
@@ -27,22 +28,29 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item1 mx-4">
             <router-link class="nav-link" aria-current="page" to="/Overall"
-              >หน้าหลัก</router-link
+              >ภาพรวมระบบ</router-link
             >
           </li>
           <li class="nav-item1 mx-4">
-            <router-link class="nav-link" to="/profile">ข้อมูล</router-link>
+            <router-link class="nav-link" to="/profile">รายชื่อผู้ป่วย</router-link>
           </li>
           <li class="nav-item1 mx-4">
-            <router-link class="nav-link" to="/history">ประวัติ</router-link>
+            <router-link class="nav-link" to="/history">โรงพยาบาล</router-link>
           </li>
           <li class="nav-item1 ms-4">
-            <router-link class="nav-link" to="/contact">ติดต่อ</router-link>
+            <router-link class="nav-link" to="/contact">กลุ่มผู้ใช้งาน</router-link>
+          </li>
+          <li class="nav-item1 ms-4">
+            <router-link class="nav-link" to="/contact">ผู้ใช่งาน</router-link>
+          </li>
+          <li class="nav-item1 ms-4">
+            <router-link class="nav-link" to="/contact">แผนก</router-link>
           </li>
           <li class="nav-item ms-4 logout-bg">
             <button @click="logout" class="logout-btn">ออกจากระบบ</button>
           </li>
         </ul>
+      </div>
       </div>
     </div>
   </nav>
@@ -60,6 +68,9 @@ export default {
 </script>
 
 <style scoped>
+.hidenav{
+  display: none;
+}
 .navbar {
   background-image: linear-gradient(
     to right,
@@ -128,6 +139,9 @@ button.logout-btn:active {
 @media (max-width: 992px) {
   .container-fluid {
     max-width: 720px;
+  }
+  .hidenav{
+    display: contents;
   }
 }
 

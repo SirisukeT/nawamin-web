@@ -157,7 +157,7 @@ export default {
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 700px;
   /* background-color: red; */
   justify-content: top;

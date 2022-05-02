@@ -97,8 +97,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 350px;
-  height: 600px;
   /* background-color: blue; */
 }
 .rightbox {

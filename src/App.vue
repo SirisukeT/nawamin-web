@@ -136,16 +136,17 @@ button.save {
 }
 
 @media (max-width: 1200px) {
+  
+}
+@media (max-width: 992px) {
   .container-fluid {
     max-width: 960px;
   }
-
-  div.sidenav{
-    display: none;
-  }
-
   .content-naw{
     margin-left: 0;
+  }
+  div.sidenav{
+    display: none;
   }
 }
 </style>

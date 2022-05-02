@@ -56,20 +56,11 @@ rb {
   justify-content: space-between;
   /* background-color: black; */
 }
-.leftbox {
-  margin-left: 20px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350px;
-  height: 600px;
-  /* background-color: blue; */
-}
 .rightbox {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 100%;
   justify-content: top;
   align-items: center;
@@ -80,6 +71,7 @@ rb {
   align-items: center;
   margin-top: 10px;
   width: 100%;
+  height: 100%;
   /* height: 650px; */
   background-color: #c4c4c4;
   border-radius: 50px;
@@ -92,7 +84,7 @@ rb {
 }
 .boxin {
   margin: 20px;
-  width: 100%;
+  width: 95%;
   height: 95%;
   background-color: #e7e7e7;
   border-radius: 50px;

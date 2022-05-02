@@ -80,7 +80,7 @@ export default {
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 700px;
   /* background-color: red; */
   justify-content: top;
@@ -108,7 +108,6 @@ export default {
   margin: 20px;
   padding-bottom: 15px;
   width: 90%;
-  height: 95%;
   background-color: #e7e7e7;
   border-radius: 50px;
   border: 1.75px solid white;
