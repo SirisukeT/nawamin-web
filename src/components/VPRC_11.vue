@@ -270,8 +270,7 @@ import { useTitleStore } from "@/stores/TitleStore";
 import test from "./test.vue"
 export default {
   name: "VPRC_11",
-  
-    Popupdata() {
+  data() {
     return {
       departs,
       status:[

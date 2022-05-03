@@ -24,18 +24,7 @@
 
     <div class="botbox">
       <div class="graphbox">
-        <table>
-          <tr style="font-size: 25px">
-            <th >ลำดับ</th>
-            <th>แผนก</th>
-          </tr>
-          <Department
-            v-for="(item, index) in departs.slice(1)"
-            :key="index"
-            :id="index+1"
-            :depart="item"
-          />
-        </table>
+        <Department/>
       </div>
     </div>
   </div>
@@ -48,14 +37,8 @@ const store = useTitleStore();
 
 <script>
 import Department from "./DataList/Department.vue";
-import departs from "@/json/departs";
 export default {
   name: "SU_41",
-  data() {
-    return {
-      departs,
-    };
-  },
   components:{Department}
 };
 </script>
