@@ -120,11 +120,7 @@ export default {
 };
 </script>
 
-<style >
-.item1 h5 {
-  margin-right: 10px;
-  margin-bottom: 0px;
-}
+<style scoped >
 .item1 {
   margin-top: 20px;
   padding: 0px 10px;
@@ -267,7 +263,7 @@ export default {
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 100%;
   height: 100%;
   /* background-color: red; */
   justify-content: top;

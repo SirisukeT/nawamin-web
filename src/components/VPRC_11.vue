@@ -10,12 +10,12 @@
           </div>
           <div class="inputbox">
             <h5>วันที่</h5>
-            <input type="text" name="testdate5" id="testdate5" value="">    
+            <input type="text" name="testdate5" id="testdate5" value="" />
           </div>
           <div class="inputbox">
             <h5>แผนก</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.shortname }}
                 </option>
@@ -27,7 +27,7 @@
           <div class="inputbox">
             <h5>จากโรงพยาบาล</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -43,7 +43,7 @@
           <div class="inputbox">
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -54,7 +54,7 @@
         <div class="box111">
           <div class="inputbox">
             <h5>ชื่อ - สกุลผู้ป่วย</h5>
-            <input type="text" id="name"/>
+            <input type="text" id="name" />
           </div>
           <div class="inputbox">
             <h5>เลขบัตรประชาชน</h5>
@@ -63,7 +63,7 @@
           <div class="inputbox">
             <h5>เพศ</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in sex" :key="index" value="">
                   {{ item }}
                 </option>
@@ -168,7 +168,7 @@
           <div class="item1">
             <h5>HEENT</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -184,7 +184,7 @@
           <div class="item1">
             <h5>HEART</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -199,7 +199,7 @@
           <div class="item1">
             <h5>LUNG</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -214,7 +214,7 @@
           <div class="item1">
             <h5>Ab</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -229,7 +229,7 @@
           <div class="item1">
             <h5>Exr</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -244,7 +244,7 @@
           <div class="item1">
             <h5>PE text</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -258,42 +258,45 @@
       </div>
     </div>
     <div class="buttonbox">
-        <test />
-        <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
-      </div>
+      <test />
+      <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
+    </div>
   </div>
 </template>
 
 <script>
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
-import test from "./test.vue"
+import test from "./test.vue";
 export default {
   name: "VPRC_11",
   data() {
     return {
       departs,
-      status:[
-        "สถานะ","ปกติ","ผิดปกติ"
-      ],
-      sex:["เพศ","ชาย","หญิง","ไม่ระบุ"]
+      status: ["สถานะ", "ปกติ", "ผิดปกติ"],
+      sex: ["เพศ", "ชาย", "หญิง", "ไม่ระบุ"],
     };
   },
-  components : { test },
+  components: { test },
   mounted() {
     const store = useTitleStore();
-    document.getElementById("name").defaultValue = store.patient.data["pname"]+''+store.patient.data["fname"]+' '+store.patient.data["lname"];
+    document.getElementById("name").defaultValue =
+      store.patient.data["pname"] +
+      "" +
+      store.patient.data["fname"] +
+      " " +
+      store.patient.data["lname"];
     document.getElementById("cid").defaultValue = store.patient.data["cid"];
   },
 };
 </script>
 
-<style>
-#select2{
+<style scoped>
+#select2 {
   width: 98%;
   border-radius: 20px;
   padding-left: 10px;
-  height: 28px;
+  height: 40px;
   border: 2px solid;
 }
 .item1 h5 {
@@ -367,16 +370,18 @@ export default {
   min-width: 220px;
   border-radius: 20px;
   padding-left: 10px;
-  height: 28px;
+  height: 40px;
   border: 2px solid;
 }
+
 .inputbox select {
- width: 100%;
-    border-radius: 20px;
-    padding: 0 0px 0 5px;
-    height: 30px;
-    border: 2px solid;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0 0px 0 5px;
+  height: 40px;
+  border: 2px solid;
 }
+
 #dmy {
   padding: 0px 10px 0px;
 }
@@ -385,9 +390,12 @@ export default {
 }
 .inputbox input {
   width: 97%;
+  height: 40px;
   border-radius: 20px;
   padding-left: 15px;
 }
+
+
 .inputboxrow {
   display: flex;
   flex-direction: row;
@@ -404,6 +412,7 @@ export default {
   width: 100%;
   display: grid;
   grid-template-columns: 3fr;
+  padding: 0 10px;
   /* background: greenyellow; */
 }
 .box21 {
@@ -471,5 +480,4 @@ export default {
   border-radius: 30px;
   border: 1.75px solid black;
 }
-
 </style>
