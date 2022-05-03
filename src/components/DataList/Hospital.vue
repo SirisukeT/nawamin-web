@@ -1,24 +1,20 @@
 <template>
-  <tr>
-    <th>{{ id }}</th>
-    <th>{{ hospname }}</th>
-    <th>{{ cdate }}</th>
-    <!-- <th id="info">
-      <button
-        @click="
-          store.sendPatient(['รายละเอียดผู้ป่วย', 'รายละเอียดผู้ป่วย', name],patient)
-        "
-      >
-        รายละเอียด
-      </button>
-    </th> -->
+  <tr v-for="(item,index) of test2" :key="index">
+    <th>{{ index+1 }}</th>
+    <th>{{ item.hospname }}</th>
+    <th>{{ item.cdate }}</th>
   </tr>
 </template>
 
 <script>
-
+import test2 from "@/json/test2"
 export default {
   name: "Hospital",
+  data(){
+    return{
+      test2
+    }
+  },
   props: {
     id: { type: String },
     hospname: { type: String, },
