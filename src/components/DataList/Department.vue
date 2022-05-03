@@ -3,10 +3,14 @@
     <tr style="font-size: 25px">
       <th>ลำดับ</th>
       <th>แผนก</th>
+      <th>แก้ไข</th>
+      <th>ลบ</th>
     </tr>
     <tr v-for="(depart, index) of departs.slice(1)" :key="index">
       <th>{{ index+1 }}</th>
       <th>{{ depart.name }}</th>
+      <th><button>แก้ไข</button></th>
+      <th><button>ลบ</button></th>
     </tr>
   </table>
 </template>
