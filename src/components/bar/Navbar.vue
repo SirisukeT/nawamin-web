@@ -213,6 +213,10 @@ button.logout-btn:active {
   #hospitalname{
     display: none;
   }
+
+  .navbar-r{
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {

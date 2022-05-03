@@ -374,6 +374,10 @@ export default {
   border: 2px solid;
 }
 
+.item1 .custom-select{
+  width: 85%;
+}
+
 .inputbox select {
   width: 100%;
   border-radius: 20px;
