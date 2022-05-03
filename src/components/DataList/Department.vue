@@ -3,8 +3,8 @@
     <tr style="font-size: 25px">
       <th>ลำดับ</th>
       <th>แผนก</th>
-      <th>แก้ไข</th>
-      <th>ลบ</th>
+      <th colspan="2">จัดการ</th>
+
     </tr>
     <tr v-for="(depart, index) of departs.slice(1)" :key="index">
       <th>{{ index+1 }}</th>
