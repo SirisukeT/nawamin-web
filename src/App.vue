@@ -13,7 +13,6 @@ body,
   box-sizing: border-box;
   width: 100%;
   /* max-width: 1400px; */
-  height: 100%;
   background-color: #CDDAD7;
 }
 
@@ -59,10 +58,12 @@ div .main-content {
   /* background-color: greenyellow; */
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   padding-bottom: 20px;
 }
-
+.buttonbox *{
+  margin-left: 10px;
+}
 button.previous {
   font-weight: bold;
   margin-top: 60px;
@@ -72,10 +73,8 @@ button.previous {
   border-radius: 15px;
   border: 1.75px solid black;
 }
-button.save {
+#savebutton {
   font-weight: bold;
-  margin-top: 60px;
-  margin-right: 20px;
   width: 150px;
   height: 60px;
   background-color: #25957A;

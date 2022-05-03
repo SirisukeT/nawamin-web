@@ -258,7 +258,7 @@
       </div>
     </div>
     <div class="buttonbox">
-        <button class="save">บันทึก</button>
+        <test />
         <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
       </div>
   </div>
@@ -267,9 +267,11 @@
 <script>
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
+import test from "./test.vue"
 export default {
   name: "APR_1",
-  data() {
+  
+    Popupdata() {
     return {
       departs,
       status:[
@@ -278,6 +280,7 @@ export default {
       sex:["เพศ","ชาย","หญิง","ไม่ระบุ"]
     };
   },
+  components : { test },
   mounted() {
     const store = useTitleStore();
     document.getElementById("name").defaultValue = store.patient.data["pname"]+''+store.patient.data["fname"]+' '+store.patient.data["lname"];
@@ -427,7 +430,7 @@ export default {
 .rightbox {
   display: flex;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0 0px;
   /* width: 1000px; */
   /* height: 100%; */
   /* background-color: red; */

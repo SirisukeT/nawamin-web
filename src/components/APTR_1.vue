@@ -87,7 +87,7 @@
       </div>
 
       <div class="buttonbox">
-        <button class="save">บันทึก</button>
+        <test />
         <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
       </div>
     </div>
@@ -95,6 +95,7 @@
 </template>
 
 <script>
+import test from "./test.vue"
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 export default {
@@ -104,6 +105,7 @@ export default {
       departs,
     };
   },
+  components : { test },
   mounted() {
     const store = useTitleStore();
     document.getElementById("name").defaultValue =
@@ -248,9 +250,9 @@ export default {
 }
 .bigbox {
   width: 100%;
-  height: 100vh;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-items: center;
   /* background-color: black; */
 }
 
