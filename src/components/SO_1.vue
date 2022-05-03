@@ -114,6 +114,7 @@ h1 {
 }
   .doctorbox{
     margin-bottom:10px ;
+    width: 100%;
   }
 }
 </style>

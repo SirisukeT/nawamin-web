@@ -32,19 +32,19 @@
             >
           </li>
           <li class="nav-item1 mx-4">
-            <router-link class="nav-link" to="/profile">รายชื่อผู้ป่วย</router-link>
+            <router-link class="nav-link" to="/PatientList">รายชื่อผู้ป่วย</router-link>
           </li>
           <li class="nav-item1 mx-4">
-            <router-link class="nav-link" to="/history">โรงพยาบาล</router-link>
+            <router-link class="nav-link" to="/SetupHospital">โรงพยาบาล</router-link>
           </li>
           <li class="nav-item1 ms-4">
-            <router-link class="nav-link" to="/contact">กลุ่มผู้ใช้งาน</router-link>
+            <router-link class="nav-link" to="/SetupUserGroup">กลุ่มผู้ใช้งาน</router-link>
           </li>
           <li class="nav-item1 ms-4">
-            <router-link class="nav-link" to="/contact">ผู้ใช่งาน</router-link>
+            <router-link class="nav-link" to="/SetupUser">ผู้ใช่งาน</router-link>
           </li>
           <li class="nav-item1 ms-4">
-            <router-link class="nav-link" to="/contact">แผนก</router-link>
+            <router-link class="nav-link" to="/SetupDepartment">แผนก</router-link>
           </li>
           <li class="nav-item ms-4 logout-bg">
             <button @click="logout" class="logout-btn">ออกจากระบบ</button>
@@ -58,7 +58,7 @@
 
 <script>
 export default {
-  name: "NavBar2",
+  name: "NavBar",
   methods: {
     logout() {
       return this.$router.push("/");
@@ -79,6 +79,7 @@ export default {
   );
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   height: auto;
+  max-width: 100vw;
   /* min-height: 71px; */
 }
 .container-fluid {
