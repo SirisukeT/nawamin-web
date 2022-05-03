@@ -10,7 +10,7 @@
           </div>
           <div class="inputbox">
             <h5>วันที่</h5>
-            <Datepickerthai />
+            <Datepickerthai  /> 
           </div>
           <div class="inputbox">
             <h5>แผนก</h5>
@@ -268,7 +268,7 @@
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 import test from "./test.vue";
-import Datepickerthai from "./calendar/Datepickerthai.vue";
+import Datepickerthai from './calendar/Datepickerthai.vue';
 export default {
   name: "APR_1",
   data() {
@@ -278,7 +278,7 @@ export default {
       sex: ["เพศ", "ชาย", "หญิง", "ไม่ระบุ"],
     };
   },
-  components: { test, Datepickerthai },
+  components: { test,Datepickerthai },
   mounted() {
     const store = useTitleStore();
     document.getElementById("name").defaultValue =
@@ -292,12 +292,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #select2 {
   width: 98%;
   border-radius: 20px;
   padding-left: 10px;
-  height: 28px;
+  height: 40px;
   border: 2px solid;
 }
 .item1 h5 {
@@ -371,16 +371,22 @@ export default {
   min-width: 220px;
   border-radius: 20px;
   padding-left: 10px;
-  height: 28px;
+  height: 40px;
   border: 2px solid;
 }
+
+.item1 .custom-select{
+  width: 80%;
+}
+
 .inputbox select {
   width: 100%;
   border-radius: 20px;
   padding: 0 0px 0 5px;
-  height: 30px;
+  height: 40px;
   border: 2px solid;
 }
+
 #dmy {
   padding: 0px 10px 0px;
 }
@@ -389,9 +395,12 @@ export default {
 }
 .inputbox input {
   width: 97%;
+  height: 40px;
   border-radius: 20px;
   padding-left: 15px;
 }
+
+
 .inputboxrow {
   display: flex;
   flex-direction: row;
@@ -408,6 +417,7 @@ export default {
   width: 100%;
   display: grid;
   grid-template-columns: 3fr;
+  padding: 0 10px;
   /* background: greenyellow; */
 }
 .box21 {
@@ -440,7 +450,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 0 0px;
-  width: 100%;
+  /* width: 1000px; */
   /* height: 100%; */
   /* background-color: red; */
   justify-content: top;
@@ -451,7 +461,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  padding-bottom: 10px;
+  padding: 20px;
   width: 100%;
   background-color: #c4c4c4;
   border-radius: 30px;
@@ -462,17 +472,10 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
+  padding: 20px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
-}
-.historybox3 {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  width: 100%;
-  background-color: #c4c4c4;
-  border-radius: 30px;
-  border: 1.75px solid black;
+  padding: 20px;
 }
 </style>

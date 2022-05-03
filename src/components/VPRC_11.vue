@@ -375,7 +375,7 @@ export default {
 }
 
 .item1 .custom-select{
-  width: 85%;
+  width: 80%;
 }
 
 .inputbox select {
@@ -460,7 +460,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  padding-bottom: 10px;
+ padding: 20px;
   width: 100%;
   background-color: #c4c4c4;
   border-radius: 30px;
@@ -471,6 +471,7 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
+  padding: 20px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
