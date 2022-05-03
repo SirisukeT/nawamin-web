@@ -38,9 +38,6 @@
             ><template v-for="(groupN, keywordG,indexg) in item.group">
               <tr v-for="(User, index) in groupN" :key="index">
                 <th>{{ ((indexg)*groupN.length)+(index+1) }}</th>
-                <!-- <th>{{indexg}}</th>
-                <th>{{groupN.length}}</th>
-                <th>{{index}}</th> -->
                 <th>{{ item.hospname }}</th>
                 <th>{{ keywordG }}</th>
                 <th>{{ User }}</th>

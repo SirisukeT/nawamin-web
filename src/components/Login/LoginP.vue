@@ -37,6 +37,7 @@ const username = ref("");
 const password = ref("");
 
 const sendLogin = () => {
+  console.log("Test");
   store.sendLogin(username.value, password.value);
   username.value = "";
   password.value = "";

@@ -30,13 +30,7 @@
             <th>โรงพยาบาล</th>
             <th>วันที่สร้าง</th>
           </tr>
-          <Hospital
-            v-for="(item, index) in hospital"
-            :key="index"
-            :id="item.index"
-            :hospname="item.hospname"
-            :cdate="item.cdate"
-          />
+          <Hospital/>
         </table>
       </div>
     </div>
@@ -49,14 +43,8 @@ const store = useTitleStore();
 </script>
 
 <script>
-import hospital from "@/json/hospital"
 export default {
   name: "SU_11",
-  data() {
-    return {
-      hospital,
-    };
-  },
 };
 </script>
 

@@ -34,7 +34,7 @@ button:active {
 
 div .main-content {
   margin-top: 100px;
-  min-width: 1150px;
+  /* min-width: 1150px; */
   /* display: grid;
   grid-template-columns: 12% 88%; */
   /* padding: 1rem 2rem; */
