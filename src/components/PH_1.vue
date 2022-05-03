@@ -84,15 +84,15 @@ rb {
 }
 .boxin {
   margin: 20px;
-  width: 95%;
-  height: 95%;
+  width: 96%;
+  /* height: 95%; */
   background-color: #e7e7e7;
   border-radius: 50px;
   border: 1.75px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
+  padding: 20px 0px;
 }
 @media (max-width: 1400px) {
   .bigbox{

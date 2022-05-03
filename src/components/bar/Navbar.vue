@@ -3,6 +3,7 @@
     class="navbar navbar-box navbar-expand-lg navbar-dark static-top fixed-top"
   >
     <div class="container-fluid">
+      <div class="d-flex" id="#hospitalname">
       <router-link :to="'/Overall'">
         <img
           id="logo"
@@ -12,6 +13,24 @@
           height="55"
           class="d-inline-block align-text-top"
       /></router-link>
+      <div id="hospitalname">
+      <h2>โรงพยาบาลค่ายนวมินทราชินี</h2>
+      </div>
+      </div>
+      <div class="navbar-r">
+        <img src="@/assets/user-regular.svg" alt="" />
+        <div class="navbar-account">
+          <h5>นายสมหมาย มิตรรัก</h5>
+          <h5>ตำแหน่ง</h5>
+          <!-- <h5>โรงพยาบาลค่ายนวมินทราชินี</h5> -->
+        </div>
+        <a @click="logout"
+          ><img
+            id="exit"
+            src="@/assets/arrow-right-from-bracket-solid.svg"
+            alt=""
+        /></a>
+      </div>
       <div class="hidenav">
       <button
         class="navbar-toggler"
@@ -68,6 +87,50 @@ export default {
 </script>
 
 <style scoped>
+.navbar-r {
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-r > * {
+  margin-left: 2.5rem;
+}
+
+.navbar-r img {
+  background: white;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+}
+
+.navbar-r a {
+  margin: 0 15px 0 20px;
+}
+
+.navbar-r img#exit {
+  background: none;
+  border-radius: 0;
+  height: 30px;
+  width: 30px;
+}
+.navbar-account {
+  text-align: center;
+}
+
+.navbar-account > * {
+  margin: 0;
+}
+h2{
+  margin: 0;
+}
+#hospitalname{
+  margin: 0;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
 .hidenav{
   display: none;
 }
@@ -83,8 +146,10 @@ export default {
   /* min-height: 71px; */
 }
 .container-fluid {
-  width: 1570px;
-  /* margin: 0; */
+  width: 100%;
+  margin: 0;
+  justify-content: space-between;
+  padding-left: 50px;
 }
 .navbar-brand {
   font-size: 30px;
@@ -124,31 +189,35 @@ button.logout-btn:active {
 
 @media (max-width: 1600px) {
   .container-fluid {
-    max-width: 1320px;
+    /* max-width: 1320px; */
   }
 }
 @media (max-width: 1400px) {
   .container-fluid {
-    max-width: 1140px;
+    /* max-width: 1140px; */
   }
 }
 @media (max-width: 1200px) {
   .container-fluid {
-    max-width: 960px;
+    /* max-width: 960px; */
   }
 }
 @media (max-width: 992px) {
   .container-fluid {
-    max-width: 720px;
+    /* max-width: 720px; */
+    justify-content: space-between;
   }
   .hidenav{
     display: contents;
+  }
+  #hospitalname{
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   .container-fluid {
-    width: 670px;
+    /* width: 670px; */
   }
 }
 @media (max-width: 670px) {

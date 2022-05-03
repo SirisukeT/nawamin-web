@@ -10,14 +10,14 @@
           </div>
           <div class="inputbox">
             <h5>วันที่</h5>
-            <input type="date" id="dmy" />
+            <input type="text" name="testdate5" id="testdate5" value="">    
           </div>
           <div class="inputbox">
             <h5>แผนก</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
-                  {{ item.name }}
+                  {{ item.shortname }}
                 </option>
               </select>
             </div>
@@ -27,7 +27,7 @@
           <div class="inputbox">
             <h5>จากโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -43,7 +43,7 @@
           <div class="inputbox">
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -63,7 +63,7 @@
           <div class="inputbox">
             <h5>เพศ</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in sex" :key="index" value="">
                   {{ item }}
                 </option>
@@ -168,7 +168,7 @@
           <div class="item1">
             <h5>HEENT</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -184,7 +184,7 @@
           <div class="item1">
             <h5>HEART</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -199,7 +199,7 @@
           <div class="item1">
             <h5>LUNG</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -214,7 +214,7 @@
           <div class="item1">
             <h5>Ab</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -229,7 +229,7 @@
           <div class="item1">
             <h5>Exr</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -244,7 +244,7 @@
           <div class="item1">
             <h5>PE text</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -256,71 +256,46 @@
           </div>
         </div>
       </div>
-      <div class="line"></div>
-      <div class="historybox2">
-        <div class="box3">
-          <div class="inputbox3">
-            <h5>1. ผลการชันสูตรที่สำคัญ</h5>
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="box3">
-          <div class="inputbox3">
-            <h5>2. การวินิจฉัยโรคขั้นสุดท้าย</h5>
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="box3">
-          <div class="inputbox3">
-            <h5>3. การรักษาที่ให้</h5>
-            <textarea type="text" />
-          </div>
-        </div>
-        <div class="box3">
-          <div class="inputbox3">
-            <h5>4. ขอให้ดำเนินการต่อ ดังนี้</h5>
-            <textarea type="text" />
-          </div>
-        </div>
-      </div>
-
-      <div class="buttonbox">
-        <button class="save">บันทึก</button>
+    </div>
+    <div class="buttonbox">
+        <test />
         <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
+import test from "./test.vue"
 export default {
-  name: "VPTR_1",
-  data() {
+  name: "VPRC_11",
+  
+    Popupdata() {
     return {
       departs,
+      status:[
+        "สถานะ","ปกติ","ผิดปกติ"
+      ],
+      sex:["เพศ","ชาย","หญิง","ไม่ระบุ"]
     };
   },
+  components : { test },
   mounted() {
     const store = useTitleStore();
-    document.getElementById("name").defaultValue =
-      store.patient.data["pname"] +
-      "" +
-      store.patient.data["fname"] +
-      " " +
-      store.patient.data["lname"];
+    document.getElementById("name").defaultValue = store.patient.data["pname"]+''+store.patient.data["fname"]+' '+store.patient.data["lname"];
     document.getElementById("cid").defaultValue = store.patient.data["cid"];
   },
 };
 </script>
 
-<style scoped>
-.line {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  width: 90%;
-  border-bottom: 6px solid black;
+<style>
+#select2{
+  width: 98%;
+  border-radius: 20px;
+  padding-left: 10px;
+  height: 28px;
+  border: 2px solid;
 }
 .item1 h5 {
   margin-right: 10px;
@@ -389,18 +364,19 @@ export default {
   height: 70px;
 }
 .item1 .custom-select select {
-  width: 250px;
+  width: 100%;
+  min-width: 220px;
   border-radius: 20px;
   padding-left: 10px;
   height: 28px;
   border: 2px solid;
 }
 .inputbox select {
-  width: 97%;
-  border-radius: 20px;
-  padding-left: 10px;
-  height: 28px;
-  border: 2px solid;
+ width: 100%;
+    border-radius: 20px;
+    padding: 0 0px 0 5px;
+    height: 30px;
+    border: 2px solid;
 }
 #dmy {
   padding: 0px 10px 0px;
@@ -426,7 +402,6 @@ export default {
 }
 .box3 {
   margin-top: 10px;
-  padding-left: 10px;
   width: 100%;
   display: grid;
   grid-template-columns: 3fr;
@@ -452,18 +427,18 @@ export default {
 }
 .bigbox {
   width: 100%;
-  height: 100vh;
   display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  flex-direction: column;
   /* background-color: black; */
 }
 
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 1000px;
-  height: 100%;
+  padding: 0 0px;
+  /* width: 1000px; */
+  /* height: 100%; */
   /* background-color: red; */
   justify-content: top;
   align-items: center;
@@ -475,7 +450,6 @@ export default {
   margin-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  height: 650px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
@@ -485,7 +459,6 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
-  /* height: 300vh; */
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
@@ -493,13 +466,11 @@ export default {
 .historybox3 {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
   margin-top: 10px;
   width: 100%;
-  height: 1000px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
 }
+
 </style>

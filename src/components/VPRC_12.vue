@@ -15,7 +15,7 @@
           <div class="inputbox">
             <h5>แผนก</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -27,7 +27,7 @@
           <div class="inputbox">
             <h5>จากโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -43,7 +43,7 @@
           <div class="inputbox">
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -63,7 +63,7 @@
           <div class="inputbox">
             <h5>เพศ</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in sex" :key="index" value="">
                   {{ item }}
                 </option>
@@ -168,7 +168,7 @@
           <div class="item1">
             <h5>HEENT</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -184,7 +184,7 @@
           <div class="item1">
             <h5>HEART</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -199,7 +199,7 @@
           <div class="item1">
             <h5>LUNG</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -214,7 +214,7 @@
           <div class="item1">
             <h5>Ab</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -229,7 +229,7 @@
           <div class="item1">
             <h5>Exr</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -244,7 +244,7 @@
           <div class="item1">
             <h5>PE text</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -296,7 +296,7 @@
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 export default {
-  name: "VPTR_1",
+  name: "VPRC_12",
   data() {
     return {
       departs,
@@ -395,12 +395,19 @@ export default {
   height: 28px;
   border: 2px solid;
 }
-.inputbox select {
-  width: 97%;
+#select2{
+  width: 98%;
   border-radius: 20px;
   padding-left: 10px;
   height: 28px;
   border: 2px solid;
+}
+.inputbox select {
+ width: 100%;
+    border-radius: 20px;
+    padding: 0 0px 0 5px;
+    height: 30px;
+    border: 2px solid;
 }
 #dmy {
   padding: 0px 10px 0px;
@@ -426,7 +433,7 @@ export default {
 }
 .box3 {
   margin-top: 10px;
-  padding-left: 10px;
+
   width: 100%;
   display: grid;
   grid-template-columns: 3fr;

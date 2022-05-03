@@ -10,14 +10,14 @@
           </div>
           <div class="inputbox">
             <h5>วันที่</h5>
-            <input type="date" id="dmy" />
+            <Datepickerthai /> 
           </div>
         </div>
         <div class="box21">
           <div class="inputbox">
             <h5>จากโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -33,7 +33,7 @@
           <div class="inputbox">
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -98,6 +98,7 @@
 import test from "./test.vue"
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
+import Datepickerthai from './calendar/Datepickerthai.vue';
 export default {
   name: "APTR_1",
   data() {
@@ -105,7 +106,7 @@ export default {
       departs,
     };
   },
-  components : { test },
+  components : { test,Datepickerthai },
   mounted() {
     const store = useTitleStore();
     document.getElementById("name").defaultValue =
@@ -119,7 +120,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 .item1 h5 {
   margin-right: 10px;
   margin-bottom: 0px;
@@ -170,8 +171,8 @@ export default {
 }
 .inputbox3 textarea {
   border-radius: 20px;
-  padding: 8px 8px 8px 15px;
-  width: 99%;
+  padding: 8px 8px 8px 8px;
+  width: 100%;
   height: 300px;
 }
 .inputbox4 textarea {
@@ -193,23 +194,30 @@ export default {
   height: 28px;
   border: 2px solid;
 }
-.inputbox select {
-  width: 97%;
+#select2{
+  width: 100%;
   border-radius: 20px;
   padding-left: 10px;
-  height: 28px;
+  height: 30px;
   border: 2px solid;
+}
+.inputbox select {
+  width: 100%;
+    border-radius: 20px;
+    padding: 0 0px 0 5px;
+    height: 30px;
+    border: 2px solid;
 }
 #dmy {
   padding: 0px 10px 0px;
 }
 .box3 .inputbox input {
-  width: 98.8%;
+  width: 100%;
 }
 .inputbox input {
-  width: 97%;
-  border-radius: 20px;
-  padding-left: 15px;
+  width: 100%;
+    border-radius: 20px;
+    padding-left: 15px;
 }
 .inputboxrow {
   display: flex;
@@ -221,10 +229,10 @@ export default {
   flex-direction: column;
   /* background: aquamarine;    */
   height: 100%;
+  margin-right: 10px;
 }
 .box3 {
   margin-top: 10px;
-  padding-left: 10px;
   width: 100%;
   display: grid;
   grid-template-columns: 3fr;
@@ -270,9 +278,8 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  padding-bottom: 10px;
+  /* padding: 20px 20px 20px 10px; */
   width: 100%;
-  height: 650px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
@@ -282,7 +289,8 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
-  height: 300vh;
+  padding: 0px 20px 20px;
+  /* height: 300vh; */
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
@@ -292,7 +300,6 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
-  height: 1000px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;

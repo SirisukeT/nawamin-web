@@ -248,6 +248,7 @@ div.info label {
   background-color: #c4c4c4;
   border-radius: 15px;
   border: 2px solid white;
+  padding-bottom: 5px;
 }
 
 .box h1 {

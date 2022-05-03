@@ -10,12 +10,12 @@
           </div>
           <div class="inputbox">
             <h5>วันที่</h5>
-            <input type="text" name="testdate5" id="testdate5" value="">    
+            <Datepickerthai />   
           </div>
           <div class="inputbox">
             <h5>แผนก</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.shortname }}
                 </option>
@@ -27,7 +27,7 @@
           <div class="inputbox">
             <h5>จากโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -43,7 +43,7 @@
           <div class="inputbox">
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -63,7 +63,7 @@
           <div class="inputbox">
             <h5>เพศ</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in sex" :key="index" value="">
                   {{ item }}
                 </option>
@@ -168,7 +168,7 @@
           <div class="item1">
             <h5>HEENT</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -184,7 +184,7 @@
           <div class="item1">
             <h5>HEART</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -199,7 +199,7 @@
           <div class="item1">
             <h5>LUNG</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -214,7 +214,7 @@
           <div class="item1">
             <h5>Ab</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -229,7 +229,7 @@
           <div class="item1">
             <h5>Exr</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -244,7 +244,7 @@
           <div class="item1">
             <h5>PE text</h5>
             <div class="custom-select">
-              <select>
+              <select id='select2'>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -268,6 +268,7 @@
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 import test from "./test.vue"
+import Datepickerthai from './calendar/Datepickerthai.vue';
 export default {
   name: "APR_1",
   
@@ -280,7 +281,7 @@ export default {
       sex:["เพศ","ชาย","หญิง","ไม่ระบุ"]
     };
   },
-  components : { test },
+  components : { test,Datepickerthai },
   mounted() {
     const store = useTitleStore();
     document.getElementById("name").defaultValue = store.patient.data["pname"]+''+store.patient.data["fname"]+' '+store.patient.data["lname"];
@@ -290,6 +291,13 @@ export default {
 </script>
 
 <style>
+#select2{
+  width: 98%;
+  border-radius: 20px;
+  padding-left: 10px;
+  height: 28px;
+  border: 2px solid;
+}
 .item1 h5 {
   margin-right: 10px;
   margin-bottom: 0px;
@@ -365,11 +373,11 @@ export default {
   border: 2px solid;
 }
 .inputbox select {
-  width: 97%;
-  border-radius: 20px;
-  padding-left: 10px;
-  height: 28px;
-  border: 2px solid;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0 0px 0 5px;
+    height: 30px;
+    border: 2px solid;
 }
 #dmy {
   padding: 0px 10px 0px;
@@ -395,7 +403,6 @@ export default {
 }
 .box3 {
   margin-top: 10px;
-  padding-left: 10px;
   width: 100%;
   display: grid;
   grid-template-columns: 3fr;
@@ -444,7 +451,6 @@ export default {
   margin-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  height: 650px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
@@ -463,7 +469,6 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
-  height: 1000px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;

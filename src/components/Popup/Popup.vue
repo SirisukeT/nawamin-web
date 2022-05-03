@@ -29,7 +29,7 @@ export default {
     bottom: 0;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.2);
-
+    margin: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
