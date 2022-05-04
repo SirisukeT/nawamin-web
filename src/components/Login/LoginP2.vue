@@ -77,11 +77,11 @@ export default {
 }
 
 .Header {
-  margin-top: 2rem;
+  margin-top: 10vh;
   color: #114D3E;
 }
 form.LoginHomePage {
-  margin-top: 2rem;
+  margin-top: 5vh;
   min-height: 550px;
   width: 500px;
   display: flex;
