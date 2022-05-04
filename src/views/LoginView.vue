@@ -1,9 +1,9 @@
 <template>
-  <LoginP />
+  <LoginP2 />
 </template>
 
 <script>
 export default {
-  name: "LoginView",
+    name: "LoginView",
 };
 </script>
