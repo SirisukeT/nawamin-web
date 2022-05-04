@@ -51,7 +51,17 @@ export const useTitleStore = defineStore("TitleStore", () => {
     data: [],
     name: "",
     text: "",
+    vn: "",
   });
+
+  const callRef = (component, vn) => {
+    router.push({
+      name: component[0],
+      params: { main: component[1], name: component[2], sub: component[3] },
+    });
+    patient.value.vn = vn;
+    window.scrollTo(0, 0);
+  };
 
   const getSomething = (key, info) => {
     if (key == "sex") {
@@ -125,6 +135,7 @@ export const useTitleStore = defineStore("TitleStore", () => {
     changePage,
     sendPatient,
     getSomething,
+    callRef,
 
   };
 });

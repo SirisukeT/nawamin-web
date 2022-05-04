@@ -1,0 +1,53 @@
+[
+    {
+        "001/2564": {
+            "date": "2022-05-02",
+            "depart": "MED",
+            "ohosp": "โรงพยาบาลค่ายนวมินทราชินี",
+            "dhosp": "โรงพยาบาลชลบุรี",
+            "name": "",
+            "cv": "1234567891234",
+            "tel": "000-000-0000",
+            "sex": "-",
+            "age":"-",
+            "whos": "พญ.กนกพร วงศ์อนันต์กิจ",
+            "hn": "",
+            "history": {
+                "past": "ผู้ป่วยมี underlying เป็นความดันสูง",
+                "present": "ปวดจุกลิ้นปี่ 1 Month \n1 Month ปวดจุกลิ้นปี่ คลื่นไส้ เบื่ออาหาร นำหนักลด",
+                "lab": "stool occult blood positive",
+                "initial": "Peptic ulcer with alarm symptom",
+                "drug": "Omeprazole (20) 1x1 o ac #20 tabs \nMotilium (10) 1x3 o ac # 10 tabs",
+                "cause": "ตรวจเพิ่มเติม EGD Scope",
+                "other": "-",
+                "right": "ประกันสังคม"
+            },
+            "physical": {
+                "HEENT": [
+                    "ผิดปกติ",
+                    "mild pale, no jaundice"
+                ],
+                "HEART": [
+                    "ปกติ",
+                    "pulse full bilat, Nomal s1s2, no murmur "
+                ],
+                "LUNG": [
+                    "ปกติ",
+                    "Clear breath sound both lungs"
+                ],
+                "Ab": [
+                    "ปกติ",
+                    "Soft, tender at epigastium, no guarding, no rebound"
+                ],
+                "Exr": [
+                    "ปกติ",
+                    "no edema"
+                ],
+                "PE text": [
+                    "ปกติ",
+                    "PR: no melena"
+                ]
+            }
+        }
+    }
+]

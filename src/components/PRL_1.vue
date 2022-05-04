@@ -24,28 +24,7 @@
 
     <div class="botbox">
       <div class="graphbox">
-        <table>
-          <tr>
-            <th>ลำดับ</th>
-            <th>วันที่ส่งต่อ</th>
-            <th>โรงพยาบาลต้นทาง</th>
-            <th>โรงพยาบาลปลายทาง</th>
-            <th>ผู้ส่งต่อ</th>
-            <th>แผนก</th>
-            <th></th>
-          </tr>
-          <PatientRef
-            v-for="(item, index) in refer"
-            :key="index"
-            :patient="item"
-            :id="index + 1"
-            :sdate="item.sdate"
-            :ohosp="item.ohosp"
-            :dhosp="item.dhosp"
-            :whos="item.whos"
-            :department="item.depart"
-          />
-        </table>
+        <PatientRef/>
       </div>
     </div>
   </div>
@@ -86,6 +65,16 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
+
+.graphbox {
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  /* display: flex;
+  justify-content: space-between; */
+  background-color: #e7e7e7;
+  /* border: 1px solid black; */
+}
 .botbox {
   margin-top: 0px;
   width: 100%;
@@ -96,26 +85,7 @@ h1 {
   border-radius: 15px;
   border: 1.75px solid black;
 }
-.subdocb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* width: 375px; */
-  height: 60px;
-  width: 100%;
-  background-color: #c4c4c4;
-  border-radius: 15px;
-  border: 1.75px solid black;
-}
-.graphbox {
-  margin: 10px;
-  width: 100%;
-  height: 100%;
-  /* display: flex;
-  justify-content: space-between; */
-  background-color: #e7e7e7;
-  /* border: 1px solid black; */
-}
+
 .midbox {
   width: 100%;
   height: 100px;

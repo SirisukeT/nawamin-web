@@ -6,11 +6,11 @@
         <div class="box111">
           <div class="inputbox">
             <h5>เลขที่ใบส่งตัว</h5>
-            <input type="text" />
+            <input type="text" id="vn" />
           </div>
           <div class="inputbox">
             <h5>วันที่</h5>
-            <Datepickerthai  /> 
+            <input type="text" id="date"/>
           </div>
           <div class="inputbox">
             <h5>แผนก</h5>
@@ -36,7 +36,7 @@
           </div>
           <div class="inputbox">
             <h5>เบอร์โทรศัพท์</h5>
-            <input type="text" />
+            <input type="text" id="tel"/>
           </div>
         </div>
         <div class="box21">
@@ -62,13 +62,7 @@
           </div>
           <div class="inputbox">
             <h5>เพศ</h5>
-            <div class="custom-select">
-              <select id="select2">
-                <option v-for="(item, index) in sex" :key="index" value="">
-                  {{ item }}
-                </option>
-              </select>
-            </div>
+            <input type="text" id="sex" />
           </div>
         </div>
         <div class="box111">
@@ -116,49 +110,49 @@
         <div class="box3">
           <div class="inputbox">
             <h5>1. ประวัติการป่วยในอดีตและประวัติครอบครัว</h5>
-            <textarea type="text" />
+            <textarea type="text" id="1"/>
           </div>
         </div>
         <div class="box3">
           <div class="inputbox">
             <h5>2. ประวัติการป่วยปัจจุบัน</h5>
-            <textarea type="text" />
+            <textarea type="text" id="2"/>
           </div>
         </div>
         <div class="box3">
           <div class="inputbox2">
             <h5>3. ผลการตรวจชันสูตรทางห้องทดลองที่สำคัญ</h5>
-            <textarea type="text" />
+            <textarea type="text" id="3"/>
           </div>
         </div>
         <div class="box3">
           <div class="inputbox2">
             <h5>4. ผลการวินิจฉัยโรคชั้นต้น</h5>
-            <textarea type="text" />
+            <textarea type="text" id="4"/>
           </div>
         </div>
         <div class="box3">
           <div class="inputbox3">
             <h5>5. การรักษาหรือยาที่ได้ให้ไว้แล้ว</h5>
-            <textarea type="text" />
+            <textarea type="text" id="5"/>
           </div>
         </div>
         <div class="box3">
           <div class="inputbox4">
             <h5>6. สาเหตุที่ส่ง</h5>
-            <textarea type="text" />
+            <textarea type="text" id="6"/>
           </div>
         </div>
         <div class="box3">
           <div class="inputbox2">
             <h5>7. รายละเอียดอื่น ๆ</h5>
-            <textarea type="text" />
+            <textarea type="text" id="7"/>
           </div>
         </div>
         <div class="box3">
           <div class="inputbox4">
             <h5>8. สิทธิการรักษา</h5>
-            <textarea type="text" />
+            <textarea type="text" id="8"/>
           </div>
         </div>
       </div>
@@ -277,8 +271,9 @@ const store = useTitleStore();
 </script>
 
 <script>
-import hospital from "../json/test2.json"
+import hospital from "../json/test2.json";
 import departs from "../json/departs.json";
+import vn from "../json/vn.json";
 import { useTitleStore } from "@/stores/TitleStore";
 import test from "./test.vue";
 import Datepickerthai from './calendar/Datepickerthai.vue';
@@ -290,6 +285,7 @@ export default {
       status: ["สถานะ", "ปกติ", "ผิดปกติ"],
       sex: ["เพศ", "ชาย", "หญิง", "ไม่ระบุ"],
       hospital,
+      vn,
     };
   },
   components: { test,Datepickerthai },
@@ -302,6 +298,21 @@ export default {
       " " +
       store.patient.data["lname"];
     document.getElementById("cid").defaultValue = store.patient.data["cid"];
+    document.getElementById("vn").defaultValue = store.patient.vn;
+    console.log(this.vn[0][store.patient.vn]);
+    document.getElementById("date").defaultValue = this.vn[0][store.patient.vn].date;
+    document.getElementById("tel").defaultValue = this.vn[0][store.patient.vn].tel;
+    document.getElementById("sex").defaultValue = this.vn[0][store.patient.vn].sex;
+    document.getElementById("1").defaultValue = this.vn[0][store.patient.vn].history.past;
+    document.getElementById("2").defaultValue = this.vn[0][store.patient.vn].history.present;
+    document.getElementById("3").defaultValue = this.vn[0][store.patient.vn].history.lab;
+    document.getElementById("4").defaultValue = this.vn[0][store.patient.vn].history.initial;
+    document.getElementById("5").defaultValue = this.vn[0][store.patient.vn].history.drug;
+    document.getElementById("6").defaultValue = this.vn[0][store.patient.vn].history.cause;
+    document.getElementById("7").defaultValue = this.vn[0][store.patient.vn].history.other;
+    document.getElementById("8").defaultValue = this.vn[0][store.patient.vn].history.right;
+
+
   },
 };
 </script>
