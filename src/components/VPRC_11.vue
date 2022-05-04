@@ -10,7 +10,7 @@
           </div>
           <div class="inputbox">
             <h5>วันที่</h5>
-            <input type="text" name="testdate5" id="testdate5" value="" />
+            <Datepickerthai  /> 
           </div>
           <div class="inputbox">
             <h5>แผนก</h5>
@@ -258,7 +258,7 @@
       </div>
     </div>
     <div class="buttonbox">
-      <test />
+      <button id="reportbutton">แจ้งผลการรักษา</button>
       <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
     </div>
   </div>
@@ -268,6 +268,7 @@
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 import test from "./test.vue";
+import Datepickerthai from './calendar/Datepickerthai.vue';
 export default {
   name: "VPRC_11",
   data() {
@@ -277,7 +278,7 @@ export default {
       sex: ["เพศ", "ชาย", "หญิง", "ไม่ระบุ"],
     };
   },
-  components: { test },
+  components: { test,Datepickerthai },
   mounted() {
     const store = useTitleStore();
     document.getElementById("name").defaultValue =
@@ -460,7 +461,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
- padding: 20px;
+  padding: 20px;
   width: 100%;
   background-color: #c4c4c4;
   border-radius: 30px;
@@ -475,14 +476,6 @@ export default {
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
-}
-.historybox3 {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  width: 100%;
-  background-color: #c4c4c4;
-  border-radius: 30px;
-  border: 1.75px solid black;
+  padding: 20px;
 }
 </style>

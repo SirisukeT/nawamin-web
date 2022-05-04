@@ -1,6 +1,6 @@
 <template>
   <main>
-    <button @click="() => TogglePopup('buttonTrigger')" id="savebutton">บันทึก</button>
+    <button @click="() => TogglePopup('buttonTrigger')" id="detailbutton">รายละเอียดอาการ</button>
     <PopupPM1
       v-if="popupTriggers.buttonTrigger"
       :TogglePopup="() => TogglePopup('buttonTrigger')"

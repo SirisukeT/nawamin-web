@@ -59,7 +59,11 @@
           </div>
 
           <div class="info2">
-            <Medicine><template #key>Penicilin</template><template #value>รายละเอียด</template></Medicine>
+            <!-- <Medicine><template #key>Penicilin</template><template #value>รายละเอียด</template></Medicine> -->
+            <div class="subinfo">
+              <h5 style="color:red">Penicilin</h5>
+            </div>
+            <div class="subinfo"><testpm1 /></div>
           </div>
         </div>
       </div>
@@ -71,10 +75,11 @@
 </template>
 
 <script>
+import testpm1 from "./testpm1.vue"
 import Medicine from "./DataList/Medicine.vue";
 export default {
   name: "PM_1",
-  components: { Medicine },
+  components: { Medicine,testpm1 },
 };
 </script>
 
@@ -97,6 +102,7 @@ export default {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   /* background-color: black; */
 }
 
