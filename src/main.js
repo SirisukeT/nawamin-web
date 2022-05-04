@@ -4,6 +4,7 @@ import { useTitleStore } from '@/stores/TitleStore.js'
 import App from "./App.vue";
 import router from "./router";
 import LoginP from "./components/Login/LoginP.vue";
+import LoginP2 from "./components/Login/LoginP2.vue";
 import NavBar from "./components/bar/NavBar.vue";
 import NavBar2 from "./components/bar/NavBar2.vue";
 import SideBar from "./components/bar/SideBar.vue";
@@ -83,6 +84,7 @@ app.component("NavBar2", NavBar2);
 app.component("TitleBar", TitleBar);
 app.component("SO_1", SO_1);
 app.component("LoginP", LoginP);
+app.component("LoginP2", LoginP2);
 app.component("PD_1", PD_1);
 app.component("PL_11", PL_11);
 app.component("PL_12", PL_12);
