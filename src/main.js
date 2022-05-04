@@ -42,6 +42,7 @@ import VPRC_11 from "./components/VPRC_11.vue";
 import VPRC_12 from "./components/VPRC_12.vue";
 import APTR_1 from "./components/APTR_1.vue";
 import VPTR_1 from "./components/VPTR_1.vue";
+import VPTR_2 from "./components/VPTR_2.vue";
 
 // import AdminView from "./views/AdminView.vue";
 // import LoginView from "./views/LoginView.vue";
@@ -108,6 +109,7 @@ app.component("VPRC_11", VPRC_11);
 app.component("VPRC_12", VPRC_12);
 app.component("APTR_1", APTR_1);
 app.component("VPTR_1", VPTR_1);
+app.component("VPTR_2", VPTR_2);
 app.component("SU_11",SU_11);
 app.component("SU_12",SU_12);
 app.component("SU_21",SU_21);
