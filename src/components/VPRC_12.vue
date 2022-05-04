@@ -321,8 +321,15 @@ export default {
 .line {
   margin-top: 30px;
   margin-bottom: 20px;
-  width: 90%;
+  width: 100%;
   border-bottom: 6px solid black;
+}
+#select2 {
+  width: 98%;
+  border-radius: 20px;
+  padding-left: 10px;
+  height: 40px;
+  border: 2px solid;
 }
 .item1 h5 {
   margin-right: 10px;
@@ -391,26 +398,26 @@ export default {
   height: 70px;
 }
 .item1 .custom-select select {
-  width: 250px;
+  width: 100%;
+  min-width: 220px;
   border-radius: 20px;
   padding-left: 10px;
-  height: 28px;
+  height: 40px;
   border: 2px solid;
 }
-#select2{
+
+.item1 .custom-select{
+  width: 80%;
+}
+
+.inputbox select {
   width: 98%;
   border-radius: 20px;
-  padding-left: 10px;
-  height: 28px;
+  padding: 0 0px 0 5px;
+  height: 40px;
   border: 2px solid;
 }
-.inputbox select {
- width: 100%;
-    border-radius: 20px;
-    padding: 0 0px 0 5px;
-    height: 30px;
-    border: 2px solid;
-}
+
 #dmy {
   padding: 0px 10px 0px;
 }
@@ -419,9 +426,12 @@ export default {
 }
 .inputbox input {
   width: 97%;
+  height: 40px;
   border-radius: 20px;
   padding-left: 15px;
 }
+
+
 .inputboxrow {
   display: flex;
   flex-direction: row;
@@ -435,10 +445,10 @@ export default {
 }
 .box3 {
   margin-top: 10px;
-
   width: 100%;
   display: grid;
   grid-template-columns: 3fr;
+  padding: 0 10px;
   /* background: greenyellow; */
 }
 .box21 {
@@ -461,18 +471,18 @@ export default {
 }
 .bigbox {
   width: 100%;
-  height: 100vh;
   display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  flex-direction: column;
   /* background-color: black; */
 }
 
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 1000px;
-  height: 100%;
+  padding: 0 0px;
+  /* width: 1000px; */
+  /* height: 100%; */
   /* background-color: red; */
   justify-content: top;
   align-items: center;
@@ -482,9 +492,8 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  padding-bottom: 10px;
+  padding: 20px;
   width: 100%;
-  height: 650px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
@@ -494,10 +503,11 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
-  /* height: 300vh; */
+  padding: 20px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
+  padding: 20px;
 }
 .historybox3 {
   display: flex;
