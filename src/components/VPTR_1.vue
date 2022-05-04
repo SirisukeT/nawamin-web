@@ -412,7 +412,7 @@ export default {
 }
 
 .inputbox select {
-  width: 100%;
+  width: 98%;
   border-radius: 20px;
   padding: 0 0px 0 5px;
   height: 40px;
