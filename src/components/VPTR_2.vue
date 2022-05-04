@@ -285,7 +285,6 @@
       </div>
 
       <div class="buttonbox">
-        <test />
         <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
       </div>
     </div>
@@ -298,7 +297,7 @@ import hospital from "../json/test2.json"
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 export default {
-  name: "VPTR_1",
+  name: "VPTR_2",
   data() {
     return {
       departs,
