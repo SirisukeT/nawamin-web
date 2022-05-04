@@ -258,11 +258,23 @@
       </div>
     </div>
     <div class="buttonbox">
-      <button id="reportbutton">แจ้งผลการรักษา</button>
+      <button @click="
+              store.changePage([
+                'แจ้งผลการรักษา',
+                'รายละเอียดผู้ป่วย',
+                $route.params.name,
+                'แจ้งผลการรักษา',
+              ])
+            " id="reportbutton">แจ้งผลการรักษา</button>
       <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
     </div>
   </div>
 </template>
+
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <script>
 import hospital from "../json/test2.json"
