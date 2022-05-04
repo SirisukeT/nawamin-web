@@ -16,8 +16,8 @@
             <h5>แผนก</h5>
             <div class="custom-select">
               <select>
-                <option v-for="(item, index) in hospital" :key="index" value="">
-                  {{ item.hospname }}
+                <option v-for="(item, index) in departs" :key="index" value="">
+                  {{ item.name }}
                 </option>
               </select>
             </div>
@@ -44,8 +44,8 @@
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
               <select id="select2">
-                <option v-for="(item, index) in departs" :key="index" value="">
-                  {{ item.name }}
+                <option v-for="(item, index) in hospital" :key="index" value="">
+                  {{ item.hospname }}
                 </option>
               </select>
             </div>
