@@ -11,7 +11,7 @@
     <div class="midbox">
       <div class="addbox">
         <button
-          @click="store.changePage(['เพิ่มโรงพยาบาล', 'ตั้งค่าโรงพยาบาล'])"
+          @click="store.changePage(['เพิ่มโรงพยาบาล', 'เพิ่มโรงพยาบาล'])"
           class="subadd"
         >
           เพิ่มโรงพยาบาล
