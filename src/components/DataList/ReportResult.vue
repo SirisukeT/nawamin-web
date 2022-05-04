@@ -1,21 +1,33 @@
 <template>
-  <tr>
-    <th>{{ id }}</th>
-    <th>{{ sdate }}</th>
-    <th>{{ ohos }}</th>
-    <th>{{ dhos }}</th>
-    <th>{{ whos }}</th>
-    <th>{{ department }}</th>
-    <th id="info">
-      <button
-        @click="
-          store.sendPatient(['รายละเอียดใบส่งตัว', 'รายละเอียดใบส่งตัว', name],patient)
-        "
-      >
-        รายละเอียด
-      </button>
-    </th>
-  </tr>
+  <table>
+    <tr>
+      <th>ลำดับ</th>
+      <th>วันที่ส่งต่อ</th>
+      <th>โรงพยาบาลต้นทาง</th>
+      <th>โรงพยาบาลปลายทาง</th>
+      <th>ผู้ส่งผลต่อ</th>
+      <th></th>
+    </tr>
+    <tr v-for="(item, index) in transfer" :key="index">
+      <th>{{ index+1 }}</th>
+      <th>{{ item.sdate }}</th>
+      <th>{{ item.ohosp }}</th>
+      <th>{{ item.dhosp }}</th>
+      <th>{{ item.whos }}</th>
+      <th id="info">
+        <button
+          @click="
+            store.sendPatient(
+              ['รายละเอียดใบส่งตัว', 'รายละเอียดใบส่งตัว', name],
+              patient
+            )
+          "
+        >
+          รายละเอียด
+        </button>
+      </th>
+    </tr>
+  </table>
 </template>
 
 <script setup>
@@ -24,6 +36,7 @@ const store = useTitleStore();
 </script>
 
 <script>
+import transfer from "@/json/transfer";
 export default {
   name: "PatientRef",
   props: {
@@ -35,5 +48,10 @@ export default {
     department: { type: String },
     patient: {},
   },
+  data(){
+    return{
+      transfer,
+    }
+  }
 };
 </script>

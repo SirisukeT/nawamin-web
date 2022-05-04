@@ -24,23 +24,7 @@
 
     <div class="botbox">
       <div class="graphbox">
-        <table>
-          <tr>
-            <th>ลำดับ</th>
-            <th>วันที่ส่งต่อ</th>
-            <th>โรงพยาบาลต้นทาง</th>
-            <th>โรงพยาบาลปลายทาง</th>
-            <th>ผู้ส่งผลต่อ</th>
-            <th></th>
-          </tr>
-          <ReportResult
-            v-for="(item, index) in data"
-            :key="index"
-            :patient="item"
-            :id="index + 1"
-            :sdate="item.sdate"
-          />
-        </table>
+        <ReportResult/>
       </div>
     </div>
   </div>
