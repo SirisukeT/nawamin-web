@@ -10,12 +10,12 @@
           </div>
           <div class="inputbox">
             <h5>วันที่</h5>
-            <input type="date" id="dmy" />
+            <Datepickerthai  /> 
           </div>
           <div class="inputbox">
             <h5>แผนก</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select>
                 <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
@@ -27,7 +27,7 @@
           <div class="inputbox">
             <h5>จากโรงพยาบาล</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select>
                 <option v-for="(item, index) in hospital" :key="index" value="">
                   {{ item.hospname }}
                 </option>
@@ -43,7 +43,7 @@
           <div class="inputbox">
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in hospital" :key="index" value="">
                   {{ item.hospname }}
                 </option>
@@ -54,7 +54,7 @@
         <div class="box111">
           <div class="inputbox">
             <h5>ชื่อ - สกุลผู้ป่วย</h5>
-            <input type="text" id="name"/>
+            <input type="text" id="name" />
           </div>
           <div class="inputbox">
             <h5>เลขบัตรประชาชน</h5>
@@ -63,7 +63,7 @@
           <div class="inputbox">
             <h5>เพศ</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select id="select2">
                 <option v-for="(item, index) in sex" :key="index" value="">
                   {{ item }}
                 </option>
@@ -168,7 +168,7 @@
           <div class="item1">
             <h5>HEENT</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -184,7 +184,7 @@
           <div class="item1">
             <h5>HEART</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -199,7 +199,7 @@
           <div class="item1">
             <h5>LUNG</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -214,7 +214,7 @@
           <div class="item1">
             <h5>Ab</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -229,7 +229,7 @@
           <div class="item1">
             <h5>Exr</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -244,7 +244,7 @@
           <div class="item1">
             <h5>PE text</h5>
             <div class="custom-select">
-              <select id='select2'>
+              <select>
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -285,25 +285,27 @@
       </div>
 
       <div class="buttonbox">
-        <button class="save">บันทึก</button>
+        <test />
         <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
       </div>
     </div>
   </div>
 </template>
-
 <script>
+import test from "./test.vue";
+import Datepickerthai from './calendar/Datepickerthai.vue';
 import hospital from "../json/test2.json"
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 export default {
-  name: "VPRC_12",
+  name: "VPTR_1",
   data() {
     return {
       departs,
       hospital,
     };
   },
+  components: { test,Datepickerthai },
   mounted() {
     const store = useTitleStore();
     document.getElementById("name").defaultValue =
