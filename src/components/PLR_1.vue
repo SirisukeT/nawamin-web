@@ -80,7 +80,7 @@ export default {
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 700px;
   /* background-color: red; */
   justify-content: top;
@@ -108,7 +108,6 @@ export default {
   margin: 20px;
   padding-bottom: 15px;
   width: 90%;
-  height: 95%;
   background-color: #e7e7e7;
   border-radius: 50px;
   border: 1.75px solid white;
@@ -137,7 +136,7 @@ export default {
 .info2 {
   margin-top: 15px;
   width: 90%;
-  height: 40px;
+  /* height: 40px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -151,5 +150,32 @@ export default {
 h1.CurrentDiseases {
   padding-top: 10px;
   margin-bottom: 0px;
+}
+
+@media (max-width: 1400px) {
+  .bigbox{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftbox{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 50%;
+  }  
+}
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 670px) {
+  
 }
 </style>

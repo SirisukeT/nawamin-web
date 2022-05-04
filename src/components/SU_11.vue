@@ -11,7 +11,7 @@
     <div class="midbox">
       <div class="addbox">
         <button
-          @click="store.changePage(['เพิ่มโรงพยาบาล','ตั้งค่าโรงพยาบาล'])"
+          @click="store.changePage(['เพิ่มโรงพยาบาล', 'ตั้งค่าโรงพยาบาล'])"
           class="subadd"
         >
           เพิ่มโรงพยาบาล
@@ -24,20 +24,7 @@
 
     <div class="botbox">
       <div class="graphbox">
-        <table>
-          <tr style="font-size: 25px">
-            <th >ลำดับ</th>
-            <th>โรงพยาบาล</th>
-            <th>วันที่สร้าง</th>
-          </tr>
-          <Hospital
-            v-for="(item, index) in hospital"
-            :key="index"
-            :id="item.index"
-            :hospname="item.hospname"
-            :cdate="item.cdate"
-          />
-        </table>
+        <Hospital />
       </div>
     </div>
   </div>
@@ -49,14 +36,8 @@ const store = useTitleStore();
 </script>
 
 <script>
-import hospital from "@/json/hospital"
 export default {
   name: "SU_11",
-  data() {
-    return {
-      hospital,
-    };
-  },
 };
 </script>
 

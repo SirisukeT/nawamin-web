@@ -95,14 +95,12 @@ export default {
 
 .bigbox {
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   /* background-color: black; */
 }
 
 .rightbox {
-  padding-left: 100px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -162,7 +160,8 @@ export default {
 .info2 {
   margin-top: 15px;
   width: 90%;
-  height: 40px;
+  /* height: 40px; */
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -183,5 +182,33 @@ h5.red {
 h5.use {
   vertical-align: baseline;
   text-align: justify;
+}
+@media (max-width: 1400px) {
+  .bigbox{
+    flex-direction: column;
+    align-items: center;
+  }
+  .leftbox{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 50%;
+  }
+  .rightbox{
+    padding: 0;
+  }  
+}
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 670px) {
+  
 }
 </style>

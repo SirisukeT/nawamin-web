@@ -77,20 +77,28 @@ th#info button {
 .info {
   margin-top: 10px;
   width: 90%;
-  height: 40px;
+  /* height: 40px; */
   display: flex;
   /* background-color: red; */
+}
+
+.info p{
+  margin: 0;
 }
 .infoleft {
   width: 50%;
   /* height: 100%; */
-  text-align: left;
+  /* text-align: left; */
   /* background-color: skyblue; */
 }
 .inforight {
   width: 50%;
   /* height: 100%; */
-  text-align: right;
   /* background-color: greenyellow; */
+}
+
+.inforight p{
+  width: 100%;
+  text-align: right;
 }
 </style>

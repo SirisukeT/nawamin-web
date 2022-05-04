@@ -88,7 +88,7 @@ export const useTitleStore = defineStore("TitleStore", () => {
       var age = Math.abs(year - 1970);
 
       //display the calculated age
-      patient.value.text = age;
+      patient.value.text = age+" ปี";
       return true;
     }
     return false;

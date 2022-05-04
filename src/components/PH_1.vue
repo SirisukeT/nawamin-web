@@ -51,25 +51,16 @@ rb {
 
 .bigbox {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: space-between;
   /* background-color: black; */
 }
-.leftbox {
-  margin-left: 20px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350px;
-  height: 600px;
-  /* background-color: blue; */
-}
 .rightbox {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 100%;
   justify-content: top;
   align-items: center;
@@ -80,7 +71,8 @@ rb {
   align-items: center;
   margin-top: 10px;
   width: 100%;
-  height: 650px;
+  height: 100%;
+  /* height: 650px; */
   background-color: #c4c4c4;
   border-radius: 50px;
   border: 1.75px solid white;
@@ -92,14 +84,39 @@ rb {
 }
 .boxin {
   margin: 20px;
-  width: 100%;
-  height: 95%;
+  width: 96%;
+  /* height: 95%; */
   background-color: #e7e7e7;
   border-radius: 50px;
   border: 1.75px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
+  padding: 20px 0px;
+}
+@media (max-width: 1400px) {
+  .bigbox{
+    flex-direction: column;
+    align-items: center;
+  }
+  .leftbox{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 50%;
+  }  
+}
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 670px) {
+  
 }
 </style>

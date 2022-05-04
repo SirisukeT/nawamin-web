@@ -40,7 +40,7 @@
             <div class="inforight">
               <h5>13 กันยายน 2564</h5>
             </div>
-            <button class="inforight">13 กันยายน 2564</button>
+            <!-- <button class="inforight">13 กันยายน 2564</button> -->
           </div>
         </div>
       </div>
@@ -97,8 +97,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 350px;
-  height: 600px;
   /* background-color: blue; */
 }
 .rightbox {
@@ -170,7 +168,7 @@ export default {
 .info2 {
   margin-top: 15px;
   width: 90%;
-  height: 40px;
+  /* height: 40px; */
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -10,14 +10,14 @@
           </div>
           <div class="inputbox">
             <h5>วันที่</h5>
-            <input type="date" id="dmy" />
+            <Datepickerthai  /> 
           </div>
           <div class="inputbox">
             <h5>แผนก</h5>
             <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in depart" :key="index" value="">
-                  {{ item.name }}
+              <select id="select2">
+                <option v-for="(item, index) in departs" :key="index" value="">
+                  {{ item.shortname }}
                 </option>
               </select>
             </div>
@@ -27,8 +27,8 @@
           <div class="inputbox">
             <h5>จากโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in depart" :key="index" value="">
+              <select id="select2">
+                <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
               </select>
@@ -43,8 +43,8 @@
           <div class="inputbox">
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
-              <select>
-                <option v-for="(item, index) in depart" :key="index" value="">
+              <select id="select2">
+                <option v-for="(item, index) in departs" :key="index" value="">
                   {{ item.name }}
                 </option>
               </select>
@@ -54,7 +54,7 @@
         <div class="box111">
           <div class="inputbox">
             <h5>ชื่อ - สกุลผู้ป่วย</h5>
-            <input type="text" id="name"/>
+            <input type="text" id="name" />
           </div>
           <div class="inputbox">
             <h5>เลขบัตรประชาชน</h5>
@@ -63,7 +63,7 @@
           <div class="inputbox">
             <h5>เพศ</h5>
             <div class="custom-select">
-              <select>
+              <select id="select2">
                 <option v-for="(item, index) in sex" :key="index" value="">
                   {{ item }}
                 </option>
@@ -168,7 +168,7 @@
           <div class="item1">
             <h5>HEENT</h5>
             <div class="custom-select">
-              <select>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -184,7 +184,7 @@
           <div class="item1">
             <h5>HEART</h5>
             <div class="custom-select">
-              <select>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -199,7 +199,7 @@
           <div class="item1">
             <h5>LUNG</h5>
             <div class="custom-select">
-              <select>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -214,7 +214,7 @@
           <div class="item1">
             <h5>Ab</h5>
             <div class="custom-select">
-              <select>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -229,7 +229,7 @@
           <div class="item1">
             <h5>Exr</h5>
             <div class="custom-select">
-              <select>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -244,7 +244,7 @@
           <div class="item1">
             <h5>PE text</h5>
             <div class="custom-select">
-              <select>
+              <select id="select2">
                 <option v-for="(item, index) in status" :key="index" value="">
                   {{ item }}
                 </option>
@@ -256,36 +256,50 @@
           </div>
         </div>
       </div>
-      <div class="buttonbox">
-        <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
-      </div>
+    </div>
+    <div class="buttonbox">
+      <test />
+      <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
     </div>
   </div>
 </template>
 
 <script>
-import depart from "../json/depart.json";
+import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
+import test from "./test.vue";
+import Datepickerthai from './calendar/Datepickerthai.vue';
 export default {
   name: "APR_1",
   data() {
     return {
-      depart,
-      status:[
-        "สถานะ","ปกติ","ผิดปกติ"
-      ],
-      sex:["เพศ","ชาย","หญิง","ไม่ระบุ"]
+      departs,
+      status: ["สถานะ", "ปกติ", "ผิดปกติ"],
+      sex: ["เพศ", "ชาย", "หญิง", "ไม่ระบุ"],
     };
   },
+  components: { test,Datepickerthai },
   mounted() {
     const store = useTitleStore();
-    document.getElementById("name").defaultValue = store.patient.data["pname"]+''+store.patient.data["fname"]+' '+store.patient.data["lname"];
+    document.getElementById("name").defaultValue =
+      store.patient.data["pname"] +
+      "" +
+      store.patient.data["fname"] +
+      " " +
+      store.patient.data["lname"];
     document.getElementById("cid").defaultValue = store.patient.data["cid"];
   },
 };
 </script>
 
 <style scoped>
+#select2 {
+  width: 98%;
+  border-radius: 20px;
+  padding-left: 10px;
+  height: 40px;
+  border: 2px solid;
+}
 .item1 h5 {
   margin-right: 10px;
   margin-bottom: 0px;
@@ -353,19 +367,26 @@ export default {
   height: 70px;
 }
 .item1 .custom-select select {
-  width: 250px;
+  width: 100%;
+  min-width: 220px;
   border-radius: 20px;
   padding-left: 10px;
-  height: 28px;
+  height: 40px;
   border: 2px solid;
 }
+
+.item1 .custom-select{
+  width: 80%;
+}
+
 .inputbox select {
-  width: 97%;
+  width: 100%;
   border-radius: 20px;
-  padding-left: 10px;
-  height: 28px;
+  padding: 0 0px 0 5px;
+  height: 40px;
   border: 2px solid;
 }
+
 #dmy {
   padding: 0px 10px 0px;
 }
@@ -374,9 +395,12 @@ export default {
 }
 .inputbox input {
   width: 97%;
+  height: 40px;
   border-radius: 20px;
   padding-left: 15px;
 }
+
+
 .inputboxrow {
   display: flex;
   flex-direction: row;
@@ -390,10 +414,10 @@ export default {
 }
 .box3 {
   margin-top: 10px;
-  padding-left: 10px;
   width: 100%;
   display: grid;
   grid-template-columns: 3fr;
+  padding: 0 10px;
   /* background: greenyellow; */
 }
 .box21 {
@@ -416,17 +440,18 @@ export default {
 }
 .bigbox {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   /* background-color: black; */
 }
 
 .rightbox {
   display: flex;
   flex-direction: column;
-  width: 1000px;
-  height: 100%;
+  padding: 0 0px;
+  /* width: 1000px; */
+  /* height: 100%; */
   /* background-color: red; */
   justify-content: top;
   align-items: center;
@@ -436,9 +461,8 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  padding-bottom: 10px;
+  padding: 20px;
   width: 100%;
-  height: 650px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
@@ -448,19 +472,10 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
-  height: 300vh;
+  padding: 20px;
   background-color: #c4c4c4;
   border-radius: 30px;
   border: 1.75px solid black;
-}
-.historybox3 {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  width: 100%;
-  height: 1000px;
-  background-color: #c4c4c4;
-  border-radius: 30px;
-  border: 1.75px solid black;
+  padding: 20px;
 }
 </style>

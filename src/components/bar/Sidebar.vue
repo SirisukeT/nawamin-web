@@ -30,13 +30,13 @@
       <button id="b4" @click="store.changePage(['ตั้งค่าโรงพยาบาล','ตั้งค่าโรงพยาบาล'])">
         โรงพยาบาล
       </button>
-      <button id="b5" @click="store.changePage(['กลุ่มผู้ใช้งาน'])">
+      <button id="b5" @click="store.changePage(['ตั้งค่ากลุ่มผู้ใช้งาน','ตั้งค่ากลุ่มผู้ใช้งาน'])">
         กลุ่มผู้ใช้งาน
       </button>
-      <button id="b6" @click="store.changePage(['ผู้ใช้งาน'])">
+      <button id="b6" @click="store.changePage(['ตั้งค่าผู้ใช้งาน','ตั้งค่าผู้ใช้งาน'])">
         ผู้ใช้งาน
       </button>
-      <button id="b7" @click="store.changePage(['แผนก'])">แผนก</button>
+      <button id="b7" @click="store.changePage(['ตั้งค่าแผนก','ตั้งค่าแผนก'])">แผนก</button>
     </div>
   </div>
 </template>
@@ -64,7 +64,7 @@ export default {
 
 <style scoped>
 div.sidenav {
-  margin-top: 100px;
+  margin-top: 71px;
   text-align: center;
   background-image: linear-gradient(rgb(37, 149, 122), rgb(129, 187, 173));
   overflow: hidden;

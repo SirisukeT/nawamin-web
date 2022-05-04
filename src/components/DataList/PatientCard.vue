@@ -24,13 +24,13 @@ export default {
 
 <style>
 .leftbox {
-  margin-left: 20px;
+  /* margin-right: 30px; */
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 350px;
-  height: 600px;
+  /* width: 350px;
+  height: 600px; */
   /* background-color: blue; */
 }
 
@@ -54,7 +54,7 @@ export default {
 .phptext {
   margin-top: 20px;
   width: 100%;
-  height: 100px;
+  /* height: 100px; */
   /* background-color: greenyellow; */
   display: flex;
   justify-content: center;

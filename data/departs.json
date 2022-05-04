@@ -1,5 +1,9 @@
 [
-    {"name":"เลือกแผนก"},
+    {
+        "spclty": "00",
+        "name": "เลือกแผนก",
+        "shortname": "เลือกแผนก"
+    },
     {
         "spclty": "01",
         "name": "อายุรกรรม",
@@ -14,12 +18,7 @@
         "oldcode": null,
         "nhso_code": "01",
         "operation": null,
-        "provis_code": "00100",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00100"
     },
     {
         "spclty": "02",
@@ -35,12 +34,7 @@
         "oldcode": null,
         "nhso_code": "02",
         "operation": null,
-        "provis_code": "00200",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00200"
     },
     {
         "spclty": "03",
@@ -56,12 +50,7 @@
         "oldcode": null,
         "nhso_code": "03",
         "operation": null,
-        "provis_code": "00300",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00300"
     },
     {
         "spclty": "04",
@@ -77,12 +66,7 @@
         "oldcode": null,
         "nhso_code": "04",
         "operation": null,
-        "provis_code": "00400",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00400"
     },
     {
         "spclty": "05",
@@ -98,12 +82,7 @@
         "oldcode": null,
         "nhso_code": "05",
         "operation": null,
-        "provis_code": "00500",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00500"
     },
     {
         "spclty": "06",
@@ -119,12 +98,7 @@
         "oldcode": null,
         "nhso_code": "06",
         "operation": null,
-        "provis_code": "00600",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00600"
     },
     {
         "spclty": "07",
@@ -140,12 +114,7 @@
         "oldcode": null,
         "nhso_code": "07",
         "operation": null,
-        "provis_code": "00700",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00700"
     },
     {
         "spclty": "08",
@@ -161,12 +130,7 @@
         "oldcode": null,
         "nhso_code": "08",
         "operation": null,
-        "provis_code": "00800",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00800"
     },
     {
         "spclty": "09",
@@ -182,12 +146,7 @@
         "oldcode": null,
         "nhso_code": "10",
         "operation": null,
-        "provis_code": "00900",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00900"
     },
     {
         "spclty": "10",
@@ -203,12 +162,7 @@
         "oldcode": null,
         "nhso_code": "10",
         "operation": null,
-        "provis_code": "01000",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "01000"
     },
     {
         "spclty": "11",
@@ -224,12 +178,7 @@
         "oldcode": null,
         "nhso_code": "11",
         "operation": null,
-        "provis_code": "01100",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "01100"
     },
     {
         "spclty": "12",
@@ -245,12 +194,7 @@
         "oldcode": null,
         "nhso_code": "02",
         "operation": null,
-        "provis_code": "00200",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "00200"
     },
     {
         "spclty": "13",
@@ -266,12 +210,7 @@
         "oldcode": null,
         "nhso_code": "12",
         "operation": null,
-        "provis_code": "01300",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "01300"
     },
     {
         "spclty": "14",
@@ -287,12 +226,7 @@
         "oldcode": null,
         "nhso_code": "12",
         "operation": null,
-        "provis_code": "01400",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "01400"
     },
     {
         "spclty": "15",
@@ -308,12 +242,7 @@
         "oldcode": null,
         "nhso_code": "12",
         "operation": null,
-        "provis_code": "01500",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "01500"
     },
     {
         "spclty": "16",
@@ -329,12 +258,7 @@
         "oldcode": null,
         "nhso_code": "12",
         "operation": null,
-        "provis_code": "01600",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "01600"
     },
     {
         "spclty": "99",
@@ -350,11 +274,6 @@
         "oldcode": null,
         "nhso_code": "12",
         "operation": null,
-        "provis_code": "09900",
-        "hos_guid": null,
-        "no_export_43": null,
-        "display_order": null,
-        "allow_online_appointment": null,
-        "active_status": null
+        "provis_code": "09900"
     }
 ]

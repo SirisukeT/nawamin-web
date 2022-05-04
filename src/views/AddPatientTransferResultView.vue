@@ -5,14 +5,16 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <SU_12/>
+        <APTR_1/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import APTR_1 from "../components/APTR_1.vue";
 export default {
-  name: "SetupAddView",
+    name: "AddPatientTransferResultView",
+    components: { APTR_1 }
 };
 </script>

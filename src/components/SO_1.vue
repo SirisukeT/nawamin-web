@@ -54,7 +54,6 @@ h1 {
 .topbox {
   margin: 0px;
   width: 100%;
-  height: 200px;
   display: flex;
   justify-content: space-between;
 }
@@ -105,5 +104,17 @@ h1 {
   display: flex;
   justify-content: space-between;
   background-color: #c4c4c4;
+}
+@media (max-width: 992px){
+  .topbox {
+  margin: 0px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+  .doctorbox{
+    margin-bottom:10px ;
+    width: 100%;
+  }
 }
 </style>

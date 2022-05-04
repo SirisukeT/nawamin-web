@@ -1,0 +1,79 @@
+[
+    {
+        "religion": "01",
+        "name": "พุทธ",
+        "nhso_code": "01",
+        "hos_guid": "",
+        "oldcode": "5"
+    },
+    {
+        "religion": "02",
+        "name": "อิสลาม",
+        "nhso_code": "02",
+        "hos_guid": "",
+        "oldcode": "7"
+    },
+    {
+        "religion": "03",
+        "name": "คริสต์",
+        "nhso_code": "03",
+        "hos_guid": "",
+        "oldcode": "6"
+    },
+    {
+        "religion": "04",
+        "name": "พราหมณ์-ฮินดู",
+        "nhso_code": "04",
+        "hos_guid": "",
+        "oldcode": "8"
+    },
+    {
+        "religion": "05",
+        "name": "ซิกข์",
+        "nhso_code": "05",
+        "hos_guid": "",
+        "oldcode": "10"
+    },
+    {
+        "religion": "06",
+        "name": "ยิว",
+        "nhso_code": "06",
+        "hos_guid": "",
+        "oldcode": "11"
+    },
+    {
+        "religion": "07",
+        "name": "เชน",
+        "nhso_code": "07",
+        "hos_guid": "",
+        "oldcode": "12"
+    },
+    {
+        "religion": "08",
+        "name": "โซโรอัสเตอร์",
+        "nhso_code": "08",
+        "hos_guid": null,
+        "oldcode": "13"
+    },
+    {
+        "religion": "09",
+        "name": "บาไฮ",
+        "nhso_code": "09",
+        "hos_guid": "",
+        "oldcode": "14"
+    },
+    {
+        "religion": "10",
+        "name": "อศาสนา\/ไม่นับถือศาสนา",
+        "nhso_code": "99",
+        "hos_guid": null,
+        "oldcode": "0"
+    },
+    {
+        "religion": "99",
+        "name": "ไม่ระบุ",
+        "nhso_code": "99",
+        "hos_guid": null,
+        "oldcode": "99"
+    }
+]

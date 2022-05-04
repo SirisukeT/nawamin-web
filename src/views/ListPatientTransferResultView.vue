@@ -5,14 +5,16 @@
       <SideBar />
       <div class="content-naw">
         <TitleBar />
-        <SU_11/>
+        <LPTR_1/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import LPTR_1 from "../components/LPTR_1.vue";
 export default {
-  name: "SetupView",
+    name: "ListPatientTransferResultView",
+    components: { LPTR_1 }
 };
 </script>

@@ -12,7 +12,7 @@ body,
   padding: 0;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  /* max-width: 1400px; */
   background-color: #CDDAD7;
 }
 
@@ -26,13 +26,15 @@ button:active {
 
 .main-admin {
   /* height: 100%; */
-  width: 100%;
+  /* width: 100%; */
+  /* width: 1400px; */
   display: flex;
   flex-direction: column;
 }
 
 div .main-content {
   margin-top: 100px;
+  /* min-width: 1150px; */
   /* display: grid;
   grid-template-columns: 12% 88%; */
   /* padding: 1rem 2rem; */
@@ -41,6 +43,8 @@ div .main-content {
   background-color :#CDDAD7;
   max-width: 100%;
   /* height: 100%; */
+  /* display: flex; */
+  min-width: 1150px;
   margin-left: 250px;
   padding: 1rem 5rem;
 }
@@ -54,15 +58,35 @@ div .main-content {
   /* background-color: greenyellow; */
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
 }
-
+.buttonbox *{
+  margin-left: 10px;
+}
 button.previous {
   font-weight: bold;
   margin-top: 60px;
   width: 150px;
   height: 60px;
   background-color: #f4d013;
+  border-radius: 15px;
+  border: 1.75px solid black;
+}
+button.save{
+  font-weight: bold;
+  margin-top: 60px;
+  width: 150px;
+  height: 60px;
+  background-color: #25957A;
+  border-radius: 15px;
+  border: 1.75px solid black;
+}
+#savebutton {
+  font-weight: bold;
+  width: 150px;
+  height: 60px;
+  background-color: #25957A;
   border-radius: 15px;
   border: 1.75px solid black;
 }
@@ -117,5 +141,20 @@ button.previous {
 
 .ta-c {
   text-align: center;
+}
+
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 992px) {
+  .container-fluid {
+    max-width: 960px;
+  }
+  .content-naw{
+    margin-left: 0;
+  }
+  div.sidenav{
+    display: none;
+  }
 }
 </style>
