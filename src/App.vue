@@ -90,7 +90,26 @@ button.save{
   border-radius: 15px;
   border: 1.75px solid black;
 }
-
+#reportbutton {
+  font-weight: bold;
+  width: 150px;
+  height: 60px;
+  background-color: #2B3CD4;
+  border-radius: 15px;
+  border: 1.75px solid black;
+}
+#detailbutton {
+  font-weight: bold;
+  width: 150px;
+  height: 60px;
+  border-radius: 15px;
+  /* border: 1.75px solid black; */
+  background: white;
+  color: red;
+}
+.bigbox{
+  flex-direction: column;
+}
 .dp-flex-r {
   display: flex;
   align-items: center;
