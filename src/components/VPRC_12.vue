@@ -28,8 +28,8 @@
             <h5>จากโรงพยาบาล</h5>
             <div class="custom-select">
               <select id='select2'>
-                <option v-for="(item, index) in departs" :key="index" value="">
-                  {{ item.name }}
+                <option v-for="(item, index) in hospital" :key="index" value="">
+                  {{ item.hospname }}
                 </option>
               </select>
             </div>
@@ -44,8 +44,8 @@
             <h5>ถึงโรงพยาบาล</h5>
             <div class="custom-select">
               <select id='select2'>
-                <option v-for="(item, index) in departs" :key="index" value="">
-                  {{ item.name }}
+                <option v-for="(item, index) in hospital" :key="index" value="">
+                  {{ item.hospname }}
                 </option>
               </select>
             </div>
@@ -293,6 +293,7 @@
 </template>
 
 <script>
+import hospital from "../json/test2.json"
 import departs from "../json/departs.json";
 import { useTitleStore } from "@/stores/TitleStore";
 export default {
@@ -300,6 +301,7 @@ export default {
   data() {
     return {
       departs,
+      hospital,
     };
   },
   mounted() {
