@@ -4,7 +4,7 @@
       <h1 class="Header">E - service บริการผู้ป่วย</h1>
       <form @submit.prevent="sendLogin" class="LoginHomePage">
         <div class="login100-form-avatar">
-          <img src="@/assets/logo_re.png" width="300" alt="LOGO" />
+          <img src="@/assets/logo_re.png" alt="LOGO" />
         </div>
         <div class="LoginInput">
           <p>
@@ -61,8 +61,8 @@ export default {
 .containerLogin {
   text-align: center;
   width: 100%;
-  height: 100%;
-  min-height: 935px;
+  height: 100vh;
+  min-height: 750px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -77,16 +77,15 @@ export default {
 }
 
 .Header {
-  margin-top: 50px;
+  margin-top: 2rem;
   color: #114D3E;
 }
 form.LoginHomePage {
-  margin-top: 50px;
-  min-height: 620px;
-  width: 600px;
+  margin-top: 2rem;
+  min-height: 550px;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-color: #446a46;
   border-radius: 20px;
 }
@@ -101,6 +100,10 @@ form.LoginHomePage input {
   border: 0px;
 }
 
+.login100-form-avatar img{
+    margin-top: 50px;
+    width: 200px;
+}
 form.LoginHomePage input.LoginSubmit {
   background: #82a284;
   font-weight: bold;
