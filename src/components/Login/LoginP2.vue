@@ -62,7 +62,7 @@ export default {
   text-align: center;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  min-height: 935px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -82,7 +82,7 @@ export default {
 }
 form.LoginHomePage {
   margin-top: 50px;
-  height: 620px;
+  min-height: 620px;
   width: 600px;
   display: flex;
   flex-direction: column;
