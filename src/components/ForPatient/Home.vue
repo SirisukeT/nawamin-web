@@ -14,7 +14,7 @@
             <img src="@/assets/star.png" alt="" />
           </h2>
           <div class="containter__event">
-              <h1>event</h1>
+              <slider3/>
           </div>
         </div>
       </div>

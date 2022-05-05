@@ -60,7 +60,7 @@ export default {};
 .container {
   padding: 48px 12px 108px 12px;
   background: #446A46;
-  width: 1248px;
+  width: 80rem;
   height: 20%;
   /* margin: 0; */
 }
