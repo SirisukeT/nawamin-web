@@ -27,11 +27,6 @@
 <script>
 export default {
   name: "NavBar",
-  methods: {
-    logout() {
-      this.$router.push("/");
-    },
-  },
 };
 </script>
 
@@ -48,8 +43,8 @@ export default {
 
 .container-fluid {
   height: 100%;
-  width: 1248px;
-  padding: 0;
+  /* width: 1248px; */
+  padding: 0 2rem;
 }
 
 div.navbar-brand {
