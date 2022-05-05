@@ -9,6 +9,7 @@ import NavBar from "./components/bar/NavBar.vue";
 import NavBar2 from "./components/bar/NavBar2.vue";
 import NavbarHome from "./components/bar/NavbarHome.vue";
 import Footer from "./components/bar/Footer.vue"
+import menulist from "./components/bar/menulist.vue"
 import SideBar from "./components/bar/SideBar.vue";
 import TitleBar from "./components/bar/TitleBar.vue";
 import SO_1 from "./components/SO_1.vue";
@@ -73,6 +74,7 @@ app.component("NavBar", NavBar);
 app.component("NavBar2", NavBar2);
 app.component("NavbarHome", NavbarHome);
 app.component("Footer", Footer);
+app.component("menulist", menulist);
 app.component("TitleBar", TitleBar);
 app.component("SO_1", SO_1);
 app.component("LoginP", LoginP);

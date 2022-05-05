@@ -5,20 +5,22 @@
       <Home />
     </div>
     <Footer />
+    <menulist />
   </div>
 </template>
 
 <script>
+import Menulist from '../components/bar/menulist.vue';
 import Home from "../components/ForPatient/Home.vue";
 export default {
   name: "HomePage",
-  components: { Home },
+  components: { Home, Menulist },
 };
 </script>
 
 <style scoped>
 .main-admin {
-  background-color: #CDDAD7;
+  background-color: white;
 }
 
 .mt-100 {
