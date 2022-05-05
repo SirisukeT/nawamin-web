@@ -16,13 +16,13 @@ body,
   background-color: #CDDAD7;
 }
 
-button:hover {
+/* button:hover {
   transform: scale(1.05);
 }
 
 button:active {
   transform: scale(0.95);
-}
+} */
 
 .main-admin {
   display: flex;
@@ -169,5 +169,10 @@ button.save{
   div.sidenav{
     display: none;
   }
+}
+
+.invertimg {
+  -webkit-filter: invert(1);
+   filter: invert(1);
 }
 </style>

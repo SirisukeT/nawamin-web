@@ -1,6 +1,6 @@
 <template>
   <div class="main-admin">
-    <NavbarHome />
+    <header><NavbarHome /></header>
     <div class="mt-100">
       <Home />
     </div>
@@ -21,7 +21,7 @@ export default {
   background-color: #CDDAD7;
 }
 
-.mt-100{
-    margin-top: 100px;
+.mt-100 {
+  margin-top: 100px;
 }
 </style>

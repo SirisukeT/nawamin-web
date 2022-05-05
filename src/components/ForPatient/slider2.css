@@ -1,0 +1,10 @@
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+@media (max-width: 1200px){
+    img{
+        width: 95%;
+    }
+}
