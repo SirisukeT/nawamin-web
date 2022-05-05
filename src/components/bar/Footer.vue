@@ -1,118 +1,79 @@
 <template>
-  <nav class="footer">
-    <div class="container-fluid">
-      <div class="navbar-brand">
+  <div class="container">
+    <div class="row">
+      <div class="logobox">
         <router-link :to="'/Overall'">
           <img
             id="logo"
             src="@/assets/logo_re.png"
             alt=""
-            width="55"
-            height="55"
+            width="70"
+            height="70"
             class="d-inline-block align-text-top"
-        /></router-link>
-        <p>โรงพยาบาลค่ายนวมินทราชินี</p>
+        />
+        </router-link>
+        <p id="logotext">โรงพยาบาลค่ายนวมินทราชินี</p>
       </div>
-      <div class="navbar-r">
-        <router-link to="/">หน้าหลัก</router-link>
-        <router-link to="/">เกี่ยวกับเรา</router-link>
-        <img class="invertimg" src="@/assets/angle-right-solid.svg" alt="" >
-        <img src="@/assets/Antu_dialog-icon-preview.png" alt="" >
-        <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
+      <div class="contentbox">
+        <h5 id="headtext">Contacts</h5>
+        <p id="text">หมู่ที่ 9 301 ตำบล บ้านสวน อำเภอเมืองชลบุรี ชลบุรี 20000</p>
+        <p id="text">038-273034</p>
+        <p id="text">033-039621</p>
+      </div>
+      <div class="contentbox">
+        <h5 id="headtext">เกี่ยวกับเรา</h5>
+        <router-link to="/" id="text">ข้อมูลโรงพยาบาล</router-link>
+        <router-link to="/" id="text">ติดต่อเรา</router-link>
+      </div>
+      <div class="contentbox">
+        <h5 id="headtext">สำหรับเจ้าหน้าที่</h5>
+        <router-link to="/" id="text">สำหรับแพทย์ผู้รักษา</router-link>
+        <router-link to="/" id="text">สำหรับผู้ดูแลระบบ</router-link>
       </div>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>
-export default {
-  name: "NavBar",
-  methods: {
-    logout() {
-      this.$router.push("/");
-    },
-  },
-};
+export default {};
 </script>
 
 <style scoped>
-
-.navbar {
-  background-color: #446A46;
-  /* width: 100%; */
-  min-width: 200px;
-  height: 71px;
-  max-height: 71px;
-  padding: 0;
+#logotext{
+  color: white;
+  text-decoration:none;
+  font-weight: 1000; 
+  font-size:16px ;
+  margin: 0;
 }
-
-.container-fluid {
-  height: 100%;
+#headtext{
+  color: white;
+  text-decoration:none;
+  font-weight: 1000; 
+}
+#text{
+  color: white;
+  text-decoration:none;
+  font-weight: 300;
+  margin-bottom: 8px; 
+}
+.container {
+  padding: 48px 12px 108px 12px;
+  background: #446A46;
   width: 1248px;
-  padding: 0;
+  height: 20%;
+  /* margin: 0; */
 }
-
-div.navbar-brand {
-  color: #000;
+.contentbox{
+  width: 25%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  padding: 0 24px;
 }
-
-div.navbar-brand p { 
-  margin-left: 1rem;
-  color: white;
-}
-
-.navbar-r {
-  max-height: 100%;
+.logobox{
+  width: 25%;
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.navbar-r > * {
-  margin-left: 1rem;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.navbar-r img {
-  /* background: white; */
-  /* border-radius: 50%; */
-  height: 55px;
-  width: 55px;
-}
-
-.invertimg {
-  -webkit-filter: invert(1);
-   filter: invert(1);
-}
-
-.navbar-r a {
-  margin: 0 15px 0 20px;
-}
-
-.navbar-r img#exit {
-  background: none;
-  border-radius: 0;
-  height: 30px;
-  width: 30px;
-}
-
-.navbar-brand p {
-  margin: 0;
-  font-size: 30px;
-}
-
-.navbar-account {
-  text-align: center;
-}
-
-.navbar-account > * {
-  margin: 0;
 }
 </style>
