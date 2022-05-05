@@ -16,9 +16,22 @@
       <div class="navbar-r">
         <router-link to="/">หน้าหลัก</router-link>
         <router-link to="/">เกี่ยวกับเรา</router-link>
-        <img class="invertimg" src="@/assets/angle-right-solid.svg" alt="" >
-        <img src="@/assets/Antu_dialog-icon-preview.png" alt="" >
-        <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
+        <img class="invertimg" src="@/assets/angle-right-solid.svg" alt="" />
+        <img src="@/assets/Antu_dialog-icon-preview.png" alt="" />
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn"
+            data-bs-toggle="dropdown"
+            data-bs-display="static"
+            aria-expanded="false"
+          >
+            <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><button class="dropdown-item" type="button">เข้าสู่ระบบ</button></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -31,9 +44,8 @@ export default {
 </script>
 
 <style scoped>
-
 .navbar {
-  background-color: #446A46;
+  background-color: #446a46;
   /* width: 100%; */
   min-width: 200px;
   height: 71px;
@@ -56,7 +68,7 @@ div.navbar-brand {
   padding: 0;
 }
 
-div.navbar-brand p { 
+div.navbar-brand p {
   margin-left: 1rem;
   color: white;
 }
@@ -98,4 +110,7 @@ div.navbar-brand p {
   font-size: 30px;
 }
 
+/* .btn-group:hover .dropdown-menu {
+    display: block;
+ } */
 </style>
