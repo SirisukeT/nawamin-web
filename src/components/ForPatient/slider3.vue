@@ -1,9 +1,7 @@
 <template>
-  <Carousel>
-    <Slide v-for="item in image" :key="item">
-      <div class="carousel__item">
-        <img :src="item.img" alt="" />
-      </div>
+  <Carousel :items-to-show="3" id="hideArrowsExample" >
+    <Slide v-for="slide in image" :key="slide">
+      <div class="carousel__item_column"><img class="img3 mt-5" :src="slide.img" alt="">{{slide.name}}</div>
     </Slide>
 
     <template #addons>
@@ -14,11 +12,10 @@
 
 <script>
 import { defineComponent } from 'vue';
-import { Carousel, Navigation, Slide } from 'vue3-carousel';
-import 'vue3-carousel/dist/carousel.css';
-
+import { Carousel, Slide, Navigation } from 'vue3-carousel';
+import "./slider.css"
 export default defineComponent({
-  name: 'slider3',
+  name: 'HiddenArrows',
   components: {
     Carousel,
     Slide,
@@ -27,9 +24,15 @@ export default defineComponent({
   data() {
     return {
       image: [
-        { img: "/slide1.jpeg" },
-        { img: "/slide2.png" },
-        { img: "/slide3.jpg" },
+        { img: "/slide1.jpeg" ,name:"กิจกรรมที่ 1"},
+        { img: "/slide2.png" ,name:"กิจกรรมที่ 2"},
+        { img: "/slide3.jpg" ,name:"กิจกรรมที่ 3"},
+        { img: "/slide1.jpeg" ,name:"กิจกรรมที่ 4"},
+        { img: "/slide2.png" ,name:"กิจกรรมที่ 5"},
+        { img: "/slide3.jpg" ,name:"กิจกรรมที่ 6"},
+        { img: "/slide1.jpeg" ,name:"กิจกรรมที่ 7"},
+        { img: "/slide2.png" ,name:"กิจกรรมที่ 8"},
+        { img: "/slide3.jpg" ,name:"กิจกรรมที่ 9"},
       ],
     };
   },
@@ -37,8 +40,9 @@ export default defineComponent({
 </script>
 
 <style>
-.carousel__prev--in-active,
-.carousel__next--in-active {
+#hideArrowsExample .carousel__prev--in-active,
+#hideArrowsExample .carousel__next--in-active {
   display: none;
 }
+
 </style>

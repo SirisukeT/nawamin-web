@@ -7,10 +7,29 @@
   justify-content: center;
   align-items: center;
 }
+
+.carousel__item_column{
+  min-height: 300px;
+  width: 90%;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.img3{
+  width: 80%;
+  height: 20%;
+}
+
 .carousel__prev,
 .carousel__next {
   background-color: var(--vc-nav-background-color);
   border-radius: var(--vc-nav-width);
+  border: 10px solid white;
   width: var(--vc-nav-width);
   height: var(--vc-nav-width);
   text-align: center;

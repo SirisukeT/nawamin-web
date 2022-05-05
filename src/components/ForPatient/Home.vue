@@ -28,7 +28,7 @@
             <img src="@/assets/star.png" alt="" />
           </h2>
           <div class="containter__knowledge">
-              <!-- <slider3/> -->
+              <slider3/>
           </div>
         </div>
       </div>
