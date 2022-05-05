@@ -16,6 +16,11 @@ const router = createRouter({
       component: LoginView,
     },
     {
+      path: "/about-us",
+      name: "about-us",
+      component: () => import("../views/AboutUsPage.vue"),
+    },
+    {
       path: "/overall",
       name: "ภาพรวมระบบ",
       

@@ -15,7 +15,7 @@
       </div>
       <div class="navbar-r">
         <router-link to="/">หน้าหลัก</router-link>
-        <router-link to="/">เกี่ยวกับเรา</router-link>
+        <router-link to="/about-us">เกี่ยวกับเรา</router-link>
         <img class="invertimg" src="@/assets/angle-right-solid.svg" alt="" />
         <img src="@/assets/Antu_dialog-icon-preview.png" alt="" />
         <div class="btn-group">
