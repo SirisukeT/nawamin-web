@@ -29,7 +29,7 @@
             <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><button class="dropdown-item" type="button">เข้าสู่ระบบ</button></li>
+            <li><router-link to="/login">เข้าสู่ระบบ</router-link></li>
           </ul>
         </div>
       </div>
