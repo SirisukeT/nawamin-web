@@ -1,9 +1,10 @@
 <template>
   <div class="main-admin">
-    <NavbarHome />
+    <header><NavbarHome /></header>
     <div class="mt-100">
       <Home />
     </div>
+    <footer style="display:flex; justify-content:center;margin-top: auto;"><h1>Footer</h1></footer>
   </div>
 </template>
 
@@ -20,7 +21,7 @@ export default {
   background-color: white;
 }
 
-.mt-100{
-    margin-top: 100px;
+.mt-100 {
+  margin-top: 100px;
 }
 </style>

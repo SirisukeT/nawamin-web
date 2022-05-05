@@ -45,21 +45,8 @@ import APTR_1 from "./components/APTR_1.vue";
 import VPTR_1 from "./components/VPTR_1.vue";
 import VPTR_2 from "./components/VPTR_2.vue";
 
-// import AdminView from "./views/AdminView.vue";
-// import LoginView from "./views/LoginView.vue";
-// import PatientCurrentDisease from "./views/PatientCurrentDisease.vue";
-// import PatientCurrentDrugsView from "./views/PatientCurrentDrugsView.vue";
-// import PatientDetailsView from "./views/PatientDetailsView.vue";
-// import PatientInfoView from "./views/PatientInfoView.vue";
-// import PatientLabReportView from "./views/PatientLabReportView.vue";
-// import PatientListView from "./views/PatientListView.vue";
-// import PatientListViewAdd from "./views/PatientListViewAdd.vue";
-// import PatientRefListView from "./views/PatientRefListView.vue";
-
 import GrayBox from "./components/Boxes/GrayBox.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
-// import { faPhone } from "@fortawesome/free-solid-svg-icons";
-// import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -123,14 +110,6 @@ app.component("SU_42",SU_42);
 app.component("PatientCard", PatientCard);
 app.component("GrayBox", GrayBox);
 
+
+
 const store = useTitleStore();
-// app.component("AdminView", AdminView);
-// app.component("LoginView", LoginView);
-// app.component("PatientCurrentDisease", PatientCurrentDisease);
-// app.component("PatientCurrentDrugsView", PatientCurrentDrugsView);
-// app.component("PatientDetailsView", PatientDetailsView);
-// app.component("PatientInfoView", PatientInfoView);
-// app.component("PatientLabReportView", PatientLabReportView);
-// app.component("PatientListView", PatientListView);
-// app.component("PatientListViewAdd", PatientListViewAdd);
-// app.component("PatientRefListView.vue",PatientRefListView);

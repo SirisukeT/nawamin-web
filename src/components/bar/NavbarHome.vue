@@ -87,11 +87,6 @@ div.navbar-brand p {
   width: 55px;
 }
 
-.invertimg {
-  -webkit-filter: invert(1);
-   filter: invert(1);
-}
-
 .navbar-r a {
   margin: 0 15px 0 20px;
 }
@@ -108,11 +103,4 @@ div.navbar-brand p {
   font-size: 30px;
 }
 
-.navbar-account {
-  text-align: center;
-}
-
-.navbar-account > * {
-  margin: 0;
-}
 </style>

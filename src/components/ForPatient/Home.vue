@@ -2,24 +2,46 @@
   <div class="content">
     <section class="module">
       <div class="module__content">
-        <img src="@/assets/img_001.png" alt="" />
+        <slider />
       </div>
     </section>
     <section class="module">
       <div class="module__content">
-        <div class="container"><h2>ภาพกิจกรรม</h2></div>
+        <div class="container">
+          <h2>
+            <img src="@/assets/star.png" alt="" />
+            ภาพกิจกรรม
+            <img src="@/assets/star.png" alt="" />
+          </h2>
+          <div class="containter__event">
+              <h1>event</h1>
+          </div>
+        </div>
       </div>
     </section>
     <section class="module">
       <div class="module__content">
-        <div class="container"><h2>ศูนย์ความรู้</h2></div>
+        <div class="container">
+          <h2>
+            <img src="@/assets/star.png" alt="" />
+            ศูนย์ความรู้
+            <img src="@/assets/star.png" alt="" />
+          </h2>
+          <div class="containter__knowledge">
+              <slider3/>
+          </div>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
 <script>
-export default {};
+import slider3 from "./slider3.vue";
+import slider from "./slider.vue";
+export default {
+  components: { slider,slider3 },
+};
 </script>
 
 <style>
@@ -42,10 +64,17 @@ export default {};
   max-width: 80rem;
   margin: 0 auto;
   padding: 0 1rem;
-  /* background-color: #999; */
+  background-color: #cddad7;
 }
 
 .module__content img {
   max-width: 78rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
