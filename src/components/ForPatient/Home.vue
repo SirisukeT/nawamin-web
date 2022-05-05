@@ -48,6 +48,7 @@ export default {
 .content {
   box-sizing: border-box;
   margin: 0 auto;
+  background-color: white;
 }
 
 .content * {
@@ -56,15 +57,14 @@ export default {
 
 .module {
   margin: 0 auto;
-  background-color: white;
-  border: 1px solid;
+  padding-top: 2rem;
+  /* background-color: white; */
 }
 
 .module__content {
   max-width: 80rem;
   margin: 0 auto;
   padding: 0 1rem;
-  background-color: #cddad7;
 }
 
 .module__content img {

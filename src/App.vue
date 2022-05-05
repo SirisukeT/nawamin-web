@@ -11,9 +11,8 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
-  /* max-width: 1400px; */
-  background-color: #CDDAD7;
+  width: 100vw;
+  background-color: #cddad7;
 }
 
 /* button:hover {
@@ -27,6 +26,10 @@ button:active {
 .main-admin {
   display: flex;
   flex-direction: column;
+}
+
+.mt-71 {
+  margin-top: 71px;
 }
 
 div .main-content {
