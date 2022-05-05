@@ -4,7 +4,7 @@
     <div class="mt-100">
       <Home />
     </div>
-    <footer style="display:flex; justify-content:center;margin-top: auto;"><h1>Footer</h1></footer>
+    <Footer />
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .main-admin {
-  background-color: white;
+  background-color: #CDDAD7;
 }
 
 .mt-100 {
