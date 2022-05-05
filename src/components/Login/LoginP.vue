@@ -69,7 +69,7 @@ export default {
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: center;
-  background-image: url("@/assets/Login_BG.jpg");
+  background-image: url("@/assets/Login_BG.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

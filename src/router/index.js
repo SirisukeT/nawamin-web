@@ -1,16 +1,22 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LoginView from "../views/LoginView.vue";
+import HomePage from "../views/HomePage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
+      name: "homepage",
+      component: HomePage,
+    },
+    {
+      path: "/login",
       name: "login",
       component: LoginView,
     },
     {
-      path: "/Overall",
+      path: "/overall",
       name: "ภาพรวมระบบ",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route

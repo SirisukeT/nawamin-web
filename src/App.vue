@@ -25,20 +25,14 @@ button:active {
 }
 
 .main-admin {
-  /* height: 100%; */
-  /* width: 100%; */
-  /* width: 1400px; */
   display: flex;
   flex-direction: column;
 }
 
 div .main-content {
   margin-top: 100px;
-  /* min-width: 1150px; */
-  /* display: grid;
-  grid-template-columns: 12% 88%; */
-  /* padding: 1rem 2rem; */
 }
+
 .content-naw {
   background-color :#CDDAD7;
   max-width: 100%;

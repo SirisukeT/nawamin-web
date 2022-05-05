@@ -163,14 +163,14 @@
             <h5>HEENT</h5>
             <div class="custom-select">
               <select id="select2">
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
+                <option value="">
+                  {{ vn[0][store.patient.vn].physical.HEENT[0] }}
                 </option>
               </select>
             </div>
           </div>
           <div class="item2">
-            <textarea type="text" />
+            <textarea type="text" id="HEENT"/>
           </div>
         </div>
 
@@ -179,14 +179,14 @@
             <h5>HEART</h5>
             <div class="custom-select">
               <select id="select2">
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
+                <option value="">
+                  {{ vn[0][store.patient.vn].physical.HEART[0] }}
                 </option>
               </select>
             </div>
           </div>
           <div class="item2">
-            <textarea type="text" />
+            <textarea type="text" id="HEART"/>
           </div>
         </div>
         <div class="inputboxrow">
@@ -194,14 +194,14 @@
             <h5>LUNG</h5>
             <div class="custom-select">
               <select id="select2">
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
+                <option value="">
+                  {{ vn[0][store.patient.vn].physical.LUNG[0] }}
                 </option>
               </select>
             </div>
           </div>
           <div class="item2">
-            <textarea type="text" />
+            <textarea type="text" id="LUNG"/>
           </div>
         </div>
         <div class="inputboxrow">
@@ -209,14 +209,14 @@
             <h5>Ab</h5>
             <div class="custom-select">
               <select id="select2">
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
+                <option value="">
+                  {{ vn[0][store.patient.vn].physical.Ab[0] }}
                 </option>
               </select>
             </div>
           </div>
           <div class="item2">
-            <textarea type="text" />
+            <textarea type="text" id="Ab"/>
           </div>
         </div>
         <div class="inputboxrow">
@@ -224,14 +224,14 @@
             <h5>Exr</h5>
             <div class="custom-select">
               <select id="select2">
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
+                <option value="">
+                  {{ vn[0][store.patient.vn].physical.Exr[0] }}
                 </option>
               </select>
             </div>
           </div>
           <div class="item2">
-            <textarea type="text" />
+            <textarea type="text" id="Exr"/>
           </div>
         </div>
         <div class="inputboxrow">
@@ -239,14 +239,14 @@
             <h5>PE text</h5>
             <div class="custom-select">
               <select id="select2">
-                <option v-for="(item, index) in status" :key="index" value="">
-                  {{ item }}
+                <option value="">
+                  {{ vn[0][store.patient.vn].physical.PE_text[0] }}
                 </option>
               </select>
             </div>
           </div>
           <div class="item2">
-            <textarea type="text" />
+            <textarea type="text" id="PE"/>
           </div>
         </div>
       </div>
@@ -311,6 +311,12 @@ export default {
     document.getElementById("6").defaultValue = this.vn[0][store.patient.vn].history.cause;
     document.getElementById("7").defaultValue = this.vn[0][store.patient.vn].history.other;
     document.getElementById("8").defaultValue = this.vn[0][store.patient.vn].history.right;
+    document.getElementById("HEENT").defaultValue = this.vn[0][store.patient.vn].physical.HEENT[1];
+    document.getElementById("HEART").defaultValue = this.vn[0][store.patient.vn].physical.HEART[1];
+    document.getElementById("LUNG").defaultValue =  this.vn[0][store.patient.vn].physical.LUNG[1];
+    document.getElementById("Ab").defaultValue =    this.vn[0][store.patient.vn].physical.Ab[1];
+    document.getElementById("Exr").defaultValue =   this.vn[0][store.patient.vn].physical.Exr[1];
+    document.getElementById("PE").defaultValue =    this.vn[0][store.patient.vn].physical.PE_text[1];
 
 
   },

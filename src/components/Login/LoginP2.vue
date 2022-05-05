@@ -48,7 +48,7 @@ const sendLogin = () => {
 
 <script>
 export default {
-  name: "LoginP",
+  name: "LoginP2",
 };
 </script>
 <style scoped>
@@ -68,7 +68,7 @@ export default {
   flex-wrap: wrap;
   align-content: center;
   justify-content: flex-start;
-  background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("@/assets/Login_BG.jpg");
+  background-image: url("@/assets/Login_BG.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
