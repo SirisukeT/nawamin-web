@@ -36,7 +36,6 @@ import PatientPerson from "./components/DataList/PatientPerson.vue";
 import PatientInfo from "./components/DataList/PatientInfo.vue";
 import PatientCard from "./components/DataList/PatientCard.vue";
 import PatientCardUser from "./components/DataList/PatientCardUser.vue";
-import PatientCard from "./components/DataList/PatientCard.vue";
 import PatientRef from "./components/DataList/PatientRef.vue";
 import PatientRefUser from "./components/DataList/PatientRefUser.vue";
 
