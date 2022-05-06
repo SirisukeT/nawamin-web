@@ -2,17 +2,17 @@
   <div class="main-admin">
     <header><NavbarLogin /></header>
     <div class="mt-71">
-      <appointment />
+      <Tranfer2 />
     </div>
     <Footer />
   </div>
 </template>
 
 <script>
-import appointment from "../../components/ForPatient/appointment.vue";
+import Tranfer2 from "../../components/ForPatient/Tranfer2.vue";
 export default {
-  name: "AppointmentPage",
-  components: { appointment },
+  name: "TranferDetailsPage",
+  components: { Tranfer2 },
 };
 </script>
 

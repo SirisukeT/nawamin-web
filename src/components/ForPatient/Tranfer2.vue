@@ -3,10 +3,10 @@
     <section class="module">
       <div class="module__content">
         <div class="mainbox">
-          <menulist />
           <div class="detailbox">
-            <PatientCardUser />
-            <div class="table"><Appoints/></div>
+            <patient-card />
+            <refer />
+            <section class="right marginB-25"><button @click="$router.go(-1)" class="previous">ย้อนกลับ</button></section>
           </div>
         </div>
       </div>
@@ -15,16 +15,17 @@
 </template>
 
 <script>
-import Appoints from "../DataList/Appoints.vue"
+import refer from "../form/refer.vue";
 export default {
-  name: "appointment",
-  components:{Appoints},
+  name: "Tranfer2",
+  components: { refer },
 };
 </script>
 
 <style scoped>
 .mainbox {
   display: flex;
+  justify-content: center;
 }
 .detailbox {
   width: 62rem;
@@ -32,11 +33,10 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.table{
-    width: 100%;
-    min-height: 20rem;
-    background: #82A284;
-    margin-top: 30px;
-    border-radius: 20px;
+.table {
+  width: 100%;
+  background: #82a284;
+  border-radius: 20px;
+  margin-top: 30px;
 }
 </style>

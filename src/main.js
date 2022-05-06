@@ -34,9 +34,11 @@ import Medicine from "./components/DataList/Medicine.vue";
 import Hospital from "./components/DataList/Hospital.vue";
 import PatientPerson from "./components/DataList/PatientPerson.vue";
 import PatientInfo from "./components/DataList/PatientInfo.vue";
+import PatientCard from "./components/DataList/PatientCard.vue";
 import PatientCardUser from "./components/DataList/PatientCardUser.vue";
 import PatientCard from "./components/DataList/PatientCard.vue";
 import PatientRef from "./components/DataList/PatientRef.vue";
+import PatientRefUser from "./components/DataList/PatientRefUser.vue";
 
 import PCD_11 from "./components/PCD_11.vue";
 import PCD_12 from "./components/PCD_12.vue";
@@ -95,6 +97,9 @@ app.component("Hospital", Hospital);
 app.component("PatientPerson", PatientPerson);
 app.component("PatientInfo", PatientInfo);
 app.component("PatientRef", PatientRef);
+app.component("PatientRefUser", PatientRefUser);
+app.component("PatientCardUser", PatientCardUser);
+app.component("PatientCard", PatientCard);
 
 app.component("PCD_11", PCD_11);
 app.component("PCD_12", PCD_12);
@@ -114,8 +119,6 @@ app.component("SU_31",SU_31);
 app.component("SU_32",SU_32);
 app.component("SU_41",SU_41);
 app.component("SU_42",SU_42);
-app.component("PatientCardUser", PatientCardUser);
-app.component("PatientCard", PatientCard);
 app.component("GrayBox", GrayBox);
 
 
