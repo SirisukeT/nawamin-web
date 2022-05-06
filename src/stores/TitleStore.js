@@ -11,6 +11,13 @@ export const useTitleStore = defineStore("TitleStore", () => {
     // text: ["Text"],
   });
 
+  const admin = ref({
+    username: "",
+    password: "",
+    isLogin: false,
+    // text: ["Text"],
+  });
+
   if (localStorage.getItem("user")) {
     user.value = JSON.parse(localStorage.getItem("user"));
   }
@@ -32,7 +39,15 @@ export const useTitleStore = defineStore("TitleStore", () => {
     user.value.username = username;
     user.value.password = password;
     user.value.isLogin = true;
-    router.push({ name: "ภาพรวมระบบ" });
+    router.push("/overall");
+    window.scrollTo(0, 0);
+  };
+
+  const sendLoginAdmin = (username, password) => {
+    user.value.username = username;
+    user.value.password = password;
+    user.value.isLogin = true;
+    router.push("/home");
     window.scrollTo(0, 0);
   };
 
@@ -131,7 +146,9 @@ export const useTitleStore = defineStore("TitleStore", () => {
   return {
     user,
     patient,
+    admin,
     sendLogin,
+    sendLoginAdmin,
     changePage,
     sendPatient,
     getSomething,
