@@ -15,8 +15,24 @@
       </div>
       <div class="navbar-r">
         <router-link to="/">หน้าหลัก</router-link>
-        <router-link to="/about-us">เกี่ยวกับเรา</router-link>
-        <img class="invertimg" src="@/assets/angle-right-solid.svg" alt="" />
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn"
+            data-bs-toggle="dropdown"
+            data-bs-display="static"
+            aria-expanded="false"
+          >
+            เกี่ยวกับเรา
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><router-link to="/about-us">ข้อมูลโรงพยาบาล</router-link></li>
+            <li><router-link to="/contact">ติดต่อเรา</router-link></li>
+            
+          </ul>
+        </div>
+        
+        <!-- <img class="invertimg" src="@/assets/angle-right-solid.svg" alt="" /> -->
         <img src="@/assets/Antu_dialog-icon-preview.png" alt="" />
         <div class="btn-group">
           <button
@@ -51,6 +67,12 @@ export default {
   height: 71px;
   max-height: 71px;
   padding: 0;
+}
+
+.btn{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .container-fluid {
@@ -110,7 +132,4 @@ div.navbar-brand p {
   font-size: 30px;
 }
 
-/* .btn-group:hover .dropdown-menu {
-    display: block;
- } */
 </style>
