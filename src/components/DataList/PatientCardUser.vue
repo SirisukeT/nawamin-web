@@ -5,7 +5,7 @@
         <img src="@/assets/user-regular.svg" alt="" />
       </div>
     </div>
-    <div class="phptext">
+    <div class="pfptext">
       <h3>{{store.patient.name}}</h3>
     </div>
   </div>
@@ -52,7 +52,7 @@ h3{
   border-radius: 100%;
 }
 
-.phptext {
+.pfptext {
   margin-top: 20px;
   display: flex;
   justify-content: center;

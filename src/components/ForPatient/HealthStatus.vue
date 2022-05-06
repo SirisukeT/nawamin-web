@@ -5,7 +5,7 @@
         <div class="mainbox">
           <menulist />
           <div class="detailbox">
-            <patient-card />
+            <PatientCardUser />
             <h3>สถานะสุขภาพของคุณอยู่ในกลุ่มสี</h3>
             <div class="status">
               <h5>เสี่ยง</h5>
@@ -42,6 +42,37 @@
               corrupti minus. Similique adipisci consequatur quo ullam at
               veritatis maiores reprehenderit nisi?
             </p>
+            <div class="row" id="toprow">
+              <p class="datalist">เอ็กซเรย์ปอด</p>
+              <div class="choicebox">
+              <p class="datalist">ผิดปกติ</p>
+              </div>
+            </div>
+            <div class="row">
+              <p class="datalist">ผลตรวจฟัน</p>
+              <div class="choicebox">
+              <p class="datalist">ผิดปกติ</p>
+              </div>
+            </div>
+            <div class="row">
+              <p class="datalist">ผลตรวจสุขภาพจิต</p>
+              <div class="choicebox">
+              <p class="datalist">ผิดปกติ</p>
+              </div>
+            </div>
+            <div class="row">
+              <p class="datalist">ผลตรวจมะเร็งเต้านม</p>
+              <div class="choicebox">
+              <p class="datalist">ผิดปกติ</p>
+              </div>
+            </div>
+            <div class="row">
+              <p class="datalist">ผลตรวจภายใน</p>
+              <div class="choicebox">
+              <p class="datalist">ผิดปกติ</p>
+              </div>
+            </div>
+            
           </div>
           </div>
         </div>
@@ -55,8 +86,30 @@ export default {};
 </script>
 
 <style scoped>
+#toprow{
+  margin-top: 5%;
+}
+p{
+  font-size: 20px;
+}
+.choicebox{
+  width: auto;
+  background: wheat;
+  padding: 10px 40px 10px 10px;
+  border-radius: 10px;
+}
+.datalist{
+  width: 12rem;
+  margin: 0;
+  font-size: 20px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 .suggestbox{
-    padding: 0 20px;
+    padding: 0 20px 40px 20px;
 }
 #suggest {
   text-align: center;
