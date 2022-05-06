@@ -24,7 +24,10 @@
             />
           </p>
           <p><input class="LoginSubmit" type="submit" value="เข้าสู่ระบบ" /></p>
-          <p class="ForgotPW"><router-link to="/">ลืมรหัสผ่าน</router-link></p>
+          <p class="botm">
+            <router-link to="/">กลับสู่หน้าหลัก</router-link
+            ><router-link to="/">ลืมรหัสผ่าน</router-link>
+          </p>
         </div>
       </form>
     </div>
@@ -78,7 +81,7 @@ export default {
 
 .Header {
   margin-top: 10vh;
-  color: #114D3E;
+  color: #114d3e;
 }
 form.LoginHomePage {
   margin-top: 5vh;
@@ -88,6 +91,7 @@ form.LoginHomePage {
   flex-direction: column;
   background-color: #446a46;
   border-radius: 20px;
+  align-items: center
 }
 form.LoginHomePage input {
   width: 340px;
@@ -100,9 +104,9 @@ form.LoginHomePage input {
   border: 0px;
 }
 
-.login100-form-avatar img{
-    margin-top: 50px;
-    width: 200px;
+.login100-form-avatar img {
+  margin-top: 50px;
+  width: 200px;
 }
 form.LoginHomePage input.LoginSubmit {
   background: #82a284;
@@ -120,11 +124,14 @@ form.LoginHomePage input.LoginSubmit:hover {
   margin-top: 20px;
 }
 
-.ForgotPW {
+.botm {
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
 }
 
-.ForgotPW a {
+.botm a {
   color: white;
   font-size: 20px;
 }
