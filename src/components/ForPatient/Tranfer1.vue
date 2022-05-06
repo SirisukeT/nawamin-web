@@ -5,7 +5,7 @@
         <div class="mainbox">
           <menulist />
           <div class="detailbox">
-            <patient-card />
+            <PatientCardUser />
             <div class="table"><PatientRefUser/></div>
           </div>
         </div>
