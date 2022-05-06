@@ -5,7 +5,6 @@
       <Home />
     </div>
     <Footer />
-    <menulist />
   </div>
 </template>
 
