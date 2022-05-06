@@ -2,17 +2,17 @@
   <div class="main-admin">
     <header><NavbarHome /></header>
     <div class="mt-71">
-      <about_us />
+      <HealtStatus />
     </div>
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
-import about_us from "../components/ForPatient/about_us.vue";
+import HealtStatus from "../../components/ForPatient/HealtStatus.vue";
 export default {
   name: "AboutUsPage",
-  components: { about_us },
+  components: { HealtStatus },
 };
 </script>
 

@@ -98,6 +98,7 @@ export default {};
   display: flex;
   flex-direction: column;
   width: 250px;
+  max-height: 326px;
   border: 3px solid;
   border-radius: 20px;
   padding: 10px 0;
@@ -110,9 +111,9 @@ export default {};
 }
 .menubigbox {
   /* background: skyblue; */
-  width: 300px;
+  margin-top: 3rem;
+  width: 18rem;
   display: flex;
-  justify-content: flex-end;
-  padding: 0px;
+  justify-content: flex-start;
 }
 </style>

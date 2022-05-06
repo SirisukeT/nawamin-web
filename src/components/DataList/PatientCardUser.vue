@@ -1,5 +1,5 @@
 <template>
-  <div class="leftbox">
+  <div class="pfpbox">
     <div class="ppcolor">
       <div class="pp">
         <img src="@/assets/user-regular.svg" alt="" />
@@ -18,25 +18,26 @@ const store = useTitleStore();
 
 <script>
 export default {
-  name: "PatientCard",
+  name: "PatientCardUser",
 };
 </script>
 
 <style>
-.leftbox {
-  /* margin-right: 30px; */
-  margin-top: 50px;
+h3{
+  font-size: 24px;
+  font-weight: 700;
+}
+.pfpbox {
+  width: 100%;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 350px;
-  height: 600px; */
-  /* background-color: blue; */
 }
 
 .ppcolor {
-  width: 200px;
-  height: 200px;
+  width: 8.5rem;
+  height: 8.5rem;
   background-color: red;
   border-radius: 100%;
   display: flex;
@@ -45,17 +46,14 @@ export default {
 }
 
 .pp img {
-  width: 170px;
-  height: 170px;
+  width: 7rem;
+  height: 7rem;
   background-color: white;
   border-radius: 100%;
 }
 
 .phptext {
   margin-top: 20px;
-  width: 100%;
-  /* height: 100px; */
-  /* background-color: greenyellow; */
   display: flex;
   justify-content: center;
   text-align: center;
