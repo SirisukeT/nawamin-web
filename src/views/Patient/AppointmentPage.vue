@@ -2,17 +2,17 @@
   <div class="main-admin">
     <header><NavbarLogin /></header>
     <div class="mt-71">
-      <contact />
+      <Appointment />
     </div>
     <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
-import contact from "../../components/ForPatient/contact.vue";
+import Appointment from "../../components/ForPatient/Appointment.vue";
 export default {
-  name: "ContactPage",
-  components: { contact },
+  name: "AppointmentPage",
+  components: { Appointment },
 };
 </script>
 

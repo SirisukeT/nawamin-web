@@ -1,18 +1,18 @@
 <template>
   <div class="main-admin">
-    <header><NavbarHome /></header>
+    <header><NavbarLogin /></header>
     <div class="mt-71">
-      <HealtStatus />
+      <about_us />
     </div>
     <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
-import HealtStatus from "../../components/ForPatient/HealtStatus.vue";
+import about_us from "../../components/ForPatient/about_us.vue";
 export default {
   name: "AboutUsPage",
-  components: { HealtStatus },
+  components: { about_us },
 };
 </script>
 
