@@ -31,6 +31,21 @@ const router = createRouter({
       component: () => import("../views/Patient/AboutUsPage.vue"),
     },
     {
+      path: "/health",
+      name: "HealthStatusPage",
+      component: () => import("../views/Patient/HealthStatusPage.vue"),
+    },
+    {
+      path: "/transfer",
+      name: "TranferPage",
+      component: () => import("../views/Patient/TranferPage.vue"),
+    },
+    {
+      path: "/appointment",
+      name: "appointment",
+      component: () => import("../views/Patient/AppointmentPage.vue"),
+    },
+    {
       path: "/overall",
       name: "ภาพรวมระบบ",
       

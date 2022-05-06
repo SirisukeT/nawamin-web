@@ -4,7 +4,7 @@
     <div class="mt-71">
       <HealthStatus />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 

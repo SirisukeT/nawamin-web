@@ -4,7 +4,7 @@
     <div class="mt-71">
       <Appointment />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 

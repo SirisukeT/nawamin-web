@@ -4,7 +4,7 @@
     <div class="mt-71">
       <contact />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 

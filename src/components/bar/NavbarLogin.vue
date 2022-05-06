@@ -16,12 +16,25 @@
       <div class="navbar-r">
         <router-link to="/home">หน้าหลัก</router-link>
         <router-link to="/about-us">ข้อมูลของฉัน</router-link>
-        <router-link to="/about-us">สถานะสุขภาพ</router-link>
-        <router-link to="/about-us">ใบส่งตัว</router-link>
-        <router-link to="/about-us">นัดหมาย</router-link>
-        <router-link to="/about-us">เกี่ยวกับเรา</router-link>
-        <img class="invertimg" src="@/assets/angle-right-solid.svg" alt="" />
-        <img src="@/assets/Antu_dialog-icon-preview.png" alt="" />
+        <router-link to="/health">สถานะสุขภาพ</router-link>
+        <router-link to="/transfer">ใบส่งตัว</router-link>
+        <router-link to="/appointment">นัดหมาย</router-link>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn"
+            data-bs-toggle="dropdown"
+            data-bs-display="static"
+            aria-expanded="false"
+          >
+            เกี่ยวกับเรา
+            <img src="@/assets/Antu_dialog-icon-preview.png" alt="" />
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><router-link to="/about-us">ข้อมูลโรงพยาบาล</router-link></li>
+            <li><router-link to="/contact">ติดต่อเรา</router-link></li>
+          </ul>
+        </div>
         <div class="btn-group">
           <button
             type="button"
@@ -35,8 +48,8 @@
           <ul class="dropdown-menu dropdown-menu-end">
             <li><router-link to="/login">ข้อมูลของฉัน</router-link></li>
             <li><router-link to="/login">สถานะสุขภาพ</router-link></li>
-            <li><router-link to="/login">ใบส่งตัว</router-link></li>
-            <li><router-link to="/login">นัดหมาย</router-link></li>
+            <li><router-link to="/transfer">ใบส่งตัว</router-link></li>
+            <li><router-link to="/appointment">นัดหมาย</router-link></li>
             <li><router-link to="/">ออกจากระบบ</router-link></li>
             
           </ul>
@@ -60,6 +73,12 @@ export default {
   height: 71px;
   max-height: 71px;
   padding: 0;
+}
+
+.btn{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .container-fluid {

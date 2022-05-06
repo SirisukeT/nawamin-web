@@ -4,7 +4,7 @@
     <div class="mt-71">
       <Tranfer />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 

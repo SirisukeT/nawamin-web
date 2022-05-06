@@ -4,7 +4,7 @@
     <div class="mt-71">
       <about_us />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 

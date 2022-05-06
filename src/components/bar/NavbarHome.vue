@@ -24,16 +24,16 @@
             aria-expanded="false"
           >
             เกี่ยวกับเรา
+            <img src="@/assets/Antu_dialog-icon-preview.png" alt="" />
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><router-link to="/about-us">ข้อมูลโรงพยาบาล</router-link></li>
             <li><router-link to="/contact">ติดต่อเรา</router-link></li>
-            
           </ul>
         </div>
-        
+
         <!-- <img class="invertimg" src="@/assets/angle-right-solid.svg" alt="" /> -->
-        <img src="@/assets/Antu_dialog-icon-preview.png" alt="" />
+
         <div class="btn-group">
           <button
             type="button"
@@ -69,7 +69,7 @@ export default {
   padding: 0;
 }
 
-.btn{
+.btn {
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -131,5 +131,4 @@ div.navbar-brand p {
   margin: 0;
   font-size: 30px;
 }
-
 </style>

@@ -44,9 +44,9 @@ export const useTitleStore = defineStore("TitleStore", () => {
   };
 
   const sendLoginAdmin = (username, password) => {
-    user.value.username = username;
-    user.value.password = password;
-    user.value.isLogin = true;
+    admin.value.username = username;
+    admin.value.password = password;
+    admin.value.isLogin = true;
     router.push("/home");
     window.scrollTo(0, 0);
   };
