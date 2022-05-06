@@ -12,6 +12,7 @@ body,
   padding: 0;
   box-sizing: border-box;
   width: 100vw;
+  overflow-x: hidden;
   background-color: #cddad7;
 }
 
@@ -22,6 +23,10 @@ body,
 button:active {
   transform: scale(0.95);
 } */
+
+.content{
+  min-height: 56vh;
+}
 
 .main-admin {
   display: flex;

@@ -30,16 +30,28 @@ export const useTitleStore = defineStore("TitleStore", () => {
     { deep: true },
   );
 
-  if (user.value.isLogin == true) {
-    // router.push({name: "admin"})
-    console.log("ท่านเข้าสู่ระบบด้วยบัญชี "+user.value.username);
+  if (localStorage.getItem("admin")) {
+    admin.value = JSON.parse(localStorage.getItem("admin"));
+  }
+
+  watch(
+    admin,
+    (adminVal) => {
+      localStorage.setItem("admin", JSON.stringify(adminVal));
+    },
+    { deep: true },
+  );
+
+  if (!user.value.isLogin && !admin.value.isLogin) {
+    router.push("/")
+    // alert("ท่านเข้าสู่ระบบด้วยบัญชี "+user.value.username);
   }
 
   const sendLogin = (username, password) => {
     user.value.username = username;
     user.value.password = password;
     user.value.isLogin = true;
-    router.push("/overall");
+    router.push("/home");
     window.scrollTo(0, 0);
   };
 
@@ -47,7 +59,7 @@ export const useTitleStore = defineStore("TitleStore", () => {
     admin.value.username = username;
     admin.value.password = password;
     admin.value.isLogin = true;
-    router.push("/home");
+    router.push("/overall");
     window.scrollTo(0, 0);
   };
 
@@ -143,6 +155,17 @@ export const useTitleStore = defineStore("TitleStore", () => {
     window.scrollTo(0, 0);
   }
 
+  const logout = () => {
+    window.localStorage.clear();
+    user.value.username = "";
+    user.value.password = "";
+    user.value.isLogin = false;
+    admin.value.username = "";
+    admin.value.password = "";
+    admin.value.isLogin = false;
+    router.push("/");
+  }
+
   return {
     user,
     patient,
@@ -153,6 +176,7 @@ export const useTitleStore = defineStore("TitleStore", () => {
     sendPatient,
     getSomething,
     callRef,
+    logout,
 
   };
 });

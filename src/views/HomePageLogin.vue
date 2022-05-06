@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Menulist from '../components/bar/menulist.vue';
+import Menulist from "../components/bar/menulist.vue";
 import Home from "../components/ForPatient/Home.vue";
 export default {
   name: "HomePageLogin",

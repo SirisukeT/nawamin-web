@@ -5,7 +5,7 @@
         <div class="image">
           <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
         </div>
-        <p class="listtext">ข้อมูลของฉัน</p>
+        <router-link to="/profile" class="listtext">ข้อมูลของฉัน</router-link>
       </div>
       <div class="menulist">
         <div class="image">
@@ -24,13 +24,13 @@
             />
           </svg>
         </div>
-        <p class="listtext">สถานะสุขภาพ</p>
+        <router-link to="/health" class="listtext">สถานะสุขภาพ</router-link>
       </div>
       <div class="menulist">
         <div class="image">
           <img class="invertimg" src="@/assets/docs.png" alt="" />
         </div>
-        <p class="listtext">ใบส่งตัว</p>
+        <router-link to="/transfer" class="listtext">ใบส่งตัว</router-link>
       </div>
       <div class="menulist">
         <div class="image">
@@ -47,7 +47,7 @@
             />
           </svg>
         </div>
-        <p class="listtext">นัดหมาย</p>
+        <router-link to="/appointment" class="listtext">นัดหมาย</router-link>
       </div>
       <div class="menulist">
         <div class="image">
@@ -64,11 +64,16 @@
             />
           </svg>
         </div>
-        <p class="listtext">ออกจากระบบ</p>
+        <router-link @click="store.logout" to="/" class="listtext">ออกจากระบบ</router-link>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <script>
 export default {};
@@ -78,6 +83,13 @@ export default {};
 .listtext {
   margin: 0px;
   padding: 0 10px 0 20px;
+  text-decoration: none;
+  color:black;
+}
+
+.listtext:hover{
+  color: green;
+  font-weight: bold;
 }
 .image {
   border: 3px solid black;

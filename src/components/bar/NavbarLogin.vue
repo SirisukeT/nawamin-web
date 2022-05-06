@@ -50,7 +50,7 @@
             <li><router-link to="/login">สถานะสุขภาพ</router-link></li>
             <li><router-link to="/transfer">ใบส่งตัว</router-link></li>
             <li><router-link to="/appointment">นัดหมาย</router-link></li>
-            <li><router-link to="/">ออกจากระบบ</router-link></li>
+            <li><router-link @click="store.logout" to="/">ออกจากระบบ</router-link></li>
             
           </ul>
         </div>
@@ -58,6 +58,11 @@
     </div>
   </nav>
 </template>
+
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <script>
 export default {
