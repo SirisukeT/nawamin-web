@@ -44,7 +44,7 @@ export const useTitleStore = defineStore("TitleStore", () => {
 
   if (user.value.isLogin == true) {
     // router.push({name: "admin"})
-    console.log("ท่านเข้าสู่ระบบด้วยบัญชี "+user.value.username);
+    alert("ท่านเข้าสู่ระบบด้วยบัญชี "+user.value.username);
     router.push("/home");
   }
   else{
@@ -161,6 +161,12 @@ export const useTitleStore = defineStore("TitleStore", () => {
 
   const logout = () => {
     window.localStorage.clear();
+    user.value.username = "";
+    user.value.password = "";
+    user.value.isLogin = false;
+    admin.value.username = "";
+    admin.value.password = "";
+    admin.value.isLogin = false;
   }
 
   return {
