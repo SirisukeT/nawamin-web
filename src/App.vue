@@ -23,6 +23,10 @@ button:active {
   transform: scale(0.95);
 } */
 
+.content{
+  min-height: 56vh;
+}
+
 .main-admin {
   display: flex;
   flex-direction: column;

@@ -23,8 +23,8 @@
       </div>
       <div class="contentbox">
         <h5 class="headtext">เกี่ยวกับเรา</h5>
-        <router-link to="/" class="text">ข้อมูลโรงพยาบาล</router-link>
-        <router-link to="/" class="text">ติดต่อเรา</router-link>
+        <router-link to="/about-us" class="text">ข้อมูลโรงพยาบาล</router-link>
+        <router-link to="/contact" class="text">ติดต่อเรา</router-link>
       </div>
       <div class="contentbox">
         <h5 class="headtext">สำหรับเจ้าหน้าที่</h5>

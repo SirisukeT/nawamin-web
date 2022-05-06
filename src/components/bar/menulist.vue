@@ -24,13 +24,13 @@
             />
           </svg>
         </div>
-        <router-link to="/profile" class="listtext">สถานะสุขภาพ</router-link>
+        <router-link to="/health" class="listtext">สถานะสุขภาพ</router-link>
       </div>
       <div class="menulist">
         <div class="image">
           <img class="invertimg" src="@/assets/docs.png" alt="" />
         </div>
-        <router-link to="/profile" class="listtext">ใบส่งตัว</router-link>
+        <router-link to="/transfer" class="listtext">ใบส่งตัว</router-link>
       </div>
       <div class="menulist">
         <div class="image">
@@ -47,7 +47,7 @@
             />
           </svg>
         </div>
-        <router-link to="/profile" class="listtext">นัดหมาย</router-link>
+        <router-link to="/appointment" class="listtext">นัดหมาย</router-link>
       </div>
       <div class="menulist">
         <div class="image">
@@ -64,7 +64,7 @@
             />
           </svg>
         </div>
-        <router-link to="/profile" class="listtext">ออกจากระบบ</router-link>
+        <router-link to="/" class="listtext">ออกจากระบบ</router-link>
       </div>
     </div>
   </div>
