@@ -2,7 +2,7 @@
   <main>
     <div class="containerLogin">
       <h1 class="Header">E - service บริการผู้ป่วย</h1>
-      <form @submit.prevent="sendLogin" class="LoginHomePage">
+      <form @submit.prevent="sendLoginAdmin" class="LoginHomePage">
         <div class="login100-form-avatar">
           <img src="@/assets/logo_re.png" alt="LOGO" />
         </div>
@@ -26,7 +26,7 @@
           <p><input class="LoginSubmit" type="submit" value="เข้าสู่ระบบ" /></p>
           <p class="botm">
             <router-link to="/">กลับสู่หน้าหลัก</router-link
-            ><router-link to="/">ลืมรหัสผ่าน</router-link>
+            ><router-link to="/forgot-pw">ลืมรหัสผ่าน</router-link>
           </p>
         </div>
       </form>
@@ -41,9 +41,9 @@ const store = useTitleStore();
 const username = ref("");
 const password = ref("");
 
-const sendLogin = () => {
+const sendLoginAdmin = () => {
   console.log("Test");
-  store.sendLogin(username.value, password.value);
+  store.sendLoginAdmin(username.value, password.value);
   username.value = "";
   password.value = "";
 };

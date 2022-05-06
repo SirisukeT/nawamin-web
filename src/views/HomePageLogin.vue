@@ -1,6 +1,6 @@
 <template>
   <div class="main-admin">
-    <header><NavbarHome /></header>
+    <header><NavbarLogin /></header>
     <div class="mt-71">
       <Home />
     </div>
@@ -12,7 +12,7 @@
 import Menulist from '../components/bar/menulist.vue';
 import Home from "../components/ForPatient/Home.vue";
 export default {
-  name: "HomePage",
+  name: "HomePageLogin",
   components: { Home, Menulist },
 };
 </script>

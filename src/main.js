@@ -8,6 +8,7 @@ import LoginP2 from "./components/Login/LoginP2.vue";
 import NavBar from "./components/bar/NavBar.vue";
 import NavBar2 from "./components/bar/NavBar2.vue";
 import NavbarHome from "./components/bar/NavbarHome.vue";
+import NavbarLogin from "./components/bar/NavbarLogin.vue";
 import Footer from "./components/bar/Footer.vue"
 import menulist from "./components/bar/menulist.vue"
 import SideBar from "./components/bar/SideBar.vue";
@@ -73,6 +74,7 @@ app.component("SideBar", SideBar);
 app.component("NavBar", NavBar);
 app.component("NavBar2", NavBar2);
 app.component("NavbarHome", NavbarHome);
+app.component("NavbarLogin", NavbarLogin);
 app.component("Footer", Footer);
 app.component("menulist", menulist);
 app.component("TitleBar", TitleBar);

@@ -1,10 +1,9 @@
 <template>
   <main>
     <div class="containerLogin">
-      <h1 class="Header">ADMIN</h1>
       <form @submit.prevent="sendLogin" class="LoginHomePage">
         <div class="login100-form-avatar">
-          <img src="@/assets/logo_re.png" alt="LOGO" />
+          <img src="@/assets/logo_re.png" width="300" alt="LOGO" />
         </div>
         <div class="LoginInput">
           <p>
@@ -24,9 +23,6 @@
             />
           </p>
           <p><input class="LoginSubmit" type="submit" value="เข้าสู่ระบบ" /></p>
-          <p class="botm">
-            <router-link to="/">กลับสู่หน้าหลัก</router-link>
-          </p>
         </div>
       </form>
     </div>
@@ -50,7 +46,7 @@ const sendLogin = () => {
 
 <script>
 export default {
-  name: "LoginP2",
+  name: "LoginP",
 };
 </script>
 <style scoped>
@@ -61,36 +57,31 @@ export default {
 }
 
 .containerLogin {
+  /* /* height: 100%; */
   text-align: center;
   width: 100%;
-  height: 100vh;
-  min-height: 700px;
+  height: 100%;
+  min-height: 100vh;
+  /* display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox; */
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: flex-start;
+  /* flex-wrap: wrap; */
+  justify-content: center;
   background-image: url("@/assets/Login_BG.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 1;
+  opacity: 0.8;
   z-index: 1;
 }
 
-.Header {
-  margin-top: 10vh;
-  color: #114d3e;
-}
 form.LoginHomePage {
-  margin-top: 5vh;
-  min-height: 550px;
-  width: 500px;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
-  background-color: #446a46;
-  border-radius: 20px;
-  align-items: center;
+  justify-content: flex-start;
 }
 form.LoginHomePage input {
   width: 340px;
@@ -100,38 +91,25 @@ form.LoginHomePage input {
   padding: 0 20px;
   margin: 5px 0;
   font-size: large;
-  border: 0px;
 }
 
-.login100-form-avatar img {
-  margin-top: 50px;
-  width: 200px;
-}
 form.LoginHomePage input.LoginSubmit {
-  background: #82a284;
+  background: #1b5c4c;
+  color: white;
   font-weight: bold;
   text-align: center;
   padding: 0;
 }
 
 form.LoginHomePage input.LoginSubmit:hover {
-  background: #59a793;
+  background: #114d3e;
   cursor: pointer;
 }
 
+.login100-form-avatar {
+  margin-top: 100px;
+}
 .LoginInput {
-  margin-top: 20px;
-}
-
-.botm {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  width: 340px;
-}
-
-.botm a {
-  color: white;
-  font-size: 20px;
+  margin-top: 100px;
 }
 </style>

@@ -2,7 +2,7 @@
   <nav class="navbar fixed-top">
     <div class="container-fluid">
       <div class="navbar-brand">
-        <router-link :to="'/'">
+        <router-link :to="'/home'">
           <img
             id="logo"
             src="@/assets/logo_re.png"
@@ -14,7 +14,11 @@
         <p>โรงพยาบาลค่ายนวมินทราชินี</p>
       </div>
       <div class="navbar-r">
-        <router-link to="/">หน้าหลัก</router-link>
+        <router-link to="/home">หน้าหลัก</router-link>
+        <router-link to="/about-us">ข้อมูลของฉัน</router-link>
+        <router-link to="/about-us">สถานะสุขภาพ</router-link>
+        <router-link to="/about-us">ใบส่งตัว</router-link>
+        <router-link to="/about-us">นัดหมาย</router-link>
         <router-link to="/about-us">เกี่ยวกับเรา</router-link>
         <img class="invertimg" src="@/assets/angle-right-solid.svg" alt="" />
         <img src="@/assets/Antu_dialog-icon-preview.png" alt="" />
@@ -29,7 +33,12 @@
             <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><router-link to="/login">เข้าสู่ระบบ</router-link></li>
+            <li><router-link to="/login">ข้อมูลของฉัน</router-link></li>
+            <li><router-link to="/login">สถานะสุขภาพ</router-link></li>
+            <li><router-link to="/login">ใบส่งตัว</router-link></li>
+            <li><router-link to="/login">นัดหมาย</router-link></li>
+            <li><router-link to="/">ออกจากระบบ</router-link></li>
+            
           </ul>
         </div>
       </div>
@@ -39,7 +48,7 @@
 
 <script>
 export default {
-  name: "NavBarHome",
+  name: "NavBarLogin",
 };
 </script>
 
