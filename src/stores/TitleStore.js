@@ -42,13 +42,9 @@ export const useTitleStore = defineStore("TitleStore", () => {
     { deep: true },
   );
 
-  if (user.value.isLogin == true) {
-    // router.push({name: "admin"})
-    alert("ท่านเข้าสู่ระบบด้วยบัญชี "+user.value.username);
-    router.push("/home");
-  }
-  else{
-    router.push("/");
+  if (!user.value.isLogin && !admin.value.isLogin) {
+    router.push("/")
+    // alert("ท่านเข้าสู่ระบบด้วยบัญชี "+user.value.username);
   }
 
   const sendLogin = (username, password) => {
@@ -167,6 +163,7 @@ export const useTitleStore = defineStore("TitleStore", () => {
     admin.value.username = "";
     admin.value.password = "";
     admin.value.isLogin = false;
+    router.push("/");
   }
 
   return {
@@ -179,7 +176,7 @@ export const useTitleStore = defineStore("TitleStore", () => {
     sendPatient,
     getSomething,
     callRef,
-    logout
+    logout,
 
   };
 });

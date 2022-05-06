@@ -24,7 +24,7 @@
           <h5>ตำแหน่ง</h5>
           <!-- <h5>โรงพยาบาลค่ายนวมินทราชินี</h5> -->
         </div>
-        <a @click="logout"
+        <a @click="store.logout"
           ><img
             id="exit"
             src="@/assets/arrow-right-from-bracket-solid.svg"
@@ -66,7 +66,7 @@
             <router-link class="nav-link" to="/SetupDepartment">แผนก</router-link>
           </li>
           <li class="nav-item ms-4 logout-bg">
-            <button @click="logout" class="logout-btn">ออกจากระบบ</button>
+            <button @click="store.logout" class="logout-btn">ออกจากระบบ</button>
           </li>
         </ul>
       </div>
@@ -75,14 +75,14 @@
   </nav>
 </template>
 
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
+
 <script>
 export default {
   name: "NavBar",
-  methods: {
-    logout() {
-      return this.$router.push("/");
-    },
-  },
 };
 </script>
 

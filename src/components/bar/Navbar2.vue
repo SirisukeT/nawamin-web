@@ -33,12 +33,7 @@
 
 <script>
 export default {
-  name: "NavBar",
-  methods: {
-    logout() {
-      this.$router.push("/");
-    },
-  },
+  name: "NavBar2",
 };
 </script>
 
