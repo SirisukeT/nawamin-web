@@ -28,7 +28,7 @@
       </div>
       <div class="contentbox">
         <h5 class="headtext">สำหรับเจ้าหน้าที่</h5>
-        <router-link to="/" class="text">สำหรับแพทย์ผู้รักษา</router-link>
+        <router-link to="/adminlogin" class="text">สำหรับแพทย์ผู้รักษา</router-link>
         <router-link to="/adminlogin" class="text">สำหรับผู้ดูแลระบบ</router-link>
       </div>
     </div>
