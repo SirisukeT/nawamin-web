@@ -15,7 +15,7 @@
       </div>
       <div class="navbar-r">
         <router-link to="/home">หน้าหลัก</router-link>
-        <router-link to="/about-us">ข้อมูลของฉัน</router-link>
+        <router-link to="/profile">ข้อมูลของฉัน</router-link>
         <router-link to="/health">สถานะสุขภาพ</router-link>
         <router-link to="/transfer">ใบส่งตัว</router-link>
         <router-link to="/appointment">นัดหมาย</router-link>
@@ -46,7 +46,7 @@
             <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><router-link to="/login">ข้อมูลของฉัน</router-link></li>
+            <li><router-link to="/profile">ข้อมูลของฉัน</router-link></li>
             <li><router-link to="/login">สถานะสุขภาพ</router-link></li>
             <li><router-link to="/transfer">ใบส่งตัว</router-link></li>
             <li><router-link to="/appointment">นัดหมาย</router-link></li>

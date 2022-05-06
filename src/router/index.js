@@ -31,6 +31,11 @@ const router = createRouter({
       component: () => import("../views/Patient/AboutUsPage.vue"),
     },
     {
+      path: "/profile",
+      name: "Profile",
+      component: () => import("../views/Patient/ProfilePage.vue"),
+    },
+    {
       path: "/health",
       name: "HealthStatusPage",
       component: () => import("../views/Patient/HealthStatusPage.vue"),
@@ -44,6 +49,11 @@ const router = createRouter({
       path: "/appointment",
       name: "appointment",
       component: () => import("../views/Patient/AppointmentPage.vue"),
+    },
+    {
+      path: "/contact",
+      name: "ContactPage",
+      component: () => import("../views/Patient/ContactPage.vue"),
     },
     {
       path: "/overall",
