@@ -6,7 +6,7 @@
           <menulist />
           <div class="detailbox">
             <patient-card />
-            <div class="table"></div>
+            <div class="table"><PatientRefUser/></div>
           </div>
         </div>
       </div>
@@ -15,7 +15,13 @@
 </template>
 
 <script>
-export default {};
+import refer from "../form/refer.vue"
+export default {
+  name:"Tranfer1",
+  components:{refer,
+    
+  }
+};
 </script>
 
 <style scoped>
@@ -30,9 +36,9 @@ export default {};
 }
 .table{
     width: 100%;
-    height: 40rem;
+    min-height: 20rem;
     background: #82A284;
-    border-radius: 20px;
     margin-top: 30px;
+    border-radius: 20px;
 }
 </style>

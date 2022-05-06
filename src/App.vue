@@ -178,4 +178,9 @@ button.save{
   -webkit-filter: invert(1);
    filter: invert(1);
 }
+
+.right{
+  display: flex;
+  justify-content: right;
+}
 </style>
