@@ -2,7 +2,7 @@
   <main>
     <div class="containerLogin">
       <h1 class="Header">E - service บริการผู้ป่วย</h1>
-      <form @submit.prevent="sendLoginAdmin" class="LoginHomePage">
+      <form @submit.prevent="sendLogin" class="LoginHomePage">
         <div class="login100-form-avatar">
           <img src="@/assets/logo_re.png" alt="LOGO" />
         </div>
@@ -41,9 +41,9 @@ const store = useTitleStore();
 const username = ref("");
 const password = ref("");
 
-const sendLoginAdmin = () => {
+const sendLogin = () => {
   console.log("Test");
-  store.sendLoginAdmin(username.value, password.value);
+  store.sendLogin(username.value, password.value);
   username.value = "";
   password.value = "";
 };

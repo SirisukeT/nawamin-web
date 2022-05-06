@@ -64,11 +64,16 @@
             />
           </svg>
         </div>
-        <router-link to="/" class="listtext">ออกจากระบบ</router-link>
+        <router-link @click="store.logout" to="/" class="listtext">ออกจากระบบ</router-link>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import { useTitleStore } from "@/stores/TitleStore";
+const store = useTitleStore();
+</script>
 
 <script>
 export default {};
