@@ -35,6 +35,7 @@ import Hospital from "./components/DataList/Hospital.vue";
 import PatientPerson from "./components/DataList/PatientPerson.vue";
 import PatientInfo from "./components/DataList/PatientInfo.vue";
 import PatientCard from "./components/DataList/PatientCard.vue";
+import PatientCardNoName from "./components/DataList/PatientCardNoName.vue";
 import PatientCardUser from "./components/DataList/PatientCardUser.vue";
 import PatientRef from "./components/DataList/PatientRef.vue";
 import PatientRefUser from "./components/DataList/PatientRefUser.vue";
@@ -99,6 +100,7 @@ app.component("PatientRef", PatientRef);
 app.component("PatientRefUser", PatientRefUser);
 app.component("PatientCardUser", PatientCardUser);
 app.component("PatientCard", PatientCard);
+app.component("PatientCardNoName", PatientCardNoName);
 
 app.component("PCD_11", PCD_11);
 app.component("PCD_12", PCD_12);

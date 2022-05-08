@@ -94,7 +94,7 @@ p{
 }
 .choicebox{
   width: auto;
-  background: wheat;
+  background: rgb(232, 230, 230);
   padding: 10px 40px 10px 10px;
   border-radius: 10px;
 }

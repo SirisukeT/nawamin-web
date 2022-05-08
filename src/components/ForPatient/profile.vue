@@ -5,7 +5,7 @@
         <div class="mainbox">
           <menulist />
           <div class="detailbox">
-            <PatientCardUser />
+            <PatientCardNoName />
             <h3 id="suggest">ข้อมูลของฉัน</h3>
             <div class="table">
               <p class="datalist">
@@ -15,35 +15,97 @@
             </div>
             <div class="suggestbox">
               <h3>ข้อมูลผู้ป่วย</h3>
-              <div class="gridbox4fr">
-                <div class="box11"></div>
-                <div class="box21"></div>
-                <div class="box31"></div>
-                <div class="box41"></div>
-                <div class="box51"></div>
-                <div class="box61"></div>
-                <div class="box71"></div>
+              <div class="gridbox13">
+                <div class="ingrid">
+                  <p class="datalist">คำนำหน้าชื่อ</p>
+                  <div class="showbox"></div>
+                </div>
+                <div class="ingrid">
+                  <p class="datalist">ชื่อ-นามสกุล</p>
+                  <div class="showbox"></div>
+                </div>
+              </div>
+              <div class="gridbox11">
+                <div class="ingrid">
+                  <p class="datalist">เพศ</p>
+                  <div class="showbox"></div>
+                </div>
+                <div class="ingrid">
+                  <p class="datalist">วันเกิด</p>
+                  <div class="showbox"></div>
+                </div>
+              </div>
+              <div class="gridbox11">
+                <div class="ingrid">
+                  <p class="datalist">เลขบัตรประชาชน</p>
+                  <div class="showbox"></div>
+                </div>
+                <div class="ingrid">
+                  <p class="datalist">สัญชาติ</p>
+                  <div class="showbox"></div>
+                </div>
+              </div>
+              <div class="gridbox11">
+                <div class="ingrid">
+                  <p class="datalist">เบอร์โทรศัพท์</p>
+                  <div class="showbox"></div>
+                </div>
               </div>
               <h3>ที่อยู่</h3>
-              <div class="gridbox">
-                <div class="gridbox4fr2">
-                  <div class="box12"></div>
-                  <div class="box22"></div>
-                  <div class="box32"></div>
-                  <div class="box42"></div>
+              <div class="gridbox1111">
+                <div class="ingrid">
+                  <p class="datalist">อาคาร/ตึก</p>
+                  <div class="showbox"></div>
                 </div>
-                <div class="gridbox3fr">
-                  <div class="box52"></div>
-                  <div class="box62"></div>
-                  <div class="box72"></div>
-                  <div class="box82"></div>
+                <div class="ingrid">
+                  <p class="datalist">เลขที่</p>
+                  <div class="showbox"></div>
+                </div>
+                <div class="ingrid">
+                  <p class="datalist">หมู่ที่</p>
+                  <div class="showbox"></div>
+                </div>
+                <div class="ingrid">
+                  <p class="datalist">ตรอก/ซอย</p>
+                  <div class="showbox"></div>
+                </div>
+              </div>
+              <div class="gridbox111">
+                <div class="ingrid">
+                  <p class="datalist">ตำบล/แขวง</p>
+                  <div class="showbox"></div>
+                </div>
+                <div class="ingrid">
+                  <p class="datalist">อำเภอ/เขต</p>
+                  <div class="showbox"></div>
+                </div>
+                <div class="ingrid">
+                  <p class="datalist">จังหวัด</p>
+                  <div class="showbox"></div>
+                </div>
+              </div>
+              <div class="gridbox111">
+                <div class="ingrid">
+                  <p class="datalist">รหัสไปรษณีย์</p>
+                  <div class="showbox"></div>
                 </div>
               </div>
               <h3>ผู้ติดต่อฉุกเฉิน</h3>
-              <div class="gridbox4fr">
-                <div class="box13"></div>
-                <div class="box23"></div>
-                <div class="box33"></div>
+              <div class="gridbox1">
+                <div class="ingrid">
+                  <p class="datalist">ชื่อ - นามสกุล ผู้ติดต่อฉุกเฉิน</p>
+                  <div class="showbox"></div>
+                </div>
+              </div>
+              <div class="gridbox11">
+                <div class="ingrid">
+                  <p class="datalist">เบอร์โทรศัพท์</p>
+                  <div class="showbox"></div>
+                </div>
+                <div class="ingrid">
+                  <p class="datalist">ความสัมพันธ์</p>
+                  <div class="showbox"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -60,81 +122,49 @@ export default {
 </script>
 
 <style scoped>
-.gridbox {
-  /* display: flex; */
-  /* flex-direction: column; */
+.showbox{
+  height: 100%;
+  width: 100%;
+  border-radius:6px ;
+  padding: 5px 10px;
+  background: rgb(232, 230, 230);
 }
-.gridbox4fr {
+.gridbox1 {
   display: grid;
-  grid-template-columns: repeat (4, 1fr);
+  margin-bottom: 5%;
   gap: 10px;
 }
-.gridbox4fr2 {
+.gridbox13 {
   display: grid;
-  grid-template-columns: repeat (4, 1fr);
+  grid-template-columns: 1fr 3fr;
   gap: 10px;
+  margin-bottom: 5%;
+  flex-direction: column;
 }
-.gridbox3fr {
+.gridbox11 {
   display: grid;
-  grid-template-columns: repeat (3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  margin-bottom: 5%;
 }
-.gridbox4fr .box11 {
-  height: 20px;
-  background: wheat;
+.gridbox1111 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 5%;
 }
-.gridbox4fr .box21 {
-  grid-column-start: 2;
-  grid-column-end: 5;
-  height: 20px;
-  background: wheat;
+.gridbox111 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 5%;
 }
-.gridbox4fr .box31 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  height: 20px;
-  background: wheat;
-}
-.gridbox4fr .box41 {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  height: 20px;
-  background: wheat;
-}
-.gridbox4fr .box51 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  height: 20px;
-  background: wheat;
-}
-.gridbox4fr .box61 {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  height: 20px;
-  background: wheat;
-}
-.gridbox4fr .box71 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 5;
-  height: 20px;
-  background: wheat;
-}
-.box12,.box22,.box32,.box42 {
-  height: 20px;
-  background: wheat;
+.ingrid {
+  height: auto;
+  /* background: wheat; */
 }
 .suggestbox {
-  padding: 0 20px 40px 20px;
+  padding: 0 0px 40px 0px;
 }
 .datalist {
   margin: 0;
@@ -156,6 +186,7 @@ export default {
   /* background: wheat; */
   display: flex;
   flex-direction: column;
+  padding: 0px 80px;
 }
 .table {
   padding: 5% 0;
