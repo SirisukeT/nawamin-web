@@ -47,7 +47,7 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><router-link to="/profile">ข้อมูลของฉัน</router-link></li>
-            <li><router-link to="/login">สถานะสุขภาพ</router-link></li>
+            <li><router-link to="/health">สถานะสุขภาพ</router-link></li>
             <li><router-link to="/transfer">ใบส่งตัว</router-link></li>
             <li><router-link to="/appointment">นัดหมาย</router-link></li>
             <li><router-link @click="store.logout" to="/">ออกจากระบบ</router-link></li>
