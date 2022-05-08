@@ -8,7 +8,7 @@
         </div>
         <div class="inputbox">
           <h5>วันที่</h5>
-          <input type="text" id="date" :value="vn[0].date"/>
+          <input type="text" id="date" :value="vn[0].date" />
         </div>
         <div class="inputbox">
           <h5>แผนก</h5>
@@ -26,7 +26,7 @@
           <h5>จากโรงพยาบาล</h5>
           <div class="custom-select">
             <select id="select2">
-              <option >
+              <option>
                 {{ vn[0].ohosp }}
               </option>
             </select>
@@ -42,7 +42,7 @@
           <h5>ถึงโรงพยาบาล</h5>
           <div class="custom-select">
             <select id="select2">
-              <option >
+              <option>
                 {{ vn[0].dhosp }}
               </option>
             </select>
@@ -52,11 +52,11 @@
       <div class="box111">
         <div class="inputbox">
           <h5>ชื่อ - สกุลผู้ป่วย</h5>
-          <input type="text" id="name" :value="vn[0].name"/>
+          <input type="text" id="name" :value="vn[0].name" />
         </div>
         <div class="inputbox">
           <h5>เลขบัตรประชาชน</h5>
-          <input type="text" id="cid" :value="vn[0].cv"/>
+          <input type="text" id="cid" :value="vn[0].cv" />
         </div>
         <div class="inputbox">
           <h5>เพศ</h5>
@@ -66,41 +66,41 @@
       <div class="box111">
         <div class="inputbox">
           <h5>อายุ (ปี)</h5>
-          <input type="text" :value="vn[0].age"/>
+          <input type="text" :value="vn[0].age" />
         </div>
       </div>
       <div class="box111">
         <div class="inputbox">
           <h5>บ้านเลขที่</h5>
-          <input type="text" value="-"/>
+          <input type="text" value="-" />
         </div>
         <div class="inputbox">
           <h5>หมู่บ้าน</h5>
-          <input type="text" value="-"/>
+          <input type="text" value="-" />
         </div>
         <div class="inputbox">
           <h5>หมู่ที่</h5>
-          <input type="text" value="-"/>
+          <input type="text" value="-" />
         </div>
       </div>
       <div class="box111">
         <div class="inputbox">
           <h5>ตำบล</h5>
-          <input type="text" value="-"/>
+          <input type="text" value="-" />
         </div>
         <div class="inputbox">
           <h5>อำเภอ</h5>
-          <input type="text" value="-"/>
+          <input type="text" value="-" />
         </div>
         <div class="inputbox">
           <h5>จังหวัด</h5>
-          <input type="text" value="-"/>
+          <input type="text" value="-" />
         </div>
       </div>
       <div class="box3">
         <div class="inputbox">
           <h5>เหตุผลการส่งตัว</h5>
-          <input type="text" value="-"/>
+          <input type="text" value="-" />
         </div>
       </div>
     </div>
@@ -280,40 +280,25 @@ export default {
     document.getElementById("cid").defaultValue = store.patient.data["cid"];
     document.getElementById("vn").defaultValue = store.patient.vn;
     console.log(this.vn[0]);
-    document.getElementById("date").defaultValue =
-      this.vn[0].date;
-    document.getElementById("tel").defaultValue =
-      this.vn[0].tel;
-    document.getElementById("sex").defaultValue =
-      this.vn[0].sex;
-    document.getElementById("1").defaultValue =
-      this.vn[0].history.past;
-    document.getElementById("2").defaultValue =
-      this.vn[0].history.present;
-    document.getElementById("3").defaultValue =
-      this.vn[0].history.lab;
-    document.getElementById("4").defaultValue =
-      this.vn[0].history.initial;
-    document.getElementById("5").defaultValue =
-      this.vn[0].history.drug;
-    document.getElementById("6").defaultValue =
-      this.vn[0].history.cause;
-    document.getElementById("7").defaultValue =
-      this.vn[0].history.other;
-    document.getElementById("8").defaultValue =
-      this.vn[0].history.right;
+    document.getElementById("date").defaultValue = this.vn[0].date;
+    document.getElementById("tel").defaultValue = this.vn[0].tel;
+    document.getElementById("sex").defaultValue = this.vn[0].sex;
+    document.getElementById("1").defaultValue = this.vn[0].history.past;
+    document.getElementById("2").defaultValue = this.vn[0].history.present;
+    document.getElementById("3").defaultValue = this.vn[0].history.lab;
+    document.getElementById("4").defaultValue = this.vn[0].history.initial;
+    document.getElementById("5").defaultValue = this.vn[0].history.drug;
+    document.getElementById("6").defaultValue = this.vn[0].history.cause;
+    document.getElementById("7").defaultValue = this.vn[0].history.other;
+    document.getElementById("8").defaultValue = this.vn[0].history.right;
     document.getElementById("HEENT").defaultValue =
       this.vn[0].physical.HEENT[1];
     document.getElementById("HEART").defaultValue =
       this.vn[0].physical.HEART[1];
-    document.getElementById("LUNG").defaultValue =
-      this.vn[0].physical.LUNG[1];
-    document.getElementById("Ab").defaultValue =
-      this.vn[0].physical.Ab[1];
-    document.getElementById("Exr").defaultValue =
-      this.vn[0].physical.Exr[1];
-    document.getElementById("PE").defaultValue =
-      this.vn[0].physical.PE_text[1];
+    document.getElementById("LUNG").defaultValue = this.vn[0].physical.LUNG[1];
+    document.getElementById("Ab").defaultValue = this.vn[0].physical.Ab[1];
+    document.getElementById("Exr").defaultValue = this.vn[0].physical.Exr[1];
+    document.getElementById("PE").defaultValue = this.vn[0].physical.PE_text[1];
   },
 };
 </script>
