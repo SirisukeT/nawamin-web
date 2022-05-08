@@ -3,10 +3,13 @@
     <section class="module">
       <div class="module__content">
         <div class="mainbox">
+          <menulist />
           <div class="detailbox">
-            <patient-card />
+            <PatientCardUser />
             <refer />
-            <section class="right marginB-25"><button @click="$router.go(-1)" class="previous">ย้อนกลับ</button></section>
+            <section class="right marginB-25">
+              <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
+            </section>
           </div>
         </div>
       </div>
