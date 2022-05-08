@@ -19,7 +19,7 @@
         <router-link to="/health">สถานะสุขภาพ</router-link>
         <router-link to="/transfer">ใบส่งตัว</router-link>
         <router-link to="/appointment">นัดหมาย</router-link>
-        <div class="btn-group">
+        <div class="btn-group" id="test">
           <button
             type="button"
             class="btn"
@@ -71,6 +71,9 @@ export default {
 </script>
 
 <style scoped>
+#test{
+  margin-top: 5px;
+}
 .navbar {
   background-color: #446a46;
   /* width: 100%; */
