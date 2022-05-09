@@ -58,7 +58,7 @@ export default {
 
 <style scoped>
 th {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: lighter;
   color: rgb(32, 32, 32);
   border:0;
