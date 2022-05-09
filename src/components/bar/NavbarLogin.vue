@@ -121,6 +121,11 @@ div.navbar-brand p {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  font-size: 20px;
+}
+
+.btn-group > * {
+  font-size: 20px;
 }
 
 .navbar-r img {
