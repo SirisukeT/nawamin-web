@@ -22,7 +22,8 @@
               required
             />
           </p>
-          <p><input class="LoginSubmit" type="submit" value="ยืนยันข้อมูล" /></p>
+          <testforgetpw />
+          <!-- <p><input class="LoginSubmit" type="submit" value="ยืนยันข้อมูล" /></p> -->
           <p class="botm">
             <router-link to="/">กลับสู่หน้าหลัก</router-link>
           </p>
@@ -36,8 +37,10 @@
 </template>
 
 <script>
+import testforgetpw from "../testforgetpw.vue";
 export default {
 name: "ForgotPW",
+components: { testforgetpw },
 }
 </script>
 
