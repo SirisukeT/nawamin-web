@@ -2,13 +2,13 @@
   <div class="menubigbox">
     <div class="menubox">
       <div class="menulist">
-        <div class="image">
+        <div class="image" id="profile_im">
           <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
         </div>
-        <router-link to="/profile" class="listtext">ข้อมูลของฉัน</router-link>
+        <router-link to="/profile" class="listtext" id="profile_m">ข้อมูลของฉัน</router-link>
       </div>
       <div class="menulist">
-        <div class="image">
+        <div class="image" id="health_im">
           <svg
             width="25"
             height="25"
@@ -24,16 +24,16 @@
             />
           </svg>
         </div>
-        <router-link to="/health" class="listtext">สถานะสุขภาพ</router-link>
+        <router-link to="/health" class="listtext" id="health_m">สถานะสุขภาพ</router-link>
       </div>
       <div class="menulist">
-        <div class="image">
+        <div class="image" id="transfer_im">
           <img class="invertimg" src="@/assets/docs.png" alt="" />
         </div>
-        <router-link to="/transfer" class="listtext">ใบส่งตัว</router-link>
+        <router-link to="/transfer" class="listtext" id="transfer_m">ใบส่งตัว</router-link>
       </div>
       <div class="menulist">
-        <div class="image">
+        <div class="image" id="appointment_im">
           <svg
             width="25"
             height="25"
@@ -47,7 +47,7 @@
             />
           </svg>
         </div>
-        <router-link to="/appointment" class="listtext">นัดหมาย</router-link>
+        <router-link to="/appointment" class="listtext" id="appointment_m">นัดหมาย</router-link>
       </div>
       <div class="menulist">
         <div class="image">
@@ -76,7 +76,14 @@ const store = useTitleStore();
 </script>
 
 <script>
-export default {};
+export default {
+  name: "menulist",
+  mounted() {
+    console.log(this.$route.path.slice(1));
+    document.getElementById(this.$route.path.slice(1)+"_m").style.color = "#446A46";
+    document.getElementById(this.$route.path.slice(1)+"_im").style.background  = "#446A46";
+  },
+};
 </script>
 
 <style scoped>
