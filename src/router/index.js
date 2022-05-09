@@ -146,6 +146,12 @@ const router = createRouter({
       component: () => import("../views/ListPatientTransferResultView.vue"),
     },
     {
+      path: "/:main/:name/6:sub/view",
+      name: "รายละเอียดใบแจ้งผล",
+      
+      component: () => import("../views/ViewPatientReferResult.vue"),
+    },
+    {
       path: "/:main/:name/6:sub/1",
       name: "เพิ่มใบแจ้งผล",
       
