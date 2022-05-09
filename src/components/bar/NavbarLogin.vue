@@ -45,19 +45,18 @@
           >
             <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
           </button>
-          <ul class="dropdown-menu dropdown-menu-end">
+          <ul class="dropdown-menu dropdown-menu-end sizedropdown">
             <li>
-              <router-link to="/profile"
-                ><div class="menulist">
-                  <div class="image">
-                    <img
-                      src="@/assets/user-regular.svg"
-                      alt=""
-                      class="invertimg"
-                      id="person"
-                    />
-                  </div>
+              <router-link to="/profile">
+                <div class="image">
+                  <img
+                    src="@/assets/user-regular.svg"
+                    alt=""
+                    class="invertimg"
+                    id="person"
+                  />
                 </div>
+
                 ข้อมูลของฉัน</router-link
               >
             </li>
@@ -159,7 +158,9 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
+.sizedropdown {
+  width: 200px;
+}
 #person {
   width: 25px;
   height: 25px;
@@ -178,8 +179,6 @@ export default {
   align-items: center;
   justify-content: center;
 }
-=======
->>>>>>> 95b8ce9551e730dbe5dbcad18f7a0fbba809d951
 #test {
   margin-top: 5px;
 }
@@ -232,7 +231,10 @@ div.navbar-brand p {
   font-weight: 600;
   font-size: 20px;
 }
-
+a{
+  display: flex;
+  margin: 0;
+}
 .btn-group > * {
   font-size: 20px;
 }
