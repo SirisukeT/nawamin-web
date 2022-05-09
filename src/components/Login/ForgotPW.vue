@@ -9,7 +9,7 @@
             <input
               type="text"
               v-model="username"
-              placeholder="Username"
+              placeholder=""
               required
             />
           </p>
@@ -18,7 +18,7 @@
             <input
               type="password"
               v-model="password"
-              placeholder="Password" 
+              placeholder="" 
               required
             />
           </p>
