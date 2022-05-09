@@ -5,7 +5,9 @@
         <div class="image" id="profile_im">
           <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
         </div>
-        <router-link to="/profile" class="listtext" id="profile_m">ข้อมูลของฉัน</router-link>
+        <router-link to="/profile" class="listtext" id="profile_m"
+          >ข้อมูลของฉัน</router-link
+        >
       </div>
       <div class="menulist">
         <div class="image" id="health_im">
@@ -24,13 +26,20 @@
             />
           </svg>
         </div>
-        <router-link to="/health" class="listtext" id="health_m">สถานะสุขภาพ</router-link>
+        <router-link to="/health" class="listtext" id="health_m"
+          >สถานะสุขภาพ</router-link
+        >
       </div>
       <div class="menulist">
         <div class="image" id="transfer_im">
           <img class="invertimg" src="@/assets/docs.png" alt="" />
         </div>
-        <router-link to="/transfer" class="listtext" id="transfer_m">ใบส่งตัว</router-link>
+        <router-link
+          to="/transfer"
+          class="listtext transfer/details_m"
+          id="transfer_m"
+          >ใบส่งตัว</router-link
+        >
       </div>
       <div class="menulist">
         <div class="image" id="appointment_im">
@@ -47,7 +56,9 @@
             />
           </svg>
         </div>
-        <router-link to="/appointment" class="listtext" id="appointment_m">นัดหมาย</router-link>
+        <router-link to="/appointment" class="listtext" id="appointment_m"
+          >นัดหมาย</router-link
+        >
       </div>
       <div class="menulist">
         <div class="image">
@@ -64,7 +75,9 @@
             />
           </svg>
         </div>
-        <router-link @click="store.logout" to="/" class="listtext">ออกจากระบบ</router-link>
+        <router-link @click="store.logout" to="/" class="listtext"
+          >ออกจากระบบ</router-link
+        >
       </div>
     </div>
   </div>
@@ -79,9 +92,27 @@ const store = useTitleStore();
 export default {
   name: "menulist",
   mounted() {
-    console.log(this.$route.path.slice(1));
-    document.getElementById(this.$route.path.slice(1)+"_m").style.color = "#446A46";
-    document.getElementById(this.$route.path.slice(1)+"_im").style.background  = "#446A46";
+    try {
+      document.getElementById(
+        this.$route.path.substring(
+          this.$route.path.indexOf("/") + 1,
+          this.$route.path.lastIndexOf("/")
+        ) + "_m"
+      ).style.color = "#446A46";
+      document.getElementById(
+        this.$route.path.substring(
+          this.$route.path.indexOf("/") + 1,
+          this.$route.path.lastIndexOf("/")
+        ) + "_im"
+      ).style.background = "#446A46";
+    } catch (err) {}
+    try {
+      document.getElementById(this.$route.path.slice(1) + "_m").style.color =
+        "#446A46";
+      document.getElementById(
+        this.$route.path.slice(1) + "_im"
+      ).style.background = "#446A46";
+    } catch (err) {}
   },
 };
 </script>
@@ -91,10 +122,10 @@ export default {
   margin: 0px;
   padding: 0 10px 0 20px;
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
-.listtext:hover{
+.listtext:hover {
   color: green;
   font-weight: bold;
 }
@@ -113,7 +144,7 @@ export default {
   height: 25px;
 }
 .menubox {
-  background: #CDDAD7;
+  background: #cddad7;
   display: flex;
   flex-direction: column;
   width: 250px;

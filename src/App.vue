@@ -25,7 +25,7 @@ button:active {
 } */
 
 .content{
-  min-height: 56vh;
+  min-height: 60vh;
 }
 
 .main-admin {

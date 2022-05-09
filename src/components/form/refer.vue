@@ -279,7 +279,7 @@ export default {
       store.patient.data["lname"];
     document.getElementById("cid").defaultValue = store.patient.data["cid"];
     document.getElementById("vn").defaultValue = store.patient.vn;
-    console.log(this.vn[0]);
+    // console.log(this.vn[0]);
     document.getElementById("date").defaultValue = this.vn[0].date;
     document.getElementById("tel").defaultValue = this.vn[0].tel;
     document.getElementById("sex").defaultValue = this.vn[0].sex;
