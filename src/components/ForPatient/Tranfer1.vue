@@ -29,6 +29,7 @@ export default {
   display: flex;
 }
 .detailbox {
+  min-width: 70rem;
   display: flex;
   flex-direction: column;
 }
