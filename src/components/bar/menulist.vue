@@ -113,7 +113,7 @@ export default {
   height: 25px;
 }
 .menubox {
-  background: white;
+  background: #CDDAD7;
   display: flex;
   flex-direction: column;
   width: 250px;
