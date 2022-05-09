@@ -17,7 +17,7 @@ const router = createRouter({
     },
     {
       path: "/home",
-      name: "homepage-login",
+      name: "home",
       component: () => import("../views/HomePageLogin.vue"),
     },
     {
@@ -37,12 +37,12 @@ const router = createRouter({
     },
     {
       path: "/health",
-      name: "HealthStatusPage",
+      name: "health",
       component: () => import("../views/Patient/HealthStatusPage.vue"),
     },
     {
       path: "/transfer",
-      name: "TranferPage",
+      name: "transfer",
       component: () => import("../views/Patient/TranferPage.vue"),
     },
     {
@@ -57,7 +57,7 @@ const router = createRouter({
     },
     {
       path: "/contact",
-      name: "ContactPage",
+      name: "contact",
       component: () => import("../views/Patient/ContactPage.vue"),
     },
     {

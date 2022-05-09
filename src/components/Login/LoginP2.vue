@@ -30,6 +30,9 @@
           </p>
         </div>
       </form>
+      <form action="" class="recaptcha">
+        recaptcha
+      </form>
     </div>
   </main>
 </template>
@@ -65,7 +68,7 @@ export default {
   text-align: center;
   width: 100%;
   height: 100vh;
-  min-height: 750px;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -80,7 +83,7 @@ export default {
 }
 
 .Header {
-  margin-top: 10vh;
+  margin-top: 5vh;
   color: #114d3e;
 }
 form.LoginHomePage {
@@ -93,6 +96,16 @@ form.LoginHomePage {
   border-radius: 20px;
   align-items: center
 }
+
+.recaptcha{
+  padding: 50px 0 50px 0;
+  margin-top: 5vh;
+  width: 500px;
+  background: gray;
+  text-align: center;
+  font-size: 30px;
+}
+
 form.LoginHomePage input {
   width: 340px;
   height: 57px;
