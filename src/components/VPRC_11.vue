@@ -164,7 +164,7 @@
             <div class="custom-select">
               <select id="select2">
                 <option value="">
-                  {{ vn[0][store.patient.vn].physical.HEENT[0] }}
+                  {{ vn[0].physical.HEENT[0] }}
                 </option>
               </select>
             </div>
@@ -180,7 +180,7 @@
             <div class="custom-select">
               <select id="select2">
                 <option value="">
-                  {{ vn[0][store.patient.vn].physical.HEART[0] }}
+                  {{ vn[0].physical.HEART[0] }}
                 </option>
               </select>
             </div>
@@ -195,7 +195,7 @@
             <div class="custom-select">
               <select id="select2">
                 <option value="">
-                  {{ vn[0][store.patient.vn].physical.LUNG[0] }}
+                  {{ vn[0].physical.LUNG[0] }}
                 </option>
               </select>
             </div>
@@ -210,7 +210,7 @@
             <div class="custom-select">
               <select id="select2">
                 <option value="">
-                  {{ vn[0][store.patient.vn].physical.Ab[0] }}
+                  {{ vn[0].physical.Ab[0] }}
                 </option>
               </select>
             </div>
@@ -225,7 +225,7 @@
             <div class="custom-select">
               <select id="select2">
                 <option value="">
-                  {{ vn[0][store.patient.vn].physical.Exr[0] }}
+                  {{ vn[0].physical.Exr[0] }}
                 </option>
               </select>
             </div>
@@ -240,7 +240,7 @@
             <div class="custom-select">
               <select id="select2">
                 <option value="">
-                  {{ vn[0][store.patient.vn].physical.PE_text[0] }}
+                  {{ vn[0].physical.PE_text[0] }}
                 </option>
               </select>
             </div>
@@ -298,25 +298,25 @@ export default {
       " " +
       store.patient.data["lname"];
     document.getElementById("cid").defaultValue = store.patient.data["cid"];
-    document.getElementById("vn").defaultValue = store.patient.vn;
-    console.log(this.vn[0][store.patient.vn]);
-    document.getElementById("date").defaultValue = this.vn[0][store.patient.vn].date;
-    document.getElementById("tel").defaultValue = this.vn[0][store.patient.vn].tel;
-    document.getElementById("sex").defaultValue = this.vn[0][store.patient.vn].sex;
-    document.getElementById("1").defaultValue = this.vn[0][store.patient.vn].history.past;
-    document.getElementById("2").defaultValue = this.vn[0][store.patient.vn].history.present;
-    document.getElementById("3").defaultValue = this.vn[0][store.patient.vn].history.lab;
-    document.getElementById("4").defaultValue = this.vn[0][store.patient.vn].history.initial;
-    document.getElementById("5").defaultValue = this.vn[0][store.patient.vn].history.drug;
-    document.getElementById("6").defaultValue = this.vn[0][store.patient.vn].history.cause;
-    document.getElementById("7").defaultValue = this.vn[0][store.patient.vn].history.other;
-    document.getElementById("8").defaultValue = this.vn[0][store.patient.vn].history.right;
-    document.getElementById("HEENT").defaultValue = this.vn[0][store.patient.vn].physical.HEENT[1];
-    document.getElementById("HEART").defaultValue = this.vn[0][store.patient.vn].physical.HEART[1];
-    document.getElementById("LUNG").defaultValue =  this.vn[0][store.patient.vn].physical.LUNG[1];
-    document.getElementById("Ab").defaultValue =    this.vn[0][store.patient.vn].physical.Ab[1];
-    document.getElementById("Exr").defaultValue =   this.vn[0][store.patient.vn].physical.Exr[1];
-    document.getElementById("PE").defaultValue =    this.vn[0][store.patient.vn].physical.PE_text[1];
+    document.getElementById("vn").defaultValue = "001/2564";
+    console.log(this.vn[0]);
+    document.getElementById("date").defaultValue = this.vn[0].date;
+    document.getElementById("tel").defaultValue = this.vn[0].tel;
+    document.getElementById("sex").defaultValue = this.vn[0].sex;
+    document.getElementById("1").defaultValue = this.vn[0].history.past;
+    document.getElementById("2").defaultValue = this.vn[0].history.present;
+    document.getElementById("3").defaultValue = this.vn[0].history.lab;
+    document.getElementById("4").defaultValue = this.vn[0].history.initial;
+    document.getElementById("5").defaultValue = this.vn[0].history.drug;
+    document.getElementById("6").defaultValue = this.vn[0].history.cause;
+    document.getElementById("7").defaultValue = this.vn[0].history.other;
+    document.getElementById("8").defaultValue = this.vn[0].history.right;
+    document.getElementById("HEENT").defaultValue = this.vn[0].physical.HEENT[1];
+    document.getElementById("HEART").defaultValue = this.vn[0].physical.HEART[1];
+    document.getElementById("LUNG").defaultValue =  this.vn[0].physical.LUNG[1];
+    document.getElementById("Ab").defaultValue =    this.vn[0].physical.Ab[1];
+    document.getElementById("Exr").defaultValue =   this.vn[0].physical.Exr[1];
+    document.getElementById("PE").defaultValue =    this.vn[0].physical.PE_text[1];
 
 
   },
