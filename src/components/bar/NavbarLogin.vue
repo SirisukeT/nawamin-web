@@ -30,9 +30,38 @@
             เกี่ยวกับเรา
             <img src="@/assets/Antu_dialog-icon-preview.png" alt="" />
           </button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><router-link to="/about-us">ข้อมูลโรงพยาบาล</router-link></li>
-            <li><router-link to="/contact">ติดต่อเรา</router-link></li>
+          <ul class="dropdown-menu dropdown-menu-end sizedropdown2">
+            <li>
+              <router-link to="/about-us" class="text"
+                ><div class="image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="person"
+                    class="invertimg"
+                    viewBox="0 0 640 512"
+                  >
+                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path
+                      d="M192 48C192 21.49 213.5 0 240 0H400C426.5 0 448 21.49 448 48V512H368V432C368 405.5 346.5 384 320 384C293.5 384 272 405.5 272 432V512H192V48zM312 64C303.2 64 296 71.16 296 80V104H272C263.2 104 256 111.2 256 120V136C256 144.8 263.2 152 272 152H296V176C296 184.8 303.2 192 312 192H328C336.8 192 344 184.8 344 176V152H368C376.8 152 384 144.8 384 136V120C384 111.2 376.8 104 368 104H344V80C344 71.16 336.8 64 328 64H312zM160 96V512H48C21.49 512 0 490.5 0 464V320H80C88.84 320 96 312.8 96 304C96 295.2 88.84 288 80 288H0V224H80C88.84 224 96 216.8 96 208C96 199.2 88.84 192 80 192H0V144C0 117.5 21.49 96 48 96H160zM592 96C618.5 96 640 117.5 640 144V192H560C551.2 192 544 199.2 544 208C544 216.8 551.2 224 560 224H640V288H560C551.2 288 544 295.2 544 304C544 312.8 551.2 320 560 320H640V464C640 490.5 618.5 512 592 512H480V96H592z"
+                    />
+                  </svg>
+                </div>
+                ข้อมูลโรงพยาบาล</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/contact" class="text"
+                ><div class="image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="person" class="invertimg">
+                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path
+                      d="M256 31.1c-141.4 0-255.1 93.09-255.1 208c0 49.59 21.38 94.1 56.97 130.7c-12.5 50.39-54.31 95.3-54.81 95.8C0 468.8-.5938 472.2 .6875 475.2c1.312 3 4.125 4.797 7.312 4.797c66.31 0 116-31.8 140.6-51.41c32.72 12.31 69.01 19.41 107.4 19.41C397.4 447.1 512 354.9 512 239.1S397.4 31.1 256 31.1zM368 266c0 8.836-7.164 16-16 16h-54V336c0 8.836-7.164 16-16 16h-52c-8.836 0-16-7.164-16-16V282H160c-8.836 0-16-7.164-16-16V214c0-8.838 7.164-16 16-16h53.1V144c0-8.838 7.164-16 16-16h52c8.836 0 16 7.162 16 16v54H352c8.836 0 16 7.162 16 16V266z"
+                    />
+                  </svg>
+                </div>
+                ติดต่อเรา</router-link
+              >
+            </li>
           </ul>
         </div>
         <div class="btn-group">
@@ -47,7 +76,7 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end sizedropdown">
             <li>
-              <router-link to="/profile">
+              <router-link to="/profile" class="text">
                 <div class="image">
                   <img
                     src="@/assets/user-regular.svg"
@@ -61,7 +90,7 @@
               >
             </li>
             <li>
-              <router-link to="/health"
+              <router-link to="/health" class="text"
                 ><div class="image">
                   <svg
                     width="25"
@@ -82,7 +111,7 @@
               >
             </li>
             <li>
-              <router-link to="/transfer"
+              <router-link to="/transfer" class="text"
                 ><div class="image">
                   <img
                     class="invertimg"
@@ -95,7 +124,7 @@
               >
             </li>
             <li>
-              <router-link to="/appointment"
+              <router-link to="/appointment" class="text"
                 ><div class="image">
                   <svg
                     width="25"
@@ -114,7 +143,7 @@
               >
             </li>
             <li>
-              <router-link @click="store.logout" to="/"
+              <router-link @click="store.logout" to="/" class="text"
                 ><div class="image">
                   <svg
                     width="25"
@@ -156,6 +185,11 @@ export default {
 <style scoped>
 .sizedropdown {
   width: 200px;
+  padding: 5px 0;
+}
+.sizedropdown2 {
+  width: 220px;
+  padding: 5px 0;
 }
 #person {
   width: 25px;
@@ -165,7 +199,14 @@ export default {
   width: 25px;
   height: 25px;
 }
+.text {
+  text-decoration: none;
+  font-size: 18px;
+  color: #82a284;
+  font-weight: 200;
+}
 .image {
+  margin: 0 8px 0 0;
   border: 3px solid black;
   border-radius: 100%;
   background-color: #82a284;
@@ -227,9 +268,13 @@ div.navbar-brand p {
   font-weight: 600;
   font-size: 20px;
 }
-a{
+li {
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
+}
+a {
   display: flex;
-  margin: 0;
+  align-items: center;
 }
 .btn-group > * {
   font-size: 20px;
