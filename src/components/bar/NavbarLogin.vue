@@ -240,10 +240,8 @@ a{
 }
 
 .navbar-r img {
-  /* background: white; */
-  /* border-radius: 50%; */
-  height: 55px;
-  width: 55px;
+  height: 30px;
+  width: 30px;
 }
 
 .navbar-r a {

@@ -42,7 +42,7 @@
             data-bs-display="static"
             aria-expanded="false"
           >
-            <img class="invertimg" src="@/assets/user-regular.svg" alt="" />
+            <img width="20px" height="20px" class="invertimg" src="@/assets/user-regular.svg" alt="" />
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><router-link to="/login">เข้าสู่ระบบ</router-link></li>
@@ -118,10 +118,8 @@ div.navbar-brand p {
 }
 
 .navbar-r img {
-  /* background: white; */
-  /* border-radius: 50%; */
-  height: 55px;
-  width: 55px;
+  height: 30px;
+  width: 30px;
 }
 
 .navbar-r a {
