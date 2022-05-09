@@ -149,7 +149,11 @@ const store = useTitleStore();
 export default {
   name: "NavBarLogin",
   mounted() {
-    document.getElementById(this.$route.path.slice(1)).style.color = "#82A284";
+    try{
+      document.getElementById(this.$route.path.slice(1)).style.color = "#82A284";
+    }
+    catch(err){
+    }
   },
 };
 </script>

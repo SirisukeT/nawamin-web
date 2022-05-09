@@ -9,9 +9,9 @@
       <div class="module__content">
         <div class="container">
           <h2>
-            <img src="@/assets/star.png" alt="" />
+            <img class="star" src="@/assets/star.png" alt="" />
             ภาพกิจกรรม
-            <img src="@/assets/star.png" alt="" />
+            <img class="star" src="@/assets/star.png" alt="" />
           </h2>
           <div class="containter__event">
               <slider3/>
@@ -23,9 +23,9 @@
       <div class="module__content">
         <div class="container">
           <h2>
-            <img src="@/assets/star.png" alt="" />
+            <img class="star" src="@/assets/star.png" alt="" />
             ศูนย์ความรู้
-            <img src="@/assets/star.png" alt="" />
+            <img class="star" src="@/assets/star.png" alt="" />
           </h2>
           <div class="containter__knowledge">
               <slider3/>
@@ -76,5 +76,10 @@ export default {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+}
+
+.star{
+  width:  30px;
+  height: 30px;
 }
 </style>

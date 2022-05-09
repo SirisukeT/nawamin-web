@@ -7,7 +7,7 @@
   >
     <Slide v-for="(item, index) in image" :key="index">
       <div class="carousel__item">
-        <img :src="item.img" alt="" />
+        <img class="img1" :src="item.img" alt=""/>
       </div>
     </Slide>
 
