@@ -104,6 +104,7 @@ form.LoginHomePage {
   background: gray;
   text-align: center;
   font-size: 30px;
+  color:white;
 }
 
 form.LoginHomePage input {

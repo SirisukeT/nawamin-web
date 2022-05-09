@@ -1,12 +1,10 @@
 <template>
   <main>
     <div class="containerLogin">
-      <h1 class="Header">ADMIN</h1>
+      <h1 class="Header">ลืมรหัสผ่าน</h1>
       <form @submit.prevent="sendLoginAdmin" class="LoginHomePage">
-        <div class="login100-form-avatar">
-          <img src="@/assets/logo_re.png" alt="LOGO" />
-        </div>
         <div class="LoginInput">
+            <p class="inputTitle">รหัสผ่านใหม่</p>
           <p>
             <input
               type="text"
@@ -15,47 +13,34 @@
               required
             />
           </p>
+          <p class="inputTitle">ยืนยันรหัสผ่านใหม่</p>
           <p>
             <input
               type="password"
               v-model="password"
-              placeholder="Password"
+              placeholder="Password" 
               required
             />
           </p>
-          <p><input class="LoginSubmit" type="submit" value="เข้าสู่ระบบ" /></p>
+          <p><input class="LoginSubmit" type="submit" value="ยืนยันข้อมูล" /></p>
           <p class="botm">
             <router-link to="/">กลับสู่หน้าหลัก</router-link>
           </p>
         </div>
       </form>
       <form action="" class="recaptcha">
-        recaptcha
+        recaptcha แบบรูปภาพ
       </form>
     </div>
   </main>
 </template>
 
-<script setup>
-import { ref } from "vue";
-import { useTitleStore } from "@/stores/TitleStore";
-const store = useTitleStore();
-const username = ref("");
-const password = ref("");
-
-const sendLoginAdmin = () => {
-  console.log("Test");
-  store.sendLoginAdmin(username.value, password.value);
-  username.value = "";
-  password.value = "";
-};
-</script>
-
 <script>
 export default {
-  name: "LoginP2",
-};
+name: "ForgotPW",
+}
 </script>
+
 <style scoped>
 * {
   margin: 0;
@@ -67,7 +52,7 @@ export default {
   text-align: center;
   width: 100%;
   height: 100vh;
-  min-height: 900px;
+  min-height: 750px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -86,8 +71,8 @@ export default {
   color: #114d3e;
 }
 form.LoginHomePage {
-  margin-top: 5vh;
-  min-height: 550px;
+  margin-top: 10vh;
+  min-height: 400px;
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -116,6 +101,12 @@ form.LoginHomePage input {
   color:white;
 }
 
+.inputTitle{
+    margin-top: 20px;
+    text-align: start;
+    font-weight: bolder;
+    font-size: 20px;
+}
 
 .login100-form-avatar img {
   margin-top: 50px;
@@ -126,6 +117,7 @@ form.LoginHomePage input.LoginSubmit {
   font-weight: bold;
   text-align: center;
   padding: 0;
+  margin-top: 20px;
 }
 
 form.LoginHomePage input.LoginSubmit:hover {

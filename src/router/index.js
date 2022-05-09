@@ -61,6 +61,11 @@ const router = createRouter({
       component: () => import("../views/Patient/ContactPage.vue"),
     },
     {
+      path: "/forgot-pw",
+      name: "forgot-pw",
+      component: () => import("../views/ForgotPasswordPage.vue"),
+    },
+    {
       path: "/overall",
       name: "ภาพรวมระบบ",
       
