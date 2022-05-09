@@ -199,6 +199,9 @@ export default {
 </script>
 
 <style scoped>
+.btn-group{
+  height: 90%;
+}
 .sizedropdown {
   width: 200px;
   padding: 5px 0;
@@ -271,7 +274,7 @@ div.navbar-brand p {
 }
 
 .navbar-r {
-  max-height: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

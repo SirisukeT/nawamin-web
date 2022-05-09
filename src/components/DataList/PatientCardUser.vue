@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="pfptext">
-      <h3>{{store.patient.name}}</h3>
+      <h3>นายรักชาติ ยิ่งชีพ</h3>
     </div>
   </div>
 </template>
