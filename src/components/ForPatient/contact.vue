@@ -26,7 +26,7 @@
                   d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
                 />
               </svg>
-              <h2 class="detail" id="wlogo2">
+              <h2 class="detail" id="wlogo2" @click="fbPage">
                 โรงพยาบาลค่ายนวมินทราชินี <br />
                 Fort Nawamintharachini Hospital
               </h2>
@@ -51,6 +51,11 @@
 import PatientCard from "../DataList/PatientCardUser.vue";
 export default {
   components: { PatientCard },
+  methods:{
+    fbPage(){
+      window.location.href = 'https://www.facebook.com/fnh14';
+    }
+  }
 };
 </script>
 
@@ -65,11 +70,18 @@ svg {
   padding-left: 0px;
   color: #446a46;
 }
+
 #wlogo2 {
   width: 50%;
   margin: 0;
   padding-left: 0px;
   color: #446a46;
+}
+
+#wlogo2:hover{
+  cursor: pointer;
+  color: green;
+  font-weight: 600;
 }
 .text {
   width: 30%;

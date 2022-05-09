@@ -177,7 +177,11 @@ const store = useTitleStore();
 export default {
   name: "NavBarLogin",
   mounted() {
-    document.getElementById(this.$route.path.slice(1)).style.color = "#82A284";
+    try{
+      document.getElementById(this.$route.path.slice(1)).style.color = "#82A284";
+    }
+    catch(err){
+    }
   },
 };
 </script>
@@ -281,10 +285,8 @@ a {
 }
 
 .navbar-r img {
-  /* background: white; */
-  /* border-radius: 50%; */
-  height: 55px;
-  width: 55px;
+  height: 30px;
+  width: 30px;
 }
 
 .navbar-r a {
