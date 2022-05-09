@@ -25,14 +25,13 @@ export default defineComponent({
     return {
       image: [
         { img: "/slide1.jpeg" ,name:"กิจกรรมที่ 1"},
-        { img: "/slide2.png" ,name:"กิจกรรมที่ 2"},
+        { img: "/slide4.jpg" ,name:"กิจกรรมที่ 2"},
         { img: "/slide3.jpg" ,name:"กิจกรรมที่ 3"},
-        { img: "/slide1.jpeg" ,name:"กิจกรรมที่ 4"},
-        { img: "/slide2.png" ,name:"กิจกรรมที่ 5"},
-        { img: "/slide3.jpg" ,name:"กิจกรรมที่ 6"},
-        { img: "/slide1.jpeg" ,name:"กิจกรรมที่ 7"},
+        { img: "/slide2.png" ,name:"กิจกรรมที่ 4"},
+        { img: "/slide1.jpeg" ,name:"กิจกรรมที่ 5"},
+        { img: "/slide4.jpg" ,name:"กิจกรรมที่ 6"},
+        { img: "/slide3.jpg" ,name:"กิจกรรมที่ 7"},
         { img: "/slide2.png" ,name:"กิจกรรมที่ 8"},
-        { img: "/slide3.jpg" ,name:"กิจกรรมที่ 9"},
       ],
     };
   },
