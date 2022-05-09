@@ -110,6 +110,9 @@ export default {
       document.getElementById(this.$route.path.slice(1) + "_m").style.color =
         "#446A46";
       document.getElementById(
+        this.$route.path.slice(1) + "_m"
+      ).style.fontWeight = "bold";
+      document.getElementById(
         this.$route.path.slice(1) + "_im"
       ).style.background = "#446A46";
     } catch (err) {}

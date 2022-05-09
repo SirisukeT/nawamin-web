@@ -25,9 +25,6 @@ export default {
 </script>
 
 <style scoped>
-.mainbox {
-  display: flex;
-}
 .detailbox {
   min-width: 70rem;
   display: flex;
