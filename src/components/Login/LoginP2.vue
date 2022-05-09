@@ -68,7 +68,7 @@ export default {
   text-align: center;
   width: 100%;
   height: 100vh;
-  min-height: 800px;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

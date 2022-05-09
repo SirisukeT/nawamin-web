@@ -29,6 +29,9 @@
           </p>
         </div>
       </form>
+      <form action="" class="recaptcha">
+        recaptcha
+      </form>
     </div>
   </main>
 </template>
@@ -64,7 +67,7 @@ export default {
   text-align: center;
   width: 100%;
   height: 100vh;
-  min-height: 700px;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -79,7 +82,7 @@ export default {
 }
 
 .Header {
-  margin-top: 10vh;
+  margin-top: 5vh;
   color: #114d3e;
 }
 form.LoginHomePage {
@@ -102,6 +105,16 @@ form.LoginHomePage input {
   font-size: large;
   border: 0px;
 }
+
+.recaptcha{
+  padding: 50px 0 50px 0;
+  margin-top: 5vh;
+  width: 500px;
+  background: gray;
+  text-align: center;
+  font-size: 30px;
+}
+
 
 .login100-form-avatar img {
   margin-top: 50px;
