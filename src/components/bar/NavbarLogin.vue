@@ -14,11 +14,11 @@
         <p>โรงพยาบาลค่ายนวมินทราชินี</p>
       </div>
       <div class="navbar-r">
-        <router-link to="/home">หน้าหลัก</router-link>
-        <router-link to="/profile">ข้อมูลของฉัน</router-link>
-        <router-link to="/health">สถานะสุขภาพ</router-link>
-        <router-link to="/transfer">ใบส่งตัว</router-link>
-        <router-link to="/appointment">นัดหมาย</router-link>
+        <router-link id="home" to="/home">หน้าหลัก</router-link>
+        <router-link id="profile" to="/profile">ข้อมูลของฉัน</router-link>
+        <router-link id="health" to="/health">สถานะสุขภาพ</router-link>
+        <router-link id="transfer" to="/transfer">ใบส่งตัว</router-link>
+        <router-link id="appointment" to="/appointment">นัดหมาย</router-link>
         <div class="btn-group" id="test">
           <button
             type="button"
@@ -148,10 +148,14 @@ const store = useTitleStore();
 <script>
 export default {
   name: "NavBarLogin",
+  mounted() {
+    document.getElementById(this.$route.path.slice(1)).style.color = "#82A284";
+  },
 };
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 #person {
   width: 25px;
   height: 25px;
@@ -170,6 +174,8 @@ export default {
   align-items: center;
   justify-content: center;
 }
+=======
+>>>>>>> 95b8ce9551e730dbe5dbcad18f7a0fbba809d951
 #test {
   margin-top: 5px;
 }
@@ -220,6 +226,11 @@ div.navbar-brand p {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  font-size: 20px;
+}
+
+.btn-group > * {
+  font-size: 20px;
 }
 
 .navbar-r img {

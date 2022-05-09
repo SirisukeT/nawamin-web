@@ -35,6 +35,7 @@ export default {
   flex-direction: column;
 }
 .table{
+  padding: 10px;
     width: 100%;
     min-height: 20rem;
     background: #82A284;

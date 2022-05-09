@@ -6,7 +6,7 @@
           <menulist />
           <div class="detailbox">
             <PatientCardUser />
-            <div class="table"><Appoints/></div>
+            <div class="table"><Appoints /></div>
           </div>
         </div>
       </div>
@@ -15,10 +15,10 @@
 </template>
 
 <script>
-import Appoints from "../DataList/Appoints.vue"
+import Appoints from "../DataList/Appoints.vue";
 export default {
   name: "appointment",
-  components:{Appoints},
+  components: { Appoints },
 };
 </script>
 
@@ -32,11 +32,12 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.table{
-    width: 100%;
-    min-height: 20rem;
-    background: #82A284;
-    margin-top: 30px;
-    border-radius: 20px;
+.table {
+  padding: 10px;
+  width: 100%;
+  min-height: 20rem;
+  background: #82a284;
+  margin-top: 30px;
+  border-radius: 20px;
 }
 </style>
