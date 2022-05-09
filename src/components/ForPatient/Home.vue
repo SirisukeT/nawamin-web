@@ -58,17 +58,18 @@ export default {
 .module {
   margin: 0 auto;
   padding-top: 2rem;
+  padding-bottom: 5rem;
   /* background-color: white; */
 }
 
 .module__content {
-  max-width: 80rem;
+  max-width: 90rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 .module__content img {
-  max-width: 78rem;
+  max-width: 88rem;
 }
 
 .container {
