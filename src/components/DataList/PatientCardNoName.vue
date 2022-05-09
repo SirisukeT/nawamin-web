@@ -35,7 +35,7 @@ h3{
 .ppcolor {
   width: 8.5rem;
   height: 8.5rem;
-  background-color: red;
+  background-color: green;
   border-radius: 100%;
   display: flex;
   align-items: center;

@@ -8,11 +8,14 @@
             <PatientCardUser />
             <h3>สถานะสุขภาพของคุณอยู่ในกลุ่มสี</h3>
             <div class="status">
-              <h5>เสี่ยง</h5>
+              <h5>ปกติสีเขียว</h5>
             </div>
             <h3 id="suggest">การปฏิบัติตัว</h3>
             <div class="suggestbox">
               <p>
+                ทานอาหารให้ครบ 5 หมู่และออกกำลังกายอย่างสม่ำเสมอ
+              </p>
+              <!-- <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
                 eaque sunt ipsum id enim at architecto voluptate blanditiis
                 corrupti minus. Similique adipisci consequatur quo ullam at
@@ -35,24 +38,18 @@
                 eaque sunt ipsum id enim at architecto voluptate blanditiis
                 corrupti minus. Similique adipisci consequatur quo ullam at
                 veritatis maiores reprehenderit nisi?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
-                eaque sunt ipsum id enim at architecto voluptate blanditiis
-                corrupti minus. Similique adipisci consequatur quo ullam at
-                veritatis maiores reprehenderit nisi?
-              </p>
+              </p> -->
               <div class="gridbox11" id="toprow">
                 <div class="row">
                   <p class="datalist">เอ็กซเรย์ปอด</p>
                   <div class="choicebox">
-                    <p class="datalist">ผิดปกติ</p>
+                    <p class="datalist">ปกติ</p>
                   </div>
                 </div>
                 <div class="row">
                   <p class="datalist">ผลตรวจฟัน</p>
                   <div class="choicebox">
-                    <p class="datalist">ผิดปกติ</p>
+                    <p class="datalist">ปกติ</p>
                   </div>
                 </div>
               </div>
@@ -60,13 +57,13 @@
                 <div class="row">
                   <p class="datalist">ผลตรวจสุขภาพจิต</p>
                   <div class="choicebox">
-                    <p class="datalist">ผิดปกติ</p>
+                    <p class="datalist">ปกติ</p>
                   </div>
                 </div>
                 <div class="row">
                   <p class="datalist">ผลตรวจมะเร็งเต้านม</p>
                   <div class="choicebox">
-                    <p class="datalist">ผิดปกติ</p>
+                    <p class="datalist">ปกติ</p>
                   </div>
                 </div>
               </div>
@@ -74,7 +71,7 @@
                 <div class="row">
                   <p class="datalist">ผลตรวจภายใน</p>
                   <div class="choicebox">
-                    <p class="datalist">ผิดปกติ</p>
+                    <p class="datalist">ปกติ</p>
                   </div>
                 </div>
               </div>
@@ -121,6 +118,7 @@ p {
 }
 .suggestbox {
   padding: 0 20px 40px 20px;
+  width: 992px;
 }
 #suggest {
   text-align: center;
@@ -139,7 +137,7 @@ h5 {
 }
 .status {
   margin-top: 10px;
-  background: #ff7a00;
+  background: green;
   width: 20%;
   padding: 10px 0;
   display: flex;
