@@ -49,4 +49,5 @@ th {
   color: rgb(32, 32, 32);
   border: 0;
 }
+
 </style>

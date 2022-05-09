@@ -27,15 +27,16 @@ export default {
   display: flex;
 }
 .detailbox {
+  min-width: 70rem;
   display: flex;
   flex-direction: column;
 }
-.table {
+.table{
   padding: 10px;
-  width: 100%;
-  min-height: 20rem;
-  background: #82a284;
-  margin-top: 30px;
-  border-radius: 20px;
+    width: 100%;
+    min-height: 20rem;
+    background: #82A284;
+    margin-top: 30px;
+    border-radius: 20px;
 }
 </style>
