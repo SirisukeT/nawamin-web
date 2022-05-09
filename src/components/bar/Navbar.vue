@@ -20,7 +20,7 @@
       <div class="navbar-r">
         <img src="@/assets/user-regular.svg" alt="" />
         <div class="navbar-account">
-          <h5>นายสมหมาย มิตรรัก</h5>
+          <h5>แพทย์สมหมาย มิตรรัก</h5>
           <h5>แพทย์อายุรกรรม</h5>
           <!-- <h5>โรงพยาบาลค่ายนวมินทราชินี</h5> -->
         </div>

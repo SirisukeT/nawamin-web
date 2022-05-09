@@ -241,10 +241,10 @@ export default {
 .navbar {
   background-color: #446a46;
   /* width: 100%; */
-  min-width: 200px;
   height: 71px;
   max-height: 71px;
   padding: 0;
+  min-width: 1240px;
 }
 
 .btn {

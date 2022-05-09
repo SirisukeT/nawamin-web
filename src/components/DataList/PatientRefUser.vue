@@ -3,8 +3,10 @@
     <tr class="bold" id="first">
       <th>ลำดับ</th>
       <th>วันที่ส่งต่อ</th>
-      <th>โรงพยาบาลต้นทาง</th>
-      <th>โรงพยาบาลปลายทาง</th>
+      <th>โรงพยาบาล
+        ต้นทาง</th>
+      <th>โรงพยาบาล
+        ปลายทาง</th>
       <th>ผู้ส่งต่อ</th>
       <th>แผนก</th>
       <th></th>
@@ -56,7 +58,7 @@ export default {
 
 <style scoped>
 th {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: lighter;
   color: rgb(32, 32, 32);
   border:0;
