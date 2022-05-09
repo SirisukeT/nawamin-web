@@ -113,7 +113,7 @@ svg {
   color: #446a46;
 }
 .mainbox {
-  width: 80rem;
+  
   padding-top: 10px;
   padding-bottom: 100px;
   display: flex;

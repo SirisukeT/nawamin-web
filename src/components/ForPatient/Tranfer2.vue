@@ -7,8 +7,8 @@
           <div class="detailbox">
             <PatientCardUser />
             <refer />
-            <section class="right marginB-25">
-              <button @click="$router.go(-1)" class="previous">ย้อนกลับ</button>
+            <section class="right marginB-25 center">
+              <button @click="$router.go(-1)" class="LoginSubmit">ย้อนกลับ</button>
             </section>
           </div>
         </div>
@@ -26,6 +26,26 @@ export default {
 </script>
 
 <style scoped>
+.right{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.LoginSubmit {
+  background: #82a284;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin-top: 20px;
+  width: 150px;
+  height: 57px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 5px 0;
+  font-size: large;
+  border: 0px;
+}
 .mainbox {
   display: flex;
   justify-content: center;
