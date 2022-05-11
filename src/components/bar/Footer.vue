@@ -69,7 +69,7 @@
               /></svg
             >
 
-            <p class="text" id="click" @click="map">Google map</p>
+            <a class="text" id="click" href="https://goo.gl/maps/6YxrAVKbLvd7SLXT6" target="_blank">Google map</a>
           </div>
         </div>
         <div class="contentbox">

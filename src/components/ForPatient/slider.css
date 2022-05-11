@@ -54,14 +54,14 @@
   top: 50%;
   left: 0;
   transform: translate(-50%, -50%);
-  margin-left: 3%;
+  margin-left: 0;
 }
 
 .carousel__next {
   top: 50%;
   right: 0;
   transform: translate(50%, -50%);
-  margin-right: 3%;
+  margin-right: 0;
 }
 
 .carousel--rtl .carousel__prev {

@@ -82,7 +82,6 @@ p {
   border-bottom: 3px solid black;
 }
 .mainbox {
-  width: 80rem;
   padding-top: 10px;
   padding-bottom: 100px;
   /* background-color: wheat; */

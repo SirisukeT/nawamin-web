@@ -5,7 +5,8 @@
       v-if="popupTriggers.buttonTrigger"
       :TogglePopup="() => TogglePopup('buttonTrigger')"
     >
-      <h2>สถานะเปลี่ยนแปลงรหัสผ่านเสร็จสมบูรณ์</h2>
+      <h2>รหัสผ่านของคุณคือ</h2>
+      <h2>01012565</h2>
     </PopupFPW>
   </main>
 </template>
@@ -52,11 +53,11 @@ export default {
   border: 0px;
 }
 h2{
-  margin: 20% 0;
+  /* margin: 20% 0; */
 }
 .popup-inner h2{
-  text-align: center;
-  padding: 20px;
+  /* text-align: center; */
+  padding: 0 20px 5rem 20px;
   color: white;
 }
 </style>

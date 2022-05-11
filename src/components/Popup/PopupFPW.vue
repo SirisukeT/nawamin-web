@@ -40,6 +40,8 @@ export default {
     padding: 32px;
     border-radius: 20px;
     border: 2px solid white;
+    width: 40rem;
+    /* align-items: center; */
     }
 button.popup-save {
   font-weight: bold;

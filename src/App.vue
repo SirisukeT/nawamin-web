@@ -33,9 +33,7 @@ button:active {
   flex-direction: column;
 }
 
-.mainbox {
-  display: flex;
-}
+
 
 .mt-71 {
   margin-top: 71px;
